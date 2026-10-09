@@ -94,14 +94,25 @@ export class GitHubHost implements CodeHost {
     if (!refresh && this.repoCache.has(repo)) return this.repoCache.get(repo) ?? null;
     const [owner, name] = this.split(repo);
     if (!owner || !name) return null;
-    const res = await fetchJsonPost<{ data?: { repository: GraphqlRepo | null }; errors?: unknown }>(
-      GRAPHQL,
-      { query: REPO_QUERY, variables: { owner, name } },
-      { refresh, headers: this.headers() },
-    );
-    const repoData = res?.data?.repository ?? null;
-    this.repoCache.set(repo, repoData);
-    return repoData;
+    // GitHub returns HTTP 200 with an `errors` body (often a secondary rate
+    // limit) and a null repository. Treat that as retryable and never cache it.
+    const shouldCache = (j: unknown): boolean =>
+      Boolean((j as { data?: { repository?: unknown } })?.data?.repository);
+    for (let attempt = 1; attempt <= 4; attempt++) {
+      const res = await fetchJsonPost<{ data?: { repository: GraphqlRepo | null }; errors?: unknown }>(
+        GRAPHQL,
+        { query: REPO_QUERY, variables: { owner, name } },
+        { refresh, headers: this.headers(), shouldCache },
+      );
+      const repoData = res?.data?.repository ?? null;
+      if (repoData) {
+        this.repoCache.set(repo, repoData);
+        return repoData;
+      }
+      await sleep(500 * attempt * attempt);
+    }
+    this.repoCache.set(repo, null);
+    return null;
   }
 
   async fetchRepoMeta(repo: string, refresh = false): Promise<RepoMeta | undefined> {
@@ -218,6 +229,10 @@ export class GitHubHost implements CodeHost {
 
 function hash(s: string): string {
   return createHash("sha1").update(s).digest("hex");
+}
+
+function sleep(ms: number): Promise<void> {
+  return new Promise((r) => setTimeout(r, ms));
 }
 
 /**

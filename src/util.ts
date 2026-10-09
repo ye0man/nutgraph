@@ -131,13 +131,14 @@ export async function fetchJson<T>(
 export async function fetchJsonPost<T>(
   url: string,
   body: unknown,
-  opts: FetchOptions = {},
+  opts: FetchOptions & { shouldCache?: (json: unknown) => boolean } = {},
 ): Promise<T | undefined> {
-  const { refresh = false, offlineFallback = true, headers = {}, timeoutMs = 30000 } = opts;
+  const { refresh = false, offlineFallback = true, headers = {}, timeoutMs = 30000, shouldCache } = opts;
   const cacheFile = join(CACHE_DIR, `${sha1(url + "\n" + JSON.stringify(body))}.json`);
 
   if (!refresh && (await exists(cacheFile))) {
-    return JSON.parse(await readFile(cacheFile, "utf8")) as T;
+    const cached = JSON.parse(await readFile(cacheFile, "utf8")) as unknown;
+    if (!shouldCache || shouldCache(cached)) return cached as T;
   }
   const attempts = 4;
   for (let attempt = 1; attempt <= attempts; attempt++) {
@@ -163,9 +164,13 @@ export async function fetchJsonPost<T>(
         throw new Error(`HTTP ${res.status} ${body.slice(0, 200)}`);
       }
       const text = await res.text();
-      await mkdir(CACHE_DIR, { recursive: true });
-      await writeFile(cacheFile, text, "utf8");
-      return JSON.parse(text) as T;
+      const parsed = JSON.parse(text) as unknown;
+      // Only cache responses the caller considers valid (e.g. not GraphQL errors).
+      if (!shouldCache || shouldCache(parsed)) {
+        await mkdir(CACHE_DIR, { recursive: true });
+        await writeFile(cacheFile, text, "utf8");
+      }
+      return parsed as T;
     } catch (err) {
       if (attempt === attempts) {
         if (offlineFallback && (await exists(cacheFile))) {

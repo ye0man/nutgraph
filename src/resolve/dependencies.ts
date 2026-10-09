@@ -60,7 +60,7 @@ export async function resolveDependencies(
   let fetchedRepos = 0;
   let fetchedDeps = 0;
 
-  await pMap(target, 6, async (repo) => {
+  await pMap(target, 4, async (repo) => {
     const node = repoToNode.get(repo);
     if (!node) return;
 
