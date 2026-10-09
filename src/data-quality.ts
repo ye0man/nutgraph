@@ -41,6 +41,10 @@ const CODE_DOCS: Record<string, string> = {
     "No parseable dependency manifest was found for an open-source project, so it has no depends_on edges.",
   METADATA_MISSING:
     "Repo metadata could not be fetched (e.g. transient GitHub 502 or missing repo). Metrics/ranking will be absent until a later run fills the cache.",
+  AUTH_STATUS: "Which GitHub identity the run authenticated as, and remaining API budget (informational).",
+  AUTH_REJECTED:
+    "A token is set but GitHub rejected it -- usually a fine-grained PAT that does not cover these repositories, or missing scopes.",
+  UNAUTHENTICATED: "No GitHub token; API access is heavily rate-limited (60/hour).",
   MINT_SOFTWARE_UNKNOWN:
     "A live mint did not report which software it runs, so no `runs` edge was created. Implementation detection is weak by design.",
   NOSTR_UNAVAILABLE:

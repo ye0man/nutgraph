@@ -140,7 +140,10 @@ export async function fetchJsonPost<T>(
       if (res.status === 502 || res.status === 503 || res.status === 429 || res.status >= 500) {
         throw new Error(`HTTP ${res.status}`);
       }
-      if (!res.ok) throw new Error(`HTTP ${res.status} for ${url}`);
+      if (!res.ok) {
+        const body = await res.text().catch(() => "");
+        throw new Error(`HTTP ${res.status} ${body.slice(0, 200)}`);
+      }
       const text = await res.text();
       await mkdir(CACHE_DIR, { recursive: true });
       await writeFile(cacheFile, text, "utf8");

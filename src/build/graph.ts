@@ -7,7 +7,7 @@ import {
   type ProjectOverride,
 } from "../ingest/readme.js";
 import { fetchNuts, nutNodes, type NutImplementerRef } from "../ingest/nuts.js";
-import { GitHubHost } from "../hosts/github.js";
+import { GitHubHost, logAuthStatus } from "../hosts/github.js";
 import { loadPackages } from "../resolve/packages.js";
 import { resolveDependencies } from "../resolve/dependencies.js";
 import { resolveMints } from "../ingest/mints/resolve.js";
@@ -218,6 +218,7 @@ export async function composeGraph(dq: DataQualityLog, refresh: boolean): Promis
   // M1: machine-derived software dependency graph + metrics + scoring.
   const packages = await loadPackages();
   const host = new GitHubHost();
+  await logAuthStatus(dq, refresh);
   const dep = await resolveDependencies(nodes, host, packages, dq, refresh);
   computeScores(nodes);
 

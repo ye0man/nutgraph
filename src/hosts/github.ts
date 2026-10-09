@@ -3,8 +3,9 @@ import { execFileSync } from "node:child_process";
 import { readFile, writeFile, mkdir } from "node:fs/promises";
 import { join } from "node:path";
 import type { CodeHost, RawDependency, RepoMeta } from "./types.js";
+import type { DataQualityLog } from "../data-quality.js";
 import { fetchRepoDependencies } from "../ingest/manifests.js";
-import { CACHE_DIR, exists, fetchJsonPost, githubToken } from "../util.js";
+import { CACHE_DIR, exists, fetchJson, fetchJsonPost, githubToken } from "../util.js";
 
 const GRAPHQL = "https://api.github.com/graphql";
 
@@ -185,6 +186,47 @@ export class GitHubHost implements CodeHost {
 
 function hash(s: string): string {
   return createHash("sha1").update(s).digest("hex");
+}
+
+/**
+ * Report whether we have a working token and how much API budget remains.
+ * This is the first thing to look at when a CI run has many METADATA_MISSING
+ * issues.
+ */
+export async function logAuthStatus(dq: DataQualityLog, refresh: boolean): Promise<void> {
+  const token = githubToken() ?? ghToken();
+  if (!token) {
+    dq.add({
+      code: "UNAUTHENTICATED",
+      severity: "warn",
+      subject: "github",
+      detail: "No token available; API calls are unauthenticated and rate-limited to 60/hour.",
+      suggestion: "Set the GITHUB_TOKEN or GH_TOKEN environment variable.",
+    });
+    return;
+  }
+  const headers = { authorization: `Bearer ${token}` };
+  const user = await fetchJson<{ login?: string }>("https://api.github.com/user", { headers, refresh });
+  if (!user?.login) {
+    dq.add({
+      code: "AUTH_REJECTED",
+      severity: "warn",
+      subject: "github token",
+      detail: "A token is set but GitHub rejected it for /user (403/401).",
+      suggestion:
+        "Most likely a fine-grained PAT that does not include these repos. Use a classic PAT with public_repo, or grant the fine-grained token access to all repositories.",
+    });
+    return;
+  }
+  const rl = await fetchJson<{
+    resources?: { graphql?: { remaining?: number; limit?: number }; core?: { remaining?: number } };
+  }>("https://api.github.com/rate_limit", { headers, refresh });
+  dq.add({
+    code: "AUTH_STATUS",
+    severity: "info",
+    subject: user.login,
+    detail: `graphql ${rl?.resources?.graphql?.remaining ?? "?"}/${rl?.resources?.graphql?.limit ?? "?"}, core remaining ${rl?.resources?.core?.remaining ?? "?"}.`,
+  });
 }
 
 function ghToken(): string | undefined {

@@ -34,7 +34,7 @@ jobs:
 
       - name: Build graph
         env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
           NUTGRAPH_TOR_SOCKS: socks5h://127.0.0.1:9050
         run: npm run build
 
