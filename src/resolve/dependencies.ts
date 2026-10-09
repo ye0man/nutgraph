@@ -60,12 +60,12 @@ export async function resolveDependencies(
   let fetchedRepos = 0;
   let fetchedDeps = 0;
 
+  // Phase 1 -- dependencies. Their public manifest/tree reads get first claim on
+  // the anonymous API budget when the token can't see a repo, so every repo's
+  // edges are discovered before any metadata lookups consume the budget.
   await pMap(target, 4, async (repo) => {
     const node = repoToNode.get(repo);
     if (!node) return;
-
-    // Dependencies first: their (public) manifest/tree reads get first claim on
-    // the anonymous API budget when the token can't see a repo.
     const deps = await host.fetchDependencies(repo);
     fetchedDeps += deps.length;
     for (const dep of deps) {
@@ -86,7 +86,12 @@ export async function resolveDependencies(
       edges.push(edge);
       edgePkg.set(edge, { registry: entry.registry, name: entry.name });
     }
+  });
 
+  // Phase 2 -- metadata + contributors.
+  await pMap(target, 4, async (repo) => {
+    const node = repoToNode.get(repo);
+    if (!node) return;
     const meta = await host.fetchRepoMeta(repo);
     if (meta) {
       applyMetrics(node, meta);
