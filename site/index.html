@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>nutgraph — the Cashu ecosystem</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header id="topbar">
+      <div class="brand"><span class="dot"></span> nutgraph</div>
+      <input id="search" type="search" placeholder="Search projects, mints, NUTs…" autocomplete="off" />
+      <div id="filters"></div>
+      <div id="stats"></div>
+    </header>
+
+    <main>
+      <svg id="stage"></svg>
+      <aside id="panel" class="hidden"></aside>
+      <div id="legend"></div>
+    </main>
+
+    <div id="boot">Loading graph…</div>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>

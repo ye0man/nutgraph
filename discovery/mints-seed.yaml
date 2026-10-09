@@ -1,12 +1,12 @@
 # Last-resort manual mint seeds.
 #
 # Only for mints that survive every automated source AND are known-good. Keep
-# this empty unless something genuinely cannot be discovered automatically --
-# an entry here is a data-quality flag that discovery is incomplete.
-#
-# Each entry is a URL; the verification layer fills in pubkey, nuts, network,
-# and software by probing /v1/info (clearnet or Tor).
+# this small -- an entry here is a data-quality flag that discovery is
+# incomplete. The testnut mints below are unbacked and always available, which
+# keeps the mint pipeline demonstrable even when relays/directories are blocked.
 
-mints: []
-  # - url: https://example.onion
-  #   note: onion-only mint; not in any directory
+mints:
+  - url: https://testnut.cashu.space
+    note: testnut mint (fake ecash, with fees)
+  - url: https://nofee.testnut.cashu.space
+    note: testnut mint (fake ecash, no fees)

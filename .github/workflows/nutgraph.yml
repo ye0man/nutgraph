@@ -1,0 +1,62 @@
+name: nutgraph
+
+on:
+  schedule:
+    - cron: "17 6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: nutgraph
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install and start Tor (for .onion mints)
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y tor
+          (tor --SocksPort 9050 >/tmp/tor.log 2>&1 &)
+          sleep 5
+
+      - run: npm ci
+
+      - name: Build graph
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NUTGRAPH_TOR_SOCKS: socks5h://127.0.0.1:9050
+        run: npm run build
+
+      - name: Commit refreshed outputs
+        run: |
+          git config user.name "nutgraph-bot"
+          git config user.email "nutgraph-bot@users.noreply.github.com"
+          git add DATA_QUALITY.md snapshots site/graph.json
+          git diff --staged --quiet || git commit -m "chore: nightly nutgraph rebuild"
+          git push
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

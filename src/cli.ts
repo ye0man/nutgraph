@@ -103,6 +103,10 @@ async function writeOutputs(graph: Graph, dq: DataQualityLog): Promise<void> {
   // Dated snapshot for growth animation + release diffs.
   const day = graph.generated_at.slice(0, 10);
   await writeJson(path("snapshots", `${day}.json`), graph);
+
+  // The static site (M4) loads ./graph.json from its own directory so it can be
+  // deployed independently (GitHub Pages).
+  await writeJson(path("site", "graph.json"), graph);
 }
 
 function summarize(graph: Graph, dq: DataQualityLog): string {

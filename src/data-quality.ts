@@ -41,6 +41,12 @@ const CODE_DOCS: Record<string, string> = {
     "No parseable dependency manifest was found for an open-source project, so it has no depends_on edges.",
   METADATA_MISSING:
     "Repo metadata could not be fetched (e.g. transient GitHub 502 or missing repo). Metrics/ranking will be absent until a later run fills the cache.",
+  MINT_SOFTWARE_UNKNOWN:
+    "A live mint did not report which software it runs, so no `runs` edge was created. Implementation detection is weak by design.",
+  NOSTR_UNAVAILABLE:
+    "NIP-87 relays could not be queried (likely network restrictions). Seed/directory sources still apply.",
+  DIRECTORY_UNREACHABLE: "A mint directory page could not be fetched.",
+  MINT_DISCOVERY_SUMMARY: "Summary of mint discovery for the run (informational).",
   MANAGER_UNSUPPORTED:
     "A dependency's package manager has no registry adapter yet, so its version cannot be tracked.",
   ONTOLOGY_NODE_MISSING:

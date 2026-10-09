@@ -16,6 +16,7 @@
     "lint": "tsc --noEmit"
   },
   "dependencies": {
+    "socks-proxy-agent": "^10.1.0",
     "yaml": "^2.6.0",
     "zod": "^3.23.8"
   },

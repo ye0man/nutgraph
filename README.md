@@ -7,9 +7,10 @@ tools that depend on them in orbit.
 The **dataset is the product**. The interactive visualization is one client of
 it; release tooling and agent context are the others.
 
-> Status: **M1**. The pipeline emits a real graph with a machine-derived,
-> version-aware software dependency graph (`depends_on` + semver lag), repo
-> metrics, and node ranking. Mint discovery (M3) and the site (M4) are next.
+> Status: **M4**. The pipeline emits the full graph (spec, NUTs, core libs,
+> bindings, projects, **live mints**), with machine-derived version-aware
+> dependencies and a static 2D radial viewer. Mint discovery uses NIP-87 relays,
+> directories, and Tor-aware `/v1/info` probing.
 
 ## What it does
 
@@ -29,8 +30,9 @@ it; release tooling and agent context are the others.
 ```
 
 Implemented: **ingest** of the awesome-cashu README, the NUTs spec, repo
-metadata, and repo manifests; **resolve** of node identity, the NUT
-compatibility matrix, and version-aware dependencies; **build** of
+metadata and manifests, and live mints (NIP-87 relays, directories, `/v1/info`
+over clearnet/Tor); **resolve** of node identity, the NUT compatibility matrix,
+version-aware dependencies, ranking, and mint→software edges; **build** of
 `dist/graph.json`, dated snapshots, and `DATA_QUALITY.md`.
 
 ## The curation line
@@ -56,23 +58,39 @@ npm run impact -- cashubtc/cashu-ts   # who depends on a lib, most-at-risk first
 npm run typecheck
 ```
 
-Set `GITHUB_TOKEN` (or have `gh` authenticated) for metadata. Optional test
-filters: `NUTGRAPH_REPOS=owner/a,owner/b` and `NUTGRAPH_LIMIT=N`.
-Network responses are cached under `data/cache/`; pass `--refresh` to bypass.
+Set `GITHUB_TOKEN` (or have `gh` authenticated) for metadata. Mint discovery is
+controlled by `NUTGRAPH_MINT_SOURCES` (`seed,directories,nostr`, default all)
+and `NUTGRAPH_TOR_SOCKS` (e.g. `socks5h://127.0.0.1:9050`) to reach `.onion`
+mints. Other test filters: `NUTGRAPH_REPOS=owner/a,owner/b`,
+`NUTGRAPH_LIMIT=N`, `NUTGRAPH_MINT_LIMIT=N`. Network responses are cached under
+`data/cache/`; pass `--refresh` to bypass.
+
+### View the site
+
+```sh
+npm run build
+npx serve site      # or: python -m http.server -d site
+```
+
+`npm run build` writes `site/graph.json`; the viewer is a self-contained static
+page (d3 from CDN) that can be deployed to GitHub Pages. A nightly workflow
+(`.github/workflows/nutgraph.yml`) rebuilds the graph, commits refreshed
+outputs, and deploys the site.
 
 ## Repo layout
 
 ```
-ontology/     curated: core.yaml, bindings.yaml, projects.yaml, hosts.yaml
+ontology/     curated: core.yaml, bindings.yaml, projects.yaml, packages.yaml, hosts.yaml
 discovery/    curated: sources.yaml (mint discovery), mints-seed.yaml
 overrides/    curated: edges.yaml (escape hatch)
-src/hosts/    CodeHost adapters (github now; forgejo/M6)
-src/ingest/   readme, nuts, (registries, mints -> M1/M3)
-src/resolve/  identity, edges, versions (M1)
-src/score/    metrics, profiles, rank (M1)
+src/hosts/    CodeHost adapter: github (forgejo -> M6)
+src/ingest/   readme, nuts, manifests, registries, mints/ (nostr, directories, probe)
+src/resolve/  packages, dependencies (depends_on + semver), versions
+src/score/    profiles, rank (popularity/freshness/rings)
 src/build/    graph compose, snapshots, agent bundle
-site/         static 2D radial viewer (M4)
-dist/         generated output (gitignored until CI publishes it)
+site/         static 2D radial viewer (d3 from CDN)
+.github/      nightly build + GitHub Pages deploy
+dist/         generated output (gitignored)
 snapshots/    dated graphs (growth animation + release diffs)
 ```
 
@@ -98,15 +116,20 @@ explains the *classes* so they can be fixed deliberately.
 | Monorepo attribution | One repo backs several nodes (e.g. cdk + cdk-mintd). | Repo-level deps/metrics are attributed to the canonical (core) node only. | Documented; crate-level attribution is future work. |
 | GitHub dependency-graph flakiness | The GraphQL dependency field returns 502s/empties under load. | Was the sole dep source; now only a fallback. | Primary source is direct manifest parsing (tier 1); GraphQL is a fallback for unparsed ecosystems (NuGet/Maven/Swift). |
 | Semver `unknown` | Range is non-semver (git URL, `workspace:`, PR ref). | Lag not computed for that edge. | Expected; shown as `unknown`. |
+| Mint software unknown | `/v1/info` rarely reports the implementation. | `runs` edges are sparse; some mints attach to the spec instead of their software. | Detection is name/version heuristics; add curated mappings or mint-side reporting. |
+| Mint network junk | Some NIP-87 announcements put free text in the `n` tag. | Bad `network` values. | Sanitized to mainnet/testnet/signet/regtest; unknown → unset. |
+| Relay/directory availability | Public Nostr relays or directory pages can be blocked/down (`NOSTR_UNAVAILABLE`, `DIRECTORY_UNREACHABLE`). | Fewer discovered mints that run. | Best-effort fan-in; seeds and other sources still apply. Add directories as needed. |
+| `.onion` mints | Tor is not reachable without a SOCKS proxy. | Onion-only mints are skipped. | Set `NUTGRAPH_TOR_SOCKS`; CI installs and starts Tor. |
+| Directory candidate noise | Directory pages link many non-mint hosts. | Extra probes (most fail `/v1/info`). | Probe is the gate; candidates are capped and cached. |
 
 ## Roadmap
 
 - **M0** scaffold, schema v1, ontology, README + NUTs ingest, skeleton graph. *(done)*
 - **M1** software dependency graph: direct manifest parsing (npm/crates/pypi/go/pub)
   + GitHub dependency-graph fallback, version-aware `depends_on` with semver lag,
-  repo metrics, scoring + rank/ring, `impact` release report. *(this)*
-- **M2** NUT axis: `implements_nuts` from detection, not just the spec README.
-- **M3** mint discovery: Nostr NIP-87/NIP-60, directories, wallet seeds, Tor-aware probing.
-- **M4** static 2D radial site.
-- **M5** agent bundle + snapshots.
+  repo metrics, scoring + rank/ring, `impact` release report. *(done)*
+- **M2** NUT axis: `implements` edges from live-mint `/v1/info` plus the spec README. *(done)*
+- **M3** mint discovery: NIP-87 relays, directory fan-in, seed list, Tor-aware `/v1/info` probing, pubkey identity. *(done)*
+- **M4** static 2D radial site: spec at center, NUT ring, core/binding rings, dependency orbit, detail panel, filters, search. *(done)*
+- **M5** agent bundle + snapshots: `nodes/edges.jsonl`, `schema.md`, `manifest.json`, growth animation.
 - **M6** Forgejo `CodeHost` adapter (git.cashu.dev).
