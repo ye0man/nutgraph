@@ -7,6 +7,8 @@ tools that depend on them in orbit.
 The **dataset is the product**. The interactive visualization is one client of
 it; release tooling and agent context are the others.
 
+> **Live site: https://ye0man.github.io/nutgraph/**
+>
 > Status: **M4**. The pipeline emits the full graph (spec, NUTs, core libs,
 > bindings, projects, **live mints**), with machine-derived version-aware
 > dependencies and a static 2D radial viewer. Mint discovery uses NIP-87 relays,
