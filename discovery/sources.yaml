@@ -13,12 +13,17 @@ nostr:
   # NIP-60: kind 17375 = wallet events whose `mint` tags reveal mints in active use
   #         -> aggregate COUNTS ONLY, never user linkage (privacy).
   kinds: [38172, 38000, 17375]
+  # Relays that allow read access without auth. Some hosts block datacenter
+  # IPs (e.g. GitHub Actions), so coverage is backed up by data/known-mints.json.
   relays:
     - wss://relay.damus.io
     - wss://nos.lol
     - wss://relay.primal.net
     - wss://relay.nostr.band
-    - wss://nostr.wine
+    - wss://relay.snort.social
+    - wss://relay.nostr.bg
+    - wss://nostr.mom
+    - wss://purplepag.es
 
 directories:
   - id: cashu-space

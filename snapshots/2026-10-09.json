@@ -1,9 +1,9 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-10-09T10:30:10.997Z",
+  "generated_at": "2026-10-09T10:43:36.650Z",
   "counts": {
-    "nodes": 509,
-    "edges": 330,
+    "nodes": 511,
+    "edges": 356,
     "by_type": {
       "mint_software": 36,
       "wallet": 100,
@@ -14,7 +14,7 @@
       "app": 284,
       "spec": 1,
       "nut": 31,
-      "mint_instance": 1
+      "mint_instance": 3
     }
   },
   "nodes": [
@@ -53,9 +53,9 @@
         "contributors": 3
       },
       "scores": {
-        "popularity": 0.641,
-        "freshness": 0.462,
-        "rank": 0.593,
+        "popularity": 0.614,
+        "freshness": 0.781,
+        "rank": 0.658,
         "ring": 0
       },
       "created_at": "2026-02-27T20:35:44Z"
@@ -96,8 +96,8 @@
       },
       "scores": {
         "popularity": 0.239,
-        "freshness": 0.956,
-        "rank": 0.518,
+        "freshness": 0.982,
+        "rank": 0.528,
         "ring": 0
       },
       "created_at": "2025-02-14T23:26:52Z"
@@ -138,9 +138,9 @@
       },
       "scores": {
         "popularity": 0,
-        "freshness": 0.231,
-        "rank": 0.062,
-        "ring": 3
+        "freshness": 0.688,
+        "rank": 0.183,
+        "ring": 2
       },
       "created_at": "2026-02-28T22:36:58Z"
     },
@@ -179,10 +179,10 @@
         "contributors": 1
       },
       "scores": {
-        "popularity": 0.392,
-        "freshness": 0.538,
-        "rank": 0.449,
-        "ring": 1
+        "popularity": 0.386,
+        "freshness": 0.821,
+        "rank": 0.556,
+        "ring": 0
       },
       "created_at": "2026-05-20T22:23:25Z"
     },
@@ -220,9 +220,9 @@
         "contributors": 1
       },
       "scores": {
-        "popularity": 0.392,
-        "freshness": 0.769,
-        "rank": 0.492,
+        "popularity": 0.386,
+        "freshness": 0.906,
+        "rank": 0.525,
         "ring": 0
       },
       "created_at": "2026-07-11T18:57:01Z"
@@ -286,9 +286,9 @@
         "contributors": 1
       },
       "scores": {
-        "popularity": 0.336,
-        "freshness": 0.538,
-        "rank": 0.39,
+        "popularity": 0.273,
+        "freshness": 0.813,
+        "rank": 0.417,
         "ring": 1
       },
       "created_at": "2026-06-11T01:40:51Z"
@@ -356,8 +356,8 @@
       },
       "scores": {
         "popularity": 0,
-        "freshness": 0.846,
-        "rank": 0.226,
+        "freshness": 0.938,
+        "rank": 0.25,
         "ring": 2
       },
       "created_at": "2026-06-07T02:51:11Z"
@@ -397,9 +397,9 @@
         "contributors": 2
       },
       "scores": {
-        "popularity": 0.876,
-        "freshness": 0.352,
-        "rank": 0.672,
+        "popularity": 0.881,
+        "freshness": 0.75,
+        "rank": 0.83,
         "ring": 0
       },
       "created_at": "2024-02-27T08:00:09Z"
@@ -442,8 +442,8 @@
       },
       "scores": {
         "popularity": 1,
-        "freshness": 0.857,
-        "rank": 0.944,
+        "freshness": 0.946,
+        "rank": 0.979,
         "ring": 0
       },
       "created_at": "2022-09-11T01:26:19Z"
@@ -483,9 +483,9 @@
       },
       "scores": {
         "popularity": 0,
-        "freshness": 0.308,
-        "rank": 0.082,
-        "ring": 3
+        "freshness": 0.719,
+        "rank": 0.192,
+        "ring": 2
       },
       "created_at": "2026-05-20T18:06:59Z"
     },
@@ -524,9 +524,9 @@
         "contributors": 1
       },
       "scores": {
-        "popularity": 0.462,
-        "freshness": 0.385,
-        "rank": 0.441,
+        "popularity": 0.443,
+        "freshness": 0.75,
+        "rank": 0.525,
         "ring": 1
       },
       "created_at": "2025-11-19T04:16:43Z"
@@ -560,15 +560,15 @@
         "open_issues": 26,
         "releases": 1,
         "created_at": "2024-02-01T17:59:31Z",
-        "last_commit": "2026-10-09T10:00:05Z",
+        "last_commit": "2026-10-09T09:54:03Z",
         "last_release": "2026-04-28T13:55:40Z",
         "archived": false,
         "contributors": 11
       },
       "scores": {
-        "popularity": 0.847,
-        "freshness": 0.758,
-        "rank": 0.812,
+        "popularity": 0.883,
+        "freshness": 0.768,
+        "rank": 0.838,
         "ring": 0
       },
       "created_at": "2024-02-01T17:59:31Z"
@@ -607,9 +607,9 @@
         "contributors": 3
       },
       "scores": {
-        "popularity": 0.313,
-        "freshness": 0.439,
-        "rank": 0.347,
+        "popularity": 0.324,
+        "freshness": 0.584,
+        "rank": 0.393,
         "ring": 1
       },
       "created_at": "2026-02-10T18:50:21Z"
@@ -648,9 +648,9 @@
         "contributors": 1
       },
       "scores": {
-        "popularity": 0.501,
-        "freshness": 0.561,
-        "rank": 0.517,
+        "popularity": 0.56,
+        "freshness": 0.674,
+        "rank": 0.59,
         "ring": 0
       },
       "created_at": "2024-08-13T19:58:47Z"
@@ -691,9 +691,9 @@
         "contributors": 2
       },
       "scores": {
-        "popularity": 0.616,
-        "freshness": 0.684,
-        "rank": 0.642,
+        "popularity": 0.673,
+        "freshness": 0.725,
+        "rank": 0.693,
         "ring": 0
       },
       "created_at": "2026-03-07T23:02:25Z"
@@ -734,8 +734,8 @@
       },
       "scores": {
         "popularity": 0,
-        "freshness": 0.379,
-        "rank": 0.101,
+        "freshness": 0.539,
+        "rank": 0.144,
         "ring": 2
       },
       "created_at": "2026-02-07T23:29:12Z"
@@ -775,9 +775,9 @@
         "contributors": 1
       },
       "scores": {
-        "popularity": 0.231,
-        "freshness": 0.705,
-        "rank": 0.416,
+        "popularity": 0.264,
+        "freshness": 0.753,
+        "rank": 0.454,
         "ring": 1
       },
       "created_at": "2026-09-07T13:55:37Z"
@@ -817,9 +817,9 @@
         "contributors": 1
       },
       "scores": {
-        "popularity": 0.165,
-        "freshness": 0.5,
-        "rank": 0.255,
+        "popularity": 0.172,
+        "freshness": 0.629,
+        "rank": 0.294,
         "ring": 1
       },
       "created_at": "2026-04-06T12:55:30Z"
@@ -860,8 +860,8 @@
       },
       "scores": {
         "popularity": 0,
-        "freshness": 0.848,
-        "rank": 0.226,
+        "freshness": 0.888,
+        "rank": 0.237,
         "ring": 1
       },
       "created_at": "2026-04-06T16:14:50Z"
@@ -903,9 +903,9 @@
         "contributors": 9
       },
       "scores": {
-        "popularity": 0.796,
-        "freshness": 0.875,
-        "rank": 0.827,
+        "popularity": 0.843,
+        "freshness": 0.895,
+        "rank": 0.863,
         "ring": 0
       },
       "created_at": "2026-02-27T15:46:36Z"
@@ -946,8 +946,8 @@
       },
       "scores": {
         "popularity": 0.227,
-        "freshness": 0.794,
-        "rank": 0.447,
+        "freshness": 0.827,
+        "rank": 0.46,
         "ring": 1
       },
       "created_at": "2024-07-31T21:01:09Z"
@@ -987,9 +987,9 @@
         "contributors": 1
       },
       "scores": {
-        "popularity": 0.317,
-        "freshness": 0.73,
-        "rank": 0.477,
+        "popularity": 0.364,
+        "freshness": 0.767,
+        "rank": 0.521,
         "ring": 1
       },
       "created_at": "2026-01-19T22:17:49Z"
@@ -1028,9 +1028,9 @@
         "contributors": 1
       },
       "scores": {
-        "popularity": 0.551,
-        "freshness": 0.348,
-        "rank": 0.497,
+        "popularity": 0.597,
+        "freshness": 0.517,
+        "rank": 0.575,
         "ring": 0
       },
       "created_at": "2026-01-30T23:50:23Z"
@@ -1071,9 +1071,9 @@
       },
       "scores": {
         "popularity": 0,
-        "freshness": 0.364,
-        "rank": 0.097,
-        "ring": 3
+        "freshness": 0.528,
+        "rank": 0.141,
+        "ring": 2
       },
       "created_at": "2026-02-04T18:36:37Z"
     },
@@ -1112,8 +1112,8 @@
       },
       "scores": {
         "popularity": 0.15,
-        "freshness": 0.985,
-        "rank": 0.373,
+        "freshness": 0.989,
+        "rank": 0.374,
         "ring": 1
       },
       "created_at": "2025-08-09T17:52:15Z"
@@ -1154,9 +1154,9 @@
         "contributors": 38
       },
       "scores": {
-        "popularity": 0.969,
-        "freshness": 0.657,
-        "rank": 0.847,
+        "popularity": 0.974,
+        "freshness": 0.701,
+        "rank": 0.868,
         "ring": 0
       },
       "created_at": "2023-02-27T18:06:48Z"
@@ -1197,8 +1197,8 @@
       },
       "scores": {
         "popularity": 0,
-        "freshness": 0.939,
-        "rank": 0.251,
+        "freshness": 0.955,
+        "rank": 0.255,
         "ring": 2
       },
       "created_at": "2026-02-23T02:39:14Z"
@@ -1237,9 +1237,9 @@
         "contributors": 1
       },
       "scores": {
-        "popularity": 0.19,
-        "freshness": 0.652,
-        "rank": 0.313,
+        "popularity": 0.221,
+        "freshness": 0.742,
+        "rank": 0.36,
         "ring": 1
       },
       "created_at": "2025-12-25T10:33:26Z"
@@ -1279,9 +1279,9 @@
         "contributors": 2
       },
       "scores": {
-        "popularity": 0.616,
-        "freshness": 0.47,
-        "rank": 0.577,
+        "popularity": 0.683,
+        "freshness": 0.607,
+        "rank": 0.663,
         "ring": 0
       },
       "created_at": "2026-01-30T19:56:21Z"
@@ -1320,10 +1320,10 @@
         "contributors": 3
       },
       "scores": {
-        "popularity": 0.762,
+        "popularity": 0.806,
         "freshness": 0,
-        "rank": 0.14,
-        "ring": 3
+        "rank": 0.148,
+        "ring": 2
       },
       "created_at": "2024-08-06T16:11:52Z"
     },
@@ -1362,9 +1362,9 @@
         "contributors": 1
       },
       "scores": {
-        "popularity": 0.49,
-        "freshness": 0.479,
-        "rank": 0.486,
+        "popularity": 0.552,
+        "freshness": 0.557,
+        "rank": 0.554,
         "ring": 0
       },
       "created_at": "2026-02-06T01:30:27Z"
@@ -1404,9 +1404,9 @@
         "contributors": 1
       },
       "scores": {
-        "popularity": 0.165,
-        "freshness": 0.424,
-        "rank": 0.234,
+        "popularity": 0.172,
+        "freshness": 0.573,
+        "rank": 0.279,
         "ring": 2
       },
       "created_at": "2026-02-20T14:57:21Z"
@@ -1447,9 +1447,9 @@
         "contributors": 2
       },
       "scores": {
-        "popularity": 0.842,
-        "freshness": 0.543,
-        "rank": 0.725,
+        "popularity": 0.851,
+        "freshness": 0.612,
+        "rank": 0.758,
         "ring": 0
       },
       "created_at": "2023-06-04T19:47:20Z"
@@ -1489,9 +1489,9 @@
         "contributors": 13
       },
       "scores": {
-        "popularity": 0.941,
-        "freshness": 0.511,
-        "rank": 0.774,
+        "popularity": 0.953,
+        "freshness": 0.573,
+        "rank": 0.805,
         "ring": 0
       },
       "created_at": "2024-05-13T15:53:32Z"
@@ -1532,8 +1532,8 @@
       },
       "scores": {
         "popularity": 0,
-        "freshness": 0.409,
-        "rank": 0.109,
+        "freshness": 0.562,
+        "rank": 0.15,
         "ring": 2
       },
       "created_at": "2026-02-12T17:26:44Z"
@@ -1573,9 +1573,9 @@
         "contributors": 1
       },
       "scores": {
-        "popularity": 0.366,
-        "freshness": 0.455,
-        "rank": 0.39,
+        "popularity": 0.413,
+        "freshness": 0.596,
+        "rank": 0.461,
         "ring": 1
       },
       "created_at": "2025-11-18T10:05:35Z"
@@ -1615,9 +1615,9 @@
         "contributors": 4
       },
       "scores": {
-        "popularity": 0.681,
-        "freshness": 0.443,
-        "rank": 0.589,
+        "popularity": 0.744,
+        "freshness": 0.527,
+        "rank": 0.659,
         "ring": 0
       },
       "created_at": "2025-04-08T11:40:42Z"
@@ -1681,9 +1681,9 @@
         "contributors": 3
       },
       "scores": {
-        "popularity": 0.844,
-        "freshness": 0.741,
-        "rank": 0.804,
+        "popularity": 0.867,
+        "freshness": 0.784,
+        "rank": 0.835,
         "ring": 0
       },
       "created_at": "2023-12-14T15:18:01Z"
@@ -1724,8 +1724,8 @@
       },
       "scores": {
         "popularity": 0.15,
-        "freshness": 0.606,
-        "rank": 0.272,
+        "freshness": 0.708,
+        "rank": 0.299,
         "ring": 1
       },
       "created_at": "2026-06-30T07:33:40Z"
@@ -1766,9 +1766,9 @@
         "contributors": 4
       },
       "scores": {
-        "popularity": 0.896,
-        "freshness": 0.957,
-        "rank": 0.92,
+        "popularity": 0.911,
+        "freshness": 0.968,
+        "rank": 0.933,
         "ring": 0
       },
       "created_at": "2023-07-06T21:54:36Z"
@@ -1807,9 +1807,9 @@
         "contributors": 1
       },
       "scores": {
-        "popularity": 0.421,
-        "freshness": 0.833,
-        "rank": 0.531,
+        "popularity": 0.486,
+        "freshness": 0.876,
+        "rank": 0.59,
         "ring": 0
       },
       "created_at": "2026-02-26T13:43:59Z"
@@ -1850,8 +1850,8 @@
       },
       "scores": {
         "popularity": 0.15,
-        "freshness": 0.874,
-        "rank": 0.431,
+        "freshness": 0.89,
+        "rank": 0.438,
         "ring": 1
       },
       "created_at": "2026-09-30T14:40:39Z"
@@ -1892,8 +1892,8 @@
       },
       "scores": {
         "popularity": 0,
-        "freshness": 0.621,
-        "rank": 0.166,
+        "freshness": 0.719,
+        "rank": 0.192,
         "ring": 2
       },
       "created_at": "2026-04-01T14:38:50Z"
@@ -1934,9 +1934,9 @@
         "contributors": 10
       },
       "scores": {
-        "popularity": 0.869,
-        "freshness": 0.501,
-        "rank": 0.726,
+        "popularity": 0.898,
+        "freshness": 0.562,
+        "rank": 0.767,
         "ring": 0
       },
       "created_at": "2023-01-30T08:13:41Z"
@@ -1975,9 +1975,9 @@
         "contributors": 1
       },
       "scores": {
-        "popularity": 0.584,
-        "freshness": 0.636,
-        "rank": 0.598,
+        "popularity": 0.621,
+        "freshness": 0.73,
+        "rank": 0.65,
         "ring": 0
       },
       "created_at": "2024-07-23T15:16:13Z"
@@ -2017,9 +2017,9 @@
         "contributors": 2
       },
       "scores": {
-        "popularity": 0.382,
-        "freshness": 0.576,
-        "rank": 0.433,
+        "popularity": 0.414,
+        "freshness": 0.685,
+        "rank": 0.486,
         "ring": 1
       },
       "created_at": "2025-12-31T02:06:01Z"
@@ -2084,8 +2084,8 @@
       },
       "scores": {
         "popularity": 0,
-        "freshness": 0.394,
-        "rank": 0.105,
+        "freshness": 0.551,
+        "rank": 0.147,
         "ring": 2
       },
       "created_at": "2026-02-12T18:22:48Z"
@@ -2125,9 +2125,9 @@
       },
       "scores": {
         "popularity": 0,
-        "freshness": 0.53,
-        "rank": 0.141,
-        "ring": 3
+        "freshness": 0.652,
+        "rank": 0.174,
+        "ring": 2
       },
       "created_at": "2026-04-17T08:57:39Z"
     },
@@ -2191,9 +2191,9 @@
         "contributors": 2
       },
       "scores": {
-        "popularity": 0.431,
-        "freshness": 0.754,
-        "rank": 0.557,
+        "popularity": 0.463,
+        "freshness": 0.782,
+        "rank": 0.587,
         "ring": 0
       },
       "created_at": "2026-02-17T14:22:58Z"
@@ -2233,9 +2233,9 @@
         "contributors": 4
       },
       "scores": {
-        "popularity": 0.874,
-        "freshness": 0.955,
-        "rank": 0.906,
+        "popularity": 0.895,
+        "freshness": 0.963,
+        "rank": 0.921,
         "ring": 0
       },
       "created_at": "2024-02-18T01:34:16Z"
@@ -2316,7 +2316,7 @@
       "metrics": {
         "stars": 1399,
         "forks": 251,
-        "open_issues": 272,
+        "open_issues": 271,
         "releases": 265,
         "created_at": "2019-02-16T20:58:09Z",
         "last_commit": "2026-10-09T04:19:45Z",
@@ -2326,8 +2326,8 @@
       },
       "scores": {
         "popularity": 1,
-        "freshness": 0.945,
-        "rank": 0.979,
+        "freshness": 0.951,
+        "rank": 0.981,
         "ring": 0
       },
       "created_at": "2019-02-16T20:58:09Z"
@@ -2391,9 +2391,9 @@
         "contributors": 1
       },
       "scores": {
-        "popularity": 0.231,
-        "freshness": 0.697,
-        "rank": 0.356,
+        "popularity": 0.264,
+        "freshness": 0.775,
+        "rank": 0.4,
         "ring": 1
       },
       "created_at": "2025-05-14T22:37:44Z"
@@ -2436,9 +2436,9 @@
         "contributors": 2
       },
       "scores": {
-        "popularity": 0.426,
-        "freshness": 0.727,
-        "rank": 0.506,
+        "popularity": 0.471,
+        "freshness": 0.798,
+        "rank": 0.558,
         "ring": 1
       },
       "created_at": "2025-06-04T19:24:19Z"
@@ -2477,10 +2477,10 @@
         "contributors": 5
       },
       "scores": {
-        "popularity": 0.801,
-        "freshness": 0.485,
-        "rank": 0.108,
-        "ring": 3
+        "popularity": 0.845,
+        "freshness": 0.618,
+        "rank": 0.118,
+        "ring": 2
       },
       "created_at": "2024-11-07T09:46:51Z"
     },
@@ -2519,9 +2519,9 @@
         "contributors": 9
       },
       "scores": {
-        "popularity": 0.843,
-        "freshness": 0.227,
-        "rank": 0.339,
+        "popularity": 0.877,
+        "freshness": 0.348,
+        "rank": 0.368,
         "ring": 1
       },
       "created_at": "2025-05-20T07:55:51Z"
@@ -2584,10 +2584,10 @@
         "contributors": 3
       },
       "scores": {
-        "popularity": 0.726,
-        "freshness": 0.121,
-        "rank": 0.282,
-        "ring": 2
+        "popularity": 0.779,
+        "freshness": 0.247,
+        "rank": 0.319,
+        "ring": 1
       },
       "created_at": "2024-04-05T08:46:07Z"
     },
@@ -2626,9 +2626,9 @@
         "contributors": 51
       },
       "scores": {
-        "popularity": 0.986,
-        "freshness": 0.061,
-        "rank": 0.047,
+        "popularity": 0.989,
+        "freshness": 0.128,
+        "rank": 0.049,
         "ring": 3
       },
       "created_at": "2020-01-13T20:21:19Z"
@@ -2692,9 +2692,9 @@
         "contributors": 4
       },
       "scores": {
-        "popularity": 0.557,
-        "freshness": 0.548,
-        "rank": 0.554,
+        "popularity": 0.613,
+        "freshness": 0.58,
+        "rank": 0.6,
         "ring": 0
       },
       "created_at": "2024-09-03T18:16:14Z"
@@ -2758,9 +2758,9 @@
         "contributors": 1
       },
       "scores": {
-        "popularity": 0.455,
-        "freshness": 0.183,
-        "rank": 0.174,
+        "popularity": 0.517,
+        "freshness": 0.26,
+        "rank": 0.209,
         "ring": 2
       },
       "created_at": "2024-07-15T17:18:51Z"
@@ -2825,9 +2825,9 @@
         "contributors": 7
       },
       "scores": {
-        "popularity": 0.854,
-        "freshness": 0.16,
-        "rank": 0.292,
+        "popularity": 0.885,
+        "freshness": 0.251,
+        "rank": 0.319,
         "ring": 1
       },
       "created_at": "2024-11-14T15:27:20Z"
@@ -2867,9 +2867,9 @@
         "contributors": 39
       },
       "scores": {
-        "popularity": 0.928,
-        "freshness": 0.818,
-        "rank": 0.899,
+        "popularity": 0.945,
+        "freshness": 0.865,
+        "rank": 0.924,
         "ring": 0
       },
       "created_at": "2023-04-15T05:36:53Z"
@@ -2909,9 +2909,9 @@
         "contributors": 3
       },
       "scores": {
-        "popularity": 0.632,
-        "freshness": 0.232,
-        "rank": 0.238,
+        "popularity": 0.692,
+        "freshness": 0.313,
+        "rank": 0.272,
         "ring": 2
       },
       "created_at": "2025-05-30T15:10:06Z"
@@ -3081,8 +3081,8 @@
       },
       "scores": {
         "popularity": 0,
-        "freshness": 0.651,
-        "rank": 0.253,
+        "freshness": 0.619,
+        "rank": 0.241,
         "ring": 1
       },
       "language": "dart",
@@ -3128,10 +3128,10 @@
         "contributors": 4
       },
       "scores": {
-        "popularity": 0.047,
-        "freshness": 0.508,
-        "rank": 0.227,
-        "ring": 1
+        "popularity": 0.045,
+        "freshness": 0.495,
+        "rank": 0.22,
+        "ring": 2
       },
       "language": "go",
       "created_at": "2025-10-03T14:03:55Z"
@@ -3173,7 +3173,7 @@
         "popularity": 0.578,
         "freshness": 0.235,
         "rank": 0.486,
-        "ring": 0
+        "ring": 1
       },
       "created_at": "2025-07-07T15:48:26Z"
     },
@@ -3298,7 +3298,7 @@
         "popularity": 0,
         "freshness": 0.471,
         "rank": 0.125,
-        "ring": 3
+        "ring": 2
       },
       "created_at": "2026-05-19T16:58:36Z"
     },
@@ -3343,8 +3343,8 @@
       },
       "scores": {
         "popularity": 0.973,
-        "freshness": 0.587,
-        "rank": 0.823,
+        "freshness": 0.6,
+        "rank": 0.828,
         "ring": 0
       },
       "language": "python",
@@ -3392,9 +3392,9 @@
         "contributors": 80
       },
       "scores": {
-        "popularity": 0.919,
-        "freshness": 0.571,
-        "rank": 0.784,
+        "popularity": 0.873,
+        "freshness": 0.59,
+        "rank": 0.763,
         "ring": 1
       },
       "language": "rust",
@@ -3437,7 +3437,7 @@
         "popularity": 0,
         "freshness": 0.529,
         "rank": 0.141,
-        "ring": 3
+        "ring": 2
       },
       "created_at": "2026-05-22T14:07:24Z"
     },
@@ -3481,10 +3481,10 @@
         "contributors": 4
       },
       "scores": {
-        "popularity": 0.391,
-        "freshness": 0.476,
-        "rank": 0.424,
-        "ring": 0
+        "popularity": 0.355,
+        "freshness": 0.457,
+        "rank": 0.394,
+        "ring": 1
       },
       "language": "kotlin",
       "created_at": "2025-09-11T18:24:01Z"
@@ -3555,9 +3555,9 @@
         "contributors": 4
       },
       "scores": {
-        "popularity": 0.189,
-        "freshness": 0.111,
-        "rank": 0.159,
+        "popularity": 0.173,
+        "freshness": 0.105,
+        "rank": 0.146,
         "ring": 2
       },
       "language": "python",
@@ -3603,9 +3603,9 @@
         "contributors": 6
       },
       "scores": {
-        "popularity": 0.352,
-        "freshness": 0.683,
-        "rank": 0.48,
+        "popularity": 0.327,
+        "freshness": 0.657,
+        "rank": 0.456,
         "ring": 0
       },
       "language": "swift",
@@ -3814,7 +3814,7 @@
         "popularity": 0.642,
         "freshness": 0.176,
         "rank": 0.518,
-        "ring": 0
+        "ring": 1
       },
       "created_at": "2025-08-25T22:27:38Z"
     },
@@ -3942,9 +3942,9 @@
         "contributors": 6
       },
       "scores": {
-        "popularity": 0.392,
+        "popularity": 0.364,
         "freshness": 0,
-        "rank": 0.12,
+        "rank": 0.111,
         "ring": 4
       },
       "language": "typescript",
@@ -3992,9 +3992,9 @@
         "contributors": 40
       },
       "scores": {
-        "popularity": 0.784,
-        "freshness": 0.746,
-        "rank": 0.769,
+        "popularity": 0.727,
+        "freshness": 0.752,
+        "rank": 0.737,
         "ring": 2
       },
       "language": "typescript",
@@ -4081,9 +4081,9 @@
         "contributors": 15
       },
       "scores": {
-        "popularity": 0.648,
+        "popularity": 0.6,
         "freshness": 0.667,
-        "rank": 0.656,
+        "rank": 0.626,
         "ring": 3
       },
       "language": "typescript",
@@ -4381,7 +4381,7 @@
         "popularity": 0,
         "freshness": 0.467,
         "rank": 0.124,
-        "ring": 3
+        "ring": 2
       },
       "created_at": "2026-07-05T06:26:32Z"
     },
@@ -5093,7 +5093,7 @@
         "popularity": 0,
         "freshness": 0.533,
         "rank": 0.142,
-        "ring": 3
+        "ring": 2
       },
       "created_at": "2026-05-27T21:17:15Z"
     },
@@ -5134,8 +5134,8 @@
       },
       "scores": {
         "popularity": 0.242,
-        "freshness": 0.829,
-        "rank": 0.47,
+        "freshness": 0.859,
+        "rank": 0.482,
         "ring": 1
       },
       "created_at": "2026-03-11T23:21:33Z"
@@ -5175,8 +5175,8 @@
       },
       "scores": {
         "popularity": 0,
-        "freshness": 0.653,
-        "rank": 0.174,
+        "freshness": 0.752,
+        "rank": 0.201,
         "ring": 2
       },
       "created_at": "2026-04-09T12:41:15Z"
@@ -5217,9 +5217,9 @@
       },
       "scores": {
         "popularity": 0.169,
-        "freshness": 0.526,
-        "rank": 0.264,
-        "ring": 2
+        "freshness": 0.656,
+        "rank": 0.299,
+        "ring": 1
       },
       "created_at": "2026-02-25T02:58:03Z"
     },
@@ -5282,9 +5282,9 @@
         "contributors": 1
       },
       "scores": {
-        "popularity": 0.655,
-        "freshness": 0.185,
-        "rank": 0.265,
+        "popularity": 0.667,
+        "freshness": 0.364,
+        "rank": 0.293,
         "ring": 2
       },
       "created_at": "2025-05-29T20:08:51Z"
@@ -5303,7 +5303,6 @@
       "status": "active",
       "aliases": [],
       "tags": [],
-      "primary_parent": "cashubtc/cashu-ts",
       "nuts": [],
       "sources": [
         {
@@ -5325,9 +5324,9 @@
         "contributors": 4
       },
       "scores": {
-        "popularity": 0.837,
-        "freshness": 0.182,
-        "rank": 0.582,
+        "popularity": 0.853,
+        "freshness": 0.332,
+        "rank": 0.65,
         "ring": 0
       },
       "created_at": "2025-05-14T15:08:27Z"
@@ -5367,8 +5366,8 @@
       },
       "scores": {
         "popularity": 0,
-        "freshness": 0.792,
-        "rank": 0.211,
+        "freshness": 0.852,
+        "rank": 0.227,
         "ring": 2
       },
       "created_at": "2026-05-24T09:44:09Z"
@@ -5408,9 +5407,9 @@
         "contributors": 2
       },
       "scores": {
-        "popularity": 0.624,
-        "freshness": 0.613,
-        "rank": 0.621,
+        "popularity": 0.651,
+        "freshness": 0.72,
+        "rank": 0.669,
         "ring": 0
       },
       "created_at": "2026-04-19T23:05:13Z"
@@ -5449,9 +5448,9 @@
         "contributors": 1
       },
       "scores": {
-        "popularity": 0.334,
-        "freshness": 0.699,
-        "rank": 0.432,
+        "popularity": 0.358,
+        "freshness": 0.788,
+        "rank": 0.473,
         "ring": 1
       },
       "created_at": "2026-08-15T21:27:49Z"
@@ -5492,9 +5491,9 @@
         "contributors": 4
       },
       "scores": {
-        "popularity": 0.837,
-        "freshness": 0.182,
-        "rank": 0.582,
+        "popularity": 0.853,
+        "freshness": 0.332,
+        "rank": 0.65,
         "ring": 0
       },
       "created_at": "2025-05-14T15:08:27Z"
@@ -5533,10 +5532,10 @@
         "contributors": 1
       },
       "scores": {
-        "popularity": 0.195,
-        "freshness": 0.486,
-        "rank": 0.273,
-        "ring": 2
+        "popularity": 0.212,
+        "freshness": 0.628,
+        "rank": 0.323,
+        "ring": 1
       },
       "created_at": "2026-02-24T22:37:25Z"
     },
@@ -5576,8 +5575,8 @@
       },
       "scores": {
         "popularity": 0,
-        "freshness": 0.393,
-        "rank": 0.105,
+        "freshness": 0.564,
+        "rank": 0.15,
         "ring": 2
       },
       "created_at": "2026-03-07T15:47:11Z"
@@ -5642,9 +5641,9 @@
         "contributors": 14
       },
       "scores": {
-        "popularity": 0.944,
-        "freshness": 0.631,
-        "rank": 0.822,
+        "popularity": 0.95,
+        "freshness": 0.678,
+        "rank": 0.844,
         "ring": 0
       },
       "created_at": "2025-05-17T11:51:23Z"
@@ -5684,9 +5683,9 @@
       },
       "scores": {
         "popularity": 0,
-        "freshness": 0.595,
-        "rank": 0.159,
-        "ring": 3
+        "freshness": 0.708,
+        "rank": 0.189,
+        "ring": 2
       },
       "created_at": "2026-06-14T19:04:49Z"
     },
@@ -5726,8 +5725,8 @@
       },
       "scores": {
         "popularity": 0.215,
-        "freshness": 0.908,
-        "rank": 0.484,
+        "freshness": 0.927,
+        "rank": 0.492,
         "ring": 1
       },
       "created_at": "2026-03-12T19:32:25Z"
@@ -5767,9 +5766,9 @@
         "contributors": 1
       },
       "scores": {
-        "popularity": 0.316,
+        "popularity": 0.336,
         "freshness": 0.988,
-        "rank": 0.496,
+        "rank": 0.51,
         "ring": 1
       },
       "created_at": "2026-10-02T09:51:51Z"
@@ -5808,9 +5807,9 @@
         "contributors": 3
       },
       "scores": {
-        "popularity": 0.911,
-        "freshness": 0.757,
-        "rank": 0.87,
+        "popularity": 0.919,
+        "freshness": 0.828,
+        "rank": 0.895,
         "ring": 0
       },
       "created_at": "2024-01-13T05:49:21Z"
@@ -5850,9 +5849,9 @@
         "contributors": 1
       },
       "scores": {
-        "popularity": 0.518,
+        "popularity": 0.541,
         "freshness": 0,
-        "rank": 0.095,
+        "rank": 0.099,
         "ring": 2
       },
       "created_at": "2023-12-11T10:47:32Z"
@@ -5916,9 +5915,9 @@
         "contributors": 4
       },
       "scores": {
-        "popularity": 0.944,
-        "freshness": 0.593,
-        "rank": 0.807,
+        "popularity": 0.947,
+        "freshness": 0.672,
+        "rank": 0.84,
         "ring": 0
       },
       "created_at": "2024-07-17T10:39:46Z"
@@ -5958,8 +5957,8 @@
       },
       "scores": {
         "popularity": 0,
-        "freshness": 0.746,
-        "rank": 0.199,
+        "freshness": 0.82,
+        "rank": 0.219,
         "ring": 2
       },
       "created_at": "2026-08-23T16:46:03Z"
@@ -6047,9 +6046,9 @@
         "contributors": 3
       },
       "scores": {
-        "popularity": 0.549,
-        "freshness": 0.139,
-        "rank": 0.22,
+        "popularity": 0.572,
+        "freshness": 0.284,
+        "rank": 0.248,
         "ring": 2
       },
       "created_at": "2025-02-23T15:03:52Z"
@@ -6089,9 +6088,9 @@
         "contributors": 5
       },
       "scores": {
-        "popularity": 0.438,
-        "freshness": 0.773,
-        "rank": 0.568,
+        "popularity": 0.454,
+        "freshness": 0.808,
+        "rank": 0.592,
         "ring": 0
       },
       "created_at": "2026-03-14T20:27:22Z"
@@ -6132,8 +6131,8 @@
       },
       "scores": {
         "popularity": 0,
-        "freshness": 0.445,
-        "rank": 0.119,
+        "freshness": 0.6,
+        "rank": 0.16,
         "ring": 2
       },
       "created_at": "2026-02-28T22:37:00Z"
@@ -6173,9 +6172,9 @@
       },
       "scores": {
         "popularity": 0,
-        "freshness": 0.561,
-        "rank": 0.15,
-        "ring": 3
+        "freshness": 0.684,
+        "rank": 0.182,
+        "ring": 2
       },
       "created_at": "2026-05-21T22:06:22Z"
     },
@@ -6213,10 +6212,10 @@
         "contributors": 1
       },
       "scores": {
-        "popularity": 0.195,
-        "freshness": 0.358,
-        "rank": 0.239,
-        "ring": 2
+        "popularity": 0.212,
+        "freshness": 0.54,
+        "rank": 0.299,
+        "ring": 1
       },
       "created_at": "2026-02-14T13:08:38Z"
     },
@@ -6282,8 +6281,8 @@
       },
       "scores": {
         "popularity": 0,
-        "freshness": 0.399,
-        "rank": 0.106,
+        "freshness": 0.568,
+        "rank": 0.151,
         "ring": 2
       },
       "created_at": "2026-03-07T07:09:23Z"
@@ -6323,9 +6322,9 @@
         "contributors": 1
       },
       "scores": {
-        "popularity": 0.268,
-        "freshness": 0.497,
-        "rank": 0.329,
+        "popularity": 0.297,
+        "freshness": 0.636,
+        "rank": 0.387,
         "ring": 1
       },
       "created_at": "2026-01-26T00:24:38Z"
@@ -6364,10 +6363,10 @@
         "contributors": 2
       },
       "scores": {
-        "popularity": 0.852,
+        "popularity": 0.859,
         "freshness": 0,
-        "rank": 0.156,
-        "ring": 3
+        "rank": 0.157,
+        "ring": 2
       },
       "created_at": "2023-05-29T09:12:45Z"
     },
@@ -6406,8 +6405,8 @@
       },
       "scores": {
         "popularity": 0,
-        "freshness": 0.769,
-        "rank": 0.205,
+        "freshness": 0.836,
+        "rank": 0.223,
         "ring": 2
       },
       "created_at": "2026-03-05T06:07:03Z"
@@ -6448,8 +6447,8 @@
       },
       "scores": {
         "popularity": 0,
-        "freshness": 0.913,
-        "rank": 0.244,
+        "freshness": 0.936,
+        "rank": 0.25,
         "ring": 2
       },
       "created_at": "2026-10-04T18:21:14Z"
@@ -6490,9 +6489,9 @@
         "contributors": 5
       },
       "scores": {
-        "popularity": 0.51,
-        "freshness": 0.923,
-        "rank": 0.671,
+        "popularity": 0.539,
+        "freshness": 0.94,
+        "rank": 0.695,
         "ring": 0
       },
       "created_at": "2026-02-27T17:56:49Z"
@@ -6532,10 +6531,10 @@
         "contributors": 1
       },
       "scores": {
-        "popularity": 0.679,
+        "popularity": 0.688,
         "freshness": 0,
-        "rank": 0.124,
-        "ring": 2
+        "rank": 0.126,
+        "ring": 1
       },
       "created_at": "2023-03-05T03:19:47Z"
     },
@@ -6574,9 +6573,9 @@
         "contributors": 1
       },
       "scores": {
-        "popularity": 0.195,
-        "freshness": 0.535,
-        "rank": 0.328,
+        "popularity": 0.212,
+        "freshness": 0.62,
+        "rank": 0.37,
         "ring": 1
       },
       "created_at": "2026-03-28T13:57:37Z"
@@ -6617,8 +6616,8 @@
       },
       "scores": {
         "popularity": 0,
-        "freshness": 0.237,
-        "rank": 0.063,
+        "freshness": 0.416,
+        "rank": 0.111,
         "ring": 3
       },
       "created_at": "2025-10-29T21:26:51Z"
@@ -6658,9 +6657,9 @@
         "contributors": 2
       },
       "scores": {
-        "popularity": 0.584,
-        "freshness": 0.584,
-        "rank": 0.088,
+        "popularity": 0.616,
+        "freshness": 0.7,
+        "rank": 0.096,
         "ring": 2
       },
       "created_at": "2024-05-20T17:48:22Z"
@@ -6798,9 +6797,9 @@
         "contributors": 3
       },
       "scores": {
-        "popularity": 0.86,
-        "freshness": 0.567,
-        "rank": 0.746,
+        "popularity": 0.871,
+        "freshness": 0.646,
+        "rank": 0.784,
         "ring": 0
       },
       "created_at": "2026-01-29T21:35:11Z"
@@ -6960,9 +6959,9 @@
         "contributors": 3
       },
       "scores": {
-        "popularity": 0.818,
-        "freshness": 0.782,
-        "rank": 0.804,
+        "popularity": 0.834,
+        "freshness": 0.81,
+        "rank": 0.825,
         "ring": 0
       },
       "created_at": "2026-06-02T18:41:43Z"
@@ -7052,9 +7051,9 @@
         "contributors": 1
       },
       "scores": {
-        "popularity": 0.268,
-        "freshness": 0.821,
-        "rank": 0.415,
+        "popularity": 0.297,
+        "freshness": 0.872,
+        "rank": 0.45,
         "ring": 0
       },
       "created_at": "2026-09-05T23:43:26Z"
@@ -7094,10 +7093,10 @@
         "contributors": 1
       },
       "scores": {
-        "popularity": 0.268,
-        "freshness": 0.821,
-        "rank": 0.415,
-        "ring": 1
+        "popularity": 0.297,
+        "freshness": 0.872,
+        "rank": 0.45,
+        "ring": 0
       },
       "created_at": "2026-09-05T23:43:26Z"
     },
@@ -7136,9 +7135,9 @@
         "contributors": 5
       },
       "scores": {
-        "popularity": 0.887,
-        "freshness": 0.361,
-        "rank": 0.683,
+        "popularity": 0.899,
+        "freshness": 0.489,
+        "rank": 0.739,
         "ring": 0
       },
       "created_at": "2026-02-17T23:19:44Z"
@@ -7179,9 +7178,9 @@
         "contributors": 6
       },
       "scores": {
-        "popularity": 0.828,
-        "freshness": 0.243,
-        "rank": 0.601,
+        "popularity": 0.846,
+        "freshness": 0.388,
+        "rank": 0.668,
         "ring": 0
       },
       "created_at": "2025-10-18T22:13:30Z"
@@ -7221,9 +7220,9 @@
         "contributors": 2
       },
       "scores": {
-        "popularity": 0.892,
-        "freshness": 0.59,
-        "rank": 0.811,
+        "popularity": 0.893,
+        "freshness": 0.704,
+        "rank": 0.843,
         "ring": 0
       },
       "created_at": "2026-03-15T15:16:57Z"
@@ -7263,8 +7262,8 @@
       },
       "scores": {
         "popularity": 0.255,
-        "freshness": 0.387,
-        "rank": 0.29,
+        "freshness": 0.56,
+        "rank": 0.336,
         "ring": 1
       },
       "created_at": "2025-12-19T19:55:19Z"
@@ -7304,9 +7303,9 @@
         "contributors": 1
       },
       "scores": {
-        "popularity": 0.195,
-        "freshness": 0.919,
-        "rank": 0.388,
+        "popularity": 0.212,
+        "freshness": 0.94,
+        "rank": 0.406,
         "ring": 0
       },
       "created_at": "2026-09-12T08:16:14Z"
@@ -7345,9 +7344,9 @@
         "contributors": 2
       },
       "scores": {
-        "popularity": 0.665,
-        "freshness": 0.578,
-        "rank": 0.642,
+        "popularity": 0.684,
+        "freshness": 0.696,
+        "rank": 0.687,
         "ring": 0
       },
       "created_at": "2026-01-02T13:41:57Z"
@@ -7388,8 +7387,8 @@
       },
       "scores": {
         "popularity": 0,
-        "freshness": 0.519,
-        "rank": 0.202,
+        "freshness": 0.611,
+        "rank": 0.238,
         "ring": 2
       },
       "created_at": "2026-05-11T00:44:14Z"
@@ -7429,10 +7428,10 @@
         "contributors": 2
       },
       "scores": {
-        "popularity": 0.566,
-        "freshness": 0.312,
-        "rank": 0.498,
-        "ring": 1
+        "popularity": 0.585,
+        "freshness": 0.5,
+        "rank": 0.563,
+        "ring": 0
       },
       "created_at": "2024-06-16T03:54:07Z"
     },
@@ -7471,8 +7470,8 @@
       },
       "scores": {
         "popularity": 0,
-        "freshness": 0.734,
-        "rank": 0.196,
+        "freshness": 0.812,
+        "rank": 0.217,
         "ring": 2
       },
       "created_at": "2026-09-01T17:46:01Z"
@@ -7512,9 +7511,9 @@
         "contributors": 1
       },
       "scores": {
-        "popularity": 0.334,
-        "freshness": 0.179,
-        "rank": 0.146,
+        "popularity": 0.358,
+        "freshness": 0.36,
+        "rank": 0.179,
         "ring": 2
       },
       "created_at": "2025-04-04T20:59:46Z"
@@ -7602,9 +7601,9 @@
         "contributors": 1
       },
       "scores": {
-        "popularity": 0.496,
-        "freshness": 0.329,
-        "rank": 0.452,
+        "popularity": 0.515,
+        "freshness": 0.516,
+        "rank": 0.515,
         "ring": 1
       },
       "created_at": "2025-11-07T18:04:59Z"
@@ -7667,9 +7666,9 @@
         "contributors": 1
       },
       "scores": {
-        "popularity": 0.195,
-        "freshness": 0.855,
-        "rank": 0.371,
+        "popularity": 0.212,
+        "freshness": 0.896,
+        "rank": 0.394,
         "ring": 1
       },
       "created_at": "2026-09-30T12:19:08Z"
@@ -7710,9 +7709,9 @@
         "contributors": 2
       },
       "scores": {
-        "popularity": 0.624,
-        "freshness": 0.771,
-        "rank": 0.681,
+        "popularity": 0.651,
+        "freshness": 0.804,
+        "rank": 0.711,
         "ring": 0
       },
       "created_at": "2026-01-16T14:34:18Z"
@@ -7753,9 +7752,9 @@
         "contributors": 1
       },
       "scores": {
-        "popularity": 0.441,
-        "freshness": 0.28,
-        "rank": 0.379,
+        "popularity": 0.456,
+        "freshness": 0.421,
+        "rank": 0.442,
         "ring": 0
       },
       "created_at": "2026-01-25T11:31:18Z"
@@ -7796,8 +7795,8 @@
       },
       "scores": {
         "popularity": 0.169,
-        "freshness": 0.18,
-        "rank": 0.173,
+        "freshness": 0.321,
+        "rank": 0.228,
         "ring": 2
       },
       "created_at": "2025-10-06T20:58:17Z"
@@ -7837,9 +7836,9 @@
         "contributors": 1
       },
       "scores": {
-        "popularity": 0.268,
-        "freshness": 0.335,
-        "rank": 0.286,
+        "popularity": 0.297,
+        "freshness": 0.52,
+        "rank": 0.356,
         "ring": 0
       },
       "created_at": "2025-11-28T11:17:10Z"
@@ -7879,9 +7878,9 @@
         "contributors": 1
       },
       "scores": {
-        "popularity": 0.619,
-        "freshness": 0.824,
-        "rank": 0.699,
+        "popularity": 0.636,
+        "freshness": 0.859,
+        "rank": 0.723,
         "ring": 0
       },
       "created_at": "2026-01-26T00:16:12Z"
@@ -7922,9 +7921,9 @@
         "contributors": 3
       },
       "scores": {
-        "popularity": 0.696,
-        "freshness": 0.952,
-        "rank": 0.795,
+        "popularity": 0.723,
+        "freshness": 0.962,
+        "rank": 0.816,
         "ring": 0
       },
       "created_at": "2026-03-26T22:04:25Z"
@@ -7963,9 +7962,9 @@
         "contributors": 1
       },
       "scores": {
-        "popularity": 0.195,
-        "freshness": 0.994,
-        "rank": 0.408,
+        "popularity": 0.212,
+        "freshness": 0.992,
+        "rank": 0.42,
         "ring": 1
       },
       "created_at": "2026-08-13T19:15:22Z"
@@ -8004,9 +8003,9 @@
         "contributors": 4
       },
       "scores": {
-        "popularity": 0.354,
-        "freshness": 0.422,
-        "rank": 0.372,
+        "popularity": 0.358,
+        "freshness": 0.584,
+        "rank": 0.418,
         "ring": 1
       },
       "created_at": "2026-02-19T03:08:05Z"
@@ -8046,9 +8045,9 @@
         "contributors": 2
       },
       "scores": {
-        "popularity": 0.558,
-        "freshness": 0.562,
-        "rank": 0.559,
+        "popularity": 0.59,
+        "freshness": 0.65,
+        "rank": 0.613,
         "ring": 0
       },
       "created_at": "2026-04-27T21:27:06Z"
@@ -8089,8 +8088,8 @@
       },
       "scores": {
         "popularity": 0,
-        "freshness": 0.532,
-        "rank": 0.142,
+        "freshness": 0.66,
+        "rank": 0.176,
         "ring": 2
       },
       "created_at": "2026-04-23T22:26:05Z"
@@ -8130,9 +8129,9 @@
         "contributors": 1
       },
       "scores": {
-        "popularity": 0.646,
-        "freshness": 0.266,
-        "rank": 0.545,
+        "popularity": 0.663,
+        "freshness": 0.46,
+        "rank": 0.609,
         "ring": 0
       },
       "created_at": "2023-07-12T15:18:52Z"
@@ -8172,8 +8171,8 @@
       },
       "scores": {
         "popularity": 0.215,
-        "freshness": 0.717,
-        "rank": 0.349,
+        "freshness": 0.8,
+        "rank": 0.371,
         "ring": 1
       },
       "created_at": "2026-03-07T17:48:53Z"
@@ -8213,9 +8212,9 @@
         "contributors": 4
       },
       "scores": {
-        "popularity": 0.853,
-        "freshness": 0.11,
-        "rank": 0.328,
+        "popularity": 0.873,
+        "freshness": 0.176,
+        "rank": 0.343,
         "ring": 1
       },
       "created_at": "2024-06-20T20:12:00Z"
@@ -8256,8 +8255,8 @@
       },
       "scores": {
         "popularity": 0.169,
-        "freshness": 0.835,
-        "rank": 0.428,
+        "freshness": 0.871,
+        "rank": 0.442,
         "ring": 1
       },
       "created_at": "2026-07-19T19:06:20Z"
@@ -8297,8 +8296,8 @@
       },
       "scores": {
         "popularity": 0.169,
-        "freshness": 0.509,
-        "rank": 0.259,
+        "freshness": 0.644,
+        "rank": 0.295,
         "ring": 2
       },
       "created_at": "2026-04-01T21:56:34Z"
@@ -8338,9 +8337,9 @@
         "contributors": 5
       },
       "scores": {
-        "popularity": 0.611,
-        "freshness": 0.912,
-        "rank": 0.728,
+        "popularity": 0.628,
+        "freshness": 0.922,
+        "rank": 0.742,
         "ring": 0
       },
       "created_at": "2026-03-06T02:22:06Z"
@@ -8379,10 +8378,10 @@
         "contributors": 1
       },
       "scores": {
-        "popularity": 0.268,
-        "freshness": 0.191,
-        "rank": 0.124,
-        "ring": 3
+        "popularity": 0.297,
+        "freshness": 0.376,
+        "rank": 0.159,
+        "ring": 2
       },
       "created_at": "2025-08-09T14:14:08Z"
     },
@@ -8421,9 +8420,9 @@
         "contributors": 1
       },
       "scores": {
-        "popularity": 0.268,
-        "freshness": 0.541,
-        "rank": 0.374,
+        "popularity": 0.297,
+        "freshness": 0.631,
+        "rank": 0.427,
         "ring": 1
       },
       "created_at": "2025-11-01T13:33:21Z"
@@ -8463,9 +8462,9 @@
         "contributors": 1
       },
       "scores": {
-        "popularity": 0.438,
-        "freshness": 0.37,
-        "rank": 0.42,
+        "popularity": 0.454,
+        "freshness": 0.548,
+        "rank": 0.479,
         "ring": 1
       },
       "created_at": "2025-11-27T18:33:47Z"
@@ -8506,8 +8505,8 @@
       },
       "scores": {
         "popularity": 0,
-        "freshness": 0.694,
-        "rank": 0.185,
+        "freshness": 0.78,
+        "rank": 0.208,
         "ring": 2
       },
       "created_at": "2026-07-15T23:40:15Z"
@@ -8547,8 +8546,8 @@
       },
       "scores": {
         "popularity": 0.169,
-        "freshness": 0.63,
-        "rank": 0.292,
+        "freshness": 0.736,
+        "rank": 0.32,
         "ring": 1
       },
       "created_at": "2026-07-07T21:26:11Z"
@@ -8587,9 +8586,9 @@
         "contributors": 1
       },
       "scores": {
-        "popularity": 0.195,
-        "freshness": 0.775,
-        "rank": 0.35,
+        "popularity": 0.212,
+        "freshness": 0.84,
+        "rank": 0.379,
         "ring": 1
       },
       "created_at": "2026-09-01T08:05:55Z"
@@ -8630,9 +8629,9 @@
       },
       "scores": {
         "popularity": 0.215,
-        "freshness": 0.98,
-        "rank": 0.512,
-        "ring": 0
+        "freshness": 0.984,
+        "rank": 0.514,
+        "ring": 1
       },
       "created_at": "2025-11-04T23:12:59Z"
     },
@@ -8671,9 +8670,9 @@
         "contributors": 1
       },
       "scores": {
-        "popularity": 0.268,
-        "freshness": 0.688,
-        "rank": 0.38,
+        "popularity": 0.297,
+        "freshness": 0.776,
+        "rank": 0.425,
         "ring": 1
       },
       "created_at": "2026-06-19T15:14:14Z"
@@ -8713,9 +8712,9 @@
       },
       "scores": {
         "popularity": 0,
-        "freshness": 0.474,
-        "rank": 0.126,
-        "ring": 3
+        "freshness": 0.62,
+        "rank": 0.165,
+        "ring": 2
       },
       "created_at": "2026-03-30T11:43:42Z"
     },
@@ -8754,9 +8753,9 @@
       },
       "scores": {
         "popularity": 0,
-        "freshness": 0.503,
-        "rank": 0.134,
-        "ring": 3
+        "freshness": 0.64,
+        "rank": 0.171,
+        "ring": 2
       },
       "created_at": "2026-03-30T12:04:39Z"
     },
@@ -8795,8 +8794,8 @@
       },
       "scores": {
         "popularity": 0,
-        "freshness": 0.942,
-        "rank": 0.251,
+        "freshness": 0.956,
+        "rank": 0.255,
         "ring": 2
       },
       "created_at": "2026-09-30T09:54:21Z"
@@ -8836,9 +8835,9 @@
       },
       "scores": {
         "popularity": 0.265,
-        "freshness": 0.121,
-        "rank": 0.113,
-        "ring": 3
+        "freshness": 0.224,
+        "rank": 0.127,
+        "ring": 2
       },
       "created_at": "2025-08-17T08:59:06Z"
     },
@@ -8876,9 +8875,9 @@
         "contributors": 2
       },
       "scores": {
-        "popularity": 0.624,
-        "freshness": 0.665,
-        "rank": 0.635,
+        "popularity": 0.651,
+        "freshness": 0.76,
+        "rank": 0.68,
         "ring": 0
       },
       "created_at": "2025-10-25T01:06:07Z"
@@ -8917,9 +8916,9 @@
         "contributors": 2
       },
       "scores": {
-        "popularity": 0.584,
-        "freshness": 0.52,
-        "rank": 0.567,
+        "popularity": 0.616,
+        "freshness": 0.652,
+        "rank": 0.626,
         "ring": 0
       },
       "created_at": "2026-01-06T15:36:52Z"
@@ -8959,9 +8958,9 @@
         "contributors": 1
       },
       "scores": {
-        "popularity": 0.334,
-        "freshness": 0.438,
-        "rank": 0.375,
+        "popularity": 0.358,
+        "freshness": 0.54,
+        "rank": 0.429,
         "ring": 1
       },
       "created_at": "2026-02-20T17:51:45Z"
@@ -9000,10 +8999,10 @@
         "contributors": 3
       },
       "scores": {
-        "popularity": 0.483,
-        "freshness": 0.41,
-        "rank": 0.463,
-        "ring": 1
+        "popularity": 0.511,
+        "freshness": 0.576,
+        "rank": 0.529,
+        "ring": 0
       },
       "created_at": "2023-11-19T16:15:49Z"
     },
@@ -9041,9 +9040,9 @@
         "contributors": 1
       },
       "scores": {
-        "popularity": 0.334,
-        "freshness": 0.514,
-        "rank": 0.382,
+        "popularity": 0.358,
+        "freshness": 0.648,
+        "rank": 0.435,
         "ring": 1
       },
       "created_at": "2025-03-09T13:51:22Z"
@@ -9107,9 +9106,9 @@
       },
       "scores": {
         "popularity": 0,
-        "freshness": 0.434,
-        "rank": 0.116,
-        "ring": 3
+        "freshness": 0.592,
+        "rank": 0.158,
+        "ring": 2
       },
       "created_at": "2026-03-16T17:53:31Z"
     },
@@ -9148,9 +9147,9 @@
         "contributors": 1
       },
       "scores": {
-        "popularity": 0.481,
-        "freshness": 0.462,
-        "rank": 0.476,
+        "popularity": 0.508,
+        "freshness": 0.612,
+        "rank": 0.536,
         "ring": 0
       },
       "created_at": "2025-10-25T14:59:46Z"
@@ -9189,9 +9188,9 @@
         "contributors": 1
       },
       "scores": {
-        "popularity": 0.375,
-        "freshness": 0.647,
-        "rank": 0.448,
+        "popularity": 0.391,
+        "freshness": 0.748,
+        "rank": 0.486,
         "ring": 1
       },
       "created_at": "2026-07-24T15:42:57Z"
@@ -9254,9 +9253,9 @@
         "contributors": 2
       },
       "scores": {
-        "popularity": 0.665,
-        "freshness": 0.295,
-        "rank": 0.566,
+        "popularity": 0.684,
+        "freshness": 0.484,
+        "rank": 0.63,
         "ring": 0
       },
       "created_at": "2025-11-26T18:47:34Z"
@@ -9295,9 +9294,9 @@
         "contributors": 1
       },
       "scores": {
-        "popularity": 0.195,
+        "popularity": 0.212,
         "freshness": 0,
-        "rank": 0.036,
+        "rank": 0.039,
         "ring": 3
       },
       "created_at": "2023-12-17T03:47:40Z"
@@ -9337,9 +9336,9 @@
       },
       "scores": {
         "popularity": 0,
-        "freshness": 0.439,
-        "rank": 0.117,
-        "ring": 3
+        "freshness": 0.596,
+        "rank": 0.159,
+        "ring": 2
       },
       "created_at": "2026-03-20T09:01:07Z"
     },
@@ -9377,9 +9376,9 @@
         "contributors": 2
       },
       "scores": {
-        "popularity": 0.437,
-        "freshness": 0.249,
-        "rank": 0.387,
+        "popularity": 0.465,
+        "freshness": 0.436,
+        "rank": 0.458,
         "ring": 1
       },
       "created_at": "2025-11-10T15:44:46Z"
@@ -9420,8 +9419,8 @@
       },
       "scores": {
         "popularity": 0,
-        "freshness": 0.254,
-        "rank": 0.068,
+        "freshness": 0.448,
+        "rank": 0.119,
         "ring": 3
       },
       "created_at": "2025-11-19T06:41:38Z"
@@ -9461,8 +9460,8 @@
       },
       "scores": {
         "popularity": 0,
-        "freshness": 0.711,
-        "rank": 0.19,
+        "freshness": 0.796,
+        "rank": 0.212,
         "ring": 2
       },
       "created_at": "2026-06-21T05:30:50Z"
@@ -9502,9 +9501,9 @@
         "contributors": 59
       },
       "scores": {
-        "popularity": 0.668,
-        "freshness": 0.451,
-        "rank": 0.61,
+        "popularity": 0.687,
+        "freshness": 0.604,
+        "rank": 0.665,
         "ring": 0
       },
       "created_at": "2026-03-12T11:14:21Z"
@@ -9544,9 +9543,9 @@
         "contributors": 1
       },
       "scores": {
-        "popularity": 0.397,
-        "freshness": 0.809,
-        "rank": 0.507,
+        "popularity": 0.417,
+        "freshness": 0.864,
+        "rank": 0.536,
         "ring": 1
       },
       "created_at": "2026-07-22T23:19:12Z"
@@ -9586,8 +9585,8 @@
       },
       "scores": {
         "popularity": 0,
-        "freshness": 0.751,
-        "rank": 0.2,
+        "freshness": 0.824,
+        "rank": 0.22,
         "ring": 2
       },
       "created_at": "2026-08-23T16:37:25Z"
@@ -9626,9 +9625,9 @@
         "contributors": 53
       },
       "scores": {
-        "popularity": 0.981,
-        "freshness": 1,
-        "rank": 0.986,
+        "popularity": 0.984,
+        "freshness": 0.996,
+        "rank": 0.987,
         "ring": 0
       },
       "created_at": "2024-11-01T19:53:27Z"
@@ -9667,9 +9666,9 @@
         "contributors": 1
       },
       "scores": {
-        "popularity": 0.268,
-        "freshness": 0.549,
-        "rank": 0.343,
+        "popularity": 0.297,
+        "freshness": 0.672,
+        "rank": 0.397,
         "ring": 1
       },
       "created_at": "2026-05-08T06:21:39Z"
@@ -9709,8 +9708,8 @@
       },
       "scores": {
         "popularity": 0.727,
-        "freshness": 0.15,
-        "rank": 0.287,
+        "freshness": 0.3,
+        "rank": 0.307,
         "ring": 1
       },
       "created_at": "2025-01-26T13:15:44Z"
@@ -9751,9 +9750,9 @@
       },
       "scores": {
         "popularity": 0.169,
-        "freshness": 0.341,
-        "rank": 0.215,
-        "ring": 2
+        "freshness": 0.524,
+        "rank": 0.263,
+        "ring": 1
       },
       "created_at": "2025-09-13T04:00:46Z"
     },
@@ -9793,9 +9792,9 @@
         "contributors": 1
       },
       "scores": {
-        "popularity": 0.195,
-        "freshness": 0.399,
-        "rank": 0.275,
+        "popularity": 0.212,
+        "freshness": 0.518,
+        "rank": 0.331,
         "ring": 1
       },
       "created_at": "2025-12-16T14:00:53Z"
@@ -9858,9 +9857,9 @@
         "contributors": 1
       },
       "scores": {
-        "popularity": 0.268,
-        "freshness": 0.74,
-        "rank": 0.394,
+        "popularity": 0.297,
+        "freshness": 0.816,
+        "rank": 0.435,
         "ring": 1
       },
       "created_at": "2026-09-02T16:05:33Z"
@@ -9923,9 +9922,9 @@
         "contributors": 1
       },
       "scores": {
-        "popularity": 0.633,
-        "freshness": 0.162,
-        "rank": 0.254,
+        "popularity": 0.652,
+        "freshness": 0.328,
+        "rank": 0.283,
         "ring": 2
       },
       "created_at": "2025-06-05T15:46:48Z"
@@ -9988,9 +9987,9 @@
         "contributors": 1
       },
       "scores": {
-        "popularity": 0.268,
-        "freshness": 0.364,
-        "rank": 0.294,
+        "popularity": 0.297,
+        "freshness": 0.544,
+        "rank": 0.363,
         "ring": 1
       },
       "created_at": "2026-02-19T18:46:01Z"
@@ -10029,9 +10028,9 @@
         "contributors": 2
       },
       "scores": {
-        "popularity": 0.364,
-        "freshness": 0.96,
-        "rank": 0.523,
+        "popularity": 0.38,
+        "freshness": 0.968,
+        "rank": 0.537,
         "ring": 0
       },
       "created_at": "2026-04-01T14:41:23Z"
@@ -10071,9 +10070,9 @@
         "contributors": 1
       },
       "scores": {
-        "popularity": 0.432,
-        "freshness": 0.202,
-        "rank": 0.185,
+        "popularity": 0.449,
+        "freshness": 0.384,
+        "rank": 0.216,
         "ring": 2
       },
       "created_at": "2025-04-16T16:22:24Z"
@@ -10114,9 +10113,9 @@
         "contributors": 5
       },
       "scores": {
-        "popularity": 0.925,
-        "freshness": 0.867,
-        "rank": 0.902,
+        "popularity": 0.935,
+        "freshness": 0.895,
+        "rank": 0.92,
         "ring": 0
       },
       "created_at": "2025-02-01T06:32:08Z"
@@ -10156,8 +10155,8 @@
       },
       "scores": {
         "popularity": 0,
-        "freshness": 0.601,
-        "rank": 0.16,
+        "freshness": 0.712,
+        "rank": 0.19,
         "ring": 2
       },
       "created_at": "2026-06-16T21:58:23Z"
@@ -10197,8 +10196,8 @@
       },
       "scores": {
         "popularity": 0.273,
-        "freshness": 0.925,
-        "rank": 0.447,
+        "freshness": 0.944,
+        "rank": 0.452,
         "ring": 1
       },
       "created_at": "2026-10-03T11:02:00Z"
@@ -10239,9 +10238,9 @@
         "contributors": 3
       },
       "scores": {
-        "popularity": 0.681,
-        "freshness": 0.711,
-        "rank": 0.693,
+        "popularity": 0.697,
+        "freshness": 0.77,
+        "rank": 0.725,
         "ring": 0
       },
       "created_at": "2025-10-29T22:59:35Z"
@@ -10304,9 +10303,9 @@
         "contributors": 1
       },
       "scores": {
-        "popularity": 0.518,
-        "freshness": 0.289,
-        "rank": 0.457,
+        "popularity": 0.541,
+        "freshness": 0.48,
+        "rank": 0.525,
         "ring": 1
       },
       "created_at": "2025-11-21T14:23:24Z"
@@ -10347,9 +10346,9 @@
         "contributors": 14
       },
       "scores": {
-        "popularity": 0.975,
-        "freshness": 0.868,
-        "rank": 0.934,
+        "popularity": 0.98,
+        "freshness": 0.881,
+        "rank": 0.942,
         "ring": 0
       },
       "created_at": "2025-07-08T21:29:59Z"
@@ -10389,8 +10388,8 @@
       },
       "scores": {
         "popularity": 0.261,
-        "freshness": 0.416,
-        "rank": 0.302,
+        "freshness": 0.58,
+        "rank": 0.346,
         "ring": 1
       },
       "created_at": "2026-03-13T08:26:59Z"
@@ -10431,8 +10430,8 @@
       },
       "scores": {
         "popularity": 0.169,
-        "freshness": 0.954,
-        "rank": 0.378,
+        "freshness": 0.964,
+        "rank": 0.381,
         "ring": 1
       },
       "created_at": "2026-10-02T10:58:04Z"
@@ -10472,9 +10471,9 @@
         "contributors": 2
       },
       "scores": {
-        "popularity": 0.863,
-        "freshness": 0.798,
-        "rank": 0.127,
+        "popularity": 0.87,
+        "freshness": 0.856,
+        "rank": 0.13,
         "ring": 1
       },
       "created_at": "2024-01-06T21:12:42Z"
@@ -10515,9 +10514,9 @@
         "contributors": 2
       },
       "scores": {
-        "popularity": 0.558,
-        "freshness": 0.689,
-        "rank": 0.609,
+        "popularity": 0.59,
+        "freshness": 0.753,
+        "rank": 0.653,
         "ring": 0
       },
       "created_at": "2026-03-18T14:35:50Z"
@@ -10557,8 +10556,8 @@
       },
       "scores": {
         "popularity": 0,
-        "freshness": 0.786,
-        "rank": 0.21,
+        "freshness": 0.848,
+        "rank": 0.226,
         "ring": 2
       },
       "created_at": "2026-08-09T01:00:56Z"
@@ -10598,10 +10597,10 @@
         "contributors": 1
       },
       "scores": {
-        "popularity": 0.613,
-        "freshness": 0.214,
-        "rank": 0.506,
-        "ring": 1
+        "popularity": 0.63,
+        "freshness": 0.4,
+        "rank": 0.569,
+        "ring": 0
       },
       "created_at": "2025-09-10T15:48:46Z"
     },
@@ -10639,9 +10638,9 @@
         "contributors": 3
       },
       "scores": {
-        "popularity": 0.733,
-        "freshness": 0.607,
-        "rank": 0.699,
+        "popularity": 0.756,
+        "freshness": 0.716,
+        "rank": 0.745,
         "ring": 0
       },
       "created_at": "2025-10-05T12:15:45Z"
@@ -10680,9 +10679,9 @@
         "contributors": 1
       },
       "scores": {
-        "popularity": 0.397,
-        "freshness": 0.347,
-        "rank": 0.384,
+        "popularity": 0.417,
+        "freshness": 0.532,
+        "rank": 0.447,
         "ring": 1
       },
       "created_at": "2026-01-29T12:03:34Z"
@@ -10721,9 +10720,9 @@
         "contributors": 1
       },
       "scores": {
-        "popularity": 0.195,
-        "freshness": 0.676,
-        "rank": 0.324,
+        "popularity": 0.212,
+        "freshness": 0.768,
+        "rank": 0.36,
         "ring": 1
       },
       "created_at": "2026-08-13T22:16:01Z"
@@ -10763,8 +10762,8 @@
       },
       "scores": {
         "popularity": 0.169,
-        "freshness": 0.468,
-        "rank": 0.249,
+        "freshness": 0.616,
+        "rank": 0.288,
         "ring": 2
       },
       "created_at": "2025-03-28T21:42:37Z"
@@ -10830,8 +10829,8 @@
       },
       "scores": {
         "popularity": 0.169,
-        "freshness": 0.477,
-        "rank": 0.289,
+        "freshness": 0.575,
+        "rank": 0.327,
         "ring": 1
       },
       "created_at": "2025-11-22T03:12:47Z"
@@ -10871,9 +10870,9 @@
         "contributors": 2
       },
       "scores": {
-        "popularity": 0.855,
-        "freshness": 0.405,
-        "rank": 0.735,
+        "popularity": 0.861,
+        "freshness": 0.572,
+        "rank": 0.784,
         "ring": 0
       },
       "created_at": "2025-04-07T05:59:56Z"
@@ -10913,9 +10912,9 @@
         "contributors": 4
       },
       "scores": {
-        "popularity": 0.938,
-        "freshness": 0.804,
-        "rank": 0.886,
+        "popularity": 0.945,
+        "freshness": 0.84,
+        "rank": 0.904,
         "ring": 0
       },
       "created_at": "2024-10-18T14:25:55Z"
@@ -10955,9 +10954,9 @@
         "contributors": 2
       },
       "scores": {
-        "popularity": 0.76,
-        "freshness": 0.879,
-        "rank": 0.792,
+        "popularity": 0.781,
+        "freshness": 0.912,
+        "rank": 0.816,
         "ring": 0
       },
       "created_at": "2026-09-07T20:25:24Z"
@@ -10997,8 +10996,8 @@
       },
       "scores": {
         "popularity": 0,
-        "freshness": 0.803,
-        "rank": 0.214,
+        "freshness": 0.86,
+        "rank": 0.229,
         "ring": 2
       },
       "created_at": "2026-03-24T00:01:56Z"
@@ -11038,9 +11037,9 @@
         "contributors": 1
       },
       "scores": {
-        "popularity": 0.518,
-        "freshness": 0.884,
-        "rank": 0.616,
+        "popularity": 0.541,
+        "freshness": 0.916,
+        "rank": 0.641,
         "ring": 0
       },
       "created_at": "2024-12-14T21:07:25Z"
@@ -11081,8 +11080,8 @@
       },
       "scores": {
         "popularity": 0,
-        "freshness": 0.636,
-        "rank": 0.17,
+        "freshness": 0.74,
+        "rank": 0.197,
         "ring": 2
       },
       "created_at": "2026-07-13T17:17:51Z"
@@ -11146,9 +11145,9 @@
         "contributors": 1
       },
       "scores": {
-        "popularity": 0.451,
-        "freshness": 0.241,
-        "rank": 0.369,
+        "popularity": 0.467,
+        "freshness": 0.387,
+        "rank": 0.436,
         "ring": 1
       },
       "created_at": "2025-10-01T16:19:13Z"
@@ -11189,10 +11188,10 @@
         "contributors": 3
       },
       "scores": {
-        "popularity": 0.59,
-        "freshness": 0.388,
-        "rank": 0.511,
-        "ring": 1
+        "popularity": 0.605,
+        "freshness": 0.5,
+        "rank": 0.564,
+        "ring": 0
       },
       "created_at": "2025-03-29T11:22:29Z"
     },
@@ -11232,8 +11231,8 @@
       },
       "scores": {
         "popularity": 0,
-        "freshness": 0.832,
-        "rank": 0.222,
+        "freshness": 0.88,
+        "rank": 0.235,
         "ring": 2
       },
       "created_at": "2026-09-28T21:44:13Z"
@@ -11320,9 +11319,9 @@
         "contributors": 5
       },
       "scores": {
-        "popularity": 0.617,
-        "freshness": 0.983,
-        "rank": 0.715,
+        "popularity": 0.633,
+        "freshness": 0.984,
+        "rank": 0.726,
         "ring": 0
       },
       "created_at": "2026-01-17T22:14:21Z"
@@ -11362,10 +11361,10 @@
         "contributors": 3
       },
       "scores": {
-        "popularity": 0.825,
-        "freshness": 0.112,
-        "rank": 0.274,
-        "ring": 2
+        "popularity": 0.843,
+        "freshness": 0.249,
+        "rank": 0.306,
+        "ring": 1
       },
       "created_at": "2025-03-25T13:55:16Z"
     },
@@ -11403,9 +11402,9 @@
         "contributors": 1
       },
       "scores": {
-        "popularity": 0.268,
-        "freshness": 0.763,
-        "rank": 0.4,
+        "popularity": 0.297,
+        "freshness": 0.832,
+        "rank": 0.439,
         "ring": 1
       },
       "created_at": "2026-03-25T18:27:54Z"
@@ -11445,9 +11444,9 @@
         "contributors": 1
       },
       "scores": {
-        "popularity": 0.603,
-        "freshness": 0.145,
-        "rank": 0.24,
+        "popularity": 0.62,
+        "freshness": 0.296,
+        "rank": 0.267,
         "ring": 2
       },
       "created_at": "2025-03-24T22:00:06Z"
@@ -11510,9 +11509,9 @@
         "contributors": 1
       },
       "scores": {
-        "popularity": 0.334,
-        "freshness": 0.22,
-        "rank": 0.304,
+        "popularity": 0.358,
+        "freshness": 0.404,
+        "rank": 0.37,
         "ring": 1
       },
       "created_at": "2023-04-06T15:17:03Z"
@@ -11553,8 +11552,8 @@
       },
       "scores": {
         "popularity": 0.272,
-        "freshness": 0.457,
-        "rank": 0.321,
+        "freshness": 0.608,
+        "rank": 0.361,
         "ring": 1
       },
       "created_at": "2025-10-30T14:39:44Z"
@@ -11593,9 +11592,9 @@
         "contributors": 6
       },
       "scores": {
-        "popularity": 0.569,
-        "freshness": 0.948,
-        "rank": 0.67,
+        "popularity": 0.589,
+        "freshness": 0.96,
+        "rank": 0.688,
         "ring": 0
       },
       "created_at": "2025-11-17T00:08:19Z"
@@ -11634,9 +11633,9 @@
         "contributors": 1
       },
       "scores": {
-        "popularity": 0.316,
-        "freshness": 0.353,
-        "rank": 0.326,
+        "popularity": 0.336,
+        "freshness": 0.536,
+        "rank": 0.389,
         "ring": 1
       },
       "created_at": "2026-02-14T12:18:52Z"
@@ -11675,9 +11674,9 @@
         "contributors": 1
       },
       "scores": {
-        "popularity": 0.195,
-        "freshness": 0.26,
-        "rank": 0.213,
+        "popularity": 0.212,
+        "freshness": 0.452,
+        "rank": 0.276,
         "ring": 2
       },
       "created_at": "2025-11-30T22:45:22Z"
@@ -11718,8 +11717,8 @@
       },
       "scores": {
         "popularity": 0.169,
-        "freshness": 0.618,
-        "rank": 0.289,
+        "freshness": 0.724,
+        "rank": 0.317,
         "ring": 1
       },
       "created_at": "2026-06-14T12:44:25Z"
@@ -11758,9 +11757,9 @@
         "contributors": 3
       },
       "scores": {
-        "popularity": 0.761,
-        "freshness": 0.133,
-        "rank": 0.045,
+        "popularity": 0.78,
+        "freshness": 0.26,
+        "rank": 0.048,
         "ring": 3
       },
       "created_at": "2025-01-21T01:49:31Z"
@@ -11801,8 +11800,8 @@
       },
       "scores": {
         "popularity": 0.169,
-        "freshness": 0.861,
-        "rank": 0.353,
+        "freshness": 0.9,
+        "rank": 0.364,
         "ring": 1
       },
       "created_at": "2026-06-09T20:17:34Z"
@@ -11842,9 +11841,9 @@
         "contributors": 1
       },
       "scores": {
-        "popularity": 0.195,
-        "freshness": 0.78,
-        "rank": 0.351,
+        "popularity": 0.212,
+        "freshness": 0.844,
+        "rank": 0.38,
         "ring": 1
       },
       "created_at": "2026-09-12T21:24:48Z"
@@ -11910,9 +11909,9 @@
       },
       "scores": {
         "popularity": 0,
-        "freshness": 0.48,
-        "rank": 0.128,
-        "ring": 3
+        "freshness": 0.624,
+        "rank": 0.166,
+        "ring": 2
       },
       "created_at": "2026-03-30T11:46:59Z"
     },
@@ -11951,9 +11950,9 @@
         "contributors": 9
       },
       "scores": {
-        "popularity": 0.675,
-        "freshness": 0.225,
-        "rank": 0.555,
+        "popularity": 0.707,
+        "freshness": 0.408,
+        "rank": 0.627,
         "ring": 0
       },
       "created_at": "2025-10-01T09:21:20Z"
@@ -11983,13 +11982,22 @@
         }
       ],
       "metrics": {
+        "stars": 0,
+        "forks": 0,
+        "open_issues": 0,
+        "releases": 0,
+        "created_at": "2026-01-30T00:56:07Z",
+        "last_commit": "2026-01-30T00:56:03Z",
+        "archived": false,
         "contributors": 1
       },
       "scores": {
         "popularity": 0,
-        "rank": 0,
-        "ring": 3
-      }
+        "freshness": 0.528,
+        "rank": 0.141,
+        "ring": 2
+      },
+      "created_at": "2026-01-30T00:56:07Z"
     },
     {
       "id": "wrapnuts/wrapnuts",
@@ -12015,13 +12023,23 @@
         }
       ],
       "metrics": {
+        "stars": 4,
+        "forks": 0,
+        "open_issues": 0,
+        "releases": 2,
+        "created_at": "2024-08-16T20:14:02Z",
+        "last_commit": "2024-12-12T16:13:29Z",
+        "last_release": "2024-09-08T10:15:40Z",
+        "archived": false,
         "contributors": 1
       },
       "scores": {
-        "popularity": 0,
-        "rank": 0,
-        "ring": 3
-      }
+        "popularity": 0.391,
+        "freshness": 0.13,
+        "rank": 0.145,
+        "ring": 2
+      },
+      "created_at": "2024-08-16T20:14:02Z"
     },
     {
       "id": "schrotti77/zapout-mvp",
@@ -12048,13 +12066,22 @@
         }
       ],
       "metrics": {
+        "stars": 0,
+        "forks": 0,
+        "open_issues": 0,
+        "releases": 0,
+        "created_at": "2026-03-18T13:44:37Z",
+        "last_commit": "2026-05-20T06:17:00Z",
+        "archived": false,
         "contributors": 3
       },
       "scores": {
-        "popularity": 0.787,
-        "rank": 0.787,
-        "ring": 0
-      }
+        "popularity": 0.215,
+        "freshness": 0.68,
+        "rank": 0.339,
+        "ring": 1
+      },
+      "created_at": "2026-03-18T13:44:37Z"
     },
     {
       "id": "amperstrand/micronuts",
@@ -12080,13 +12107,22 @@
         }
       ],
       "metrics": {
+        "stars": 3,
+        "forks": 0,
+        "open_issues": 13,
+        "releases": 0,
+        "created_at": "2026-03-15T10:32:06Z",
+        "last_commit": "2026-10-09T06:21:48Z",
+        "archived": false,
         "contributors": 12
       },
       "scores": {
-        "popularity": 0.96,
-        "rank": 0.96,
+        "popularity": 0.62,
+        "freshness": 1,
+        "rank": 0.721,
         "ring": 0
-      }
+      },
+      "created_at": "2026-03-15T10:32:06Z"
     },
     {
       "id": "kazluu/alchemint",
@@ -12112,13 +12148,22 @@
         }
       ],
       "metrics": {
+        "stars": 0,
+        "forks": 0,
+        "open_issues": 0,
+        "releases": 0,
+        "created_at": "2024-12-16T13:30:02Z",
+        "last_commit": "2024-11-26T21:49:53Z",
+        "archived": false,
         "contributors": 1
       },
       "scores": {
         "popularity": 0,
-        "rank": 0,
+        "freshness": 0.344,
+        "rank": 0.014,
         "ring": 4
-      }
+      },
+      "created_at": "2024-12-16T13:30:02Z"
     },
     {
       "id": "0xg4tt0/be-your-own-mint",
@@ -12144,13 +12189,22 @@
         }
       ],
       "metrics": {
+        "stars": 0,
+        "forks": 0,
+        "open_issues": 0,
+        "releases": 0,
+        "created_at": "2024-06-21T14:11:54Z",
+        "last_commit": "2024-06-21T14:34:32Z",
+        "archived": false,
         "contributors": 1
       },
       "scores": {
         "popularity": 0,
+        "freshness": 0,
         "rank": 0,
         "ring": 4
-      }
+      },
+      "created_at": "2024-06-21T14:11:54Z"
     },
     {
       "id": "thesimplekid/cashu-lsp",
@@ -12177,13 +12231,22 @@
         }
       ],
       "metrics": {
+        "stars": 0,
+        "forks": 0,
+        "open_issues": 0,
+        "releases": 0,
+        "created_at": "2025-03-13T17:54:19Z",
+        "last_commit": "2025-03-31T22:38:24Z",
+        "archived": false,
         "contributors": 1
       },
       "scores": {
         "popularity": 0,
-        "rank": 0,
-        "ring": 3
-      }
+        "freshness": 0.469,
+        "rank": 0.019,
+        "ring": 4
+      },
+      "created_at": "2025-03-13T17:54:19Z"
     },
     {
       "id": "michilis/cashu-mint-page",
@@ -12209,13 +12272,23 @@
         }
       ],
       "metrics": {
+        "stars": 3,
+        "forks": 0,
+        "open_issues": 0,
+        "releases": 1,
+        "created_at": "2025-05-31T17:51:28Z",
+        "last_commit": "2025-08-31T16:53:44Z",
+        "last_release": "2025-05-31T20:58:40Z",
+        "archived": false,
         "contributors": 2
       },
       "scores": {
-        "popularity": 0.75,
-        "rank": 0.225,
-        "ring": 2
-      }
+        "popularity": 0.511,
+        "freshness": 0.464,
+        "rank": 0.074,
+        "ring": 3
+      },
+      "created_at": "2025-05-31T17:51:28Z"
     },
     {
       "id": "thesimplekid/cashu-rs-mint",
@@ -12242,13 +12315,22 @@
         }
       ],
       "metrics": {
+        "stars": 16,
+        "forks": 1,
+        "open_issues": 1,
+        "releases": 0,
+        "created_at": "2023-06-18T02:34:39Z",
+        "last_commit": "2024-10-20T10:04:02Z",
+        "archived": true,
         "contributors": 1
       },
       "scores": {
-        "popularity": 0,
-        "rank": 0,
+        "popularity": 0.597,
+        "freshness": 0.281,
+        "rank": 0.038,
         "ring": 3
-      }
+      },
+      "created_at": "2023-06-18T02:34:39Z"
     },
     {
       "id": "lescuer97/cashu-signer",
@@ -12274,13 +12356,22 @@
         }
       ],
       "metrics": {
+        "stars": 0,
+        "forks": 0,
+        "open_issues": 0,
+        "releases": 0,
+        "created_at": "2024-06-20T08:21:26Z",
+        "last_commit": "2024-06-20T08:21:26Z",
+        "archived": false,
         "contributors": 1
       },
       "scores": {
         "popularity": 0,
+        "freshness": 0,
         "rank": 0,
         "ring": 4
-      }
+      },
+      "created_at": "2024-06-20T08:21:26Z"
     },
     {
       "id": "gandlafbtc/cashu-ts-mint",
@@ -12307,13 +12398,22 @@
         }
       ],
       "metrics": {
+        "stars": 0,
+        "forks": 0,
+        "open_issues": 0,
+        "releases": 0,
+        "created_at": "2024-12-17T07:50:07Z",
+        "last_commit": "2024-12-17T07:50:31Z",
+        "archived": false,
         "contributors": 1
       },
       "scores": {
         "popularity": 0,
-        "rank": 0,
+        "freshness": 0.406,
+        "rank": 0.016,
         "ring": 0
-      }
+      },
+      "created_at": "2024-12-17T07:50:07Z"
     },
     {
       "id": "abdelstark/gakimint",
@@ -12326,7 +12426,7 @@
       "url": "https://github.com/AbdelStark/gakimint",
       "description": "is a Cashu mint written in Elixir.",
       "category": "Currently Unmaintained Projects / Mints",
-      "status": "unmaintained",
+      "status": "archived",
       "aliases": [],
       "tags": [],
       "nuts": [],
@@ -12339,13 +12439,22 @@
         }
       ],
       "metrics": {
+        "stars": 17,
+        "forks": 7,
+        "open_issues": 7,
+        "releases": 0,
+        "created_at": "2024-09-18T11:19:26Z",
+        "last_commit": "2024-11-12T18:05:11Z",
+        "archived": true,
         "contributors": 7
       },
       "scores": {
-        "popularity": 0.906,
-        "rank": 0.272,
-        "ring": 2
-      }
+        "popularity": 0.912,
+        "freshness": 0.313,
+        "rank": 0.056,
+        "ring": 3
+      },
+      "created_at": "2024-09-18T11:19:26Z"
     },
     {
       "id": "keep-starknet-strange/cashubrew-website",
@@ -12371,13 +12480,22 @@
         }
       ],
       "metrics": {
+        "stars": 0,
+        "forks": 0,
+        "open_issues": 0,
+        "releases": 0,
+        "created_at": "2024-09-27T06:31:05Z",
+        "last_commit": "2024-09-27T06:57:51Z",
+        "archived": false,
         "contributors": 1
       },
       "scores": {
         "popularity": 0,
+        "freshness": 0,
         "rank": 0,
         "ring": 4
-      }
+      },
+      "created_at": "2024-09-27T06:31:05Z"
     },
     {
       "id": "sovereign-app/chamberlain",
@@ -12416,7 +12534,7 @@
       "url": "https://github.com/elnosh/gonuts",
       "description": "is a Cashu wallet and mint written in Go.",
       "category": "Currently Unmaintained Projects / Mints",
-      "status": "unmaintained",
+      "status": "archived",
       "aliases": [],
       "tags": [],
       "nuts": [],
@@ -12429,13 +12547,23 @@
         }
       ],
       "metrics": {
+        "stars": 39,
+        "forks": 16,
+        "open_issues": 11,
+        "releases": 6,
+        "created_at": "2023-10-10T23:34:44Z",
+        "last_commit": "2025-08-13T07:05:58Z",
+        "last_release": "2025-08-16T17:08:56Z",
+        "archived": true,
         "contributors": 5
       },
       "scores": {
-        "popularity": 0.888,
-        "rank": 0.266,
-        "ring": 2
-      }
+        "popularity": 0.947,
+        "freshness": 0.264,
+        "rank": 0.051,
+        "ring": 3
+      },
+      "created_at": "2023-10-10T23:34:44Z"
     },
     {
       "id": "benthecarman/ldk-node-cashu-mint",
@@ -12461,13 +12589,22 @@
         }
       ],
       "metrics": {
+        "stars": 3,
+        "forks": 1,
+        "open_issues": 0,
+        "releases": 0,
+        "created_at": "2024-03-13T12:11:20Z",
+        "last_commit": "2024-03-14T23:27:07Z",
+        "archived": false,
         "contributors": 3
       },
       "scores": {
-        "popularity": 0.813,
-        "rank": 0.244,
-        "ring": 2
-      }
+        "popularity": 0.648,
+        "freshness": 0,
+        "rank": 0.036,
+        "ring": 3
+      },
+      "created_at": "2024-03-13T12:11:20Z"
     },
     {
       "id": "cashubtc/lnbits-cashu",
@@ -12480,7 +12617,7 @@
       "url": "https://github.com/cashubtc/lnbits-cashu",
       "description": "is a Cashu mint extension for LNbits based on Nutshell (archived).",
       "category": "Currently Unmaintained Projects / Mints",
-      "status": "unmaintained",
+      "status": "archived",
       "aliases": [],
       "tags": [],
       "nuts": [],
@@ -12493,13 +12630,23 @@
         }
       ],
       "metrics": {
+        "stars": 4,
+        "forks": 1,
+        "open_issues": 2,
+        "releases": 1,
+        "created_at": "2024-03-18T13:16:55Z",
+        "last_commit": "2024-05-30T17:40:08Z",
+        "last_release": "2024-03-26T16:52:57Z",
+        "archived": true,
         "contributors": 1
       },
       "scores": {
-        "popularity": 0,
-        "rank": 0,
+        "popularity": 0.477,
+        "freshness": 0.107,
+        "rank": 0.012,
         "ring": 4
-      }
+      },
+      "created_at": "2024-03-18T13:16:55Z"
     },
     {
       "id": "lnbits/cashu",
@@ -12512,7 +12659,7 @@
       "url": "https://github.com/lnbits/cashu",
       "description": "is an LNbits Cashu integration (archived).",
       "category": "Currently Unmaintained Projects / Mints",
-      "status": "unmaintained",
+      "status": "archived",
       "aliases": [],
       "tags": [],
       "nuts": [],
@@ -12525,13 +12672,23 @@
         }
       ],
       "metrics": {
+        "stars": 8,
+        "forks": 3,
+        "open_issues": 0,
+        "releases": 14,
+        "created_at": "2023-02-11T09:56:33Z",
+        "last_commit": "2024-04-09T13:47:56Z",
+        "last_release": "2024-02-15T13:03:28Z",
+        "archived": true,
         "contributors": 8
       },
       "scores": {
-        "popularity": 0.938,
-        "rank": 0.281,
-        "ring": 2
-      }
+        "popularity": 0.841,
+        "freshness": 0,
+        "rank": 0.019,
+        "ring": 4
+      },
+      "created_at": "2023-02-11T09:56:33Z"
     },
     {
       "id": "gandlafbtc/mint",
@@ -12557,13 +12714,22 @@
         }
       ],
       "metrics": {
+        "stars": 7,
+        "forks": 1,
+        "open_issues": 0,
+        "releases": 0,
+        "created_at": "2024-12-28T13:07:56Z",
+        "last_commit": "2025-01-27T08:36:09Z",
+        "archived": false,
         "contributors": 1
       },
       "scores": {
-        "popularity": 0,
-        "rank": 0,
-        "ring": 4
-      }
+        "popularity": 0.528,
+        "freshness": 0.438,
+        "rank": 0.076,
+        "ring": 3
+      },
+      "created_at": "2024-12-28T13:07:56Z"
     },
     {
       "id": "jurraca/mint-anywhere",
@@ -12589,13 +12755,22 @@
         }
       ],
       "metrics": {
+        "stars": 0,
+        "forks": 0,
+        "open_issues": 0,
+        "releases": 0,
+        "created_at": "2025-10-03T10:39:33Z",
+        "last_commit": "2025-10-03T12:00:51Z",
+        "archived": false,
         "contributors": 1
       },
       "scores": {
         "popularity": 0,
-        "rank": 0,
+        "freshness": 0.563,
+        "rank": 0.023,
         "ring": 4
-      }
+      },
+      "created_at": "2025-10-03T10:39:33Z"
     },
     {
       "id": "ngutech21/moksha",
@@ -12608,7 +12783,7 @@
       "url": "https://github.com/ngutech21/moksha",
       "description": "is a Cashu wallet and mint written in Rust.",
       "category": "Currently Unmaintained Projects / Mints",
-      "status": "unmaintained",
+      "status": "archived",
       "aliases": [],
       "tags": [],
       "nuts": [],
@@ -12621,13 +12796,23 @@
         }
       ],
       "metrics": {
+        "stars": 76,
+        "forks": 23,
+        "open_issues": 10,
+        "releases": 3,
+        "created_at": "2023-04-13T10:44:01Z",
+        "last_commit": "2024-12-14T06:52:22Z",
+        "last_release": "2024-02-22T09:57:14Z",
+        "archived": true,
         "contributors": 11
       },
       "scores": {
         "popularity": 0.969,
-        "rank": 0.291,
-        "ring": 1
-      }
+        "freshness": 0.268,
+        "rank": 0.052,
+        "ring": 3
+      },
+      "created_at": "2023-04-13T10:44:01Z"
     },
     {
       "id": "tlindi/mynode-nutshell",
@@ -12653,13 +12838,22 @@
         }
       ],
       "metrics": {
+        "stars": 2,
+        "forks": 0,
+        "open_issues": 0,
+        "releases": 0,
+        "created_at": "2025-04-19T18:20:22Z",
+        "last_commit": "2025-04-19T17:36:43Z",
+        "archived": false,
         "contributors": 1
       },
       "scores": {
-        "popularity": 0,
-        "rank": 0,
-        "ring": 4
-      }
+        "popularity": 0.273,
+        "freshness": 0.5,
+        "rank": 0.05,
+        "ring": 3
+      },
+      "created_at": "2025-04-19T18:20:22Z"
     },
     {
       "id": "massmux/nutshell-docker",
@@ -12685,13 +12879,22 @@
         }
       ],
       "metrics": {
+        "stars": 4,
+        "forks": 0,
+        "open_issues": 0,
+        "releases": 0,
+        "created_at": "2023-11-01T14:10:52Z",
+        "last_commit": "2024-02-17T06:23:56Z",
+        "archived": false,
         "contributors": 1
       },
       "scores": {
-        "popularity": 0,
-        "rank": 0,
+        "popularity": 0.358,
+        "freshness": 0,
+        "rank": 0.02,
         "ring": 4
-      }
+      },
+      "created_at": "2023-11-01T14:10:52Z"
     },
     {
       "id": "callebtc/nutshell-lnurl",
@@ -12731,7 +12934,7 @@
         "popularity": 0,
         "freshness": 0,
         "rank": 0,
-        "ring": 2
+        "ring": 3
       },
       "created_at": "2023-11-30T17:09:14Z"
     },
@@ -12760,13 +12963,23 @@
         }
       ],
       "metrics": {
+        "stars": 12,
+        "forks": 0,
+        "open_issues": 1,
+        "releases": 10,
+        "created_at": "2025-06-30T03:23:11Z",
+        "last_commit": "2025-11-14T10:15:09Z",
+        "last_release": "2025-09-28T03:38:11Z",
+        "archived": false,
         "contributors": 1
       },
       "scores": {
-        "popularity": 0,
-        "rank": 0,
-        "ring": 3
-      }
+        "popularity": 0.46,
+        "freshness": 0.554,
+        "rank": 0.149,
+        "ring": 2
+      },
+      "created_at": "2025-06-30T03:23:11Z"
     },
     {
       "id": "sparrowtek/swift-cashu-mint",
@@ -12803,8 +13016,8 @@
       },
       "scores": {
         "popularity": 0,
-        "freshness": 0.154,
-        "rank": 0.012,
+        "freshness": 0.656,
+        "rank": 0.053,
         "ring": 3
       },
       "created_at": "2025-08-08T21:23:11Z"
@@ -12833,13 +13046,22 @@
         }
       ],
       "metrics": {
+        "stars": 0,
+        "forks": 0,
+        "open_issues": 0,
+        "releases": 0,
+        "created_at": "2024-07-05T20:11:53Z",
+        "last_commit": "2024-07-15T11:02:34Z",
+        "archived": false,
         "contributors": 1
       },
       "scores": {
         "popularity": 0,
+        "freshness": 0,
         "rank": 0,
         "ring": 4
-      }
+      },
+      "created_at": "2024-07-05T20:11:53Z"
     },
     {
       "id": "abdelstark/zashu",
@@ -12876,9 +13098,9 @@
         "contributors": 1
       },
       "scores": {
-        "popularity": 0.503,
-        "freshness": 0.077,
-        "rank": 0.117,
+        "popularity": 0.426,
+        "freshness": 0.625,
+        "rank": 0.144,
         "ring": 2
       },
       "created_at": "2025-12-04T09:41:03Z"
@@ -12918,9 +13140,9 @@
         "contributors": 2
       },
       "scores": {
-        "popularity": 0.558,
-        "freshness": 0.167,
-        "rank": 0.068,
+        "popularity": 0.63,
+        "freshness": 0.303,
+        "rank": 0.081,
         "ring": 3
       },
       "created_at": "2025-05-20T07:52:42Z"
@@ -12959,9 +13181,9 @@
         "contributors": 1
       },
       "scores": {
-        "popularity": 0.504,
+        "popularity": 0.554,
         "freshness": 0,
-        "rank": 0.028,
+        "rank": 0.03,
         "ring": 3
       },
       "created_at": "2023-05-17T17:03:11Z"
@@ -13001,9 +13223,9 @@
         "contributors": 1
       },
       "scores": {
-        "popularity": 0.275,
-        "freshness": 0.258,
-        "rank": 0.041,
+        "popularity": 0.321,
+        "freshness": 0.371,
+        "rank": 0.05,
         "ring": 3
       },
       "created_at": "2025-04-15T06:50:45Z"
@@ -13043,9 +13265,9 @@
         "contributors": 2
       },
       "scores": {
-        "popularity": 0.382,
+        "popularity": 0.414,
         "freshness": 0,
-        "rank": 0.021,
+        "rank": 0.023,
         "ring": 3
       },
       "created_at": "2024-08-25T18:30:28Z"
@@ -13074,13 +13296,22 @@
         }
       ],
       "metrics": {
+        "stars": 2,
+        "forks": 0,
+        "open_issues": 0,
+        "releases": 0,
+        "created_at": "2025-10-17T19:59:23Z",
+        "last_commit": "2025-10-21T18:14:51Z",
+        "archived": false,
         "contributors": 1
       },
       "scores": {
-        "popularity": 0,
-        "rank": 0,
-        "ring": 4
-      }
+        "popularity": 0.221,
+        "freshness": 0.449,
+        "rank": 0.084,
+        "ring": 3
+      },
+      "created_at": "2025-10-17T19:59:23Z"
     },
     {
       "id": "motorina0/cashu-js-wallet",
@@ -13106,13 +13337,22 @@
         }
       ],
       "metrics": {
+        "stars": 7,
+        "forks": 2,
+        "open_issues": 0,
+        "releases": 0,
+        "created_at": "2022-09-15T13:16:11Z",
+        "last_commit": "2022-10-04T10:34:44Z",
+        "archived": false,
         "contributors": 2
       },
       "scores": {
-        "popularity": 0.551,
-        "rank": 0.165,
-        "ring": 2
-      }
+        "popularity": 0.618,
+        "freshness": 0,
+        "rank": 0.034,
+        "ring": 3
+      },
+      "created_at": "2022-09-15T13:16:11Z"
     },
     {
       "id": "tdelabro/cashu-mcp-wallet",
@@ -13148,9 +13388,9 @@
         "contributors": 2
       },
       "scores": {
-        "popularity": 0.236,
-        "freshness": 0.303,
-        "rank": 0.038,
+        "popularity": 0.25,
+        "freshness": 0.416,
+        "rank": 0.044,
         "ring": 3
       },
       "created_at": "2025-08-29T22:39:31Z"
@@ -13191,8 +13431,8 @@
       },
       "scores": {
         "popularity": 0.15,
-        "freshness": 0.333,
-        "rank": 0.06,
+        "freshness": 0.483,
+        "rank": 0.072,
         "ring": 3
       },
       "created_at": "2025-12-20T00:06:51Z"
@@ -13222,13 +13462,22 @@
         }
       ],
       "metrics": {
+        "stars": 6,
+        "forks": 2,
+        "open_issues": 0,
+        "releases": 0,
+        "created_at": "2022-10-18T16:32:19Z",
+        "last_commit": "2024-01-02T20:34:11Z",
+        "archived": false,
         "contributors": 2
       },
       "scores": {
-        "popularity": 0.551,
-        "rank": 0.165,
-        "ring": 1
-      }
+        "popularity": 0.612,
+        "freshness": 0,
+        "rank": 0.034,
+        "ring": 3
+      },
+      "created_at": "2022-10-18T16:32:19Z"
     },
     {
       "id": "pleb-devs/cashu-wallet",
@@ -13255,13 +13504,22 @@
         }
       ],
       "metrics": {
+        "stars": 0,
+        "forks": 0,
+        "open_issues": 0,
+        "releases": 0,
+        "created_at": "2024-05-25T23:40:45Z",
+        "last_commit": "2024-05-28T21:05:51Z",
+        "archived": false,
         "contributors": 1
       },
       "scores": {
         "popularity": 0,
+        "freshness": 0,
         "rank": 0,
-        "ring": 3
-      }
+        "ring": 4
+      },
+      "created_at": "2024-05-25T23:40:45Z"
     },
     {
       "id": "thewildhustle/cashu-wallet",
@@ -13288,13 +13546,22 @@
         }
       ],
       "metrics": {
+        "stars": 1,
+        "forks": 0,
+        "open_issues": 0,
+        "releases": 0,
+        "created_at": "2024-07-10T02:33:44Z",
+        "last_commit": "2024-07-10T02:28:48Z",
+        "archived": false,
         "contributors": 1
       },
       "scores": {
-        "popularity": 0,
-        "rank": 0,
-        "ring": 3
-      }
+        "popularity": 0.172,
+        "freshness": 0,
+        "rank": 0.009,
+        "ring": 4
+      },
+      "created_at": "2024-07-10T02:33:44Z"
     },
     {
       "id": "cashuprojects/cashu-wallet-browser-extension",
@@ -13321,13 +13588,22 @@
         }
       ],
       "metrics": {
+        "stars": 1,
+        "forks": 0,
+        "open_issues": 0,
+        "releases": 0,
+        "created_at": "2024-01-04T10:02:11Z",
+        "last_commit": "2024-01-06T19:14:49Z",
+        "archived": false,
         "contributors": 1
       },
       "scores": {
-        "popularity": 0,
-        "rank": 0,
-        "ring": 3
-      }
+        "popularity": 0.172,
+        "freshness": 0,
+        "rank": 0.009,
+        "ring": 4
+      },
+      "created_at": "2024-01-04T10:02:11Z"
     },
     {
       "id": "callebtc/cashu-wallet-cli-tools",
@@ -13354,13 +13630,22 @@
         }
       ],
       "metrics": {
+        "stars": 3,
+        "forks": 0,
+        "open_issues": 0,
+        "releases": 0,
+        "created_at": "2025-02-18T22:36:05Z",
+        "last_commit": "2025-02-18T22:38:21Z",
+        "archived": false,
         "contributors": 1
       },
       "scores": {
-        "popularity": 0,
-        "rank": 0,
-        "ring": 3
-      }
+        "popularity": 0.264,
+        "freshness": 0.258,
+        "rank": 0.039,
+        "ring": 2
+      },
+      "created_at": "2025-02-18T22:36:05Z"
     },
     {
       "id": "superphatarrow/cashu-wallet-pwa",
@@ -13386,13 +13671,22 @@
         }
       ],
       "metrics": {
+        "stars": 0,
+        "forks": 0,
+        "open_issues": 0,
+        "releases": 0,
+        "created_at": "2023-03-04T13:07:08Z",
+        "last_commit": "2023-03-04T13:48:17Z",
+        "archived": false,
         "contributors": 1
       },
       "scores": {
         "popularity": 0,
+        "freshness": 0,
         "rank": 0,
         "ring": 4
-      }
+      },
+      "created_at": "2023-03-04T13:07:08Z"
     },
     {
       "id": "keychat-io/cashu-wallet-rs",
@@ -13418,13 +13712,22 @@
         }
       ],
       "metrics": {
+        "stars": 2,
+        "forks": 0,
+        "open_issues": 0,
+        "releases": 0,
+        "created_at": "2024-06-25T03:51:55Z",
+        "last_commit": "2025-12-10T09:27:53Z",
+        "archived": false,
         "contributors": 3
       },
       "scores": {
-        "popularity": 0.753,
-        "rank": 0.226,
+        "popularity": 0.426,
+        "freshness": 0.494,
+        "rank": 0.133,
         "ring": 2
-      }
+      },
+      "created_at": "2024-06-25T03:51:55Z"
     },
     {
       "id": "supertestnet/cashu-workshop",
@@ -13450,13 +13753,22 @@
         }
       ],
       "metrics": {
+        "stars": 8,
+        "forks": 2,
+        "open_issues": 0,
+        "releases": 0,
+        "created_at": "2024-02-07T05:17:36Z",
+        "last_commit": "2024-08-13T18:17:09Z",
+        "archived": false,
         "contributors": 1
       },
       "scores": {
-        "popularity": 0,
-        "rank": 0,
+        "popularity": 0.486,
+        "freshness": 0,
+        "rank": 0.027,
         "ring": 4
-      }
+      },
+      "created_at": "2024-02-07T05:17:36Z"
     },
     {
       "id": "edilmedeiros/cashu-workshop",
@@ -13482,13 +13794,22 @@
         }
       ],
       "metrics": {
+        "stars": 7,
+        "forks": 0,
+        "open_issues": 0,
+        "releases": 0,
+        "created_at": "2025-09-12T12:40:27Z",
+        "last_commit": "2025-10-11T22:20:28Z",
+        "archived": false,
         "contributors": 1
       },
       "scores": {
-        "popularity": 0,
-        "rank": 0,
-        "ring": 4
-      }
+        "popularity": 0.349,
+        "freshness": 0.438,
+        "rank": 0.112,
+        "ring": 2
+      },
+      "created_at": "2025-09-12T12:40:27Z"
     },
     {
       "id": "hvmelo/cashu_app",
@@ -13514,13 +13835,22 @@
         }
       ],
       "metrics": {
+        "stars": 4,
+        "forks": 2,
+        "open_issues": 0,
+        "releases": 0,
+        "created_at": "2025-03-05T20:43:43Z",
+        "last_commit": "2025-03-17T15:03:28Z",
+        "archived": false,
         "contributors": 1
       },
       "scores": {
-        "popularity": 0,
-        "rank": 0,
-        "ring": 4
-      }
+        "popularity": 0.431,
+        "freshness": 0.27,
+        "rank": 0.058,
+        "ring": 3
+      },
+      "created_at": "2025-03-05T20:43:43Z"
     },
     {
       "id": "marc26z/cashucardwallet",
@@ -13546,13 +13876,22 @@
         }
       ],
       "metrics": {
+        "stars": 0,
+        "forks": 0,
+        "open_issues": 0,
+        "releases": 0,
+        "created_at": "2025-08-09T19:35:54Z",
+        "last_commit": "2025-08-09T23:29:00Z",
+        "archived": false,
         "contributors": 1
       },
       "scores": {
         "popularity": 0,
-        "rank": 0,
+        "freshness": 0.404,
+        "rank": 0.016,
         "ring": 4
-      }
+      },
+      "created_at": "2025-08-09T19:35:54Z"
     },
     {
       "id": "gudnessuche/cashuwallet",
@@ -13579,13 +13918,22 @@
         }
       ],
       "metrics": {
+        "stars": 0,
+        "forks": 0,
+        "open_issues": 0,
+        "releases": 0,
+        "created_at": "2024-05-17T09:47:58Z",
+        "last_commit": "2024-12-01T20:42:39Z",
+        "archived": false,
         "contributors": 2
       },
       "scores": {
-        "popularity": 0.551,
-        "rank": 0.165,
-        "ring": 2
-      }
+        "popularity": 0.15,
+        "freshness": 0.236,
+        "rank": 0.026,
+        "ring": 3
+      },
+      "created_at": "2024-05-17T09:47:58Z"
     },
     {
       "id": "pdcolandrea/cashuwallet",
@@ -13612,13 +13960,22 @@
         }
       ],
       "metrics": {
+        "stars": 1,
+        "forks": 0,
+        "open_issues": 0,
+        "releases": 0,
+        "created_at": "2023-05-18T17:35:21Z",
+        "last_commit": "2023-05-18T18:04:48Z",
+        "archived": false,
         "contributors": 1
       },
       "scores": {
-        "popularity": 0,
-        "rank": 0,
-        "ring": 3
-      }
+        "popularity": 0.172,
+        "freshness": 0,
+        "rank": 0.009,
+        "ring": 4
+      },
+      "created_at": "2023-05-18T17:35:21Z"
     },
     {
       "id": "thesimplekid/crabstash",
@@ -13631,7 +13988,7 @@
       "url": "https://github.com/thesimplekid/crabstash",
       "description": "is a Cashu mobile wallet written in Dart (archived).",
       "category": "Currently Unmaintained Projects / Wallets",
-      "status": "unmaintained",
+      "status": "archived",
       "aliases": [],
       "tags": [],
       "nuts": [],
@@ -13644,13 +14001,23 @@
         }
       ],
       "metrics": {
+        "stars": 4,
+        "forks": 0,
+        "open_issues": 0,
+        "releases": 1,
+        "created_at": "2023-05-13T21:35:32Z",
+        "last_commit": "2023-05-17T17:15:49Z",
+        "last_release": "2023-05-14T15:31:16Z",
+        "archived": true,
         "contributors": 1
       },
       "scores": {
-        "popularity": 0,
-        "rank": 0,
+        "popularity": 0.313,
+        "freshness": 0,
+        "rank": 0.007,
         "ring": 4
-      }
+      },
+      "created_at": "2023-05-13T21:35:32Z"
     },
     {
       "id": "thesimplekid/iced-cashu",
@@ -13677,13 +14044,22 @@
         }
       ],
       "metrics": {
+        "stars": 3,
+        "forks": 0,
+        "open_issues": 0,
+        "releases": 0,
+        "created_at": "2024-06-18T12:56:07Z",
+        "last_commit": "2024-06-18T12:55:47Z",
+        "archived": false,
         "contributors": 1
       },
       "scores": {
-        "popularity": 0,
-        "rank": 0,
-        "ring": 3
-      }
+        "popularity": 0.264,
+        "freshness": 0,
+        "rank": 0.014,
+        "ring": 4
+      },
+      "created_at": "2024-06-18T12:56:07Z"
     },
     {
       "id": "dayvvo/kernel",
@@ -13750,13 +14126,22 @@
         }
       ],
       "metrics": {
+        "stars": 0,
+        "forks": 0,
+        "open_issues": 0,
+        "releases": 0,
+        "created_at": "2023-08-18T06:14:37Z",
+        "last_commit": "2023-08-18T06:13:14Z",
+        "archived": false,
         "contributors": 1
       },
       "scores": {
         "popularity": 0,
+        "freshness": 0,
         "rank": 0,
         "ring": 4
-      }
+      },
+      "created_at": "2023-08-18T06:14:37Z"
     },
     {
       "id": "satsandsports/mdk_group_chat_with_cashu_wallet_integration",
@@ -13783,13 +14168,22 @@
         }
       ],
       "metrics": {
+        "stars": 1,
+        "forks": 0,
+        "open_issues": 0,
+        "releases": 0,
+        "created_at": "2025-10-03T11:30:07Z",
+        "last_commit": "2025-10-06T21:06:18Z",
+        "archived": false,
         "contributors": 2
       },
       "scores": {
-        "popularity": 0.551,
-        "rank": 0.165,
+        "popularity": 0.322,
+        "freshness": 0.427,
+        "rank": 0.052,
         "ring": 2
-      }
+      },
+      "created_at": "2025-10-03T11:30:07Z"
     },
     {
       "id": "miladsoft/my-cashu-app",
@@ -13826,9 +14220,9 @@
         "contributors": 1
       },
       "scores": {
-        "popularity": 0.165,
-        "freshness": 0.152,
-        "rank": 0.024,
+        "popularity": 0.172,
+        "freshness": 0.292,
+        "rank": 0.031,
         "ring": 3
       },
       "created_at": "2025-05-18T09:15:24Z"
@@ -13869,8 +14263,8 @@
       },
       "scores": {
         "popularity": 0,
-        "freshness": 0.212,
-        "rank": 0.008,
+        "freshness": 0.337,
+        "rank": 0.013,
         "ring": 3
       },
       "created_at": "2024-12-13T13:14:21Z"
@@ -13910,9 +14304,9 @@
         "contributors": 1
       },
       "scores": {
-        "popularity": 0.298,
-        "freshness": 0.187,
-        "rank": 0.038,
+        "popularity": 0.337,
+        "freshness": 0.275,
+        "rank": 0.047,
         "ring": 3
       },
       "created_at": "2025-05-14T19:52:13Z"
@@ -13952,9 +14346,9 @@
       },
       "scores": {
         "popularity": 0,
-        "freshness": 0.091,
-        "rank": 0.004,
-        "ring": 3
+        "freshness": 0.213,
+        "rank": 0.009,
+        "ring": 4
       },
       "created_at": "2024-10-16T10:21:26Z"
     },
@@ -13994,9 +14388,9 @@
       },
       "scores": {
         "popularity": 0,
-        "freshness": 0.136,
-        "rank": 0.005,
-        "ring": 3
+        "freshness": 0.281,
+        "rank": 0.011,
+        "ring": 4
       },
       "created_at": "2025-04-30T20:45:17Z"
     },
@@ -14036,8 +14430,8 @@
       },
       "scores": {
         "popularity": 0,
-        "freshness": 0.318,
-        "rank": 0.025,
+        "freshness": 0.472,
+        "rank": 0.038,
         "ring": 3
       },
       "created_at": "2025-11-27T16:06:17Z"
@@ -14077,9 +14471,9 @@
         "contributors": 1
       },
       "scores": {
-        "popularity": 0.19,
-        "freshness": 0.273,
-        "rank": 0.032,
+        "popularity": 0.221,
+        "freshness": 0.382,
+        "rank": 0.04,
         "ring": 3
       },
       "created_at": "2025-08-02T00:34:41Z"
@@ -14108,13 +14502,22 @@
         }
       ],
       "metrics": {
+        "stars": 0,
+        "forks": 1,
+        "open_issues": 1,
+        "releases": 0,
+        "created_at": "2024-09-13T13:34:54Z",
+        "last_commit": "2024-09-25T11:39:12Z",
+        "archived": false,
         "contributors": 3
       },
       "scores": {
-        "popularity": 0.753,
-        "rank": 0.226,
-        "ring": 2
-      }
+        "popularity": 0.305,
+        "freshness": 0,
+        "rank": 0.017,
+        "ring": 4
+      },
+      "created_at": "2024-09-13T13:34:54Z"
     },
     {
       "id": "thewildhustle/sat-blaster",
@@ -14140,13 +14543,22 @@
         }
       ],
       "metrics": {
+        "stars": 0,
+        "forks": 0,
+        "open_issues": 0,
+        "releases": 0,
+        "created_at": "2024-07-04T23:01:10Z",
+        "last_commit": "2024-08-30T03:53:36Z",
+        "archived": false,
         "contributors": 1
       },
       "scores": {
         "popularity": 0,
+        "freshness": 0,
         "rank": 0,
         "ring": 4
-      }
+      },
+      "created_at": "2024-07-04T23:01:10Z"
     },
     {
       "id": "crywolf/toy-cashu",
@@ -14172,13 +14584,22 @@
         }
       ],
       "metrics": {
+        "stars": 0,
+        "forks": 0,
+        "open_issues": 0,
+        "releases": 0,
+        "created_at": "2025-10-31T20:56:33Z",
+        "last_commit": "2025-11-27T15:59:40Z",
+        "archived": false,
         "contributors": 1
       },
       "scores": {
         "popularity": 0,
-        "rank": 0,
-        "ring": 4
-      }
+        "freshness": 0.461,
+        "rank": 0.037,
+        "ring": 3
+      },
+      "created_at": "2025-10-31T20:56:33Z"
     },
     {
       "id": "umkm-ecash/umkm-btc",
@@ -14204,13 +14625,22 @@
         }
       ],
       "metrics": {
+        "stars": 1,
+        "forks": 0,
+        "open_issues": 0,
+        "releases": 0,
+        "created_at": "2025-10-12T11:16:20Z",
+        "last_commit": "2025-12-23T14:13:09Z",
+        "archived": false,
         "contributors": 1
       },
       "scores": {
-        "popularity": 0,
-        "rank": 0,
-        "ring": 4
-      }
+        "popularity": 0.172,
+        "freshness": 0.506,
+        "rank": 0.078,
+        "ring": 3
+      },
+      "created_at": "2025-10-12T11:16:20Z"
     },
     {
       "id": "cashuprojects/wallet-extension",
@@ -14247,9 +14677,9 @@
         "contributors": 2
       },
       "scores": {
-        "popularity": 0.382,
+        "popularity": 0.414,
         "freshness": 0,
-        "rank": 0.021,
+        "rank": 0.023,
         "ring": 3
       },
       "created_at": "2023-08-31T14:54:17Z"
@@ -14288,10 +14718,10 @@
         "contributors": 1
       },
       "scores": {
-        "popularity": 0.275,
+        "popularity": 0.321,
         "freshness": 0,
-        "rank": 0.015,
-        "ring": 3
+        "rank": 0.018,
+        "ring": 4
       },
       "created_at": "2024-03-04T21:10:43Z"
     },
@@ -14329,10 +14759,10 @@
         "contributors": 2
       },
       "scores": {
-        "popularity": 0.503,
+        "popularity": 0.526,
         "freshness": 0,
-        "rank": 0.028,
-        "ring": 3
+        "rank": 0.029,
+        "ring": 4
       },
       "created_at": "2023-08-31T15:00:33Z"
     },
@@ -14371,9 +14801,9 @@
         "contributors": 2
       },
       "scores": {
-        "popularity": 0.437,
+        "popularity": 0.465,
         "freshness": 0,
-        "rank": 0.024,
+        "rank": 0.026,
         "ring": 3
       },
       "created_at": "2023-09-09T11:50:46Z"
@@ -14414,9 +14844,9 @@
       },
       "scores": {
         "popularity": 0.242,
-        "freshness": 0.5,
-        "rank": 0.103,
-        "ring": 3
+        "freshness": 0.58,
+        "rank": 0.112,
+        "ring": 2
       },
       "created_at": "2025-11-03T00:22:50Z"
     },
@@ -14454,10 +14884,10 @@
         "contributors": 2
       },
       "scores": {
-        "popularity": 0.437,
+        "popularity": 0.465,
         "freshness": 0,
-        "rank": 0.024,
-        "ring": 3
+        "rank": 0.026,
+        "ring": 4
       },
       "created_at": "2023-12-23T18:03:07Z"
     },
@@ -14495,9 +14925,9 @@
         "contributors": 1
       },
       "scores": {
-        "popularity": 0.544,
+        "popularity": 0.567,
         "freshness": 0,
-        "rank": 0.03,
+        "rank": 0.031,
         "ring": 3
       },
       "created_at": "2024-02-21T03:47:16Z"
@@ -14536,10 +14966,10 @@
         "contributors": 1
       },
       "scores": {
-        "popularity": 0.426,
+        "popularity": 0.441,
         "freshness": 0,
-        "rank": 0.023,
-        "ring": 3
+        "rank": 0.024,
+        "ring": 4
       },
       "created_at": "2023-02-01T09:01:17Z"
     },
@@ -14567,13 +14997,22 @@
         }
       ],
       "metrics": {
+        "stars": 6,
+        "forks": 1,
+        "open_issues": 7,
+        "releases": 0,
+        "created_at": "2023-05-12T17:56:59Z",
+        "last_commit": "2024-06-29T12:09:11Z",
+        "archived": false,
         "contributors": 2
       },
       "scores": {
-        "popularity": 0.618,
-        "rank": 0.186,
-        "ring": 2
-      }
+        "popularity": 0.734,
+        "freshness": 0,
+        "rank": 0.04,
+        "ring": 3
+      },
+      "created_at": "2023-05-12T17:56:59Z"
     },
     {
       "id": "thesimplekid/cashu-crab-bindings",
@@ -14600,13 +15039,22 @@
         }
       ],
       "metrics": {
+        "stars": 2,
+        "forks": 1,
+        "open_issues": 0,
+        "releases": 0,
+        "created_at": "2024-01-01T18:50:09Z",
+        "last_commit": "2024-01-01T19:05:45Z",
+        "archived": false,
         "contributors": 1
       },
       "scores": {
-        "popularity": 0,
-        "rank": 0,
+        "popularity": 0.421,
+        "freshness": 0,
+        "rank": 0.023,
         "ring": 3
-      }
+      },
+      "created_at": "2024-01-01T18:50:09Z"
     },
     {
       "id": "gandlafbtc/cashu-crypto-js",
@@ -14642,9 +15090,9 @@
         "contributors": 1
       },
       "scores": {
-        "popularity": 0.589,
+        "popularity": 0.607,
         "freshness": 0,
-        "rank": 0.032,
+        "rank": 0.033,
         "ring": 3
       },
       "created_at": "2023-02-13T09:08:44Z"
@@ -14683,9 +15131,9 @@
         "contributors": 8
       },
       "scores": {
-        "popularity": 0.885,
-        "freshness": 0.376,
-        "rank": 0.225,
+        "popularity": 0.902,
+        "freshness": 0.552,
+        "rank": 0.243,
         "ring": 2
       },
       "created_at": "2023-12-20T03:33:21Z"
@@ -14701,7 +15149,7 @@
       "url": "https://github.com/cashubtc/cashu-feni",
       "description": "is a Golang library for Cashu wallets and mints.",
       "category": "Currently Unmaintained Projects / Libraries",
-      "status": "unmaintained",
+      "status": "archived",
       "aliases": [],
       "tags": [],
       "nuts": [],
@@ -14714,13 +15162,23 @@
         }
       ],
       "metrics": {
+        "stars": 37,
+        "forks": 12,
+        "open_issues": 5,
+        "releases": 13,
+        "created_at": "2022-10-06T16:59:04Z",
+        "last_commit": "2023-09-20T12:17:44Z",
+        "last_release": "2023-07-16T20:28:13Z",
+        "archived": true,
         "contributors": 8
       },
       "scores": {
-        "popularity": 0.936,
-        "rank": 0.281,
-        "ring": 2
-      }
+        "popularity": 0.957,
+        "freshness": 0,
+        "rank": 0.022,
+        "ring": 4
+      },
+      "created_at": "2022-10-06T16:59:04Z"
     },
     {
       "id": "aaroncj1/cashu-java",
@@ -14756,9 +15214,9 @@
         "contributors": 1
       },
       "scores": {
-        "popularity": 0.195,
-        "freshness": 0.272,
-        "rank": 0.065,
+        "popularity": 0.212,
+        "freshness": 0.464,
+        "rank": 0.084,
         "ring": 3
       },
       "created_at": "2025-12-04T04:01:54Z"
@@ -14797,10 +15255,10 @@
         "contributors": 1
       },
       "scores": {
-        "popularity": 0.343,
+        "popularity": 0.362,
         "freshness": 0,
-        "rank": 0.019,
-        "ring": 3
+        "rank": 0.02,
+        "ring": 4
       },
       "created_at": "2023-01-27T16:01:30Z"
     },
@@ -14828,13 +15286,22 @@
         }
       ],
       "metrics": {
+        "stars": 1,
+        "forks": 0,
+        "open_issues": 0,
+        "releases": 0,
+        "created_at": "2024-06-18T06:16:23Z",
+        "last_commit": "2024-06-18T06:19:36Z",
+        "archived": false,
         "contributors": 1
       },
       "scores": {
-        "popularity": 0,
-        "rank": 0,
+        "popularity": 0.212,
+        "freshness": 0,
+        "rank": 0.012,
         "ring": 4
-      }
+      },
+      "created_at": "2024-06-18T06:16:23Z"
     },
     {
       "id": "a1denvalu3/cashu-kvac",
@@ -14860,13 +15327,23 @@
         }
       ],
       "metrics": {
+        "stars": 10,
+        "forks": 1,
+        "open_issues": 0,
+        "releases": 5,
+        "created_at": "2024-10-23T19:32:03Z",
+        "last_commit": "2025-08-14T08:50:07Z",
+        "last_release": "2025-04-07T07:28:15Z",
+        "archived": false,
         "contributors": 1
       },
       "scores": {
-        "popularity": 0,
-        "rank": 0,
-        "ring": 4
-      }
+        "popularity": 0.587,
+        "freshness": 0.234,
+        "rank": 0.067,
+        "ring": 3
+      },
+      "created_at": "2024-10-23T19:32:03Z"
     },
     {
       "id": "gudnuf/cashu-react",
@@ -14893,13 +15370,22 @@
         }
       ],
       "metrics": {
+        "stars": 0,
+        "forks": 0,
+        "open_issues": 0,
+        "releases": 0,
+        "created_at": "2024-11-16T11:29:33Z",
+        "last_commit": "2024-11-20T13:58:01Z",
+        "archived": false,
         "contributors": 1
       },
       "scores": {
         "popularity": 0,
-        "rank": 0,
-        "ring": 3
-      }
+        "freshness": 0.192,
+        "rank": 0.008,
+        "ring": 4
+      },
+      "created_at": "2024-11-16T11:29:33Z"
     },
     {
       "id": "clarkmoody/cashu-rs",
@@ -14935,9 +15421,9 @@
         "contributors": 1
       },
       "scores": {
-        "popularity": 0.676,
+        "popularity": 0.684,
         "freshness": 0,
-        "rank": 0.037,
+        "rank": 0.038,
         "ring": 3
       },
       "created_at": "2023-04-19T22:12:26Z"
@@ -15008,13 +15494,22 @@
         }
       ],
       "metrics": {
+        "stars": 0,
+        "forks": 0,
+        "open_issues": 0,
+        "releases": 0,
+        "created_at": "2024-12-14T16:04:02Z",
+        "last_commit": "2025-01-03T22:25:22Z",
+        "archived": false,
         "contributors": 1
       },
       "scores": {
         "popularity": 0,
-        "rank": 0,
-        "ring": 3
-      }
+        "freshness": 0.216,
+        "rank": 0.009,
+        "ring": 4
+      },
+      "created_at": "2024-12-14T16:04:02Z"
     },
     {
       "id": "abdelstark/cashu-zk-engine",
@@ -15030,6 +15525,7 @@
       "status": "unmaintained",
       "aliases": [],
       "tags": [],
+      "primary_parent": "cashubtc/cashu",
       "nuts": [],
       "sources": [
         {
@@ -15050,9 +15546,9 @@
         "contributors": 1
       },
       "scores": {
-        "popularity": 0.575,
+        "popularity": 0.593,
         "freshness": 0,
-        "rank": 0.032,
+        "rank": 0.033,
         "ring": 3
       },
       "created_at": "2024-08-02T08:26:18Z"
@@ -15068,7 +15564,7 @@
       "url": "https://github.com/ryzizub/cashu_dart",
       "description": "is a Dart library for Cashu wallets (archived).",
       "category": "Currently Unmaintained Projects / Libraries",
-      "status": "unmaintained",
+      "status": "archived",
       "aliases": [],
       "tags": [],
       "nuts": [],
@@ -15081,13 +15577,22 @@
         }
       ],
       "metrics": {
+        "stars": 5,
+        "forks": 0,
+        "open_issues": 0,
+        "releases": 0,
+        "created_at": "2024-01-09T16:55:08Z",
+        "last_commit": "2024-04-08T18:57:43Z",
+        "archived": true,
         "contributors": 1
       },
       "scores": {
-        "popularity": 0,
-        "rank": 0,
+        "popularity": 0.417,
+        "freshness": 0,
+        "rank": 0.011,
         "ring": 4
-      }
+      },
+      "created_at": "2024-01-09T16:55:08Z"
     },
     {
       "id": "syoolahhome/cashu_dart",
@@ -15113,13 +15618,22 @@
         }
       ],
       "metrics": {
+        "stars": 0,
+        "forks": 0,
+        "open_issues": 0,
+        "releases": 0,
+        "created_at": "2025-02-06T23:50:35Z",
+        "last_commit": "2025-02-06T23:50:47Z",
+        "archived": false,
         "contributors": 8
       },
       "scores": {
-        "popularity": 0.936,
-        "rank": 0.281,
-        "ring": 2
-      }
+        "popularity": 0.255,
+        "freshness": 0.228,
+        "rank": 0.037,
+        "ring": 3
+      },
+      "created_at": "2025-02-06T23:50:35Z"
     },
     {
       "id": "happylemonprogramming/cashubuddy",
@@ -15157,9 +15671,9 @@
       },
       "scores": {
         "popularity": 0,
-        "freshness": 0.127,
-        "rank": 0.005,
-        "ring": 3
+        "freshness": 0.252,
+        "rank": 0.01,
+        "ring": 4
       },
       "created_at": "2025-02-17T17:23:58Z"
     },
@@ -15187,13 +15701,22 @@
         }
       ],
       "metrics": {
+        "stars": 1,
+        "forks": 2,
+        "open_issues": 3,
+        "releases": 0,
+        "created_at": "2024-10-19T15:52:58Z",
+        "last_commit": "2024-11-21T20:43:25Z",
+        "archived": false,
         "contributors": 4
       },
       "scores": {
-        "popularity": 0.855,
-        "rank": 0.257,
-        "ring": 2
-      }
+        "popularity": 0.595,
+        "freshness": 0.2,
+        "rank": 0.074,
+        "ring": 3
+      },
+      "created_at": "2024-10-19T15:52:58Z"
     },
     {
       "id": "forte11cuba/cashupp",
@@ -15219,13 +15742,22 @@
         }
       ],
       "metrics": {
+        "stars": 2,
+        "forks": 0,
+        "open_issues": 0,
+        "releases": 0,
+        "created_at": "2025-07-01T05:06:40Z",
+        "last_commit": "2025-07-07T02:36:25Z",
+        "archived": false,
         "contributors": 1
       },
       "scores": {
-        "popularity": 0,
-        "rank": 0,
-        "ring": 4
-      }
+        "popularity": 0.297,
+        "freshness": 0.348,
+        "rank": 0.047,
+        "ring": 3
+      },
+      "created_at": "2025-07-01T05:06:40Z"
     },
     {
       "id": "arkanoider/cdk",
@@ -15251,13 +15783,22 @@
         }
       ],
       "metrics": {
+        "stars": 0,
+        "forks": 0,
+        "open_issues": 0,
+        "releases": 0,
+        "created_at": "2024-04-06T16:08:33Z",
+        "last_commit": "2024-04-06T15:22:30Z",
+        "archived": false,
         "contributors": 5
       },
       "scores": {
-        "popularity": 0.888,
-        "rank": 0.266,
-        "ring": 2
-      }
+        "popularity": 0.242,
+        "freshness": 0,
+        "rank": 0.013,
+        "ring": 4
+      },
+      "created_at": "2024-04-06T16:08:33Z"
     },
     {
       "id": "cashubtc/cdk-flutter",
@@ -15270,7 +15811,7 @@
       "url": "https://github.com/cashubtc/cdk-flutter",
       "description": "is a CDK Flutter Rust bridge library (archived).",
       "category": "Currently Unmaintained Projects / Libraries",
-      "status": "unmaintained",
+      "status": "archived",
       "aliases": [],
       "tags": [],
       "nuts": [],
@@ -15283,13 +15824,22 @@
         }
       ],
       "metrics": {
+        "stars": 4,
+        "forks": 6,
+        "open_issues": 0,
+        "releases": 0,
+        "created_at": "2025-11-18T15:02:21Z",
+        "last_commit": "2026-07-03T16:25:04Z",
+        "archived": true,
         "contributors": 4
       },
       "scores": {
-        "popularity": 0.855,
-        "rank": 0.257,
+        "popularity": 0.796,
+        "freshness": 0.732,
+        "rank": 0.117,
         "ring": 2
-      }
+      },
+      "created_at": "2025-11-18T15:02:21Z"
     },
     {
       "id": "gandlafbtc/headless-cashu",
@@ -15316,13 +15866,22 @@
         }
       ],
       "metrics": {
+        "stars": 1,
+        "forks": 0,
+        "open_issues": 0,
+        "releases": 0,
+        "created_at": "2023-06-29T13:54:30Z",
+        "last_commit": "2023-09-15T12:08:17Z",
+        "archived": false,
         "contributors": 1
       },
       "scores": {
-        "popularity": 0,
-        "rank": 0,
+        "popularity": 0.212,
+        "freshness": 0,
+        "rank": 0.012,
         "ring": 4
-      }
+      },
+      "created_at": "2023-06-29T13:54:30Z"
     },
     {
       "id": "gandlafbtc/nostr-mint-connect",
@@ -15349,13 +15908,22 @@
         }
       ],
       "metrics": {
+        "stars": 0,
+        "forks": 0,
+        "open_issues": 0,
+        "releases": 0,
+        "created_at": "2025-02-10T06:57:29Z",
+        "last_commit": "2025-02-10T09:26:26Z",
+        "archived": false,
         "contributors": 1
       },
       "scores": {
         "popularity": 0,
-        "rank": 0,
+        "freshness": 0.232,
+        "rank": 0.009,
         "ring": 4
-      }
+      },
+      "created_at": "2025-02-10T06:57:29Z"
     },
     {
       "id": "4xvgal/nutbac",
@@ -15381,13 +15949,22 @@
         }
       ],
       "metrics": {
+        "stars": 0,
+        "forks": 0,
+        "open_issues": 0,
+        "releases": 0,
+        "created_at": "2025-12-21T10:26:56Z",
+        "last_commit": "2025-12-22T11:59:33Z",
+        "archived": false,
         "contributors": 1
       },
       "scores": {
         "popularity": 0,
-        "rank": 0,
-        "ring": 4
-      }
+        "freshness": 0.488,
+        "rank": 0.039,
+        "ring": 3
+      },
+      "created_at": "2025-12-21T10:26:56Z"
     },
     {
       "id": "krutt/aesir",
@@ -15413,13 +15990,22 @@
         }
       ],
       "metrics": {
+        "stars": 23,
+        "forks": 0,
+        "open_issues": 0,
+        "releases": 0,
+        "created_at": "2023-12-01T07:43:59Z",
+        "last_commit": "2025-10-30T07:55:50Z",
+        "archived": false,
         "contributors": 1
       },
       "scores": {
-        "popularity": 0,
-        "rank": 0,
-        "ring": 4
-      }
+        "popularity": 0.511,
+        "freshness": 0.42,
+        "rank": 0.146,
+        "ring": 2
+      },
+      "created_at": "2023-12-01T07:43:59Z"
     },
     {
       "id": "babdbtc/atomic-mint-swap",
@@ -15445,13 +16031,22 @@
         }
       ],
       "metrics": {
+        "stars": 2,
+        "forks": 0,
+        "open_issues": 0,
+        "releases": 0,
+        "created_at": "2025-11-16T11:54:35Z",
+        "last_commit": "2025-11-17T11:28:56Z",
+        "archived": false,
         "contributors": 1
       },
       "scores": {
-        "popularity": 0,
-        "rank": 0,
-        "ring": 4
-      }
+        "popularity": 0.297,
+        "freshness": 0.44,
+        "rank": 0.1,
+        "ring": 3
+      },
+      "created_at": "2025-11-16T11:54:35Z"
     },
     {
       "id": "wilfredallyn/axepool",
@@ -15477,13 +16072,22 @@
         }
       ],
       "metrics": {
+        "stars": 0,
+        "forks": 0,
+        "open_issues": 0,
+        "releases": 0,
+        "created_at": "2025-04-06T12:54:10Z",
+        "last_commit": "2025-03-26T21:26:04Z",
+        "archived": false,
         "contributors": 2
       },
       "scores": {
-        "popularity": 0.618,
-        "rank": 0.186,
-        "ring": 2
-      }
+        "popularity": 0.169,
+        "freshness": 0.28,
+        "rank": 0.03,
+        "ring": 4
+      },
+      "created_at": "2025-04-06T12:54:10Z"
     },
     {
       "id": "satsczar/bolsonitro-faucet",
@@ -15510,13 +16114,22 @@
         }
       ],
       "metrics": {
+        "stars": 1,
+        "forks": 0,
+        "open_issues": 0,
+        "releases": 0,
+        "created_at": "2023-12-23T13:00:12Z",
+        "last_commit": "2023-12-23T20:46:22Z",
+        "archived": false,
         "contributors": 1
       },
       "scores": {
-        "popularity": 0,
-        "rank": 0,
+        "popularity": 0.212,
+        "freshness": 0,
+        "rank": 0.012,
         "ring": 4
-      }
+      },
+      "created_at": "2023-12-23T13:00:12Z"
     },
     {
       "id": "joaozinhom/cashtanha",
@@ -15552,10 +16165,10 @@
         "contributors": 2
       },
       "scores": {
-        "popularity": 0.364,
-        "freshness": 0.243,
-        "rank": 0.1,
-        "ring": 3
+        "popularity": 0.38,
+        "freshness": 0.428,
+        "rank": 0.118,
+        "ring": 2
       },
       "created_at": "2025-10-31T21:47:26Z"
     },
@@ -15583,13 +16196,22 @@
         }
       ],
       "metrics": {
+        "stars": 2,
+        "forks": 0,
+        "open_issues": 0,
+        "releases": 0,
+        "created_at": "2023-09-11T02:22:04Z",
+        "last_commit": "2023-09-11T09:25:40Z",
+        "archived": false,
         "contributors": 2
       },
       "scores": {
-        "popularity": 0.618,
-        "rank": 0.186,
-        "ring": 2
-      }
+        "popularity": 0.465,
+        "freshness": 0,
+        "rank": 0.026,
+        "ring": 4
+      },
+      "created_at": "2023-09-11T02:22:04Z"
     },
     {
       "id": "michilis/cashu-claim-telegram-bot",
@@ -15657,13 +16279,22 @@
         }
       ],
       "metrics": {
+        "stars": 6,
+        "forks": 1,
+        "open_issues": 0,
+        "releases": 0,
+        "created_at": "2023-02-14T05:42:49Z",
+        "last_commit": "2023-04-14T11:43:08Z",
+        "archived": false,
         "contributors": 1
       },
       "scores": {
-        "popularity": 0,
-        "rank": 0,
-        "ring": 4
-      }
+        "popularity": 0.565,
+        "freshness": 0,
+        "rank": 0.031,
+        "ring": 3
+      },
+      "created_at": "2023-02-14T05:42:49Z"
     },
     {
       "id": "cashumints-space/wallets",
@@ -15699,10 +16330,10 @@
         "contributors": 1
       },
       "scores": {
-        "popularity": 0.121,
+        "popularity": 0.124,
         "freshness": 0,
         "rank": 0.007,
-        "ring": 3
+        "ring": 4
       },
       "created_at": "2024-05-17T19:55:24Z"
     },
@@ -15731,13 +16362,22 @@
         }
       ],
       "metrics": {
+        "stars": 0,
+        "forks": 0,
+        "open_issues": 0,
+        "releases": 0,
+        "created_at": "2025-09-16T04:39:52Z",
+        "last_commit": "2025-09-16T07:29:47Z",
+        "archived": false,
         "contributors": 1
       },
       "scores": {
         "popularity": 0,
-        "rank": 0,
-        "ring": 4
-      }
+        "freshness": 0.388,
+        "rank": 0.016,
+        "ring": 3
+      },
+      "created_at": "2025-09-16T04:39:52Z"
     },
     {
       "id": "lightning-digital-entertainment/cashu-address-cli",
@@ -15805,13 +16445,22 @@
         }
       ],
       "metrics": {
+        "stars": 0,
+        "forks": 0,
+        "open_issues": 0,
+        "releases": 0,
+        "created_at": "2025-06-09T15:49:11Z",
+        "last_commit": "2025-06-12T14:01:34Z",
+        "archived": false,
         "contributors": 37
       },
       "scores": {
-        "popularity": 0.976,
-        "rank": 0.293,
-        "ring": 1
-      }
+        "popularity": 0.266,
+        "freshness": 0.336,
+        "rank": 0.043,
+        "ring": 3
+      },
+      "created_at": "2025-06-09T15:49:11Z"
     },
     {
       "id": "3xtr3m3hodl/cashu-auditor",
@@ -15837,13 +16486,22 @@
         }
       ],
       "metrics": {
+        "stars": 0,
+        "forks": 2,
+        "open_issues": 0,
+        "releases": 0,
+        "created_at": "2025-06-10T10:23:02Z",
+        "last_commit": "2025-04-02T11:57:14Z",
+        "archived": false,
         "contributors": 1
       },
       "scores": {
-        "popularity": 0,
-        "rank": 0,
+        "popularity": 0.151,
+        "freshness": 0.292,
+        "rank": 0.028,
         "ring": 4
-      }
+      },
+      "created_at": "2025-06-10T10:23:02Z"
     },
     {
       "id": "szerwinski/cashu-bob",
@@ -15880,8 +16538,8 @@
       },
       "scores": {
         "popularity": 0.266,
-        "freshness": 0.168,
-        "rank": 0.036,
+        "freshness": 0.34,
+        "rank": 0.043,
         "ring": 3
       },
       "created_at": "2025-06-09T16:03:47Z"
@@ -15911,13 +16569,22 @@
         }
       ],
       "metrics": {
+        "stars": 3,
+        "forks": 1,
+        "open_issues": 0,
+        "releases": 0,
+        "created_at": "2025-04-18T14:03:27Z",
+        "last_commit": "2025-04-18T16:34:53Z",
+        "archived": false,
         "contributors": 1
       },
       "scores": {
-        "popularity": 0,
-        "rank": 0,
-        "ring": 4
-      }
+        "popularity": 0.482,
+        "freshness": 0.304,
+        "rank": 0.065,
+        "ring": 3
+      },
+      "created_at": "2025-04-18T14:03:27Z"
     },
     {
       "id": "andotherstuff/cashu-faucet-worker",
@@ -15930,7 +16597,7 @@
       "url": "https://github.com/andotherstuff/cashu-faucet-worker",
       "description": "is a Cashu faucet worker (archived).",
       "category": "Currently Unmaintained Projects / Misc",
-      "status": "unmaintained",
+      "status": "archived",
       "aliases": [],
       "tags": [],
       "nuts": [],
@@ -15943,13 +16610,22 @@
         }
       ],
       "metrics": {
+        "stars": 0,
+        "forks": 0,
+        "open_issues": 0,
+        "releases": 0,
+        "created_at": "2025-05-20T14:14:53Z",
+        "last_commit": "2025-05-20T14:41:34Z",
+        "archived": true,
         "contributors": 1
       },
       "scores": {
         "popularity": 0,
-        "rank": 0,
+        "freshness": 0.32,
+        "rank": 0.006,
         "ring": 4
-      }
+      },
+      "created_at": "2025-05-20T14:14:53Z"
     },
     {
       "id": "gudnuf/cashu-gateway-ts",
@@ -15976,13 +16652,22 @@
         }
       ],
       "metrics": {
+        "stars": 1,
+        "forks": 0,
+        "open_issues": 0,
+        "releases": 0,
+        "created_at": "2025-11-04T06:22:23Z",
+        "last_commit": "2025-11-25T06:38:06Z",
+        "archived": false,
         "contributors": 1
       },
       "scores": {
-        "popularity": 0,
-        "rank": 0,
-        "ring": 4
-      }
+        "popularity": 0.212,
+        "freshness": 0.444,
+        "rank": 0.082,
+        "ring": 3
+      },
+      "created_at": "2025-11-04T06:22:23Z"
     },
     {
       "id": "thesimplekid/cashu-lnurl",
@@ -16008,13 +16693,22 @@
         }
       ],
       "metrics": {
+        "stars": 14,
+        "forks": 1,
+        "open_issues": 6,
+        "releases": 0,
+        "created_at": "2023-06-08T19:31:17Z",
+        "last_commit": "2023-10-22T20:23:40Z",
+        "archived": false,
         "contributors": 1
       },
       "scores": {
-        "popularity": 0,
-        "rank": 0,
-        "ring": 4
-      }
+        "popularity": 0.602,
+        "freshness": 0,
+        "rank": 0.033,
+        "ring": 3
+      },
+      "created_at": "2023-06-08T19:31:17Z"
     },
     {
       "id": "babdbtc/cashu-marketplace",
@@ -16041,13 +16735,22 @@
         }
       ],
       "metrics": {
+        "stars": 0,
+        "forks": 0,
+        "open_issues": 0,
+        "releases": 0,
+        "created_at": "2026-01-11T20:05:27Z",
+        "last_commit": "2026-01-12T22:48:38Z",
+        "archived": false,
         "contributors": 1
       },
       "scores": {
         "popularity": 0,
-        "rank": 0,
+        "freshness": 0.504,
+        "rank": 0.04,
         "ring": 3
-      }
+      },
+      "created_at": "2026-01-11T20:05:27Z"
     },
     {
       "id": "egge21m/cashu-nostr-updater",
@@ -16073,13 +16776,22 @@
         }
       ],
       "metrics": {
+        "stars": 0,
+        "forks": 0,
+        "open_issues": 0,
+        "releases": 0,
+        "created_at": "2024-03-07T11:53:51Z",
+        "last_commit": "2024-03-07T12:37:52Z",
+        "archived": false,
         "contributors": 1
       },
       "scores": {
         "popularity": 0,
+        "freshness": 0,
         "rank": 0,
         "ring": 4
-      }
+      },
+      "created_at": "2024-03-07T11:53:51Z"
     },
     {
       "id": "egge21m/cashu-notify",
@@ -16105,13 +16817,22 @@
         }
       ],
       "metrics": {
+        "stars": 0,
+        "forks": 0,
+        "open_issues": 0,
+        "releases": 0,
+        "created_at": "2025-01-14T09:37:39Z",
+        "last_commit": "2025-02-11T14:26:13Z",
+        "archived": false,
         "contributors": 1
       },
       "scores": {
         "popularity": 0,
-        "rank": 0,
+        "freshness": 0.236,
+        "rank": 0.009,
         "ring": 4
-      }
+      },
+      "created_at": "2025-01-14T09:37:39Z"
     },
     {
       "id": "egge21m/cashu-p2pk",
@@ -16138,13 +16859,22 @@
         }
       ],
       "metrics": {
+        "stars": 0,
+        "forks": 0,
+        "open_issues": 0,
+        "releases": 0,
+        "created_at": "2024-02-07T13:39:07Z",
+        "last_commit": "2024-02-08T11:11:55Z",
+        "archived": false,
         "contributors": 1
       },
       "scores": {
         "popularity": 0,
+        "freshness": 0,
         "rank": 0,
         "ring": 4
-      }
+      },
+      "created_at": "2024-02-07T13:39:07Z"
     },
     {
       "id": "ethntuttle/cashu-paper-scissors",
@@ -16170,13 +16900,22 @@
         }
       ],
       "metrics": {
+        "stars": 0,
+        "forks": 0,
+        "open_issues": 0,
+        "releases": 0,
+        "created_at": "2024-04-24T02:16:57Z",
+        "last_commit": "2024-04-24T02:16:51Z",
+        "archived": false,
         "contributors": 1
       },
       "scores": {
         "popularity": 0,
+        "freshness": 0,
         "rank": 0,
         "ring": 4
-      }
+      },
+      "created_at": "2024-04-24T02:16:57Z"
     },
     {
       "id": "thesimplekid/cashu-payment-backend",
@@ -16203,13 +16942,22 @@
         }
       ],
       "metrics": {
+        "stars": 2,
+        "forks": 0,
+        "open_issues": 0,
+        "releases": 0,
+        "created_at": "2025-03-21T08:03:04Z",
+        "last_commit": "2025-03-22T14:11:25Z",
+        "archived": false,
         "contributors": 1
       },
       "scores": {
-        "popularity": 0,
-        "rank": 0,
-        "ring": 4
-      }
+        "popularity": 0.297,
+        "freshness": 0.276,
+        "rank": 0.044,
+        "ring": 3
+      },
+      "created_at": "2025-03-21T08:03:04Z"
     },
     {
       "id": "pdcolandrea/cashu-playground",
@@ -16236,13 +16984,22 @@
         }
       ],
       "metrics": {
+        "stars": 1,
+        "forks": 0,
+        "open_issues": 0,
+        "releases": 0,
+        "created_at": "2023-05-12T22:22:46Z",
+        "last_commit": "2023-05-12T22:23:45Z",
+        "archived": false,
         "contributors": 1
       },
       "scores": {
-        "popularity": 0,
-        "rank": 0,
+        "popularity": 0.212,
+        "freshness": 0,
+        "rank": 0.012,
         "ring": 4
-      }
+      },
+      "created_at": "2023-05-12T22:22:46Z"
     },
     {
       "id": "gudnuf/cashu-pm-workflow",
@@ -16267,8 +17024,22 @@
           "note": "Currently Unmaintained Projects / Misc"
         }
       ],
-      "metrics": {},
-      "scores": {}
+      "metrics": {
+        "stars": 0,
+        "forks": 0,
+        "open_issues": 0,
+        "releases": 0,
+        "created_at": "2025-09-21T23:38:53Z",
+        "last_commit": "2025-09-21T23:38:53Z",
+        "archived": false
+      },
+      "scores": {
+        "popularity": 0,
+        "freshness": 0.392,
+        "rank": 0.02,
+        "ring": 4
+      },
+      "created_at": "2025-09-21T23:38:53Z"
     },
     {
       "id": "abdelstark/cashu-pol",
@@ -16295,13 +17066,22 @@
         }
       ],
       "metrics": {
+        "stars": 0,
+        "forks": 0,
+        "open_issues": 0,
+        "releases": 0,
+        "created_at": "2025-01-15T17:00:15Z",
+        "last_commit": "2025-01-15T17:50:49Z",
+        "archived": false,
         "contributors": 1
       },
       "scores": {
         "popularity": 0,
-        "rank": 0,
+        "freshness": 0.22,
+        "rank": 0.009,
         "ring": 4
-      }
+      },
+      "created_at": "2025-01-15T17:00:15Z"
     },
     {
       "id": "gudnuf/cashu-proxy",
@@ -16327,13 +17107,22 @@
         }
       ],
       "metrics": {
+        "stars": 4,
+        "forks": 1,
+        "open_issues": 1,
+        "releases": 0,
+        "created_at": "2025-02-14T05:38:16Z",
+        "last_commit": "2025-02-14T07:05:20Z",
+        "archived": false,
         "contributors": 1
       },
       "scores": {
-        "popularity": 0,
-        "rank": 0,
-        "ring": 4
-      }
+        "popularity": 0.515,
+        "freshness": 0.244,
+        "rank": 0.066,
+        "ring": 3
+      },
+      "created_at": "2025-02-14T05:38:16Z"
     },
     {
       "id": "thesimplekid/cashu-proxy",
@@ -16370,9 +17159,9 @@
         "contributors": 1
       },
       "scores": {
-        "popularity": 0.316,
-        "freshness": 0.156,
-        "rank": 0.041,
+        "popularity": 0.336,
+        "freshness": 0.316,
+        "rank": 0.05,
         "ring": 2
       },
       "created_at": "2025-04-02T11:14:31Z"
@@ -16402,13 +17191,22 @@
         }
       ],
       "metrics": {
+        "stars": 2,
+        "forks": 1,
+        "open_issues": 0,
+        "releases": 0,
+        "created_at": "2025-02-14T05:43:54Z",
+        "last_commit": "2025-02-14T06:59:33Z",
+        "archived": false,
         "contributors": 1
       },
       "scores": {
-        "popularity": 0,
-        "rank": 0,
-        "ring": 4
-      }
+        "popularity": 0.421,
+        "freshness": 0.24,
+        "rank": 0.056,
+        "ring": 3
+      },
+      "created_at": "2025-02-14T05:43:54Z"
     },
     {
       "id": "michilis/cashu-redeem-api",
@@ -16435,13 +17233,22 @@
         }
       ],
       "metrics": {
+        "stars": 0,
+        "forks": 0,
+        "open_issues": 0,
+        "releases": 0,
+        "created_at": "2025-05-31T12:17:14Z",
+        "last_commit": "2025-07-19T07:52:10Z",
+        "archived": false,
         "contributors": 2
       },
       "scores": {
-        "popularity": 0.618,
-        "rank": 0.186,
-        "ring": 2
-      }
+        "popularity": 0.169,
+        "freshness": 0.356,
+        "rank": 0.033,
+        "ring": 3
+      },
+      "created_at": "2025-05-31T12:17:14Z"
     },
     {
       "id": "egge21m/cashu-split",
@@ -16468,13 +17275,22 @@
         }
       ],
       "metrics": {
+        "stars": 0,
+        "forks": 0,
+        "open_issues": 0,
+        "releases": 0,
+        "created_at": "2024-10-25T15:27:02Z",
+        "last_commit": "2024-10-25T15:26:46Z",
+        "archived": false,
         "contributors": 1
       },
       "scores": {
         "popularity": 0,
-        "rank": 0,
+        "freshness": 0.184,
+        "rank": 0.007,
         "ring": 4
-      }
+      },
+      "created_at": "2024-10-25T15:27:02Z"
     },
     {
       "id": "thesimplekid/cashu-tool",
@@ -16487,7 +17303,7 @@
       "url": "https://github.com/thesimplekid/cashu-tool",
       "description": "is a Rust Cashu utility tool (archived).",
       "category": "Currently Unmaintained Projects / Misc",
-      "status": "unmaintained",
+      "status": "archived",
       "aliases": [],
       "tags": [],
       "primary_parent": "cashubtc/cdk",
@@ -16501,13 +17317,22 @@
         }
       ],
       "metrics": {
+        "stars": 1,
+        "forks": 0,
+        "open_issues": 0,
+        "releases": 0,
+        "created_at": "2023-11-20T23:03:28Z",
+        "last_commit": "2024-06-14T10:26:40Z",
+        "archived": true,
         "contributors": 1
       },
       "scores": {
-        "popularity": 0,
-        "rank": 0,
+        "popularity": 0.212,
+        "freshness": 0,
+        "rank": 0.006,
         "ring": 4
-      }
+      },
+      "created_at": "2023-11-20T23:03:28Z"
     },
     {
       "id": "swedishfrenchpress/cashu-ts-docs",
@@ -16533,13 +17358,22 @@
         }
       ],
       "metrics": {
+        "stars": 0,
+        "forks": 2,
+        "open_issues": 0,
+        "releases": 0,
+        "created_at": "2024-12-11T11:27:13Z",
+        "last_commit": "2024-12-11T09:40:27Z",
+        "archived": false,
         "contributors": 1
       },
       "scores": {
-        "popularity": 0,
-        "rank": 0,
+        "popularity": 0.151,
+        "freshness": 0.204,
+        "rank": 0.025,
         "ring": 4
-      }
+      },
+      "created_at": "2024-12-11T11:27:13Z"
     },
     {
       "id": "pandabear204/cashu-webcomponent",
@@ -16565,13 +17399,22 @@
         }
       ],
       "metrics": {
+        "stars": 1,
+        "forks": 0,
+        "open_issues": 0,
+        "releases": 0,
+        "created_at": "2023-09-22T19:34:21Z",
+        "last_commit": "2023-10-05T16:53:33Z",
+        "archived": false,
         "contributors": 1
       },
       "scores": {
-        "popularity": 0,
-        "rank": 0,
+        "popularity": 0.212,
+        "freshness": 0,
+        "rank": 0.012,
         "ring": 4
-      }
+      },
+      "created_at": "2023-09-22T19:34:21Z"
     },
     {
       "id": "egge21m/cashu402",
@@ -16598,13 +17441,22 @@
         }
       ],
       "metrics": {
+        "stars": 1,
+        "forks": 0,
+        "open_issues": 0,
+        "releases": 0,
+        "created_at": "2025-03-27T15:19:19Z",
+        "last_commit": "2025-03-27T15:28:12Z",
+        "archived": false,
         "contributors": 1
       },
       "scores": {
-        "popularity": 0,
-        "rank": 0,
-        "ring": 4
-      }
+        "popularity": 0.212,
+        "freshness": 0.288,
+        "rank": 0.035,
+        "ring": 3
+      },
+      "created_at": "2025-03-27T15:19:19Z"
     },
     {
       "id": "cashucloak/cashu_cloak",
@@ -16630,13 +17482,22 @@
         }
       ],
       "metrics": {
+        "stars": 0,
+        "forks": 0,
+        "open_issues": 3,
+        "releases": 0,
+        "created_at": "2025-05-07T04:55:14Z",
+        "last_commit": "2025-06-12T07:38:47Z",
+        "archived": false,
         "contributors": 37
       },
       "scores": {
-        "popularity": 0.976,
-        "rank": 0.293,
-        "ring": 1
-      }
+        "popularity": 0.266,
+        "freshness": 0.332,
+        "rank": 0.043,
+        "ring": 3
+      },
+      "created_at": "2025-05-07T04:55:14Z"
     },
     {
       "id": "plebeiusgaragicus/cashuarcade",
@@ -16663,13 +17524,22 @@
         }
       ],
       "metrics": {
+        "stars": 0,
+        "forks": 0,
+        "open_issues": 0,
+        "releases": 0,
+        "created_at": "2025-11-01T23:21:11Z",
+        "last_commit": "2025-11-02T19:41:38Z",
+        "archived": false,
         "contributors": 1
       },
       "scores": {
         "popularity": 0,
-        "rank": 0,
-        "ring": 3
-      }
+        "freshness": 0.432,
+        "rank": 0.035,
+        "ring": 2
+      },
+      "created_at": "2025-11-01T23:21:11Z"
     },
     {
       "id": "4xvgal/cashucordauction",
@@ -16696,13 +17566,22 @@
         }
       ],
       "metrics": {
+        "stars": 1,
+        "forks": 0,
+        "open_issues": 0,
+        "releases": 0,
+        "created_at": "2025-12-03T01:15:45Z",
+        "last_commit": "2025-12-03T01:15:31Z",
+        "archived": false,
         "contributors": 1
       },
       "scores": {
-        "popularity": 0,
-        "rank": 0,
-        "ring": 4
-      }
+        "popularity": 0.212,
+        "freshness": 0.456,
+        "rank": 0.083,
+        "ring": 3
+      },
+      "created_at": "2025-12-03T01:15:45Z"
     },
     {
       "id": "cashumints-space/cashumints-telegram-bot",
@@ -16729,13 +17608,22 @@
         }
       ],
       "metrics": {
+        "stars": 0,
+        "forks": 0,
+        "open_issues": 0,
+        "releases": 0,
+        "created_at": "2024-05-17T20:40:36Z",
+        "last_commit": "2024-07-16T15:31:46Z",
+        "archived": false,
         "contributors": 1
       },
       "scores": {
         "popularity": 0,
+        "freshness": 0,
         "rank": 0,
         "ring": 4
-      }
+      },
+      "created_at": "2024-05-17T20:40:36Z"
     },
     {
       "id": "cashumints-space/cashumints-site",
@@ -16761,13 +17649,22 @@
         }
       ],
       "metrics": {
+        "stars": 1,
+        "forks": 1,
+        "open_issues": 0,
+        "releases": 0,
+        "created_at": "2025-02-18T19:15:12Z",
+        "last_commit": "2025-02-22T20:39:20Z",
+        "archived": false,
         "contributors": 1
       },
       "scores": {
-        "popularity": 0,
-        "rank": 0,
-        "ring": 4
-      }
+        "popularity": 0.336,
+        "freshness": 0.256,
+        "rank": 0.047,
+        "ring": 3
+      },
+      "created_at": "2025-02-18T19:15:12Z"
     },
     {
       "id": "cashubtc/cashurpc",
@@ -16793,13 +17690,22 @@
         }
       ],
       "metrics": {
+        "stars": 0,
+        "forks": 0,
+        "open_issues": 0,
+        "releases": 0,
+        "created_at": "2024-05-03T20:44:04Z",
+        "last_commit": "2024-05-09T12:37:26Z",
+        "archived": false,
         "contributors": 1
       },
       "scores": {
         "popularity": 0,
+        "freshness": 0,
         "rank": 0,
         "ring": 4
-      }
+      },
+      "created_at": "2024-05-03T20:44:04Z"
     },
     {
       "id": "arbadacarbayk/chatty",
@@ -16836,10 +17742,10 @@
         "contributors": 1
       },
       "scores": {
-        "popularity": 0.334,
-        "freshness": 0.395,
-        "rank": 0.107,
-        "ring": 3
+        "popularity": 0.358,
+        "freshness": 0.479,
+        "rank": 0.122,
+        "ring": 2
       },
       "created_at": "2025-07-28T22:14:21Z"
     },
@@ -16868,13 +17774,22 @@
         }
       ],
       "metrics": {
+        "stars": 16,
+        "forks": 1,
+        "open_issues": 0,
+        "releases": 0,
+        "created_at": "2023-04-20T13:27:01Z",
+        "last_commit": "2026-08-19T16:26:09Z",
+        "archived": false,
         "contributors": 2
       },
       "scores": {
-        "popularity": 0.618,
-        "rank": 0.186,
+        "popularity": 0.777,
+        "freshness": 0.784,
+        "rank": 0.234,
         "ring": 2
-      }
+      },
+      "created_at": "2023-04-20T13:27:01Z"
     },
     {
       "id": "gudnuf/cornucopia",
@@ -16900,13 +17815,22 @@
         }
       ],
       "metrics": {
+        "stars": 1,
+        "forks": 0,
+        "open_issues": 0,
+        "releases": 0,
+        "created_at": "2024-11-10T23:45:16Z",
+        "last_commit": "2024-11-21T19:47:37Z",
+        "archived": false,
         "contributors": 2
       },
       "scores": {
-        "popularity": 0.618,
-        "rank": 0.186,
-        "ring": 2
-      }
+        "popularity": 0.38,
+        "freshness": 0.196,
+        "rank": 0.05,
+        "ring": 3
+      },
+      "created_at": "2024-11-10T23:45:16Z"
     },
     {
       "id": "robwoodgate/crown-anchor",
@@ -16942,9 +17866,9 @@
         "contributors": 1
       },
       "scores": {
-        "popularity": 0.195,
-        "freshness": 0.682,
-        "rank": 0.098,
+        "popularity": 0.212,
+        "freshness": 0.772,
+        "rank": 0.108,
         "ring": 3
       },
       "created_at": "2025-02-28T20:31:35Z"
@@ -16973,13 +17897,22 @@
         }
       ],
       "metrics": {
+        "stars": 0,
+        "forks": 0,
+        "open_issues": 0,
+        "releases": 0,
+        "created_at": "2023-12-08T01:35:57Z",
+        "last_commit": "2023-12-10T21:48:12Z",
+        "archived": false,
         "contributors": 1
       },
       "scores": {
         "popularity": 0,
+        "freshness": 0,
         "rank": 0,
         "ring": 4
-      }
+      },
+      "created_at": "2023-12-08T01:35:57Z"
     },
     {
       "id": "f321x/kickstart-cln-plugin",
@@ -17016,9 +17949,9 @@
         "contributors": 2
       },
       "scores": {
-        "popularity": 0.544,
-        "freshness": 0.116,
-        "rank": 0.032,
+        "popularity": 0.559,
+        "freshness": 0.18,
+        "rank": 0.034,
         "ring": 3
       },
       "created_at": "2024-10-10T21:11:43Z"
@@ -17100,8 +18033,8 @@
       },
       "scores": {
         "popularity": 0,
-        "freshness": 0.306,
-        "rank": 0.025,
+        "freshness": 0.496,
+        "rank": 0.04,
         "ring": 3
       },
       "created_at": "2025-12-26T05:00:49Z"
@@ -17131,13 +18064,22 @@
         }
       ],
       "metrics": {
+        "stars": 1,
+        "forks": 0,
+        "open_issues": 0,
+        "releases": 0,
+        "created_at": "2025-04-19T13:21:21Z",
+        "last_commit": "2025-06-05T13:15:08Z",
+        "archived": false,
         "contributors": 1
       },
       "scores": {
-        "popularity": 0,
-        "rank": 0,
-        "ring": 4
-      }
+        "popularity": 0.212,
+        "freshness": 0.324,
+        "rank": 0.036,
+        "ring": 3
+      },
+      "created_at": "2025-04-19T13:21:21Z"
     },
     {
       "id": "ciori/mattress",
@@ -17163,13 +18105,22 @@
         }
       ],
       "metrics": {
+        "stars": 0,
+        "forks": 0,
+        "open_issues": 0,
+        "releases": 0,
+        "created_at": "2025-03-16T11:23:17Z",
+        "last_commit": "2025-03-17T20:37:10Z",
+        "archived": false,
         "contributors": 1
       },
       "scores": {
         "popularity": 0,
-        "rank": 0,
+        "freshness": 0.268,
+        "rank": 0.011,
         "ring": 4
-      }
+      },
+      "created_at": "2025-03-16T11:23:17Z"
     },
     {
       "id": "asmogo/n8n-nodes-cashu",
@@ -17207,8 +18158,8 @@
       },
       "scores": {
         "popularity": 0,
-        "freshness": 0.208,
-        "rank": 0.008,
+        "freshness": 0.396,
+        "rank": 0.016,
         "ring": 4
       },
       "created_at": "2025-10-08T10:23:22Z"
@@ -17279,13 +18230,22 @@
         }
       ],
       "metrics": {
+        "stars": 2,
+        "forks": 0,
+        "open_issues": 3,
+        "releases": 0,
+        "created_at": "2024-09-05T08:13:16Z",
+        "last_commit": "2024-09-08T18:20:49Z",
+        "archived": false,
         "contributors": 2
       },
       "scores": {
-        "popularity": 0.618,
-        "rank": 0.186,
-        "ring": 2
-      }
+        "popularity": 0.465,
+        "freshness": 0,
+        "rank": 0.026,
+        "ring": 3
+      },
+      "created_at": "2024-09-05T08:13:16Z"
     },
     {
       "id": "cashubtc/npubcash-website",
@@ -17312,13 +18272,22 @@
         }
       ],
       "metrics": {
+        "stars": 1,
+        "forks": 3,
+        "open_issues": 0,
+        "releases": 0,
+        "created_at": "2024-01-18T15:40:15Z",
+        "last_commit": "2024-09-15T18:05:05Z",
+        "archived": false,
         "contributors": 1
       },
       "scores": {
-        "popularity": 0,
-        "rank": 0,
-        "ring": 4
-      }
+        "popularity": 0.375,
+        "freshness": 0,
+        "rank": 0.021,
+        "ring": 3
+      },
+      "created_at": "2024-01-18T15:40:15Z"
     },
     {
       "id": "egge21m/nut-bridge",
@@ -17345,13 +18314,22 @@
         }
       ],
       "metrics": {
+        "stars": 4,
+        "forks": 1,
+        "open_issues": 0,
+        "releases": 0,
+        "created_at": "2025-03-17T12:54:05Z",
+        "last_commit": "2025-03-18T16:22:19Z",
+        "archived": false,
         "contributors": 1
       },
       "scores": {
-        "popularity": 0,
-        "rank": 0,
-        "ring": 4
-      }
+        "popularity": 0.515,
+        "freshness": 0.272,
+        "rank": 0.068,
+        "ring": 3
+      },
+      "created_at": "2025-03-17T12:54:05Z"
     },
     {
       "id": "cashubtc/nut-november",
@@ -17377,13 +18355,22 @@
         }
       ],
       "metrics": {
+        "stars": 0,
+        "forks": 2,
+        "open_issues": 0,
+        "releases": 0,
+        "created_at": "2025-10-31T09:32:53Z",
+        "last_commit": "2025-12-09T16:34:33Z",
+        "archived": false,
         "contributors": 2
       },
       "scores": {
-        "popularity": 0.618,
-        "rank": 0.186,
-        "ring": 2
-      }
+        "popularity": 0.319,
+        "freshness": 0.476,
+        "rank": 0.108,
+        "ring": 3
+      },
+      "created_at": "2025-10-31T09:32:53Z"
     },
     {
       "id": "gudnuf/nut-smasher",
@@ -17410,13 +18397,22 @@
         }
       ],
       "metrics": {
+        "stars": 1,
+        "forks": 0,
+        "open_issues": 0,
+        "releases": 0,
+        "created_at": "2024-04-10T21:30:19Z",
+        "last_commit": "2024-09-11T18:03:54Z",
+        "archived": false,
         "contributors": 1
       },
       "scores": {
-        "popularity": 0,
-        "rank": 0,
+        "popularity": 0.212,
+        "freshness": 0,
+        "rank": 0.012,
         "ring": 4
-      }
+      },
+      "created_at": "2024-04-10T21:30:19Z"
     },
     {
       "id": "egge21m/nutcracker",
@@ -17454,8 +18450,8 @@
       },
       "scores": {
         "popularity": 0,
-        "freshness": 0.173,
-        "rank": 0.007,
+        "freshness": 0.352,
+        "rank": 0.014,
         "ring": 3
       },
       "created_at": "2025-07-08T12:52:14Z"
@@ -17484,13 +18480,22 @@
         }
       ],
       "metrics": {
+        "stars": 13,
+        "forks": 0,
+        "open_issues": 0,
+        "releases": 0,
+        "created_at": "2023-04-02T15:15:08Z",
+        "last_commit": "2023-04-03T20:53:51Z",
+        "archived": false,
         "contributors": 1
       },
       "scores": {
-        "popularity": 0,
-        "rank": 0,
+        "popularity": 0.469,
+        "freshness": 0,
+        "rank": 0.026,
         "ring": 4
-      }
+      },
+      "created_at": "2023-04-02T15:15:08Z"
     },
     {
       "id": "vstabile/nuthog",
@@ -17517,13 +18522,22 @@
         }
       ],
       "metrics": {
+        "stars": 0,
+        "forks": 0,
+        "open_issues": 0,
+        "releases": 0,
+        "created_at": "2025-03-08T10:21:51Z",
+        "last_commit": "2025-03-16T10:38:27Z",
+        "archived": false,
         "contributors": 1
       },
       "scores": {
         "popularity": 0,
-        "rank": 0,
+        "freshness": 0.264,
+        "rank": 0.011,
         "ring": 4
-      }
+      },
+      "created_at": "2025-03-08T10:21:51Z"
     },
     {
       "id": "gandlafbtc/nutstash-homepage",
@@ -17549,13 +18563,22 @@
         }
       ],
       "metrics": {
+        "stars": 5,
+        "forks": 4,
+        "open_issues": 0,
+        "releases": 0,
+        "created_at": "2023-02-13T09:50:43Z",
+        "last_commit": "2024-12-14T12:01:39Z",
+        "archived": false,
         "contributors": 3
       },
       "scores": {
-        "popularity": 0.787,
-        "rank": 0.236,
-        "ring": 2
-      }
+        "popularity": 0.799,
+        "freshness": 0.212,
+        "rank": 0.096,
+        "ring": 3
+      },
+      "created_at": "2023-02-13T09:50:43Z"
     },
     {
       "id": "abhi25jk/p2pk-locked-cashu-token",
@@ -17582,13 +18605,22 @@
         }
       ],
       "metrics": {
+        "stars": 0,
+        "forks": 0,
+        "open_issues": 0,
+        "releases": 0,
+        "created_at": "2025-04-21T09:59:21Z",
+        "last_commit": "2025-04-21T10:01:38Z",
+        "archived": false,
         "contributors": 1
       },
       "scores": {
         "popularity": 0,
-        "rank": 0,
+        "freshness": 0.308,
+        "rank": 0.012,
         "ring": 4
-      }
+      },
+      "created_at": "2025-04-21T09:59:21Z"
     },
     {
       "id": "dtdannen/strfry-ecash-plugin-dvm-demo",
@@ -17614,13 +18646,22 @@
         }
       ],
       "metrics": {
+        "stars": 0,
+        "forks": 0,
+        "open_issues": 0,
+        "releases": 0,
+        "created_at": "2025-09-30T23:46:56Z",
+        "last_commit": "2025-10-31T00:45:59Z",
+        "archived": false,
         "contributors": 2
       },
       "scores": {
-        "popularity": 0.618,
-        "rank": 0.186,
-        "ring": 2
-      }
+        "popularity": 0.169,
+        "freshness": 0.424,
+        "rank": 0.071,
+        "ring": 3
+      },
+      "created_at": "2025-09-30T23:46:56Z"
     },
     {
       "id": "egge21m/swissbtc-cashu",
@@ -17647,13 +18688,22 @@
         }
       ],
       "metrics": {
+        "stars": 0,
+        "forks": 0,
+        "open_issues": 0,
+        "releases": 0,
+        "created_at": "2025-04-26T06:47:46Z",
+        "last_commit": "2025-04-26T07:58:43Z",
+        "archived": false,
         "contributors": 1
       },
       "scores": {
         "popularity": 0,
-        "rank": 0,
+        "freshness": 0.312,
+        "rank": 0.012,
         "ring": 4
-      }
+      },
+      "created_at": "2025-04-26T06:47:46Z"
     },
     {
       "id": "bitvora/wallet-relay",
@@ -17679,13 +18729,22 @@
         }
       ],
       "metrics": {
+        "stars": 9,
+        "forks": 2,
+        "open_issues": 0,
+        "releases": 0,
+        "created_at": "2025-02-14T16:09:23Z",
+        "last_commit": "2025-02-14T18:58:58Z",
+        "archived": false,
         "contributors": 1
       },
       "scores": {
-        "popularity": 0,
-        "rank": 0,
-        "ring": 4
-      }
+        "popularity": 0.607,
+        "freshness": 0.248,
+        "rank": 0.077,
+        "ring": 3
+      },
+      "created_at": "2025-02-14T16:09:23Z"
     },
     {
       "id": "solidpayorg/webvouchers",
@@ -17711,13 +18770,22 @@
         }
       ],
       "metrics": {
+        "stars": 4,
+        "forks": 0,
+        "open_issues": 11,
+        "releases": 0,
+        "created_at": "2019-08-20T08:58:15Z",
+        "last_commit": "2025-06-24T08:23:19Z",
+        "archived": false,
         "contributors": 3
       },
       "scores": {
-        "popularity": 0.787,
-        "rank": 0.236,
-        "ring": 2
-      }
+        "popularity": 0.605,
+        "freshness": 0.344,
+        "rank": 0.08,
+        "ring": 3
+      },
+      "created_at": "2019-08-20T08:58:15Z"
     },
     {
       "id": "thesimplekid/x-cashu-leptos",
@@ -17743,13 +18811,22 @@
         }
       ],
       "metrics": {
+        "stars": 0,
+        "forks": 0,
+        "open_issues": 0,
+        "releases": 0,
+        "created_at": "2024-09-16T14:44:16Z",
+        "last_commit": "2024-09-16T14:44:19Z",
+        "archived": false,
         "contributors": 1
       },
       "scores": {
         "popularity": 0,
+        "freshness": 0,
         "rank": 0,
         "ring": 4
-      }
+      },
+      "created_at": "2024-09-16T14:44:16Z"
     },
     {
       "id": "thesimplekid/x-cashu-search",
@@ -17776,13 +18853,22 @@
         }
       ],
       "metrics": {
+        "stars": 1,
+        "forks": 0,
+        "open_issues": 1,
+        "releases": 0,
+        "created_at": "2024-04-08T00:04:43Z",
+        "last_commit": "2024-10-27T10:13:26Z",
+        "archived": false,
         "contributors": 1
       },
       "scores": {
-        "popularity": 0,
-        "rank": 0,
-        "ring": 4
-      }
+        "popularity": 0.212,
+        "freshness": 0.188,
+        "rank": 0.031,
+        "ring": 3
+      },
+      "created_at": "2024-04-08T00:04:43Z"
     },
     {
       "id": "silentius-satoshi/zaptok",
@@ -17837,13 +18923,22 @@
         }
       ],
       "metrics": {
+        "stars": 244,
+        "forks": 90,
+        "open_issues": 40,
+        "releases": 0,
+        "created_at": "2023-01-27T20:00:46Z",
+        "last_commit": "2026-09-24T15:11:48Z",
+        "archived": false,
         "contributors": 36
       },
       "scores": {
-        "popularity": 0.7,
-        "rank": 0.7,
+        "popularity": 0.827,
+        "freshness": 0.6,
+        "rank": 0.767,
         "ring": 0
-      }
+      },
+      "created_at": "2023-01-27T20:00:46Z"
     },
     {
       "id": "NUT-00",
@@ -18704,8 +19799,71 @@
           "ref": "testnut mint (fake ecash, with fees)"
         },
         {
+          "kind": "known-mints"
+        },
+        {
           "kind": "mint-probe",
           "ref": "https://testnut.cashu.space/v1/info"
+        }
+      ],
+      "metrics": {},
+      "scores": {}
+    },
+    {
+      "id": "mint:03fdf1e25e49365ed4bbccfd88f07d5c73ef46fe853048ca94f04157a02000b017",
+      "type": "mint_instance",
+      "name": "Cashu mint",
+      "host": "none",
+      "repos": [],
+      "url": "https://mint.gitvid.net",
+      "status": "active",
+      "aliases": [
+        "03fdf1e25e49365ed4bbccfd88f07d5c73ef46fe853048ca94f04157a02000b017"
+      ],
+      "tags": [],
+      "nuts": [],
+      "primary_parent": "cashubtc/nutshell",
+      "sources": [
+        {
+          "kind": "known-mints"
+        },
+        {
+          "kind": "nostr",
+          "ref": "kind:38172"
+        },
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.gitvid.net/v1/info"
+        }
+      ],
+      "metrics": {},
+      "scores": {}
+    },
+    {
+      "id": "mint:021bce61ecb2628d96f5fba9b2e640b7c2d2a1c5e20dfdf4dede764ae17c60c872",
+      "type": "mint_instance",
+      "name": "cashu.chat",
+      "host": "none",
+      "repos": [],
+      "url": "https://mint.cashu.chat",
+      "status": "active",
+      "aliases": [
+        "021bce61ecb2628d96f5fba9b2e640b7c2d2a1c5e20dfdf4dede764ae17c60c872"
+      ],
+      "tags": [],
+      "nuts": [],
+      "primary_parent": "cashubtc/nutshell",
+      "sources": [
+        {
+          "kind": "known-mints"
+        },
+        {
+          "kind": "nostr",
+          "ref": "kind:38172"
+        },
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.cashu.chat/v1/info"
         }
       ],
       "metrics": {},
@@ -20501,6 +21659,24 @@
       "scope": []
     },
     {
+      "from": "traviseric/arxmint",
+      "to": "cashubtc/cashu-ts",
+      "type": "depends_on",
+      "scope": [],
+      "declared_range": "^3.5.0",
+      "sources": [
+        {
+          "kind": "gh-dependency-graph",
+          "ref": "package.json",
+          "url": "https://github.com/traviseric/arxmint/blob/HEAD/package.json"
+        }
+      ],
+      "confidence": 0.95,
+      "latest_at_build": "4.11.0",
+      "lag": "behind_major",
+      "role": "primary"
+    },
+    {
       "from": "traviseric/cashu-mint",
       "to": "cashubtc/cashu-ts",
       "type": "depends_on",
@@ -20537,21 +21713,21 @@
       "role": "primary"
     },
     {
-      "from": "traviseric/arxmint",
+      "from": "nisfeb/ecash",
       "to": "cashubtc/cashu-ts",
       "type": "depends_on",
       "scope": [],
-      "declared_range": "^3.5.0",
+      "declared_range": "^4.5.1",
       "sources": [
         {
           "kind": "gh-dependency-graph",
           "ref": "package.json",
-          "url": "https://github.com/traviseric/arxmint/blob/HEAD/package.json"
+          "url": "https://github.com/nisfeb/ecash/blob/HEAD/package.json"
         }
       ],
       "confidence": 0.95,
       "latest_at_build": "4.11.0",
-      "lag": "behind_major",
+      "lag": "behind_minor",
       "role": "primary"
     },
     {
@@ -20573,24 +21749,6 @@
       "role": "primary"
     },
     {
-      "from": "nisfeb/ecash",
-      "to": "cashubtc/cashu-ts",
-      "type": "depends_on",
-      "scope": [],
-      "declared_range": "^4.5.1",
-      "sources": [
-        {
-          "kind": "gh-dependency-graph",
-          "ref": "package.json",
-          "url": "https://github.com/nisfeb/ecash/blob/HEAD/package.json"
-        }
-      ],
-      "confidence": 0.95,
-      "latest_at_build": "4.11.0",
-      "lag": "behind_minor",
-      "role": "primary"
-    },
-    {
       "from": "ducat-unit/unit-cashu-mint",
       "to": "cashubtc/cashu-ts",
       "type": "depends_on",
@@ -20606,24 +21764,6 @@
       "confidence": 0.95,
       "latest_at_build": "4.11.0",
       "lag": "behind_minor",
-      "role": "primary"
-    },
-    {
-      "from": "aeschylus/botwallets",
-      "to": "cashubtc/cashu-ts",
-      "type": "depends_on",
-      "scope": [],
-      "declared_range": "^3.4.1",
-      "sources": [
-        {
-          "kind": "gh-dependency-graph",
-          "ref": "package.json",
-          "url": "https://github.com/aeschylus/botwallets/blob/HEAD/package.json"
-        }
-      ],
-      "confidence": 0.95,
-      "latest_at_build": "4.11.0",
-      "lag": "behind_major",
       "role": "primary"
     },
     {
@@ -20661,6 +21801,24 @@
       "latest_at_build": "1.0.0-rc11",
       "lag": "up_to_date",
       "role": "secondary"
+    },
+    {
+      "from": "aeschylus/botwallets",
+      "to": "cashubtc/cashu-ts",
+      "type": "depends_on",
+      "scope": [],
+      "declared_range": "^3.4.1",
+      "sources": [
+        {
+          "kind": "gh-dependency-graph",
+          "ref": "package.json",
+          "url": "https://github.com/aeschylus/botwallets/blob/HEAD/package.json"
+        }
+      ],
+      "confidence": 0.95,
+      "latest_at_build": "4.11.0",
+      "lag": "behind_major",
+      "role": "primary"
     },
     {
       "from": "swedishfrenchpress/cashu-pixel",
@@ -20771,6 +21929,24 @@
       "role": "primary"
     },
     {
+      "from": "hodladi/endfiatcashu",
+      "to": "cashubtc/coco",
+      "type": "depends_on",
+      "scope": [],
+      "declared_range": "^1.0.0-rc11",
+      "sources": [
+        {
+          "kind": "gh-dependency-graph",
+          "ref": "package.json",
+          "url": "https://github.com/hodladi/endfiatcashu/blob/HEAD/package.json"
+        }
+      ],
+      "confidence": 0.95,
+      "latest_at_build": "1.0.0-rc11",
+      "lag": "up_to_date",
+      "role": "primary"
+    },
+    {
       "from": "cashubtc/enuts",
       "to": "cashubtc/cashu-ts",
       "type": "depends_on",
@@ -20807,21 +21983,21 @@
       "role": "secondary"
     },
     {
-      "from": "hodladi/endfiatcashu",
-      "to": "cashubtc/coco",
+      "from": "hexdaemon/hexnuts",
+      "to": "cashubtc/cashu-ts",
       "type": "depends_on",
       "scope": [],
-      "declared_range": "^1.0.0-rc11",
+      "declared_range": "^3.4.1",
       "sources": [
         {
           "kind": "gh-dependency-graph",
           "ref": "package.json",
-          "url": "https://github.com/hodladi/endfiatcashu/blob/HEAD/package.json"
+          "url": "https://github.com/hexdaemon/hexnuts/blob/HEAD/package.json"
         }
       ],
       "confidence": 0.95,
-      "latest_at_build": "1.0.0-rc11",
-      "lag": "up_to_date",
+      "latest_at_build": "4.11.0",
+      "lag": "behind_major",
       "role": "primary"
     },
     {
@@ -20835,24 +22011,6 @@
           "kind": "gh-dependency-graph",
           "ref": "package.json",
           "url": "https://github.com/amisatoshi/ijmawallet/blob/HEAD/package.json"
-        }
-      ],
-      "confidence": 0.95,
-      "latest_at_build": "4.11.0",
-      "lag": "behind_major",
-      "role": "primary"
-    },
-    {
-      "from": "hexdaemon/hexnuts",
-      "to": "cashubtc/cashu-ts",
-      "type": "depends_on",
-      "scope": [],
-      "declared_range": "^3.4.1",
-      "sources": [
-        {
-          "kind": "gh-dependency-graph",
-          "ref": "package.json",
-          "url": "https://github.com/hexdaemon/hexnuts/blob/HEAD/package.json"
         }
       ],
       "confidence": 0.95,
@@ -20951,24 +22109,6 @@
       "role": "secondary"
     },
     {
-      "from": "waffledog-bot/cashu-wallet",
-      "to": "cashubtc/cashu-ts",
-      "type": "depends_on",
-      "scope": [],
-      "declared_range": "^2.1.0",
-      "sources": [
-        {
-          "kind": "gh-dependency-graph",
-          "ref": "package.json",
-          "url": "https://github.com/waffledog-bot/cashu-wallet/blob/HEAD/package.json"
-        }
-      ],
-      "confidence": 0.95,
-      "latest_at_build": "4.11.0",
-      "lag": "behind_major",
-      "role": "primary"
-    },
-    {
       "from": "codepocketdev/satoshi-pay-wallet",
       "to": "cashubtc/cashu-ts",
       "type": "depends_on",
@@ -21003,6 +22143,24 @@
       "latest_at_build": "0.3.4",
       "lag": "up_to_date",
       "role": "secondary"
+    },
+    {
+      "from": "waffledog-bot/cashu-wallet",
+      "to": "cashubtc/cashu-ts",
+      "type": "depends_on",
+      "scope": [],
+      "declared_range": "^2.1.0",
+      "sources": [
+        {
+          "kind": "gh-dependency-graph",
+          "ref": "package.json",
+          "url": "https://github.com/waffledog-bot/cashu-wallet/blob/HEAD/package.json"
+        }
+      ],
+      "confidence": 0.95,
+      "latest_at_build": "4.11.0",
+      "lag": "behind_major",
+      "role": "primary"
     },
     {
       "from": "zappi-org/zappi-wallet",
@@ -21113,24 +22271,6 @@
       "role": "secondary"
     },
     {
-      "from": "shopstr-eng/shopstr",
-      "to": "cashubtc/cashu-ts",
-      "type": "depends_on",
-      "scope": [],
-      "declared_range": "4.6.0",
-      "sources": [
-        {
-          "kind": "gh-dependency-graph",
-          "ref": "package.json",
-          "url": "https://github.com/shopstr-eng/shopstr/blob/HEAD/package.json"
-        }
-      ],
-      "confidence": 0.95,
-      "latest_at_build": "4.11.0",
-      "lag": "behind_minor",
-      "role": "primary"
-    },
-    {
       "from": "pablof7z/olas",
       "to": "cashubtc/cashu-ts",
       "type": "depends_on",
@@ -21146,6 +22286,24 @@
       "confidence": 0.95,
       "latest_at_build": "4.11.0",
       "lag": "behind_major",
+      "role": "primary"
+    },
+    {
+      "from": "shopstr-eng/shopstr",
+      "to": "cashubtc/cashu-ts",
+      "type": "depends_on",
+      "scope": [],
+      "declared_range": "4.6.0",
+      "sources": [
+        {
+          "kind": "gh-dependency-graph",
+          "ref": "package.json",
+          "url": "https://github.com/shopstr-eng/shopstr/blob/HEAD/package.json"
+        }
+      ],
+      "confidence": 0.95,
+      "latest_at_build": "4.11.0",
+      "lag": "behind_minor",
       "role": "primary"
     },
     {
@@ -21329,6 +22487,42 @@
       "role": "primary"
     },
     {
+      "from": "routstr/otrta-client",
+      "to": "cashubtc/cashu-ts",
+      "type": "depends_on",
+      "scope": [],
+      "declared_range": "= 0.7.2",
+      "sources": [
+        {
+          "kind": "gh-dependency-graph",
+          "ref": "ui/package-lock.json",
+          "url": "https://github.com/routstr/otrta-client/blob/HEAD/ui/package-lock.json"
+        }
+      ],
+      "confidence": 0.95,
+      "latest_at_build": "4.11.0",
+      "lag": "behind_major",
+      "role": "primary"
+    },
+    {
+      "from": "cachet-jp/ln-agent-poc-v2",
+      "to": "cashubtc/cashu-ts",
+      "type": "depends_on",
+      "scope": [],
+      "declared_range": "= 3.6.1",
+      "sources": [
+        {
+          "kind": "gh-dependency-graph",
+          "ref": "purchasing-agent/package.json",
+          "url": "https://github.com/cachet-jp/ln-agent-poc-v2/blob/HEAD/purchasing-agent/package.json"
+        }
+      ],
+      "confidence": 0.95,
+      "latest_at_build": "4.11.0",
+      "lag": "behind_major",
+      "role": "primary"
+    },
+    {
       "from": "chuxo/plugin-nostr",
       "to": "cashubtc/cashu-ts",
       "type": "depends_on",
@@ -21429,24 +22623,6 @@
           "kind": "gh-dependency-graph",
           "ref": "package.json",
           "url": "https://github.com/robwoodgate/cashu-redeem/blob/HEAD/package.json"
-        }
-      ],
-      "confidence": 0.95,
-      "latest_at_build": "4.11.0",
-      "lag": "behind_major",
-      "role": "primary"
-    },
-    {
-      "from": "cachet-jp/ln-agent-poc-v2",
-      "to": "cashubtc/cashu-ts",
-      "type": "depends_on",
-      "scope": [],
-      "declared_range": "= 3.6.1",
-      "sources": [
-        {
-          "kind": "gh-dependency-graph",
-          "ref": "purchasing-agent/package.json",
-          "url": "https://github.com/cachet-jp/ln-agent-poc-v2/blob/HEAD/purchasing-agent/package.json"
         }
       ],
       "confidence": 0.95,
@@ -21617,21 +22793,21 @@
       "role": "primary"
     },
     {
-      "from": "9qeklajc/ecash-402-client",
-      "to": "cashubtc/cashu-ts",
+      "from": "bitcoin-pir/cashier",
+      "to": "cashubtc/cdk",
       "type": "depends_on",
       "scope": [],
-      "declared_range": "= 0.8.1",
+      "declared_range": "0.18",
       "sources": [
         {
           "kind": "gh-dependency-graph",
-          "ref": "ui/package-lock.json",
-          "url": "https://github.com/9qeklajc/ecash-402-client/blob/HEAD/ui/package-lock.json"
+          "ref": "Cargo.toml",
+          "url": "https://github.com/bitcoin-pir/cashier/blob/HEAD/Cargo.toml"
         }
       ],
       "confidence": 0.95,
-      "latest_at_build": "4.11.0",
-      "lag": "behind_major",
+      "latest_at_build": "0.18.1",
+      "lag": "up_to_date",
       "role": "primary"
     },
     {
@@ -21653,21 +22829,21 @@
       "role": "primary"
     },
     {
-      "from": "bitcoin-pir/cashier",
-      "to": "cashubtc/cdk",
+      "from": "wadadawadada/blackbox_node",
+      "to": "cashubtc/cashu-ts",
       "type": "depends_on",
       "scope": [],
-      "declared_range": "0.18",
+      "declared_range": "^3.6.1",
       "sources": [
         {
           "kind": "gh-dependency-graph",
-          "ref": "Cargo.toml",
-          "url": "https://github.com/bitcoin-pir/cashier/blob/HEAD/Cargo.toml"
+          "ref": "package.json",
+          "url": "https://github.com/wadadawadada/blackbox_node/blob/HEAD/package.json"
         }
       ],
       "confidence": 0.95,
-      "latest_at_build": "0.18.1",
-      "lag": "up_to_date",
+      "latest_at_build": "4.11.0",
+      "lag": "behind_major",
       "role": "primary"
     },
     {
@@ -21705,24 +22881,6 @@
       "latest_at_build": "0.3.4",
       "lag": "up_to_date",
       "role": "secondary"
-    },
-    {
-      "from": "wadadawadada/blackbox_node",
-      "to": "cashubtc/cashu-ts",
-      "type": "depends_on",
-      "scope": [],
-      "declared_range": "^3.6.1",
-      "sources": [
-        {
-          "kind": "gh-dependency-graph",
-          "ref": "package.json",
-          "url": "https://github.com/wadadawadada/blackbox_node/blob/HEAD/package.json"
-        }
-      ],
-      "confidence": 0.95,
-      "latest_at_build": "4.11.0",
-      "lag": "behind_major",
-      "role": "primary"
     },
     {
       "from": "jameskevinjones/boss-battle-dvm-agent",
@@ -21815,24 +22973,6 @@
       "role": "primary"
     },
     {
-      "from": "silexperience210/cashu-lora-bridge",
-      "to": "cashubtc/cashu",
-      "type": "depends_on",
-      "scope": [],
-      "declared_range": "==0.15.3",
-      "sources": [
-        {
-          "kind": "gh-dependency-graph",
-          "ref": "requirements.txt",
-          "url": "https://github.com/silexperience210/cashu-lora-bridge/blob/HEAD/requirements.txt"
-        }
-      ],
-      "confidence": 0.95,
-      "latest_at_build": "0.21.0",
-      "lag": "behind_major",
-      "role": "primary"
-    },
-    {
       "from": "robwoodgate/cashu-for-woocommerce",
       "to": "cashubtc/cashu-ts",
       "type": "depends_on",
@@ -21848,6 +22988,24 @@
       "confidence": 0.95,
       "latest_at_build": "4.11.0",
       "lag": "up_to_date",
+      "role": "primary"
+    },
+    {
+      "from": "silexperience210/cashu-lora-bridge",
+      "to": "cashubtc/cashu",
+      "type": "depends_on",
+      "scope": [],
+      "declared_range": "==0.15.3",
+      "sources": [
+        {
+          "kind": "gh-dependency-graph",
+          "ref": "requirements.txt",
+          "url": "https://github.com/silexperience210/cashu-lora-bridge/blob/HEAD/requirements.txt"
+        }
+      ],
+      "confidence": 0.95,
+      "latest_at_build": "0.21.0",
+      "lag": "behind_major",
       "role": "primary"
     },
     {
@@ -21887,24 +23045,6 @@
       "role": "primary"
     },
     {
-      "from": "gandlafbtc/cashu-brrr",
-      "to": "cashubtc/cashu-ts",
-      "type": "depends_on",
-      "scope": [],
-      "declared_range": "^2.0.0-rc4",
-      "sources": [
-        {
-          "kind": "gh-dependency-graph",
-          "ref": "package.json",
-          "url": "https://github.com/gandlafbtc/cashu-brrr/blob/HEAD/package.json"
-        }
-      ],
-      "confidence": 0.95,
-      "latest_at_build": "4.11.0",
-      "lag": "behind_major",
-      "role": "primary"
-    },
-    {
       "from": "gudnuf/cashu-batch-mint",
       "to": "cashubtc/cashu-ts",
       "type": "depends_on",
@@ -21915,6 +23055,24 @@
           "kind": "gh-dependency-graph",
           "ref": "package.json",
           "url": "https://github.com/gudnuf/cashu-batch-mint/blob/HEAD/package.json"
+        }
+      ],
+      "confidence": 0.95,
+      "latest_at_build": "4.11.0",
+      "lag": "behind_major",
+      "role": "primary"
+    },
+    {
+      "from": "gandlafbtc/cashu-brrr",
+      "to": "cashubtc/cashu-ts",
+      "type": "depends_on",
+      "scope": [],
+      "declared_range": "^2.0.0-rc4",
+      "sources": [
+        {
+          "kind": "gh-dependency-graph",
+          "ref": "package.json",
+          "url": "https://github.com/gandlafbtc/cashu-brrr/blob/HEAD/package.json"
         }
       ],
       "confidence": 0.95,
@@ -22031,24 +23189,6 @@
       "role": "primary"
     },
     {
-      "from": "brenorb/granola",
-      "to": "cashubtc/cashu-ts",
-      "type": "depends_on",
-      "scope": [],
-      "declared_range": "4.7.1",
-      "sources": [
-        {
-          "kind": "gh-dependency-graph",
-          "ref": "package.json",
-          "url": "https://github.com/brenorb/granola/blob/HEAD/package.json"
-        }
-      ],
-      "confidence": 0.95,
-      "latest_at_build": "4.11.0",
-      "lag": "behind_minor",
-      "role": "primary"
-    },
-    {
       "from": "satsandsports/frostycashuwallet",
       "to": "cashubtc/cdk",
       "type": "depends_on",
@@ -22085,6 +23225,24 @@
       "role": "secondary"
     },
     {
+      "from": "brenorb/granola",
+      "to": "cashubtc/cashu-ts",
+      "type": "depends_on",
+      "scope": [],
+      "declared_range": "4.7.1",
+      "sources": [
+        {
+          "kind": "gh-dependency-graph",
+          "ref": "package.json",
+          "url": "https://github.com/brenorb/granola/blob/HEAD/package.json"
+        }
+      ],
+      "confidence": 0.95,
+      "latest_at_build": "4.11.0",
+      "lag": "behind_minor",
+      "role": "primary"
+    },
+    {
       "from": "ethntuttle/kirk",
       "to": "cashubtc/cdk",
       "type": "depends_on",
@@ -22118,24 +23276,6 @@
       "confidence": 0.95,
       "latest_at_build": "0.18.1",
       "lag": "unknown",
-      "role": "primary"
-    },
-    {
-      "from": "routstr/otrta-client",
-      "to": "cashubtc/cashu-ts",
-      "type": "depends_on",
-      "scope": [],
-      "declared_range": "= 0.7.2",
-      "sources": [
-        {
-          "kind": "gh-dependency-graph",
-          "ref": "ui/package-lock.json",
-          "url": "https://github.com/routstr/otrta-client/blob/HEAD/ui/package-lock.json"
-        }
-      ],
-      "confidence": 0.95,
-      "latest_at_build": "4.11.0",
-      "lag": "behind_major",
       "role": "primary"
     },
     {
@@ -22275,6 +23415,24 @@
           "kind": "gh-dependency-graph",
           "ref": "package.json",
           "url": "https://github.com/onchaindiscgolf/app/blob/HEAD/package.json"
+        }
+      ],
+      "confidence": 0.95,
+      "latest_at_build": "4.11.0",
+      "lag": "behind_major",
+      "role": "primary"
+    },
+    {
+      "from": "gandlafbtc/open-pleb",
+      "to": "cashubtc/cashu-ts",
+      "type": "depends_on",
+      "scope": [],
+      "declared_range": "^ 2.4.1",
+      "sources": [
+        {
+          "kind": "gh-dependency-graph",
+          "ref": "packages/admin-frontend/package.json",
+          "url": "https://github.com/gandlafbtc/open-pleb/blob/HEAD/packages/admin-frontend/package.json"
         }
       ],
       "confidence": 0.95,
@@ -22481,24 +23639,6 @@
       "role": "primary"
     },
     {
-      "from": "gandlafbtc/open-pleb",
-      "to": "cashubtc/cashu-ts",
-      "type": "depends_on",
-      "scope": [],
-      "declared_range": "^ 2.4.1",
-      "sources": [
-        {
-          "kind": "gh-dependency-graph",
-          "ref": "packages/admin-frontend/package.json",
-          "url": "https://github.com/gandlafbtc/open-pleb/blob/HEAD/packages/admin-frontend/package.json"
-        }
-      ],
-      "confidence": 0.95,
-      "latest_at_build": "4.11.0",
-      "lag": "behind_major",
-      "role": "primary"
-    },
-    {
       "from": "amperstrand/tollgate-auth",
       "to": "cashubtc/cashu-ts",
       "type": "depends_on",
@@ -22679,6 +23819,42 @@
       "role": "primary"
     },
     {
+      "from": "andotherstuff/cashu-wallet",
+      "to": "cashubtc/cashu-ts",
+      "type": "depends_on",
+      "scope": [],
+      "declared_range": "^2.5.2",
+      "sources": [
+        {
+          "kind": "gh-dependency-graph",
+          "ref": "package.json",
+          "url": "https://github.com/andotherstuff/cashu-wallet/blob/HEAD/package.json"
+        }
+      ],
+      "confidence": 0.95,
+      "latest_at_build": "4.11.0",
+      "lag": "behind_major",
+      "role": "primary"
+    },
+    {
+      "from": "andotherstuff/cashu-wallet",
+      "to": "cashubtc/cashu-crypto-ts",
+      "type": "depends_on",
+      "scope": [],
+      "declared_range": "^0.3.4",
+      "sources": [
+        {
+          "kind": "gh-dependency-graph",
+          "ref": "package.json",
+          "url": "https://github.com/andotherstuff/cashu-wallet/blob/HEAD/package.json"
+        }
+      ],
+      "confidence": 0.95,
+      "latest_at_build": "0.3.4",
+      "lag": "up_to_date",
+      "role": "secondary"
+    },
+    {
       "from": "abdelstark/zashu",
       "to": "cashubtc/cdk",
       "type": "depends_on",
@@ -22715,40 +23891,22 @@
       "role": "secondary"
     },
     {
-      "from": "andotherstuff/cashu-wallet",
-      "to": "cashubtc/cashu-ts",
+      "from": "gudnuf/cashu-dlcstr-rs",
+      "to": "cashubtc/cdk",
       "type": "depends_on",
       "scope": [],
-      "declared_range": "^2.5.2",
+      "declared_range": "0.2.0",
       "sources": [
         {
           "kind": "gh-dependency-graph",
-          "ref": "package.json",
-          "url": "https://github.com/andotherstuff/cashu-wallet/blob/HEAD/package.json"
+          "ref": "Cargo.toml",
+          "url": "https://github.com/gudnuf/cashu-dlcstr-rs/blob/HEAD/Cargo.toml"
         }
       ],
       "confidence": 0.95,
-      "latest_at_build": "4.11.0",
+      "latest_at_build": "0.18.1",
       "lag": "behind_major",
       "role": "primary"
-    },
-    {
-      "from": "andotherstuff/cashu-wallet",
-      "to": "cashubtc/cashu-crypto-ts",
-      "type": "depends_on",
-      "scope": [],
-      "declared_range": "^0.3.4",
-      "sources": [
-        {
-          "kind": "gh-dependency-graph",
-          "ref": "package.json",
-          "url": "https://github.com/andotherstuff/cashu-wallet/blob/HEAD/package.json"
-        }
-      ],
-      "confidence": 0.95,
-      "latest_at_build": "0.3.4",
-      "lag": "up_to_date",
-      "role": "secondary"
     },
     {
       "from": "gandlafbtc/cashu-browser-wallet",
@@ -22821,24 +23979,6 @@
       "latest_at_build": "1.0.0-rc11",
       "lag": "up_to_date",
       "role": "secondary"
-    },
-    {
-      "from": "gudnuf/cashu-dlcstr-rs",
-      "to": "cashubtc/cdk",
-      "type": "depends_on",
-      "scope": [],
-      "declared_range": "0.2.0",
-      "sources": [
-        {
-          "kind": "gh-dependency-graph",
-          "ref": "Cargo.toml",
-          "url": "https://github.com/gudnuf/cashu-dlcstr-rs/blob/HEAD/Cargo.toml"
-        }
-      ],
-      "confidence": 0.95,
-      "latest_at_build": "0.18.1",
-      "lag": "behind_major",
-      "role": "primary"
     },
     {
       "from": "cashubtc/cashu-ui",
@@ -22985,6 +24125,42 @@
       "role": "primary"
     },
     {
+      "from": "satsandsports/mdk_group_chat_with_cashu_wallet_integration",
+      "to": "cashubtc/cdk",
+      "type": "depends_on",
+      "scope": [],
+      "declared_range": "*",
+      "sources": [
+        {
+          "kind": "gh-dependency-graph",
+          "ref": "Cargo.toml",
+          "url": "https://github.com/satsandsports/mdk_group_chat_with_cashu_wallet_integration/blob/HEAD/Cargo.toml"
+        }
+      ],
+      "confidence": 0.95,
+      "latest_at_build": "0.18.1",
+      "lag": "unknown",
+      "role": "primary"
+    },
+    {
+      "from": "miladsoft/my-cashu-app",
+      "to": "cashubtc/cashu-ts",
+      "type": "depends_on",
+      "scope": [],
+      "declared_range": "^2.5.2",
+      "sources": [
+        {
+          "kind": "gh-dependency-graph",
+          "ref": "package.json",
+          "url": "https://github.com/miladsoft/my-cashu-app/blob/HEAD/package.json"
+        }
+      ],
+      "confidence": 0.95,
+      "latest_at_build": "4.11.0",
+      "lag": "behind_major",
+      "role": "primary"
+    },
+    {
       "from": "matijaoe/nutlet",
       "to": "cashubtc/cashu-ts",
       "type": "depends_on",
@@ -23021,24 +24197,6 @@
       "role": "primary"
     },
     {
-      "from": "bobodread876/react-native.cashu.me",
-      "to": "cashubtc/cashu-ts",
-      "type": "depends_on",
-      "scope": [],
-      "declared_range": "^2.5.3",
-      "sources": [
-        {
-          "kind": "gh-dependency-graph",
-          "ref": "package.json",
-          "url": "https://github.com/bobodread876/react-native.cashu.me/blob/HEAD/package.json"
-        }
-      ],
-      "confidence": 0.95,
-      "latest_at_build": "4.11.0",
-      "lag": "behind_major",
-      "role": "primary"
-    },
-    {
       "from": "sh1ftred/rest-api-cashu",
       "to": "cashubtc/cashu-ts",
       "type": "depends_on",
@@ -23057,34 +24215,16 @@
       "role": "primary"
     },
     {
-      "from": "satsandsports/mdk_group_chat_with_cashu_wallet_integration",
-      "to": "cashubtc/cdk",
-      "type": "depends_on",
-      "scope": [],
-      "declared_range": "*",
-      "sources": [
-        {
-          "kind": "gh-dependency-graph",
-          "ref": "Cargo.toml",
-          "url": "https://github.com/satsandsports/mdk_group_chat_with_cashu_wallet_integration/blob/HEAD/Cargo.toml"
-        }
-      ],
-      "confidence": 0.95,
-      "latest_at_build": "0.18.1",
-      "lag": "unknown",
-      "role": "primary"
-    },
-    {
-      "from": "miladsoft/my-cashu-app",
+      "from": "bobodread876/react-native.cashu.me",
       "to": "cashubtc/cashu-ts",
       "type": "depends_on",
       "scope": [],
-      "declared_range": "^2.5.2",
+      "declared_range": "^2.5.3",
       "sources": [
         {
           "kind": "gh-dependency-graph",
           "ref": "package.json",
-          "url": "https://github.com/miladsoft/my-cashu-app/blob/HEAD/package.json"
+          "url": "https://github.com/bobodread876/react-native.cashu.me/blob/HEAD/package.json"
         }
       ],
       "confidence": 0.95,
@@ -23199,6 +24339,24 @@
       "latest_at_build": "0.3.4",
       "lag": "up_to_date",
       "role": "secondary"
+    },
+    {
+      "from": "abdelstark/cashu-zk-engine",
+      "to": "cashubtc/cashu",
+      "type": "depends_on",
+      "scope": [],
+      "declared_range": "= 0.16.0",
+      "sources": [
+        {
+          "kind": "gh-dependency-graph",
+          "ref": "tests/references/bdhke-nutshell/poetry.lock",
+          "url": "https://github.com/abdelstark/cashu-zk-engine/blob/HEAD/tests/references/bdhke-nutshell/poetry.lock"
+        }
+      ],
+      "confidence": 0.95,
+      "latest_at_build": "0.21.0",
+      "lag": "behind_major",
+      "role": "primary"
     },
     {
       "from": "happylemonprogramming/cashubuddy",
@@ -23399,24 +24557,6 @@
       "role": "primary"
     },
     {
-      "from": "pdcolandrea/cashu-playground",
-      "to": "cashubtc/cashu-ts",
-      "type": "depends_on",
-      "scope": [],
-      "declared_range": "^0.8.0-rc.3",
-      "sources": [
-        {
-          "kind": "gh-dependency-graph",
-          "ref": "package.json",
-          "url": "https://github.com/pdcolandrea/cashu-playground/blob/HEAD/package.json"
-        }
-      ],
-      "confidence": 0.95,
-      "latest_at_build": "4.11.0",
-      "lag": "behind_major",
-      "role": "primary"
-    },
-    {
       "from": "thesimplekid/cashu-payment-backend",
       "to": "cashubtc/cdk",
       "type": "depends_on",
@@ -23432,6 +24572,24 @@
       "confidence": 0.95,
       "latest_at_build": "0.18.1",
       "lag": "unknown",
+      "role": "primary"
+    },
+    {
+      "from": "pdcolandrea/cashu-playground",
+      "to": "cashubtc/cashu-ts",
+      "type": "depends_on",
+      "scope": [],
+      "declared_range": "^0.8.0-rc.3",
+      "sources": [
+        {
+          "kind": "gh-dependency-graph",
+          "ref": "package.json",
+          "url": "https://github.com/pdcolandrea/cashu-playground/blob/HEAD/package.json"
+        }
+      ],
+      "confidence": 0.95,
+      "latest_at_build": "4.11.0",
+      "lag": "behind_major",
       "role": "primary"
     },
     {
@@ -23615,24 +24773,6 @@
       "role": "primary"
     },
     {
-      "from": "f321x/kickstart-cln-plugin",
-      "to": "cashubtc/cdk",
-      "type": "depends_on",
-      "scope": [],
-      "declared_range": "*",
-      "sources": [
-        {
-          "kind": "gh-dependency-graph",
-          "ref": "Cargo.toml",
-          "url": "https://github.com/f321x/kickstart-cln-plugin/blob/HEAD/Cargo.toml"
-        }
-      ],
-      "confidence": 0.95,
-      "latest_at_build": "0.18.1",
-      "lag": "unknown",
-      "role": "primary"
-    },
-    {
       "from": "hzrd149/chessnut",
       "to": "cashubtc/cashu-ts",
       "type": "depends_on",
@@ -23648,6 +24788,24 @@
       "confidence": 0.95,
       "latest_at_build": "4.11.0",
       "lag": "behind_major",
+      "role": "primary"
+    },
+    {
+      "from": "f321x/kickstart-cln-plugin",
+      "to": "cashubtc/cdk",
+      "type": "depends_on",
+      "scope": [],
+      "declared_range": "*",
+      "sources": [
+        {
+          "kind": "gh-dependency-graph",
+          "ref": "Cargo.toml",
+          "url": "https://github.com/f321x/kickstart-cln-plugin/blob/HEAD/Cargo.toml"
+        }
+      ],
+      "confidence": 0.95,
+      "latest_at_build": "0.18.1",
+      "lag": "unknown",
       "role": "primary"
     },
     {
@@ -23723,24 +24881,6 @@
       "role": "primary"
     },
     {
-      "from": "egge21m/nutcracker",
-      "to": "cashubtc/cashu-ts",
-      "type": "depends_on",
-      "scope": [],
-      "declared_range": "^2.5.2",
-      "sources": [
-        {
-          "kind": "gh-dependency-graph",
-          "ref": "package.json",
-          "url": "https://github.com/egge21m/nutcracker/blob/HEAD/package.json"
-        }
-      ],
-      "confidence": 0.95,
-      "latest_at_build": "4.11.0",
-      "lag": "behind_major",
-      "role": "primary"
-    },
-    {
       "from": "cashubtc/npubcash-website",
       "to": "cashubtc/cashu-ts",
       "type": "depends_on",
@@ -23787,6 +24927,24 @@
           "kind": "gh-dependency-graph",
           "ref": "package.json",
           "url": "https://github.com/gudnuf/nut-smasher/blob/HEAD/package.json"
+        }
+      ],
+      "confidence": 0.95,
+      "latest_at_build": "4.11.0",
+      "lag": "behind_major",
+      "role": "primary"
+    },
+    {
+      "from": "egge21m/nutcracker",
+      "to": "cashubtc/cashu-ts",
+      "type": "depends_on",
+      "scope": [],
+      "declared_range": "^2.5.2",
+      "sources": [
+        {
+          "kind": "gh-dependency-graph",
+          "ref": "package.json",
+          "url": "https://github.com/egge21m/nutcracker/blob/HEAD/package.json"
         }
       ],
       "confidence": 0.95,
@@ -24056,6 +25214,344 @@
         {
           "kind": "mint-probe",
           "ref": "https://testnut.cashu.space/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:03fdf1e25e49365ed4bbccfd88f07d5c73ef46fe853048ca94f04157a02000b017",
+      "to": "cashubtc/nutshell",
+      "type": "runs",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "version Nutshell/0.20.1"
+        }
+      ],
+      "confidence": 0.6,
+      "scope": []
+    },
+    {
+      "from": "mint:03fdf1e25e49365ed4bbccfd88f07d5c73ef46fe853048ca94f04157a02000b017",
+      "to": "NUT-04",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.gitvid.net/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:03fdf1e25e49365ed4bbccfd88f07d5c73ef46fe853048ca94f04157a02000b017",
+      "to": "NUT-05",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.gitvid.net/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:03fdf1e25e49365ed4bbccfd88f07d5c73ef46fe853048ca94f04157a02000b017",
+      "to": "NUT-07",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.gitvid.net/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:03fdf1e25e49365ed4bbccfd88f07d5c73ef46fe853048ca94f04157a02000b017",
+      "to": "NUT-08",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.gitvid.net/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:03fdf1e25e49365ed4bbccfd88f07d5c73ef46fe853048ca94f04157a02000b017",
+      "to": "NUT-09",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.gitvid.net/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:03fdf1e25e49365ed4bbccfd88f07d5c73ef46fe853048ca94f04157a02000b017",
+      "to": "NUT-10",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.gitvid.net/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:03fdf1e25e49365ed4bbccfd88f07d5c73ef46fe853048ca94f04157a02000b017",
+      "to": "NUT-11",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.gitvid.net/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:03fdf1e25e49365ed4bbccfd88f07d5c73ef46fe853048ca94f04157a02000b017",
+      "to": "NUT-12",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.gitvid.net/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:03fdf1e25e49365ed4bbccfd88f07d5c73ef46fe853048ca94f04157a02000b017",
+      "to": "NUT-14",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.gitvid.net/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:03fdf1e25e49365ed4bbccfd88f07d5c73ef46fe853048ca94f04157a02000b017",
+      "to": "NUT-17",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.gitvid.net/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:03fdf1e25e49365ed4bbccfd88f07d5c73ef46fe853048ca94f04157a02000b017",
+      "to": "NUT-20",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.gitvid.net/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:03fdf1e25e49365ed4bbccfd88f07d5c73ef46fe853048ca94f04157a02000b017",
+      "to": "NUT-29",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.gitvid.net/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:021bce61ecb2628d96f5fba9b2e640b7c2d2a1c5e20dfdf4dede764ae17c60c872",
+      "to": "cashubtc/nutshell",
+      "type": "runs",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "version Nutshell/0.20.2"
+        }
+      ],
+      "confidence": 0.6,
+      "scope": []
+    },
+    {
+      "from": "mint:021bce61ecb2628d96f5fba9b2e640b7c2d2a1c5e20dfdf4dede764ae17c60c872",
+      "to": "NUT-04",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.cashu.chat/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:021bce61ecb2628d96f5fba9b2e640b7c2d2a1c5e20dfdf4dede764ae17c60c872",
+      "to": "NUT-05",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.cashu.chat/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:021bce61ecb2628d96f5fba9b2e640b7c2d2a1c5e20dfdf4dede764ae17c60c872",
+      "to": "NUT-07",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.cashu.chat/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:021bce61ecb2628d96f5fba9b2e640b7c2d2a1c5e20dfdf4dede764ae17c60c872",
+      "to": "NUT-08",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.cashu.chat/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:021bce61ecb2628d96f5fba9b2e640b7c2d2a1c5e20dfdf4dede764ae17c60c872",
+      "to": "NUT-09",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.cashu.chat/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:021bce61ecb2628d96f5fba9b2e640b7c2d2a1c5e20dfdf4dede764ae17c60c872",
+      "to": "NUT-10",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.cashu.chat/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:021bce61ecb2628d96f5fba9b2e640b7c2d2a1c5e20dfdf4dede764ae17c60c872",
+      "to": "NUT-11",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.cashu.chat/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:021bce61ecb2628d96f5fba9b2e640b7c2d2a1c5e20dfdf4dede764ae17c60c872",
+      "to": "NUT-12",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.cashu.chat/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:021bce61ecb2628d96f5fba9b2e640b7c2d2a1c5e20dfdf4dede764ae17c60c872",
+      "to": "NUT-14",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.cashu.chat/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:021bce61ecb2628d96f5fba9b2e640b7c2d2a1c5e20dfdf4dede764ae17c60c872",
+      "to": "NUT-17",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.cashu.chat/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:021bce61ecb2628d96f5fba9b2e640b7c2d2a1c5e20dfdf4dede764ae17c60c872",
+      "to": "NUT-20",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.cashu.chat/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:021bce61ecb2628d96f5fba9b2e640b7c2d2a1c5e20dfdf4dede764ae17c60c872",
+      "to": "NUT-29",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.cashu.chat/v1/info"
         }
       ],
       "confidence": 0.95,

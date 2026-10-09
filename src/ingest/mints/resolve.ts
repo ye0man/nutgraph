@@ -1,6 +1,6 @@
 import type { Edge, Node, SourceRef } from "../../schema.js";
 import type { DataQualityLog } from "../../data-quality.js";
-import { path, readYaml } from "../../util.js";
+import { exists, nowIso, path, readJson, readYaml, writeJson } from "../../util.js";
 import { discoverNostr, type MintAnnouncement } from "./nostr.js";
 import { discoverDirectories } from "./directories.js";
 import { probeMint, type MintInfo } from "./probe.js";
@@ -70,6 +70,16 @@ export async function resolveMints(
       addCandidate({ url: m.url, sources: [{ kind: "mints-seed", ref: m.note }] });
     }
   }
+
+  // Remember mints discovered on previous runs. Relay/directory discovery is
+  // best-effort (datacenter IPs are often blocked), but once we know a mint's
+  // URL we can probe it directly -- so coverage never shrinks on a bad network
+  // night. This is the persistence that keeps the nightly build honest.
+  const knownPath = path("data", "known-mints.json");
+  const known: string[] = (await exists(knownPath))
+    ? ((await readJson<{ urls?: string[] }>(knownPath)).urls ?? [])
+    : [];
+  for (const u of known) addCandidate({ url: u, sources: [{ kind: "known-mints" }] });
 
   if (enabled.includes("directories")) {
     const urls = await discoverDirectories(sourcesFile.directories ?? [], dq, refresh);
@@ -162,6 +172,11 @@ export async function resolveMints(
     subject: "mints",
     detail: `${nodes.length} live mints from ${list.length} candidates (probed ${probed}).`,
   });
+
+  const liveUrls = nodes.map((n) => n.url).filter((u): u is string => Boolean(u));
+  const allUrls = [...new Set([...known, ...liveUrls])].sort();
+  await writeJson(knownPath, { updated: nowIso(), count: allUrls.length, urls: allUrls });
+
   return { nodes, edges, candidates: list.length, probed, live: nodes.length };
 }
 
