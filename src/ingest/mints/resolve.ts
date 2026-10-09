@@ -226,7 +226,7 @@ export async function resolveMints(
     code: "MINT_DISCOVERY_SUMMARY",
     severity: "info",
     subject: "mints",
-    detail: `${nodes.length} mints (${probed} probed live, rest trusted from the directory) from ${list.length} candidates.`,
+    detail: `${nodes.length} mints: ${byPubkey.size} probed live, ${nodes.length - byPubkey.size} trusted from the directory (from ${list.length} candidates).`,
   });
 
   const liveUrls = nodes.map((n) => n.url).filter((u): u is string => Boolean(u));
