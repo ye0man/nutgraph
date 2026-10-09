@@ -3,9 +3,44 @@ import { SCHEMA_VERSION } from "./schema.js";
 import type { Graph, Manifest } from "./schema.js";
 import { DataQualityLog } from "./data-quality.js";
 import { composeGraph } from "./build/graph.js";
-import { nowIso, path, writeJson, writeText } from "./util.js";
+import { nowIso, path, readJson, writeJson, writeText } from "./util.js";
 
 const PIPELINE_VERSION = "0.0.1";
+
+const LAG_ORDER: Record<string, number> = {
+  behind_major: 0,
+  behind_minor: 1,
+  unknown: 2,
+  up_to_date: 3,
+};
+
+/**
+ * Release management: given a core library node id, list everything that
+ * depends on it, most-at-risk first. This is the second purpose of nutgraph --
+ * "what do we test before the next breaking release?"
+ */
+async function impact(nodeId: string): Promise<void> {
+  const graph = await readJson<Graph>(path("dist", "graph.json"));
+  const byId = new Map(graph.nodes.map((n) => [n.id, n]));
+  const target = byId.get(nodeId);
+  if (!target) {
+    console.error(`No such node: ${nodeId}`);
+    process.exit(1);
+  }
+  const deps = graph.edges
+    .filter((e) => e.type === "depends_on" && e.to === nodeId)
+    .sort((a, b) => (LAG_ORDER[a.lag ?? "unknown"] ?? 9) - (LAG_ORDER[b.lag ?? "unknown"] ?? 9));
+
+  console.log(`Impact of ${nodeId} (${target.name}) -- ${deps.length} dependent(s)\n`);
+  const fmt = (e: (typeof deps)[number]) => {
+    const n = byId.get(e.from);
+    const stale = n?.metrics?.last_commit
+      ? `${Math.round((Date.now() - Date.parse(n.metrics.last_commit)) / 86_400_000)}d`
+      : "?";
+    return `  [${(e.lag ?? "unknown").padEnd(12)}] ${e.from.padEnd(38)} ${(e.declared_range ?? "?").padEnd(14)} -> ${(e.latest_at_build ?? "?").padEnd(10)} last commit ${stale}`;
+  };
+  for (const e of deps) console.log(fmt(e));
+}
 
 const SCHEMA_DOC = `# nutgraph data schema v${SCHEMA_VERSION}
 
@@ -107,7 +142,19 @@ async function main(): Promise<void> {
     return;
   }
 
-  console.error(`unknown command: ${cmd}\nusage: nutgraph [build|graph|readme] [--refresh]`);
+  if (cmd === "impact") {
+    const id = args.find((a) => !a.startsWith("--") && a !== "impact");
+    if (!id) {
+      console.error("usage: nutgraph impact <nodeId>");
+      process.exit(1);
+    }
+    await impact(id);
+    return;
+  }
+
+  console.error(
+    `unknown command: ${cmd}\nusage: nutgraph [build|graph|readme|impact <nodeId>] [--refresh]`,
+  );
   process.exit(1);
 }
 

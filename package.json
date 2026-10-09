@@ -11,6 +11,7 @@
     "build": "tsx src/cli.ts build",
     "readme:parse": "tsx src/cli.ts readme",
     "graph": "tsx src/cli.ts graph",
+    "impact": "tsx src/cli.ts impact",
     "typecheck": "tsc --noEmit",
     "lint": "tsc --noEmit"
   },

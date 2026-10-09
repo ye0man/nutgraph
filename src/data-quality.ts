@@ -35,6 +35,14 @@ const CODE_DOCS: Record<string, string> = {
   FETCH_FAILED: "A required network resource could not be fetched (cached copy may be used).",
   NUT_IMPLEMENTER_UNMATCHED:
     "The spec README credits a wallet/mint with a NUT, but no matching node exists (or it is not in the list). Add it to the ontology or accept the missing edge.",
+  PACKAGE_TARGET_MISSING:
+    "A machine-read dependency maps (via ontology/packages.yaml) to a node that is not in the graph. Add the project or fix the mapping.",
+  DEP_NO_MANIFEST:
+    "No parseable dependency manifest was found for an open-source project, so it has no depends_on edges.",
+  METADATA_MISSING:
+    "Repo metadata could not be fetched (e.g. transient GitHub 502 or missing repo). Metrics/ranking will be absent until a later run fills the cache.",
+  MANAGER_UNSUPPORTED:
+    "A dependency's package manager has no registry adapter yet, so its version cannot be tracked.",
   ONTOLOGY_NODE_MISSING:
     "A curated core/binding references a parent or repo that could not be resolved.",
   AMBIGUOUS_TYPE: "Node type could not be determined confidently.",

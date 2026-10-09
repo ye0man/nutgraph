@@ -106,6 +106,105 @@ export async function fetchJson<T>(
   }
 }
 
+/**
+ * Cached POST returning JSON (used for GraphQL). The cache key includes the
+ * request body so different queries don't collide.
+ */
+export async function fetchJsonPost<T>(
+  url: string,
+  body: unknown,
+  opts: FetchOptions = {},
+): Promise<T | undefined> {
+  const { refresh = false, offlineFallback = true, headers = {}, timeoutMs = 30000 } = opts;
+  const cacheFile = join(CACHE_DIR, `${sha1(url + "\n" + JSON.stringify(body))}.json`);
+
+  if (!refresh && (await exists(cacheFile))) {
+    return JSON.parse(await readFile(cacheFile, "utf8")) as T;
+  }
+  const attempts = 4;
+  for (let attempt = 1; attempt <= attempts; attempt++) {
+    try {
+      const controller = new AbortController();
+      const timer = setTimeout(() => controller.abort(), timeoutMs);
+      const res = await fetch(url, {
+        method: "POST",
+        headers: {
+          "user-agent": "nutgraph/0.0.1",
+          "content-type": "application/json",
+          ...headers,
+        },
+        body: JSON.stringify(body),
+        signal: controller.signal,
+      });
+      clearTimeout(timer);
+      if (res.status === 502 || res.status === 503 || res.status === 429 || res.status >= 500) {
+        throw new Error(`HTTP ${res.status}`);
+      }
+      if (!res.ok) throw new Error(`HTTP ${res.status} for ${url}`);
+      const text = await res.text();
+      await mkdir(CACHE_DIR, { recursive: true });
+      await writeFile(cacheFile, text, "utf8");
+      return JSON.parse(text) as T;
+    } catch (err) {
+      if (attempt === attempts) {
+        if (offlineFallback && (await exists(cacheFile))) {
+          return JSON.parse(await readFile(cacheFile, "utf8")) as T;
+        }
+        console.warn(`[fetch:post] failed: ${url} -- ${(err as Error).message}`);
+        return undefined;
+      }
+      await sleep(500 * attempt * attempt);
+    }
+  }
+  return undefined;
+}
+
+function sleep(ms: number): Promise<void> {
+  return new Promise((r) => setTimeout(r, ms));
+}
+
+/**
+ * Fetch a file that may legitimately not exist (manifests, lockfiles). Returns
+ * undefined on 404 without noise, and caches the miss (empty sentinel) so we
+ * don't refetch 404s every run.
+ */
+export async function fetchOptionalText(
+  url: string,
+  opts: FetchOptions = {},
+): Promise<string | undefined> {
+  const { refresh = false, headers = {}, timeoutMs = 20000 } = opts;
+  const cacheFile = join(CACHE_DIR, `opt-${sha1(url)}.txt`);
+  if (!refresh && (await exists(cacheFile))) {
+    const cached = await readFile(cacheFile, "utf8");
+    return cached.length ? cached : undefined;
+  }
+  try {
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), timeoutMs);
+    const res = await fetch(url, {
+      headers: { "user-agent": "nutgraph/0.0.1", ...headers },
+      signal: controller.signal,
+    });
+    clearTimeout(timer);
+    await mkdir(CACHE_DIR, { recursive: true });
+    if (res.status === 404) {
+      await writeFile(cacheFile, "", "utf8");
+      return undefined;
+    }
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const text = await res.text();
+    await writeFile(cacheFile, text, "utf8");
+    return text;
+  } catch (err) {
+    if (await exists(cacheFile)) {
+      const cached = await readFile(cacheFile, "utf8");
+      return cached.length ? cached : undefined;
+    }
+    console.warn(`[fetch:opt] failed: ${url} -- ${(err as Error).message}`);
+    return undefined;
+  }
+}
+
 export function githubToken(): string | undefined {
   return process.env.GITHUB_TOKEN || process.env.GH_TOKEN || process.env.GH_PAT;
 }
@@ -125,8 +224,7 @@ export function normalizeNodeId(id: string): string {
   return id.includes("/") ? id.toLowerCase() : id;
 }
 
-/** Extract owner/repo from a github.com URL, or undefined. */
-export function githubRepoFromUrl(url: string): string | undefined {
+/** Extract owner/repo from a github.com URL, or undefined. */export function githubRepoFromUrl(url: string): string | undefined {
   const m = url.match(/^https?:\/\/(?:www\.)?github\.com\/([^/]+)\/([^/#?]+)/i);
   if (!m) return undefined;
   return `${m[1]}/${m[2]}`.replace(/\.git$/, "");

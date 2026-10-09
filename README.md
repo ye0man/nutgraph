@@ -7,9 +7,9 @@ tools that depend on them in orbit.
 The **dataset is the product**. The interactive visualization is one client of
 it; release tooling and agent context are the others.
 
-> Status: **M0 (skeleton)**. The pipeline runs end-to-end and emits a real graph
-> from the ontology + the awesome-cashu README + the Cashu NUTs spec. Dependency
-> edges (`depends_on` + version lag) land in M1.
+> Status: **M1**. The pipeline emits a real graph with a machine-derived,
+> version-aware software dependency graph (`depends_on` + semver lag), repo
+> metrics, and node ranking. Mint discovery (M3) and the site (M4) are next.
 
 ## What it does
 
@@ -28,9 +28,10 @@ it; release tooling and agent context are the others.
 4. BUILD      graph            -> graph.json + snapshots + agent bundle
 ```
 
-Implemented so far (M0): **ingest** of the awesome-cashu README and the NUTs
-spec, **resolve** of node identity + the NUT compatibility matrix, and **build**
-of `dist/graph.json`, dated snapshots, and `DATA_QUALITY.md`.
+Implemented: **ingest** of the awesome-cashu README, the NUTs spec, repo
+metadata, and repo manifests; **resolve** of node identity, the NUT
+compatibility matrix, and version-aware dependencies; **build** of
+`dist/graph.json`, dated snapshots, and `DATA_QUALITY.md`.
 
 ## The curation line
 
@@ -49,11 +50,14 @@ changes when our understanding changes, curate it.*
 
 ```sh
 npm install
-npm run build      # ingest -> resolve -> build -> dist/ + DATA_QUALITY.md + snapshot
-npm run graph      # same pipeline, print a summary, write nothing
+npm run build                 # ingest -> resolve -> build -> dist/ + DATA_QUALITY.md + snapshot
+npm run graph                 # pipeline summary only, writes nothing
+npm run impact -- cashubtc/cashu-ts   # who depends on a lib, most-at-risk first
 npm run typecheck
 ```
 
+Set `GITHUB_TOKEN` (or have `gh` authenticated) for metadata. Optional test
+filters: `NUTGRAPH_REPOS=owner/a,owner/b` and `NUTGRAPH_LIMIT=N`.
 Network responses are cached under `data/cache/`; pass `--refresh` to bypass.
 
 ## Repo layout
@@ -88,13 +92,19 @@ explains the *classes* so they can be fixed deliberately.
 | Non-project README entries | Decoders, simulators, status boards, testnut mints. | Nodes with no repo. | M1: section-aware filtering so only real projects become graph participants. |
 | NUT list drift | NUT nodes are parsed from the `cashubtc/nuts` README. | If parsing breaks, a curated fallback is used and may be stale. | The ledger flags `NUTS_FETCH_FAILED`/`NUTS_FALLBACK_USED`; regenerate each run. |
 | Implementer unmatched | The spec README credits a project with a NUT, but no node matched by URL/repo/alias. | A missing compatibility edge. | Add the project or an alias; logged as `NUT_IMPLEMENTER_UNMATCHED`. |
-| Version lag unknown | `depends_on` + semver tracking not implemented yet. | Release-management queries unavailable. | M1. |
+| `METADATA_MISSING` | Repo metadata fetch failed (transient GitHub 502, or repo moved/renamed). | No metrics/ranking for that node until a later run. | Re-run (failures aren't cached as empty); the retry/backoff usually clears it. |
+| `PACKAGE_TARGET_MISSING` | A machine-read dependency maps to a node not in the graph. | The edge is dropped. | Add the project, or fix `ontology/packages.yaml`. |
+| Dependency scope unlabelled | Manifests don't say whether a dep is runtime or dev/test. | A dev-only dependency looks like a real one. | M1.5: prefer `dependencies` over `devDependencies`; flag test-only edges. |
+| Monorepo attribution | One repo backs several nodes (e.g. cdk + cdk-mintd). | Repo-level deps/metrics are attributed to the canonical (core) node only. | Documented; crate-level attribution is future work. |
+| GitHub dependency-graph flakiness | The GraphQL dependency field returns 502s/empties under load. | Was the sole dep source; now only a fallback. | Primary source is direct manifest parsing (tier 1); GraphQL is a fallback for unparsed ecosystems (NuGet/Maven/Swift). |
+| Semver `unknown` | Range is non-semver (git URL, `workspace:`, PR ref). | Lag not computed for that edge. | Expected; shown as `unknown`. |
 
 ## Roadmap
 
-- **M0** scaffold, schema v1, ontology, README + NUTs ingest, skeleton graph. *(this)*
-- **M1** software dependency graph: GitHub dependency-graph API + registries,
-  `depends_on` with semver lag, scoring + rank/ring.
+- **M0** scaffold, schema v1, ontology, README + NUTs ingest, skeleton graph. *(done)*
+- **M1** software dependency graph: direct manifest parsing (npm/crates/pypi/go/pub)
+  + GitHub dependency-graph fallback, version-aware `depends_on` with semver lag,
+  repo metrics, scoring + rank/ring, `impact` release report. *(this)*
 - **M2** NUT axis: `implements_nuts` from detection, not just the spec README.
 - **M3** mint discovery: Nostr NIP-87/NIP-60, directories, wallet seeds, Tor-aware probing.
 - **M4** static 2D radial site.

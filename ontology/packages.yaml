@@ -1,0 +1,80 @@
+# Package identity: maps a published package to the nutgraph node that owns it.
+#
+# This is curation because "registry package X is project Y" is a stable fact
+# about the ecosystem, not something we can derive. It is the join key that
+# turns machine-read dependencies into `depends_on` edges.
+#
+# `registry` must be one of: npm, crates, pypi, nuget, go, pub, maven, swift.
+# The dependency's package manager (from the GitHub dependency graph) is mapped
+# onto these (NPM->npm, CARGO->crates, PIP->pypi, NUGET->nuget, GO->go,
+# PUB->pub, MAVEN/GRADLE->maven).
+#
+# Many packages can map to the same node (coco ships several).
+
+packages:
+  # --- cashu-ts ---
+  - registry: npm
+    name: "@cashu/cashu-ts"
+    node: cashubtc/cashu-ts
+
+  # --- cashu-crypto-ts ---
+  - registry: npm
+    name: "@cashu/crypto"
+    node: cashubtc/cashu-crypto-ts
+
+  # --- coco (several published packages) ---
+  - registry: npm
+    name: "@cashu/coco-core"
+    node: cashubtc/coco
+  - registry: npm
+    name: "coco-cashu-core"
+    node: cashubtc/coco
+  - registry: npm
+    name: "@cashu/coco-indexeddb"
+    node: cashubtc/coco
+  - registry: npm
+    name: "@cashu/coco-expo-sqlite"
+    node: cashubtc/coco
+  - registry: npm
+    name: "@cashu/coco-sqlite"
+    node: cashubtc/coco
+  - registry: npm
+    name: "@cashu/coco-sqlite-bun"
+    node: cashubtc/coco
+  - registry: npm
+    name: "@cashu/coco-react"
+    node: cashubtc/coco
+  - registry: npm
+    name: "coco-cashu-sqlite3"
+    node: cashubtc/coco
+  - registry: npm
+    name: "coco-cashu-sqlite-bun"
+    node: cashubtc/coco
+  - registry: npm
+    name: "coco-cashu-react"
+    node: cashubtc/coco
+
+  # --- cdk (Rust crates published from the monorepo) ---
+  - registry: crates
+    name: "cdk"
+    node: cashubtc/cdk
+  - registry: crates
+    name: "cdk-common"
+    node: cashubtc/cdk
+  - registry: crates
+    name: "cdk-sqlite"
+    node: cashubtc/cdk
+  - registry: crates
+    name: "cdk-mintd"
+    node: cashubtc/cdk-mintd
+  - registry: crates
+    name: "cashu"
+    node: cashubtc/cdk
+  - registry: crates
+    name: "cashu-crypto"
+    node: cashubtc/cdk
+
+  # --- nutshell (Python) ---
+  - registry: pypi
+    name: "cashu"
+    node: cashubtc/cashu
