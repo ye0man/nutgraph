@@ -32,6 +32,14 @@ jobs:
 
       - run: npm ci
 
+      - name: Restore fetch cache
+        uses: actions/cache@v4
+        with:
+          path: data/cache
+          key: nutgraph-cache-${{ github.run_id }}
+          restore-keys: |
+            nutgraph-cache-
+
       - name: Build graph
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}

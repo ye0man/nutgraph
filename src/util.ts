@@ -73,26 +73,42 @@ export async function fetchText(
     return readFile(cacheFile, "utf8");
   }
 
-  try {
-    const controller = new AbortController();
-    const timer = setTimeout(() => controller.abort(), timeoutMs);
-    const res = await fetch(url, {
-      headers: { "user-agent": "nutgraph/0.0.1", ...headers },
-      signal: controller.signal,
-    });
-    clearTimeout(timer);
-    if (!res.ok) throw new Error(`HTTP ${res.status} for ${url}`);
-    const text = await res.text();
-    await mkdir(CACHE_DIR, { recursive: true });
-    await writeFile(cacheFile, text, "utf8");
-    return text;
-  } catch (err) {
-    if (offlineFallback && (await exists(cacheFile))) {
-      return readFile(cacheFile, "utf8");
+  for (let attempt = 1; attempt <= 3; attempt++) {
+    try {
+      const controller = new AbortController();
+      const timer = setTimeout(() => controller.abort(), timeoutMs);
+      const res = await fetch(url, {
+        headers: { "user-agent": "nutgraph/0.0.1", ...headers },
+        signal: controller.signal,
+      });
+      clearTimeout(timer);
+      if (res.status === 404) {
+        await mkdir(CACHE_DIR, { recursive: true });
+        await writeFile(cacheFile, "", "utf8");
+        return undefined;
+      }
+      if (res.status === 502 || res.status === 503 || res.status === 429 || res.status >= 500) {
+        throw new Error(`HTTP ${res.status}`);
+      }
+      if (!res.ok) throw new Error(`HTTP ${res.status} for ${url}`);
+      const text = await res.text();
+      await mkdir(CACHE_DIR, { recursive: true });
+      await writeFile(cacheFile, text, "utf8");
+      return text;
+    } catch (err) {
+      if (attempt < 3) {
+        await sleep(400 * attempt * attempt);
+        continue;
+      }
+      if (offlineFallback && (await exists(cacheFile))) {
+        const cached = await readFile(cacheFile, "utf8");
+        return cached.length ? cached : undefined;
+      }
+      if (!silent) console.warn(`[fetch] failed: ${url} -- ${(err as Error).message}`);
+      return undefined;
     }
-    if (!silent) console.warn(`[fetch] failed: ${url} -- ${(err as Error).message}`);
-    return undefined;
   }
+  return undefined;
 }
 
 export async function fetchJson<T>(
@@ -183,31 +199,41 @@ export async function fetchOptionalText(
     const cached = await readFile(cacheFile, "utf8");
     return cached.length ? cached : undefined;
   }
-  try {
-    const controller = new AbortController();
-    const timer = setTimeout(() => controller.abort(), timeoutMs);
-    const res = await fetch(url, {
-      headers: { "user-agent": "nutgraph/0.0.1", ...headers },
-      signal: controller.signal,
-    });
-    clearTimeout(timer);
-    await mkdir(CACHE_DIR, { recursive: true });
-    if (res.status === 404) {
-      await writeFile(cacheFile, "", "utf8");
+  for (let attempt = 1; attempt <= 3; attempt++) {
+    try {
+      const controller = new AbortController();
+      const timer = setTimeout(() => controller.abort(), timeoutMs);
+      const res = await fetch(url, {
+        headers: { "user-agent": "nutgraph/0.0.1", ...headers },
+        signal: controller.signal,
+      });
+      clearTimeout(timer);
+      await mkdir(CACHE_DIR, { recursive: true });
+      if (res.status === 404) {
+        await writeFile(cacheFile, "", "utf8");
+        return undefined;
+      }
+      if (res.status === 502 || res.status === 503 || res.status === 429 || res.status >= 500) {
+        throw new Error(`HTTP ${res.status}`);
+      }
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const text = await res.text();
+      await writeFile(cacheFile, text, "utf8");
+      return text;
+    } catch (err) {
+      if (attempt < 3) {
+        await sleep(400 * attempt * attempt);
+        continue;
+      }
+      if (await exists(cacheFile)) {
+        const cached = await readFile(cacheFile, "utf8");
+        return cached.length ? cached : undefined;
+      }
+      console.warn(`[fetch:opt] failed: ${url} -- ${(err as Error).message}`);
       return undefined;
     }
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    const text = await res.text();
-    await writeFile(cacheFile, text, "utf8");
-    return text;
-  } catch (err) {
-    if (await exists(cacheFile)) {
-      const cached = await readFile(cacheFile, "utf8");
-      return cached.length ? cached : undefined;
-    }
-    console.warn(`[fetch:opt] failed: ${url} -- ${(err as Error).message}`);
-    return undefined;
   }
+  return undefined;
 }
 
 export function githubToken(): string | undefined {
