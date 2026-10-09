@@ -1,0 +1,17 @@
+# Code hosts. The ingest layer talks to these through a single CodeHost
+# interface so adding a host is a drop-in adapter, not a pipeline rewrite.
+#
+# Forgejo (git.cashu.dev) is first-class in the Cashu ecosystem; the adapter is
+# planned for M6. Nodes always carry a `host` field so mixed-host graphs work
+# without a schema change.
+
+hosts:
+  github:
+    kind: github
+    api: https://api.github.com
+    enabled: true
+
+  forgejo:
+    kind: forgejo
+    api: https://git.cashu.dev/api/v1
+    enabled: false

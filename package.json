@@ -1,0 +1,26 @@
+{
+  "name": "nutgraph",
+  "version": "0.0.1",
+  "private": true,
+  "description": "A knowledge graph of the Cashu ecosystem: spec at the center, core modules and their dependents in orbit.",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsx src/cli.ts build",
+    "readme:parse": "tsx src/cli.ts readme",
+    "graph": "tsx src/cli.ts graph",
+    "typecheck": "tsc --noEmit",
+    "lint": "tsc --noEmit"
+  },
+  "dependencies": {
+    "yaml": "^2.6.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}

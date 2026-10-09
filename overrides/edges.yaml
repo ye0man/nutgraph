@@ -1,0 +1,17 @@
+# Manual edge overrides -- the escape hatch.
+#
+# Use ONLY when machine collection provably cannot see a real relationship
+# (e.g. an app that vendors a library with no manifest). Every override is
+# tagged confidence:1 and source kind "curated", so it is visible as manual in
+# the UI and in the agent bundle.
+#
+# Prefer fixing the ontology (identity/type) or the ingest layer over adding
+# overrides here: edges are supposed to be computed, not hand-maintained.
+
+edges: []
+  # - from: someorg/someapp
+  #   to: cashubtc/cashu-ts
+  #   type: depends_on
+  #   role: primary
+  #   declared_range: "~0.15.0"
+  #   note: vendors a bundled copy with no package.json

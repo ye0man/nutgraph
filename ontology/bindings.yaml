@@ -1,0 +1,39 @@
+# Language bindings of core modules.
+#
+# A binding is its own atomic node (e.g. cdk-kotlin), with a `binding_of` edge
+# to its core module. Apps depend on the *binding* for their language, not the
+# core directly -- so Numo (Kotlin) attaches to cdk-kotlin, not cdk.
+#
+# Curation rule: bindings are declared here because "this repo is a binding of
+# that core" is a stable fact about the ecosystem, not a machine-derivable edge.
+
+bindings:
+  - id: cashubtc/cdk-python
+    name: cdk-python
+    language: python
+    binding_of: cashubtc/cdk
+    url: https://github.com/cashubtc/cdk-python
+
+  - id: cashubtc/cdk-go
+    name: cdk-go
+    language: go
+    binding_of: cashubtc/cdk
+    url: https://github.com/cashubtc/cdk-go
+
+  - id: cashubtc/cdk-swift
+    name: cdk-swift
+    language: swift
+    binding_of: cashubtc/cdk
+    url: https://github.com/cashubtc/cdk-swift
+
+  - id: cashubtc/cdk-kotlin
+    name: cdk-kotlin
+    language: kotlin
+    binding_of: cashubtc/cdk
+    url: https://github.com/cashubtc/cdk-kotlin
+
+  - id: cashubtc/cdk-dart
+    name: cdk-dart
+    language: dart
+    binding_of: cashubtc/cdk
+    url: https://github.com/cashubtc/cdk-dart

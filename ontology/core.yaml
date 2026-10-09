@@ -1,0 +1,38 @@
+# Core modules: first-class implementations of the Cashu spec.
+#
+# These sit in the inner orbit around the NUT hub. Curation rule: this file is
+# small, stable, and only changes when our *understanding* of the ecosystem
+# changes -- not when the world changes. Edges between them are machine-derived.
+#
+# `id` is the canonical owner/repo slug used as the node id everywhere.
+
+core:
+  - id: cashubtc/cashu-ts
+    name: cashu-ts
+    language: typescript
+    description: TypeScript library for building Cashu wallets.
+    url: https://github.com/cashubtc/cashu-ts
+
+  - id: cashubtc/cdk
+    name: Cashu Development Kit (cdk)
+    language: rust
+    description: Rust library implementing the Cashu protocol.
+    url: https://github.com/cashubtc/cdk
+
+  - id: cashubtc/cashu
+    name: Nutshell (Python library)
+    language: python
+    description: Python library for using Cashu wallets and mints inside other Python projects.
+    url: https://github.com/cashubtc/cashu
+
+  - id: cashubtc/coco
+    name: Coco
+    language: typescript
+    description: Modular, TypeScript-first toolkit for building Cashu wallets and applications.
+    url: https://github.com/cashubtc/coco
+
+  - id: cashubtc/cashu-crypto-ts
+    name: cashu-crypto-ts
+    language: typescript
+    description: TypeScript library implementing basic crypto operations for Cashu wallets and mints.
+    url: https://github.com/cashubtc/cashu-crypto-ts

@@ -1,0 +1,12 @@
+# Last-resort manual mint seeds.
+#
+# Only for mints that survive every automated source AND are known-good. Keep
+# this empty unless something genuinely cannot be discovered automatically --
+# an entry here is a data-quality flag that discovery is incomplete.
+#
+# Each entry is a URL; the verification layer fills in pubkey, nuts, network,
+# and software by probing /v1/info (clearnet or Tor).
+
+mints: []
+  # - url: https://example.onion
+  #   note: onion-only mint; not in any directory

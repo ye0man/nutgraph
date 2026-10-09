@@ -1,0 +1,86 @@
+# Canonical project identity and type overrides.
+#
+# The README parser produces the bulk of nodes from the awesome-cashu list, but
+# the prose is ambiguous in places: a project can be listed twice, a section
+# name can imply the wrong type, or an app's orbit parent isn't obvious. This
+# file is the *small* set of corrections.
+#
+# Fields:
+#   id             canonical node id (owner/repo slug, or another stable slug)
+#   name           display name
+#   type           node type override
+#   url            canonical URL
+#   aliases        other names/URLs this project is known by (used to dedupe)
+#   status         active | unmaintained | archived
+#   primary_parent orbit attachment (usually machine-derived; seed only if obvious)
+#
+# Curation rule: only put something here if machine inference would get it
+# *wrong*, not to duplicate what the pipeline already knows.
+
+projects:
+  # Documentation sites are listed in the README as separate links and would
+  # otherwise become phantom duplicate nodes. Fold them into the canonical
+  # project via name aliases.
+  - id: cashubtc/cashu-ts
+    name: cashu-ts
+    type: core_lib
+    url: https://github.com/cashubtc/cashu-ts
+    aliases: ["cashu-ts", "cashu-ts.dev"]
+
+  - id: cashubtc/cdk
+    name: Cashu Development Kit (cdk)
+    type: core_lib
+    url: https://github.com/cashubtc/cdk
+    aliases: ["cdk", "CDK", "cashudevkit.org"]
+
+  # The README lists cashu.me (web) and the native app both as "Cashu.me" and
+  # both under the wallet section. Keep them as distinct nodes.
+  - id: cashubtc/cashu.me
+    name: Cashu.me (web)
+    type: wallet
+    url: https://github.com/cashubtc/cashu.me
+    aliases: ["cashu.me", "Cashu.me"]
+
+  - id: cashubtc/wallet
+    name: Cashu Wallet (native)
+    type: wallet
+    url: https://github.com/cashubtc/wallet
+    aliases: ["Cashu Wallet"]
+
+  # Numo is a Point-of-Sale app, not a wallet or mint, and is built on the
+  # Kotlin binding -- seed the orbit parent.
+  - id: cashubtc/Numo
+    name: Numo
+    type: app
+    url: https://github.com/cashubtc/Numo
+    primary_parent: cashubtc/cdk-kotlin
+
+  # Nutshell is listed in both the mint and wallet sections. Its primary role is
+  # the reference mint implementation.
+  - id: cashubtc/nutshell
+    name: Nutshell (mint)
+    type: mint_software
+    url: https://github.com/cashubtc/nutshell
+
+  # A showcase of dedupe + type correction: the "mintd" entry points into the
+  # cdk monorepo rather than a standalone repo. Keep it as mint software whose
+  # orbit parent is the cdk core node (resolved in M1 by the dependency graph).
+  - id: cashubtc/cdk-mintd
+    name: mintd (cdk-mintd)
+    type: mint_software
+    url: https://github.com/cashubtc/cdk/tree/main/crates/cdk-mintd
+    primary_parent: cashubtc/cdk
+
+  # Unmaintained examples from the README's dedicated section -- seed status so
+  # scoring can sink them even before metric collection catches up.
+  - id: thesimplekid/cashu-rs-mint
+    name: cashu-rs-mint
+    type: mint_software
+    url: https://github.com/thesimplekid/cashu-rs-mint
+    status: archived
+
+  - id: elnosh/gonuts
+    name: gonuts
+    type: app
+    url: https://github.com/elnosh/gonuts
+    status: unmaintained

@@ -1,0 +1,77 @@
+# Mint discovery sources.
+#
+# Discovery is a fan-in: a mint only needs to appear in ONE source to become a
+# candidate, then the verification layer probes /v1/info (clearnet + Tor) and
+# canonicalizes by NUT-06 pubkey. No single source is authoritative, which is
+# exactly why the old single-directory approach missed mints.
+#
+# Every discovered mint records which source(s) surfaced it (provenance).
+
+nostr:
+  # NIP-87: kind 38172 = mint self-announcement (u=url, d=pubkey, nuts, n=network)
+  #         kind 38000 = user recommendations (social signal, review text)
+  # NIP-60: kind 17375 = wallet events whose `mint` tags reveal mints in active use
+  #         -> aggregate COUNTS ONLY, never user linkage (privacy).
+  kinds: [38172, 38000, 17375]
+  relays:
+    - wss://relay.damus.io
+    - wss://nos.lol
+    - wss://relay.primal.net
+    - wss://relay.nostr.band
+    - wss://nostr.wine
+
+directories:
+  - id: cashu-space
+    name: cashu.space
+    kind: directory
+    url: https://cashu.space
+    enabled: true
+    notes: community mint list
+
+  - id: bitcoinmints
+    name: bitcoinmints.com
+    kind: directory
+    url: https://bitcoinmints.com
+    repo: https://github.com/MakePrisms/bitcoinmints
+    enabled: true
+
+  - id: cashumints-space
+    name: Cashumints.space
+    kind: directory
+    url: https://cashumints.space
+    enabled: true
+
+  - id: cashu-live
+    name: cashu.live mint status board
+    kind: directory
+    url: https://cashu.live
+    repo: https://github.com/shroominic/cashu-mint-status-board
+    enabled: true
+
+  - id: mintradar
+    name: MintRadar
+    kind: directory
+    url: https://mintradar.org
+    repo: https://github.com/hroomnik007/MintRadar
+    enabled: true
+
+# Default/known mints hardcoded in wallet code and examples. Parsed in M3 from
+# each repo's checked-in seed list; listed here so provenance is explicit.
+wallet_seeds:
+  - id: cashu-me
+    repo: cashubtc/cashu.me
+  - id: nutshell
+    repo: cashubtc/nutshell
+  - id: minibits
+    repo: minibits-cash/minibits_wallet
+  - id: coco
+    repo: cashubtc/coco
+  - id: nutstash
+    repo: gandlafbtc/nutstash-wallet
+  - id: cashu-ts
+    repo: cashubtc/cashu-ts
+
+crawl:
+  # Fingerprints for the web/search crawl: pages that look like a Cashu mint.
+  endpoint_path: /v1/info
+  enabled: true
