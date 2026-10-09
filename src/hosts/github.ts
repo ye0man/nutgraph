@@ -76,6 +76,14 @@ export class GitHubHost implements CodeHost {
   id = "github";
   private token?: string;
   private repoCache = new Map<string, GraphqlRepo | null>();
+  /** Per-run budget for anonymous API calls (GitHub allows ~60/hour/IP). */
+  private unauthBudget = 45;
+
+  private takeUnauth(): boolean {
+    if (this.unauthBudget <= 0) return false;
+    this.unauthBudget--;
+    return true;
+  }
 
   constructor(token?: string) {
     this.token = token ?? githubToken() ?? ghToken();
@@ -139,6 +147,7 @@ export class GitHubHost implements CodeHost {
   private async restRepoMeta(repo: string, refresh: boolean): Promise<RepoMeta | undefined> {
     const [owner, name] = this.split(repo);
     if (!owner || !name) return undefined;
+    if (!this.takeUnauth()) return undefined;
     const j = await fetchJson<{
       stargazers_count?: number;
       forks_count?: number;
@@ -194,7 +203,7 @@ export class GitHubHost implements CodeHost {
       refresh,
       silent: true,
     });
-    if (!j) {
+    if (!j && this.takeUnauth()) {
       // Unauthenticated fallback for public repos the token cannot see.
       // The `#anon` fragment changes our cache key without affecting the request.
       j = await fetchJson<{ tree?: Array<{ path: string; type: string }> }>(`${url}#anon`, {

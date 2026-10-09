@@ -64,22 +64,8 @@ export async function resolveDependencies(
     const node = repoToNode.get(repo);
     if (!node) return;
 
-    const meta = await host.fetchRepoMeta(repo);
-    if (meta) {
-      applyMetrics(node, meta);
-      fetchedRepos++;
-    } else {
-      dq.add({
-        code: "METADATA_MISSING",
-        severity: "warn",
-        subject: repo,
-        detail: "Could not fetch repo metadata (transient error or missing repo).",
-        suggestion: "Re-run; the failure is cached only when a response is obtained.",
-      });
-    }
-    const contributors = await host.fetchContributors?.(repo);
-    if (contributors !== undefined) node.metrics.contributors = contributors;
-
+    // Dependencies first: their (public) manifest/tree reads get first claim on
+    // the anonymous API budget when the token can't see a repo.
     const deps = await host.fetchDependencies(repo);
     fetchedDeps += deps.length;
     for (const dep of deps) {
@@ -100,6 +86,22 @@ export async function resolveDependencies(
       edges.push(edge);
       edgePkg.set(edge, { registry: entry.registry, name: entry.name });
     }
+
+    const meta = await host.fetchRepoMeta(repo);
+    if (meta) {
+      applyMetrics(node, meta);
+      fetchedRepos++;
+    } else {
+      dq.add({
+        code: "METADATA_MISSING",
+        severity: "warn",
+        subject: repo,
+        detail: "Could not fetch repo metadata (transient error or missing repo).",
+        suggestion: "Re-run; the failure is cached only when a response is obtained.",
+      });
+    }
+    const contributors = await host.fetchContributors?.(repo);
+    if (contributors !== undefined) node.metrics.contributors = contributors;
   });
 
   // Latest upstream versions (one lookup per unique package).
