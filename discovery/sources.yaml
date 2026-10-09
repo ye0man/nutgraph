@@ -25,6 +25,12 @@ nostr:
     - wss://nostr.mom
     - wss://purplepag.es
 
+# Structured mint list from the mint directory (ye0man/cashu-mint-directory).
+# This is the primary, cheapest source: it is already probed every 6h and
+# carries implementation + version, which gives us real `runs` edges.
+mint_directory:
+  json_url: https://raw.githubusercontent.com/ye0man/cashu-mint-directory/main/docs/mints.json
+
 directories:
   - id: cashu-space
     name: cashu.space

@@ -26,16 +26,17 @@ const TYPE_LABEL = {
   tool: "Tool",
   org: "Org",
 };
-const RADIUS = { spec: 0, nut: 168, core_lib: 300, binding: 388 };
+const RADIUS = { spec: 0, nutMandatory: 118, nutOptional: 200, core_lib: 300, binding: 388 };
 const SAT_BASE = 476;
 const SAT_STEP = 64;
 const NEW_WINDOW_DAYS = 90;
+const HIDE_AFTER_DAYS = 365;
 
 const boot = document.getElementById("boot");
 const svg = d3.select("#stage");
 const panel = document.getElementById("panel");
 
-let graph, nodeById, children, subtree, root;
+let graph, nodeById, children, subtree, root, visible;
 const state = { selected: null, hover: null, query: "", hiddenTypes: new Set() };
 
 boot.textContent = "Loading graph…";
@@ -57,20 +58,39 @@ fetch("./graph.json")
 
 function init() {
   nodeById = new Map(graph.nodes.map((n) => [n.id, n]));
+  visible = new Set(graph.nodes.filter((n) => !isHidden(n)).map((n) => n.id));
   buildTree();
   draw();
   buildFilters();
   buildLegend();
   wireSearch();
+  const hidden = graph.counts.nodes - visible.size;
   document.getElementById("stats").textContent =
-    `${graph.counts.nodes} nodes · ${graph.counts.edges} edges`;
+    `${visible.size} shown · ${graph.counts.edges} edges` + (hidden > 0 ? ` · ${hidden} stale hidden` : "");
+}
+
+/** Projects with no meaningful activity for a year (or marked unmaintained /
+ * archived) are hidden from the view but kept in the data (graph.json). */
+function isHidden(n) {
+  if (n.type === "spec" || n.type === "nut" || n.type === "core_lib" || n.type === "binding") {
+    return false;
+  }
+  if (n.status === "archived" || n.status === "unmaintained") return true;
+  const c = n.metrics && n.metrics.last_commit;
+  if (c) {
+    const days = (Date.now() - Date.parse(c)) / 86400000;
+    if (days > HIDE_AFTER_DAYS) return true;
+  }
+  return false;
 }
 
 function buildTree() {
   children = new Map();
   for (const n of graph.nodes) {
     if (n.id === "spec" || n.type === "nut") continue;
-    const parentId = n.primary_parent && nodeById.has(n.primary_parent) ? n.primary_parent : "spec";
+    if (!visible.has(n.id)) continue;
+    const parentId =
+      n.primary_parent && visible.has(n.primary_parent) ? n.primary_parent : "spec";
     n._parent = parentId;
     const arr = children.get(parentId) ?? [];
     arr.push(n.id);
@@ -84,7 +104,7 @@ function buildTree() {
     subtree.set(id, s);
     return s;
   };
-  for (const n of graph.nodes) sizeOf(n.id);
+  for (const n of graph.nodes) if (visible.has(n.id)) sizeOf(n.id);
 
   root = nodeById.get("spec");
   root._angle = 0;
@@ -98,14 +118,17 @@ function buildTree() {
     assignSubtrees(id, a, a + w);
     a += w;
   }
-  // NUT ring, evenly spaced.
+  // NUT ring: mandatory specs hug the core, optional specs sit just outside.
   const nuts = graph.nodes
     .filter((n) => n.type === "nut")
     .sort((x, y) => x.id.localeCompare(y.id));
-  nuts.forEach((n, i) => {
-    n._angle = -Math.PI / 2 + (2 * Math.PI * i) / nuts.length;
-    n._radius = RADIUS.nut;
-  });
+  const placeRing = (arr, r) =>
+    arr.forEach((n, i) => {
+      n._angle = -Math.PI / 2 + (2 * Math.PI * i) / Math.max(1, arr.length);
+      n._radius = r;
+    });
+  placeRing(nuts.filter((n) => (n.tags || []).includes("mandatory")), RADIUS.nutMandatory);
+  placeRing(nuts.filter((n) => !(n.tags || []).includes("mandatory")), RADIUS.nutOptional);
 }
 
 function assignSubtrees(id, a0, a1) {
@@ -174,7 +197,10 @@ function draw() {
 
   const paths = graph.edges
     .map((e) => ({ ...e, s: nodeById.get(e.from), t: nodeById.get(e.to) }))
-    .filter((e) => e.s && e.t && e.type !== "maintained_by");
+    .filter(
+      (e) =>
+        e.s && e.t && e.type !== "maintained_by" && visible.has(e.from) && visible.has(e.to),
+    );
 
   const link = linkSel
     .selectAll("line")
@@ -190,7 +216,7 @@ function draw() {
     .attr("stroke-dasharray", (d) => (d.type === "binding_of" || d.type === "runs" ? "2 3" : null))
     .attr("opacity", (d) => linkOpacity(d));
 
-  const nodes = graph.nodes;
+  const nodes = graph.nodes.filter((n) => visible.has(n.id));
   const node = nodeSel
     .selectAll("g")
     .data(nodes, (d) => d.id)

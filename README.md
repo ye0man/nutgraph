@@ -32,8 +32,9 @@ it; release tooling and agent context are the others.
 ```
 
 Implemented: **ingest** of the awesome-cashu README, the NUTs spec, repo
-metadata and manifests, and live mints (NIP-87 relays, directories, `/v1/info`
-over clearnet/Tor); **resolve** of node identity, the NUT compatibility matrix,
+metadata and manifests (including nested monorepo manifests), the mint
+directory JSON, and live mints (NIP-87 relays, directories, `/v1/info` over
+clearnet/Tor); **resolve** of node identity, the NUT compatibility matrix,
 version-aware dependencies, ranking, and mint→software edges; **build** of
 `dist/graph.json`, dated snapshots, and `DATA_QUALITY.md`.
 
@@ -115,7 +116,9 @@ explains the *classes* so they can be fixed deliberately.
 | `METADATA_MISSING` | Repo metadata fetch failed (transient GitHub 502, or repo moved/renamed). | No metrics/ranking for that node until a later run. | Re-run (failures aren't cached as empty); the retry/backoff usually clears it. |
 | `PACKAGE_TARGET_MISSING` | A machine-read dependency maps to a node not in the graph. | The edge is dropped. | Add the project, or fix `ontology/packages.yaml`. |
 | Dependency scope unlabelled | Manifests don't say whether a dep is runtime or dev/test. | A dev-only dependency looks like a real one. | M1.5: prefer `dependencies` over `devDependencies`; flag test-only edges. |
-| Monorepo attribution | One repo backs several nodes (e.g. cdk + cdk-mintd). | Repo-level deps/metrics are attributed to the canonical (core) node only. | Documented; crate-level attribution is future work. |
+| Monorepo attribution | One repo backs several nodes (e.g. cdk + cdk-mintd). | Repo-level metrics attach to the canonical node; nested manifests (`packages/*/package.json`, `app/build.gradle.kts`) ARE parsed via the git tree. | Per-node crate/module attribution is future work. |
+| Maven version lag | Some artifacts (e.g. `org.cashudevkit:cdk-android`) aren't in Maven Central's search index. | Lag shows `unknown` for those edges. | The edge still exists; improve the Maven lookup later. |
+| Stale projects hidden | Display-only rule: no commit in >1y, or marked unmaintained/archived. | Hidden in the viewer (data retained in `graph.json`). | `HIDE_AFTER_DAYS` in `site/app.js`. |
 | GitHub dependency-graph flakiness | The GraphQL dependency field returns 502s/empties under load. | Was the sole dep source; now only a fallback. | Primary source is direct manifest parsing (tier 1); GraphQL is a fallback for unparsed ecosystems (NuGet/Maven/Swift). |
 | Semver `unknown` | Range is non-semver (git URL, `workspace:`, PR ref). | Lag not computed for that edge. | Expected; shown as `unknown`. |
 | Mint software unknown | `/v1/info` rarely reports the implementation. | `runs` edges are sparse; some mints attach to the spec instead of their software. | Detection is name/version heuristics; add curated mappings or mint-side reporting. |

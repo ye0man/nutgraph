@@ -78,3 +78,11 @@ packages:
   - registry: pypi
     name: "cashu"
     node: cashubtc/cashu
+
+  # --- cdk-kotlin (Maven; the repo publishes cdk-android and cdk-kotlin) ---
+  - registry: maven
+    name: "org.cashudevkit:cdk-kotlin"
+    node: cashubtc/cdk-kotlin
+  - registry: maven
+    name: "org.cashudevkit:cdk-android"
+    node: cashubtc/cdk-kotlin

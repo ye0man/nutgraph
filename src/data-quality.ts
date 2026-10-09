@@ -49,6 +49,7 @@ const CODE_DOCS: Record<string, string> = {
     "A live mint did not report which software it runs, so no `runs` edge was created. Implementation detection is weak by design.",
   NOSTR_UNAVAILABLE:
     "NIP-87 relays could not be queried (likely network restrictions). Seed/directory sources still apply.",
+  MINT_DIRECTORY: "Result of loading the structured mint directory (informational, or a fetch failure).",
   DIRECTORY_UNREACHABLE: "A mint directory page could not be fetched.",
   MINT_DISCOVERY_SUMMARY: "Summary of mint discovery for the run (informational).",
   MANAGER_UNSUPPORTED:

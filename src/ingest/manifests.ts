@@ -15,7 +15,21 @@ export const MANIFESTS = [
   "requirements.txt",
   "go.mod",
   "pubspec.yaml",
+  "build.gradle",
+  "build.gradle.kts",
+  "pom.xml",
 ] as const;
+
+/** Basenames recognized when walking a repo tree (monorepos have nested manifests). */
+export const MANIFEST_BASENAMES: ReadonlySet<string> = new Set(MANIFESTS);
+
+export function isManifestPath(path: string): boolean {
+  if (path.includes("node_modules/") || path.includes("/target/") || path.includes("/.git/")) {
+    return false;
+  }
+  const base = path.split("/").pop() ?? "";
+  return MANIFEST_BASENAMES.has(base);
+}
 
 export type ManifestFile = (typeof MANIFESTS)[number];
 
@@ -38,7 +52,8 @@ export async function fetchRepoDependencies(
 }
 
 export function parseManifest(file: string, text: string): RawDependency[] {
-  switch (file) {
+  const base = file.split("/").pop() ?? file;
+  switch (base) {
     case "package.json":
       return parsePackageJson(text);
     case "Cargo.toml":
@@ -51,6 +66,11 @@ export function parseManifest(file: string, text: string): RawDependency[] {
       return parseGoMod(text);
     case "pubspec.yaml":
       return parsePubspec(text);
+    case "build.gradle":
+    case "build.gradle.kts":
+      return parseGradle(text, file);
+    case "pom.xml":
+      return parsePom(text, file);
     default:
       return [];
   }
@@ -199,4 +219,28 @@ function parseRequirementString(s: string): { name: string; req: string } | unde
   const m = s.match(/^([A-Za-z0-9_.-]+)(\[[^\]]*\])?\s*(.*)$/);
   if (!m) return undefined;
   return { name: m[1]!, req: m[3] ?? "" };
+}
+
+/** Gradle: pull `group:artifact[:version]` coordinates out of quoted strings. */
+function parseGradle(text: string, manifest: string): RawDependency[] {
+  const out: RawDependency[] = [];
+  const re = /["']([A-Za-z0-9_.-]+):([A-Za-z0-9_.-]+)(?::([^"'\s)]+))?["']/g;
+  let m: RegExpExecArray | null;
+  while ((m = re.exec(text))) {
+    out.push(dep("maven", `${m[1]}:${m[2]}`, m[3] ?? "*", manifest));
+  }
+  return out;
+}
+
+/** Maven POM: parse <dependency> blocks. */
+function parsePom(text: string, manifest: string): RawDependency[] {
+  const out: RawDependency[] = [];
+  for (const block of text.matchAll(/<dependency>([\s\S]*?)<\/dependency>/g)) {
+    const b = block[1] ?? "";
+    const g = b.match(/<groupId>([^<]+)<\/groupId>/)?.[1];
+    const a = b.match(/<artifactId>([^<]+)<\/artifactId>/)?.[1];
+    const v = b.match(/<version>([^<]+)<\/version>/)?.[1];
+    if (g && a) out.push(dep("maven", `${g}:${a}`, v ?? "*", manifest));
+  }
+  return out;
 }

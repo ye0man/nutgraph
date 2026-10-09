@@ -49,6 +49,8 @@ export interface FetchOptions {
   refresh?: boolean;
   /** return cached content if the network fails (default true) */
   offlineFallback?: boolean;
+  /** suppress the console warning on failure */
+  silent?: boolean;
   headers?: Record<string, string>;
   timeoutMs?: number;
 }
@@ -64,7 +66,7 @@ export async function fetchText(
   url: string,
   opts: FetchOptions = {},
 ): Promise<string | undefined> {
-  const { refresh = false, offlineFallback = true, headers = {}, timeoutMs = 30000 } = opts;
+  const { refresh = false, offlineFallback = true, silent = false, headers = {}, timeoutMs = 30000 } = opts;
   const cacheFile = join(CACHE_DIR, `${sha1(url)}.txt`);
 
   if (!refresh && (await exists(cacheFile))) {
@@ -88,7 +90,7 @@ export async function fetchText(
     if (offlineFallback && (await exists(cacheFile))) {
       return readFile(cacheFile, "utf8");
     }
-    console.warn(`[fetch] failed: ${url} -- ${(err as Error).message}`);
+    if (!silent) console.warn(`[fetch] failed: ${url} -- ${(err as Error).message}`);
     return undefined;
   }
 }

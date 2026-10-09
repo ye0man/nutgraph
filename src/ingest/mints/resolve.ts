@@ -1,12 +1,13 @@
 import type { Edge, Node, SourceRef } from "../../schema.js";
 import type { DataQualityLog } from "../../data-quality.js";
-import { exists, nowIso, path, readJson, readYaml, writeJson } from "../../util.js";
+import { exists, fetchJson, nowIso, path, readJson, readYaml, writeJson } from "../../util.js";
 import { discoverNostr, type MintAnnouncement } from "./nostr.js";
 import { discoverDirectories } from "./directories.js";
 import { probeMint, type MintInfo } from "./probe.js";
 
 interface SourcesFile {
   nostr?: { kinds?: number[]; relays?: string[] };
+  mint_directory?: { json_url?: string };
   directories?: Array<{ id: string; name?: string; url: string; enabled?: boolean }>;
   wallet_seeds?: Array<{ id: string; repo: string }>;
 }
@@ -28,6 +29,8 @@ interface Candidate {
   network?: string;
   name?: string;
   nuts?: number[];
+  implementation?: string;
+  version?: string;
   sources: SourceRef[];
 }
 
@@ -44,7 +47,7 @@ export async function resolveMints(
 ): Promise<MintResolution> {
   const sourcesFile = await readYaml<SourcesFile>(path("discovery", "sources.yaml"));
   const seedFile = await readYaml<SeedFile>(path("discovery", "mints-seed.yaml"));
-  const enabled = (process.env.NUTGRAPH_MINT_SOURCES ?? "seed,directories,nostr")
+  const enabled = (process.env.NUTGRAPH_MINT_SOURCES ?? "seed,directory_json,nostr")
     .split(",")
     .map((s) => s.trim());
   const torSocks = process.env.NUTGRAPH_TOR_SOCKS;
@@ -60,6 +63,8 @@ export async function resolveMints(
       prev.network ??= c.network;
       prev.name ??= c.name;
       prev.nuts ??= c.nuts;
+      prev.implementation ??= c.implementation;
+      prev.version ??= c.version;
     } else {
       candidates.set(key, c);
     }
@@ -69,6 +74,12 @@ export async function resolveMints(
     for (const m of seedFile.mints ?? []) {
       addCandidate({ url: m.url, sources: [{ kind: "mints-seed", ref: m.note }] });
     }
+  }
+
+  // Primary source: the mint directory's structured JSON (already probed every
+  // 6h; carries implementation + version so `runs` edges are accurate).
+  if (enabled.includes("directory_json")) {
+    await loadMintDirectory(sourcesFile, dq, refresh, addCandidate);
   }
 
   // Remember mints discovered on previous runs. Relay/directory discovery is
@@ -121,7 +132,7 @@ export async function resolveMints(
   for (const { info, candidate } of byPubkey.values()) {
     const pubkey = info.pubkey;
     const recommenders = recommenderCounts.get(pubkey);
-    const software = detectSoftware(info);
+    const software = implementationToNode(candidate.implementation) ?? detectSoftware(info);
     const node: Node = {
       id: `mint:${pubkey}`,
       type: "mint_instance",
@@ -147,7 +158,7 @@ export async function resolveMints(
         from: node.id,
         to: software,
         type: "runs",
-        sources: [{ kind: "mint-probe", ref: info.version ? `version ${info.version}` : undefined }],
+        sources: [{ kind: "mint-probe", ref: info.version ?? candidate.version ? `version ${info.version ?? candidate.version}` : undefined }],
         confidence: 0.6,
         scope: [],
       });
@@ -194,6 +205,66 @@ function announcementToCandidate(a: MintAnnouncement): Candidate {  return {
     nuts: a.nuts,
     sources: [{ kind: "nostr", ref: "kind:38172" }],
   };
+}
+
+interface MintDirectoryRecord {
+  url: string;
+  name?: string;
+  implementation?: string;
+  version?: string;
+  nuts?: number[];
+  status?: string;
+}
+
+async function loadMintDirectory(
+  sourcesFile: SourcesFile,
+  dq: DataQualityLog,
+  refresh: boolean,
+  add: (c: Candidate) => void,
+): Promise<void> {
+  const url = sourcesFile.mint_directory?.json_url;
+  if (!url) return;
+  const recs = await fetchJson<MintDirectoryRecord[]>(url, { refresh });
+  if (!Array.isArray(recs)) {
+    dq.add({
+      code: "MINT_DIRECTORY",
+      severity: "warn",
+      subject: "mint-directory",
+      detail: `Could not fetch ${url}.`,
+    });
+    return;
+  }
+  let added = 0;
+  for (const r of recs) {
+    if (!r.url || (r.status ?? "online") !== "online") continue;
+    add({
+      url: r.url,
+      name: r.name,
+      implementation: r.implementation,
+      version: r.version,
+      nuts: r.nuts,
+      network: /testnut|test\./i.test(r.url) ? "testnet" : undefined,
+      sources: [{ kind: "mint-directory", ref: url }],
+    });
+    added++;
+  }
+  dq.add({
+    code: "MINT_DIRECTORY",
+    severity: "info",
+    subject: "mint-directory",
+    detail: `Loaded ${added} online mints from the directory.`,
+  });
+}
+
+/** Map a directory-reported implementation string to a software node. */
+function implementationToNode(impl: string | undefined): string | undefined {
+  if (!impl) return undefined;
+  const s = impl.toLowerCase();
+  if (s.includes("nutshell")) return "cashubtc/nutshell";
+  if (s.includes("cdk-mintd")) return "cashubtc/cdk-mintd";
+  if (s.includes("cdk")) return "cashubtc/cdk";
+  if (s.includes("nutmix")) return "lescuer97/nutmix";
+  return undefined;
 }
 
 /**

@@ -120,15 +120,16 @@ export function parseReadme(
     }
 
     const override = overrideByUrl.get(e.url) ?? overrideByName.get(e.rawName.toLowerCase());
-    const ghRepo = githubRepoFromUrl(e.url);
-    const fjRepo = forgejoRepoFromUrl(e.url);
+    const repoSource = override?.url ?? e.url;
+    const ghRepo = githubRepoFromUrl(repoSource);
+    const fjRepo = forgejoRepoFromUrl(repoSource);
 
     let id: string;
     let host: string;
     let repos: string[];
     if (override) {
       id = normalizeNodeId(override.id);
-      [host, repos] = inferHostRepos(id, e.url);
+      [host, repos] = inferHostRepos(id, repoSource);
     } else if (ghRepo) {
       id = normalizeNodeId(ghRepo);
       host = "github";
@@ -199,7 +200,7 @@ export function parseReadme(
       name: override?.name ?? e.rawName,
       host,
       repos,
-      url: e.url,
+      url: override?.url ?? e.url,
       description: e.description,
       category,
       status,

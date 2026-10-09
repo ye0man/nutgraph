@@ -4,8 +4,8 @@ import { readFile, writeFile, mkdir } from "node:fs/promises";
 import { join } from "node:path";
 import type { CodeHost, RawDependency, RepoMeta } from "./types.js";
 import type { DataQualityLog } from "../data-quality.js";
-import { fetchRepoDependencies } from "../ingest/manifests.js";
-import { CACHE_DIR, exists, fetchJson, fetchJsonPost, githubToken } from "../util.js";
+import { isManifestPath, parseManifest } from "../ingest/manifests.js";
+import { CACHE_DIR, exists, fetchJson, fetchJsonPost, fetchOptionalText, githubToken } from "../util.js";
 
 const GRAPHQL = "https://api.github.com/graphql";
 
@@ -121,11 +121,43 @@ export class GitHubHost implements CodeHost {
   }
 
   async fetchDependencies(repo: string, refresh = false): Promise<RawDependency[]> {
-    // Tier 1: parse the repo's own manifests.
-    const parsed = await fetchRepoDependencies(repo, refresh);
+    // Tier 1: walk the repo tree and parse every manifest (handles monorepos,
+    // where the interesting dependency lives in a nested package.json /
+    // build.gradle, not the root).
+    const paths = await this.listManifestPaths(repo, refresh);
+    const parsedResults = await Promise.all(
+      paths.map(async (p) => {
+        const text = await fetchOptionalText(
+          `https://raw.githubusercontent.com/${repo}/HEAD/${p}`,
+          { refresh },
+        );
+        if (!text) return [];
+        try {
+          return parseManifest(p, text);
+        } catch {
+          return [];
+        }
+      }),
+    );
+    const parsed = parsedResults.flat();
     if (parsed.length) return parsed;
-    // Tier 2: GitHub's dependency graph (covers other ecosystems; flaky).
+    // Tier 2: GitHub's dependency graph (covers ecosystems we don't parse; flaky).
     return this.fetchGraphqlDependencies(repo, refresh);
+  }
+
+  /** List manifest files in the repo (shallow-first, capped). */
+  private async listManifestPaths(repo: string, refresh: boolean): Promise<string[]> {
+    const [owner, name] = this.split(repo);
+    if (!owner || !name) return [];
+    const j = await fetchJson<{ tree?: Array<{ path: string; type: string }> }>(
+      `https://api.github.com/repos/${owner}/${name}/git/trees/HEAD?recursive=1`,
+      { headers: this.headers(), refresh, silent: true },
+    );
+    const paths = (j?.tree ?? [])
+      .filter((t) => t.type === "blob" && isManifestPath(t.path))
+      .map((t) => t.path);
+    paths.sort((a, b) => a.split("/").length - b.split("/").length);
+    return paths.slice(0, 20);
   }
 
   private async fetchGraphqlDependencies(repo: string, refresh: boolean): Promise<RawDependency[]> {

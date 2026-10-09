@@ -71,6 +71,14 @@ projects:
     url: https://github.com/cashubtc/cdk/tree/main/crates/cdk-mintd
     primary_parent: cashubtc/cdk
 
+  # The README links Sovran by its org page (github.com/SovranBitcoin, no repo),
+  # so it had no dependencies. Point it at the actual repo.
+  - id: SovranBitcoin/Sovran
+    name: Sovran
+    type: wallet
+    url: https://github.com/SovranBitcoin/Sovran
+    aliases: ["Sovran", "sovran"]
+
   # Unmaintained examples from the README's dedicated section -- seed status so
   # scoring can sink them even before metric collection catches up.
   - id: thesimplekid/cashu-rs-mint
