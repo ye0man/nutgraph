@@ -117,17 +117,45 @@ export class GitHubHost implements CodeHost {
 
   async fetchRepoMeta(repo: string, refresh = false): Promise<RepoMeta | undefined> {
     const r = await this.queryRepo(repo, refresh);
-    if (!r) return undefined;
+    if (r) {
+      return {
+        stars: r.stargazerCount,
+        forks: r.forkCount,
+        openIssues: r.issues.totalCount,
+        releases: r.releases.totalCount,
+        createdAt: r.createdAt,
+        pushedAt: r.pushedAt,
+        lastCommit: r.defaultBranchRef?.target?.committedDate,
+        lastRelease: r.releases.nodes[0]?.publishedAt,
+        archived: r.isArchived,
+      };
+    }
+    // The token may not have access to this (public) repo -- e.g. a fine-grained
+    // PAT scoped to selected repositories. Fall back to an unauthenticated REST
+    // read, which still works for public repos (small per-hour budget).
+    return this.restRepoMeta(repo, refresh);
+  }
+
+  private async restRepoMeta(repo: string, refresh: boolean): Promise<RepoMeta | undefined> {
+    const [owner, name] = this.split(repo);
+    if (!owner || !name) return undefined;
+    const j = await fetchJson<{
+      stargazers_count?: number;
+      forks_count?: number;
+      open_issues_count?: number;
+      created_at?: string;
+      pushed_at?: string;
+      archived?: boolean;
+    }>(`https://api.github.com/repos/${owner}/${name}`, { refresh, silent: true });
+    if (!j || j.stargazers_count === undefined) return undefined;
     return {
-      stars: r.stargazerCount,
-      forks: r.forkCount,
-      openIssues: r.issues.totalCount,
-      releases: r.releases.totalCount,
-      createdAt: r.createdAt,
-      pushedAt: r.pushedAt,
-      lastCommit: r.defaultBranchRef?.target?.committedDate,
-      lastRelease: r.releases.nodes[0]?.publishedAt,
-      archived: r.isArchived,
+      stars: j.stargazers_count,
+      forks: j.forks_count,
+      openIssues: j.open_issues_count,
+      createdAt: j.created_at,
+      pushedAt: j.pushed_at,
+      lastCommit: j.pushed_at,
+      archived: j.archived,
     };
   }
 
@@ -160,10 +188,20 @@ export class GitHubHost implements CodeHost {
   private async listManifestPaths(repo: string, refresh: boolean): Promise<string[]> {
     const [owner, name] = this.split(repo);
     if (!owner || !name) return [];
-    const j = await fetchJson<{ tree?: Array<{ path: string; type: string }> }>(
-      `https://api.github.com/repos/${owner}/${name}/git/trees/HEAD?recursive=1`,
-      { headers: this.headers(), refresh, silent: true },
-    );
+    const url = `https://api.github.com/repos/${owner}/${name}/git/trees/HEAD?recursive=1`;
+    let j = await fetchJson<{ tree?: Array<{ path: string; type: string }> }>(url, {
+      headers: this.headers(),
+      refresh,
+      silent: true,
+    });
+    if (!j) {
+      // Unauthenticated fallback for public repos the token cannot see.
+      // The `#anon` fragment changes our cache key without affecting the request.
+      j = await fetchJson<{ tree?: Array<{ path: string; type: string }> }>(`${url}#anon`, {
+        refresh,
+        silent: true,
+      });
+    }
     const paths = (j?.tree ?? [])
       .filter((t) => t.type === "blob" && isManifestPath(t.path))
       .map((t) => t.path);
