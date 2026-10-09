@@ -129,59 +129,104 @@ export async function resolveMints(
 
   const nodes: Node[] = [];
   const edges: Edge[] = [];
-  for (const { info, candidate } of byPubkey.values()) {
-    const pubkey = info.pubkey;
-    const recommenders = recommenderCounts.get(pubkey);
-    const software = implementationToNode(candidate.implementation) ?? detectSoftware(info);
-    const node: Node = {
-      id: `mint:${pubkey}`,
+  const probedUrls = new Set<string>();
+
+  const addMint = (
+    id: string,
+    name: string,
+    url: string,
+    network: string | undefined,
+    software: string | undefined,
+    version: string | undefined,
+    nuts: number[],
+    sources: SourceRef[],
+    metrics: Node["metrics"],
+    evidence: SourceRef,
+  ): void => {
+    nodes.push({
+      id,
       type: "mint_instance",
-      name: info.name ?? candidate.name ?? new URL(info.url).host,
+      name,
       host: "none",
       repos: [],
-      url: info.url,
-      description: info.motd,
+      url,
       status: "active",
-      aliases: [pubkey],
+      aliases: [id.replace(/^mint:/, "")],
       tags: [],
       nuts: [],
-      network: normalizeNetwork(candidate.network ?? info.network),
+      network: normalizeNetwork(network),
       primary_parent: software ?? "spec",
-      sources: dedupeSources([...candidate.sources, { kind: "mint-probe", ref: `${info.url}/v1/info` }]),
-      metrics: recommenders !== undefined ? { recommenders } : {},
+      sources,
+      metrics,
       scores: {},
-    };
-    nodes.push(node);
-
+    });
     if (software) {
       edges.push({
-        from: node.id,
+        from: id,
         to: software,
         type: "runs",
-        sources: [{ kind: "mint-probe", ref: info.version ?? candidate.version ? `version ${info.version ?? candidate.version}` : undefined }],
-        confidence: 0.6,
+        sources: [version ? { ...evidence, ref: `version ${version}` } : evidence],
+        confidence: evidence.kind === "mint-probe" ? 0.6 : 0.5,
         scope: [],
       });
     }
-    for (const n of info.nuts) {
+    for (const n of nuts) {
       const nutId = `NUT-${String(n).padStart(2, "0")}`;
       if (!validNutIds.has(nutId)) continue;
       edges.push({
-        from: node.id,
+        from: id,
         to: nutId,
         type: "implements",
-        sources: [{ kind: "mint-probe", ref: `${info.url}/v1/info` }],
-        confidence: 0.95,
+        sources: [evidence],
+        confidence: evidence.kind === "mint-probe" ? 0.95 : 0.8,
         scope: [],
       });
     }
+  };
+
+  for (const { info, candidate } of byPubkey.values()) {
+    probedUrls.add(candidate.url);
+    const software = implementationToNode(candidate.implementation) ?? detectSoftware(info);
+    const recommenders = recommenderCounts.get(info.pubkey);
+    addMint(
+      `mint:${info.pubkey}`,
+      info.name ?? candidate.name ?? new URL(info.url).host,
+      info.url,
+      candidate.network ?? info.network,
+      software,
+      info.version ?? candidate.version,
+      info.nuts,
+      dedupeSources([...candidate.sources, { kind: "mint-probe", ref: `${info.url}/v1/info` }]),
+      recommenders !== undefined ? { recommenders } : {},
+      { kind: "mint-probe", ref: `${info.url}/v1/info` },
+    );
+  }
+
+  // Mints the directory lists as online but this network (e.g. CI) could not
+  // reach. Trust the directory rather than dropping them.
+  for (const c of list) {
+    if (probedUrls.has(c.url)) continue;
+    if (!c.sources.some((s) => s.kind === "mint-directory")) continue;
+    const software = implementationToNode(c.implementation);
+    addMint(
+      `mint:${mintSlug(c.url)}`,
+      c.name ?? new URL(c.url).host,
+      c.url,
+      c.network,
+      software,
+      c.version,
+      c.nuts ?? [],
+      dedupeSources([...c.sources]),
+      {},
+      { kind: "mint-directory", ref: c.url },
+    );
   }
 
   dq.add({
     code: "MINT_DISCOVERY_SUMMARY",
     severity: "info",
     subject: "mints",
-    detail: `${nodes.length} live mints from ${list.length} candidates (probed ${probed}).`,
+    detail: `${nodes.length} mints (${probed} probed live, rest trusted from the directory) from ${list.length} candidates.`,
   });
 
   const liveUrls = nodes.map((n) => n.url).filter((u): u is string => Boolean(u));
@@ -195,6 +240,15 @@ function normalizeNetwork(net: string | undefined): string | undefined {
   if (!net) return undefined;
   const n = net.trim().toLowerCase();
   return ["mainnet", "testnet", "signet", "regtest"].includes(n) ? n : undefined;
+}
+
+/** Stable id fragment for a mint we could not probe (no pubkey). */
+function mintSlug(url: string): string {
+  try {
+    return new URL(url).host.toLowerCase();
+  } catch {
+    return url.replace(/[^a-z0-9.]/gi, "");
+  }
 }
 
 function announcementToCandidate(a: MintAnnouncement): Candidate {  return {
