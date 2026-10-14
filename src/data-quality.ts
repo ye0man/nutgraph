@@ -37,6 +37,8 @@ const CODE_DOCS: Record<string, string> = {
     "The spec README credits a wallet/mint with a NUT, but no matching node exists (or it is not in the list). Add it to the ontology or accept the missing edge.",
   PACKAGE_TARGET_MISSING:
     "A machine-read dependency maps (via ontology/packages.yaml) to a node that is not in the graph. Add the project or fix the mapping.",
+  MONOREPO_INTERNAL_EDGE:
+    "A dependency resolved to a node in the same repo (a monorepo-internal relationship); it was skipped so it does not create a bogus cross-node edge or orbit parent.",
   DEP_NO_MANIFEST:
     "No parseable dependency manifest was found for an open-source project, so it has no depends_on edges.",
   METADATA_MISSING:

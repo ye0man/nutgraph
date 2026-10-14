@@ -82,6 +82,20 @@ export async function resolveDependencies(
         continue;
       }
       if (entry.node === node.id) continue;
+      // An edge whose endpoints live in the same repo (e.g. cdk -> cdk-mintd in
+      // the cdk monorepo) is an internal artifact of manifest attribution, not
+      // an ecosystem dependency. It must not drive orbit nesting.
+      const target = byId.get(entry.node);
+      if (target && sharesRepo(node, target)) {
+        dq.add({
+          code: "MONOREPO_INTERNAL_EDGE",
+          severity: "info",
+          subject: `${node.id} -> ${entry.node}`,
+          detail: `Dependency "${dep.name}" (${dep.manifest}) resolves to a node in the same repo; skipped as an internal monorepo relationship.`,
+          suggestion: "If this is a real cross-node dependency, split the nodes or add an override edge.",
+        });
+        continue;
+      }
       const edge = depEdge(node.id, entry.node, dep, repo);
       edges.push(edge);
       edgePkg.set(edge, { registry: entry.registry, name: entry.name });
@@ -157,6 +171,12 @@ export async function resolveDependencies(
   }
 
   return { edges: finalEdges, fetchedRepos, fetchedDeps };
+}
+
+function sharesRepo(a: Node, b: Node): boolean {
+  if (!a.repos.length || !b.repos.length) return false;
+  const repos = new Set(a.repos);
+  return b.repos.some((r) => repos.has(r));
 }
 
 function depEdge(from: string, to: string, dep: RawDependency, repo: string): Edge {

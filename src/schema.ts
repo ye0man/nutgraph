@@ -45,6 +45,7 @@ export const SemverLag = z.enum([
   "up_to_date",
   "behind_minor",
   "behind_major",
+  "ahead", // declared range is ahead of the latest *stable* release (pre-release / unreleased major)
   "unknown",
 ]);
 export type SemverLag = z.infer<typeof SemverLag>;

@@ -11,7 +11,8 @@ const LAG_ORDER: Record<string, number> = {
   behind_major: 0,
   behind_minor: 1,
   unknown: 2,
-  up_to_date: 3,
+  ahead: 3,
+  up_to_date: 4,
 };
 
 /**

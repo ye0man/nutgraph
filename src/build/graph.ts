@@ -103,7 +103,10 @@ export async function composeGraph(dq: DataQualityLog, refresh: boolean): Promis
   const byId = new Map<string, Node>();
   for (const n of readmeNodes) byId.set(n.id, n);
 
-  // Core modules override the README's inferred "library" type.
+  // Core modules override the README's inferred "library" type. Their orbit is
+  // NOT forced here: a core module that depends on another node is nested under
+  // it by resolveDependencies (below); one with no upstream dependency hangs off
+  // the spec hub.
   for (const c of core) {
     const id = normalizeNodeId(c.id);
     const existing = byId.get(id);
@@ -117,7 +120,6 @@ export async function composeGraph(dq: DataQualityLog, refresh: boolean): Promis
       url: c.url ?? existing?.url,
       repos: existing?.repos?.length ? existing.repos : [id],
       host: existing?.host === "none" ? "github" : (existing?.host ?? "github"),
-      primary_parent: "spec",
       sources: dedupeSources([
         ...(existing?.sources ?? []),
         { kind: "curated", ref: "ontology/core.yaml" },
@@ -220,6 +222,15 @@ export async function composeGraph(dq: DataQualityLog, refresh: boolean): Promis
   const host = new GitHubHost();
   await logAuthStatus(dq, refresh);
   const dep = await resolveDependencies(nodes, host, packages, dq, refresh);
+
+  // Core modules left without a dependency-derived parent are top-level: hang
+  // them off the spec hub so the dataset is self-describing (the viewer does not
+  // have to guess).
+  for (const c of core) {
+    const node = byId.get(normalizeNodeId(c.id));
+    if (node && !node.primary_parent) node.primary_parent = "spec";
+  }
+
   computeScores(nodes);
 
   const edges = dedupeEdges([...bindingEdges, ...implementsEdges, ...dep.edges, ...mints.edges]);

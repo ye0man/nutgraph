@@ -402,7 +402,7 @@ function renderPanel(d) {
   );
 }
 function lagRank(l) {
-  return { behind_major: 0, behind_minor: 1, unknown: 2, up_to_date: 3 }[l] ?? 9;
+  return { behind_major: 0, behind_minor: 1, unknown: 2, ahead: 3, up_to_date: 4 }[l] ?? 9;
 }
 function scoreBar(k, v) {
   if (v === undefined) return "";

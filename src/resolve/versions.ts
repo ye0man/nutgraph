@@ -26,7 +26,7 @@ export function computeLag(declared: string | undefined, latest: string | undefi
   const { major: lm, minor: lmin } = latestParsed;
 
   let lag: SemverLag;
-  if (dm > lm) lag = "unknown"; // declared ahead of latest (pre-release / dev)
+  if (dm > lm) lag = "ahead"; // declared ahead of latest stable: pre-release / unreleased major
   else if (dm < lm) lag = "behind_major";
   // 0.x: a minor bump is breaking by semver convention.
   else if (dm === 0 && dmin < lmin) lag = "behind_major";

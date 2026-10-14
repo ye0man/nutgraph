@@ -4,6 +4,10 @@
 # small, stable, and only changes when our *understanding* of the ecosystem
 # changes -- not when the world changes. Edges between them are machine-derived.
 #
+# Only protocol implementations belong here. Anything that builds on another
+# core (e.g. coco on cashu-ts, or a language binding) is NOT core: it orbits
+# what it depends on, attached by the machine-derived dependency graph.
+#
 # `id` is the canonical owner/repo slug used as the node id everywhere.
 
 core:
@@ -24,12 +28,6 @@ core:
     language: python
     description: Python library for using Cashu wallets and mints inside other Python projects.
     url: https://github.com/cashubtc/cashu
-
-  - id: cashubtc/coco
-    name: Coco
-    language: typescript
-    description: Modular, TypeScript-first toolkit for building Cashu wallets and applications.
-    url: https://github.com/cashubtc/coco
 
   - id: cashubtc/cashu-crypto-ts
     name: cashu-crypto-ts

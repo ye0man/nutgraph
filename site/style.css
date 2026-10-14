@@ -80,6 +80,7 @@ main { position: fixed; inset: 52px 0 0 0; }
 .lag.behind_major { background: #3a1420; color: #ff8fae; }
 .lag.behind_minor { background: #3a2e14; color: #ffd166; }
 .lag.up_to_date { background: #12301f; color: #6ee7a8; }
+.lag.ahead { background: #1b2b3a; color: #7fd4ff; }
 .lag.unknown { background: #1b2233; color: var(--dim); }
 
 #boot {
