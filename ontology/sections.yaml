@@ -1,0 +1,19 @@
+# README section handling.
+#
+# The awesome-cashu README mixes real projects with hosted services, decoders,
+# status boards and test fixtures. Machine parsing alone cannot tell them apart,
+# so this file curates which sections are inherently *not* code projects.
+#
+# Rule: an entry in a listed section is skipped only when it has no code-host
+# repo. Repo-backed entries in these sections (e.g. a decoder that lives on
+# GitHub) are still real projects and are kept. Nothing here changes how edges
+# are computed -- it only keeps phantom nodes out of the graph.
+#
+# `Category` strings must match the parser's "Section / Subsection" form exactly
+# (or just "Section" when the README entry has no subsection).
+
+non_project_sections:
+  - "Tools / Testnut Mints" # throwaway regtest/testnet mints, not ecosystem projects
+  - "Tools / Token Decoders" # hosted decode UIs (nutcoder, cashu-decode, ...)
+  - "Tools / Restore" # hosted restore utilities
+  - "Tools / Mint Discovery and Audit" # status boards / audit dashboards

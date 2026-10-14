@@ -77,7 +77,7 @@ export function parseManifest(file: string, text: string): RawDependency[] {
 }
 
 function dep(manager: string, name: string, requirements: string, manifest: string): RawDependency {
-  return { manager, name: name.trim(), requirements: requirements.trim() || "*", manifest };
+  return { manager, name: name.trim(), requirements: requirements.trim() || "*", manifest, origin: "manifest" };
 }
 
 function parsePackageJson(text: string): RawDependency[] {

@@ -5,6 +5,7 @@ import {
   AWESOME_CASHU_README,
   parseReadme,
   type ProjectOverride,
+  type SectionRules,
 } from "../ingest/readme.js";
 import { fetchNuts, nutNodes, type NutImplementerRef } from "../ingest/nuts.js";
 import { GitHubHost, logAuthStatus } from "../hosts/github.js";
@@ -42,6 +43,7 @@ async function loadOntology(): Promise<{
   core: CoreItem[];
   bindings: BindingItem[];
   projects: ProjectOverride[];
+  sections: SectionRules;
 }> {
   const coreFile = await readYaml<{ core?: CoreItem[] }>(path("ontology", "core.yaml"));
   const bindingFile = await readYaml<{ bindings?: BindingItem[] }>(
@@ -50,10 +52,14 @@ async function loadOntology(): Promise<{
   const projectFile = await readYaml<{ projects?: ProjectOverride[] }>(
     path("ontology", "projects.yaml"),
   );
+  const sectionFile = await readYaml<{ non_project_sections?: string[] }>(
+    path("ontology", "sections.yaml"),
+  );
   return {
     core: coreFile.core ?? [],
     bindings: bindingFile.bindings ?? [],
     projects: projectFile.projects ?? [],
+    sections: { nonProjectSections: sectionFile.non_project_sections ?? [] },
   };
 }
 
@@ -85,7 +91,7 @@ function specNode(): Node {
  * matrix (which wallets/mints implement which NUTs).
  */
 export async function composeGraph(dq: DataQualityLog, refresh: boolean): Promise<Graph> {
-  const { core, bindings, projects } = await loadOntology();
+  const { core, bindings, projects, sections } = await loadOntology();
 
   const readmeText = await fetchText(AWESOME_CASHU_README, { refresh });
   if (!readmeText) {
@@ -96,7 +102,7 @@ export async function composeGraph(dq: DataQualityLog, refresh: boolean): Promis
       detail: "Could not fetch the source list; graph will be ontology-only.",
     });
   }
-  const { nodes: readmeNodes } = parseReadme(readmeText ?? "", projects, dq);
+  const { nodes: readmeNodes } = parseReadme(readmeText ?? "", projects, sections, dq);
 
   const nuts = await fetchNuts(dq, refresh);
 

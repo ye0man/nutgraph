@@ -83,7 +83,7 @@ outputs, and deploys the site.
 ## Repo layout
 
 ```
-ontology/     curated: core.yaml, bindings.yaml, projects.yaml, packages.yaml, hosts.yaml
+ontology/     curated: core.yaml, bindings.yaml, projects.yaml, packages.yaml, sections.yaml, hosts.yaml
 discovery/    curated: sources.yaml (mint discovery), mints-seed.yaml
 overrides/    curated: edges.yaml (escape hatch)
 src/hosts/    CodeHost adapter: github (forgejo -> M6)
@@ -105,12 +105,12 @@ explains the *classes* so they can be fixed deliberately.
 
 | Class | Cause | Impact | Fix |
 | --- | --- | --- | --- |
-| `README_NO_REPO` | Project listed only by a website/org URL (closed-source apps, hosted services, GitHub **org** pages). | No dependency edges are possible; the node is context-only. | Accepted by design for closed source. For open projects, add a repo override, or let M1's code-search tier try to find the source. |
+| `README_NO_REPO` | Project listed only by a website URL (closed-source apps, hosted services). | No dependency edges are possible; the node is context-only. | Accepted by design for closed source. For open projects, add a repo override. GitHub org pages are typed `org` and do not warn. |
 | `README_DUPLICATE_ID` | One project appears in several README sections/roles. | Entries were merged into one node. | Confirm the merge; split via `ontology/projects.yaml` if the roles are genuinely distinct. |
 | Documentation-site phantom nodes | The README's "Documentation Web Sites" section links doc domains that shadow a project. | A duplicate node with no repo. | Folded into the canonical project via aliases in `ontology/projects.yaml`; keep aliases current. |
-| Org-only GitHub links | `github.com/<owner>` with no repo path. | Treated as a no-repo node, not an `org` node. | M1: detect, type as `org`, and link member repos. |
+| Org-only GitHub links | `github.com/<owner>` with no repo path. | Typed as an `org` node (no `README_NO_REPO` warn). Member-repo linking is future work. | Detected in `src/ingest/readme.ts`; `org` is a first-class node type. |
 | Coarse unmaintained types | The unmaintained section has generic subsections. | Type defaulted to `app`. | Low impact (sinked by `status`); refine mapping if a specific type matters. |
-| Non-project README entries | Decoders, simulators, status boards, testnut mints. | Nodes with no repo. | M1: section-aware filtering so only real projects become graph participants. |
+| Non-project README entries | Decoders, simulators, status boards, testnut mints. | Repo-less entries in those sections are skipped (no phantom nodes). | Curated `ontology/sections.yaml`; skipped entries are logged as `README_NON_PROJECT_SKIP`. Repo-backed entries in those sections are still kept. |
 | NUT list drift | NUT nodes are parsed from the `cashubtc/nuts` README. | If parsing breaks, a curated fallback is used and may be stale. | The ledger flags `NUTS_FETCH_FAILED`/`NUTS_FALLBACK_USED`; regenerate each run. |
 | Implementer unmatched | The spec README credits a project with a NUT, but no node matched by URL/repo/alias. | A missing compatibility edge. | Add the project or an alias; logged as `NUT_IMPLEMENTER_UNMATCHED`. |
 | `METADATA_MISSING` | Repo metadata fetch failed (transient GitHub 502, or repo moved/renamed). | No metrics/ranking for that node until a later run. | Re-run (failures aren't cached as empty); the retry/backoff usually clears it. |

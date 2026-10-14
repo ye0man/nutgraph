@@ -243,7 +243,7 @@ export class GitHubHost implements CodeHost {
       for (const d of m.dependencies.nodes) {
         const manager = MANAGER_MAP[d.packageManager];
         if (!manager) continue;
-        out.push({ manager, name: d.packageName, requirements: d.requirements, manifest: m.filename });
+        out.push({ manager, name: d.packageName, requirements: d.requirements, manifest: m.filename, origin: "gh-dependency-graph" });
       }
     }
     return out;

@@ -25,6 +25,8 @@ const CODE_DOCS: Record<string, string> = {
     "Two README entries resolved to the same canonical id; they were merged. Verify the merge is correct.",
   README_NO_REPO:
     "A listed project has no GitHub/Forgejo repo, so its dependencies cannot be derived. It will never have edges until a repo or override is supplied.",
+  README_NON_PROJECT_SKIP:
+    "A repo-less entry in a section that is not a code project (hosted decoder, testnet mint, status board, ...) was skipped so it does not become a phantom node.",
   NODE_UNRESOLVED_PARENT:
     "primary_parent points at a node id that does not exist in the ontology.",
   CORE_NOT_IN_README:

@@ -29,6 +29,9 @@ export interface RawDependency {
   requirements: string;
   /** manifest filename this came from */
   manifest: string;
+  /** how the dependency was read: the repo's own manifest (tier 1, highest
+   * trust) or GitHub's dependency graph (tier 2 fallback). */
+  origin: "manifest" | "gh-dependency-graph";
 }
 
 export interface CodeHost {

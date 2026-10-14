@@ -99,13 +99,15 @@ export async function resolveMints(
 
   const recommenderCounts = new Map<string, number>();
   if (enabled.includes("nostr")) {
-    const { announcements, recommenderCounts: rc } = await discoverNostr(
+    const { announcements, recommenderCounts: rc, walletMints } = await discoverNostr(
       sourcesFile.nostr?.relays ?? [],
       sourcesFile.nostr?.kinds ?? [38172, 38000],
       dq,
     );
     for (const [k, v] of rc) recommenderCounts.set(k, v);
     for (const a of announcements) addCandidate(announcementToCandidate(a));
+    // NIP-60 mints in active use: URLs only, no user linkage.
+    for (const u of walletMints) addCandidate({ url: u, sources: [{ kind: "nostr", ref: "kind:17375" }] });
   }
 
   const list = [...candidates.values()].slice(0, limit);

@@ -3,6 +3,7 @@ import type { DataQualityLog } from "../data-quality.js";
 import {
   fetchText,
   forgejoRepoFromUrl,
+  githubOwnerFromUrl,
   githubRepoFromUrl,
   normalizeNodeId,
   slugify,
@@ -20,6 +21,13 @@ export interface ProjectOverride {
   aliases?: string[];
   status?: NodeStatus;
   primary_parent?: string;
+}
+
+/** Curated README section handling, from ontology/sections.yaml. */
+export interface SectionRules {
+  /** Exact "Section / Subsection" categories that are not code projects; a
+   * repo-less entry here is skipped rather than becoming a phantom node. */
+  nonProjectSections: string[];
 }
 
 interface RawEntry {
@@ -71,6 +79,7 @@ function inferType(section: string, subsection: string | undefined, unmaintained
 export function parseReadme(
   markdown: string,
   overrides: ProjectOverride[],
+  rules: SectionRules,
   dq: DataQualityLog,
 ): { nodes: Node[]; entries: RawEntry[] } {
   const overrideByUrl = new Map<string, ProjectOverride>();
@@ -123,6 +132,9 @@ export function parseReadme(
     const repoSource = override?.url ?? e.url;
     const ghRepo = githubRepoFromUrl(repoSource);
     const fjRepo = forgejoRepoFromUrl(repoSource);
+    // github.com/<owner> with no repo path is an org/user page, not a project.
+    const ghOwner = !ghRepo && !fjRepo ? githubOwnerFromUrl(repoSource) : undefined;
+    const isOrg = Boolean(ghOwner) && !override;
 
     let id: string;
     let host: string;
@@ -138,6 +150,10 @@ export function parseReadme(
       id = normalizeNodeId(fjRepo);
       host = "forgejo";
       repos = [id];
+    } else if (ghOwner) {
+      id = `org:${ghOwner.toLowerCase()}`;
+      host = "github";
+      repos = [];
     } else {
       id = slugify(e.rawName);
       host = "none";
@@ -146,9 +162,23 @@ export function parseReadme(
 
     const unmaintained = /unmaintained/i.test(e.section) || override?.status === "unmaintained";
     const inferred = inferType(e.section, e.subsection, unmaintained);
-    const type = override?.type ?? inferred.type;
+    const type: NodeType = override?.type ?? (isOrg ? "org" : inferred.type);
     const status: NodeStatus = override?.status ?? (unmaintained ? "unmaintained" : "active");
     const category = e.subsection ? `${e.section} / ${e.subsection}` : e.section;
+
+    // Section-aware filtering: a repo-less entry in a section that is inherently
+    // not a code project (hosted decoders, testnut mints, status boards, ...) is
+    // not a graph participant. Repo-backed entries in those sections are kept.
+    if (!isOrg && repos.length === 0 && rules.nonProjectSections.includes(category)) {
+      dq.add({
+        code: "README_NON_PROJECT_SKIP",
+        severity: "info",
+        subject: id,
+        detail: `Skipped repo-less entry "${e.rawName}" in non-project section "${category}".`,
+        suggestion: "Add a repo/override if this is a real project, or leave it out of the graph.",
+      });
+      continue;
+    }
 
     const source: SourceRef = {
       kind: "curated",
@@ -175,7 +205,7 @@ export function parseReadme(
       continue;
     }
 
-    if (!inferred.confident && !override && !unmaintained) {
+    if (!inferred.confident && !override && !unmaintained && !isOrg) {
       dq.add({
         code: "README_TYPE_INFERRED",
         severity: "info",
@@ -184,7 +214,7 @@ export function parseReadme(
         suggestion: "Add a type override in ontology/projects.yaml if wrong.",
       });
     }
-    if (!repos.length) {
+    if (!repos.length && !isOrg) {
       dq.add({
         code: "README_NO_REPO",
         severity: "warn",

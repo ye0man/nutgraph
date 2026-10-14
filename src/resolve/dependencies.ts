@@ -180,11 +180,17 @@ function sharesRepo(a: Node, b: Node): boolean {
 }
 
 function depEdge(from: string, to: string, dep: RawDependency, repo: string): Edge {
-  const source: SourceRef = {
-    kind: "gh-dependency-graph",
-    ref: dep.manifest,
-    url: `https://github.com/${repo}/blob/HEAD/${dep.manifest}`,
-  };
+  // Attribute the edge to how we actually read it: the repo's own manifest
+  // (tier 1) or GitHub's dependency graph (tier 2 fallback). Only the fallback
+  // carries the blob URL, since its "manifest" is a graph-reported filename.
+  const source: SourceRef =
+    dep.origin === "manifest"
+      ? {
+          kind: "manifest",
+          ref: dep.manifest,
+          url: `https://github.com/${repo}/blob/HEAD/${dep.manifest}`,
+        }
+      : { kind: "gh-dependency-graph", ref: dep.manifest };
   return {
     from,
     to,

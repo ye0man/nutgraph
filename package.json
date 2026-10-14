@@ -5,7 +5,7 @@
   "description": "A knowledge graph of the Cashu ecosystem: spec at the center, core modules and their dependents in orbit.",
   "type": "module",
   "engines": {
-    "node": ">=20"
+    "node": ">=22"
   },
   "scripts": {
     "build": "tsx src/cli.ts build",

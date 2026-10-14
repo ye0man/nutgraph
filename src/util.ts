@@ -260,10 +260,19 @@ export function normalizeNodeId(id: string): string {
   return id.includes("/") ? id.toLowerCase() : id;
 }
 
-/** Extract owner/repo from a github.com URL, or undefined. */export function githubRepoFromUrl(url: string): string | undefined {
+/** Extract owner/repo from a github.com URL, or undefined. */
+export function githubRepoFromUrl(url: string): string | undefined {
   const m = url.match(/^https?:\/\/(?:www\.)?github\.com\/([^/]+)\/([^/#?]+)/i);
   if (!m) return undefined;
   return `${m[1]}/${m[2]}`.replace(/\.git$/, "");
+}
+
+/** Extract an owner-only github.com URL (e.g. github.com/foo -- an org/user
+ * page, not a repo), or undefined. */
+export function githubOwnerFromUrl(url: string): string | undefined {
+  const m = url.match(/^https?:\/\/(?:www\.)?github\.com\/([^/#?]+)\/?(?:[#?].*)?$/i);
+  if (!m) return undefined;
+  return m[1];
 }
 
 /** Extract owner/repo from a git.cashu.dev (forgejo) URL, or undefined. */
