@@ -1,9 +1,9 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-10-21T11:49:58.336Z",
+  "generated_at": "2026-10-22T11:53:33.647Z",
   "counts": {
     "nodes": 545,
-    "edges": 999,
+    "edges": 997,
     "by_type": {
       "mint_software": 36,
       "wallet": 100,
@@ -13178,8 +13178,8 @@
       "scores": {
         "popularity": 0.218,
         "freshness": 0.444,
-        "rank": 0.084,
-        "ring": 3
+        "rank": 0.042,
+        "ring": 4
       },
       "created_at": "2025-10-17T19:59:23Z"
     },
@@ -16832,7 +16832,7 @@
         "popularity": 0.297,
         "freshness": 0.276,
         "rank": 0.044,
-        "ring": 4
+        "ring": 3
       },
       "created_at": "2025-03-21T08:03:04Z"
     },
@@ -19693,15 +19693,15 @@
       "scores": {}
     },
     {
-      "id": "mint:030b8f63e87420144ccd1e1d76628f8bd5c86e3e5aa6b185445689ee2d746157bb",
+      "id": "mint:02fdd2f40867c79dfe1de03409a1ffdb1119b53d2102b4c3bd256e39b854ad9d43",
       "type": "mint_instance",
-      "name": "macadamia Mint",
+      "name": "21linz Cashu Mint",
       "host": "none",
       "repos": [],
-      "url": "https://mint.macadamia.cash",
+      "url": "https://mint.21linz.at",
       "status": "active",
       "aliases": [
-        "030b8f63e87420144ccd1e1d76628f8bd5c86e3e5aa6b185445689ee2d746157bb"
+        "02fdd2f40867c79dfe1de03409a1ffdb1119b53d2102b4c3bd256e39b854ad9d43"
       ],
       "tags": [],
       "nuts": [],
@@ -19716,22 +19716,24 @@
         },
         {
           "kind": "mint-probe",
-          "ref": "https://mint.macadamia.cash/v1/info"
+          "ref": "https://mint.21linz.at/v1/info"
         }
       ],
-      "metrics": {},
+      "metrics": {
+        "recommenders": 1
+      },
       "scores": {}
     },
     {
-      "id": "mint:03d207829861fcaa86f96258828e8a70e381451941cb4d69d6ef2d93a8d59efbbe",
+      "id": "mint:02f9e6a53065594ec71dcbb828fb949b482b60ac959fd8ca6be49a8f40822c9256",
       "type": "mint_instance",
-      "name": "WesternBTC Cashu mint",
+      "name": "Mountainlake M7",
       "host": "none",
       "repos": [],
-      "url": "https://mint.westernbtc.com",
+      "url": "https://m7.mountainlake.io",
       "status": "active",
       "aliases": [
-        "03d207829861fcaa86f96258828e8a70e381451941cb4d69d6ef2d93a8d59efbbe"
+        "02f9e6a53065594ec71dcbb828fb949b482b60ac959fd8ca6be49a8f40822c9256"
       ],
       "tags": [],
       "nuts": [],
@@ -19746,37 +19748,7 @@
         },
         {
           "kind": "mint-probe",
-          "ref": "https://mint.westernbtc.com/v1/info"
-        }
-      ],
-      "metrics": {},
-      "scores": {}
-    },
-    {
-      "id": "mint:03e08787fed613a5d0c057893a39e203eada2b91d09e5019304a0b53678b475d03",
-      "type": "mint_instance",
-      "name": "Sovran Mint",
-      "host": "none",
-      "repos": [],
-      "url": "https://mint.sovran.money",
-      "status": "active",
-      "aliases": [
-        "03e08787fed613a5d0c057893a39e203eada2b91d09e5019304a0b53678b475d03"
-      ],
-      "tags": [],
-      "nuts": [],
-      "primary_parent": "cashubtc/cdk-mintd",
-      "sources": [
-        {
-          "kind": "mint-directory",
-          "ref": "https://raw.githubusercontent.com/ye0man/cashu-mint-directory/main/docs/mints.json"
-        },
-        {
-          "kind": "known-mints"
-        },
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.sovran.money/v1/info"
+          "ref": "https://m7.mountainlake.io/v1/info"
         }
       ],
       "metrics": {},
@@ -19813,15 +19785,15 @@
       "scores": {}
     },
     {
-      "id": "mint:02f9e6a53065594ec71dcbb828fb949b482b60ac959fd8ca6be49a8f40822c9256",
+      "id": "mint:030b8f63e87420144ccd1e1d76628f8bd5c86e3e5aa6b185445689ee2d746157bb",
       "type": "mint_instance",
-      "name": "Mountainlake M7",
+      "name": "macadamia Mint",
       "host": "none",
       "repos": [],
-      "url": "https://m7.mountainlake.io",
+      "url": "https://mint.macadamia.cash",
       "status": "active",
       "aliases": [
-        "02f9e6a53065594ec71dcbb828fb949b482b60ac959fd8ca6be49a8f40822c9256"
+        "030b8f63e87420144ccd1e1d76628f8bd5c86e3e5aa6b185445689ee2d746157bb"
       ],
       "tags": [],
       "nuts": [],
@@ -19836,7 +19808,37 @@
         },
         {
           "kind": "mint-probe",
-          "ref": "https://m7.mountainlake.io/v1/info"
+          "ref": "https://mint.macadamia.cash/v1/info"
+        }
+      ],
+      "metrics": {},
+      "scores": {}
+    },
+    {
+      "id": "mint:03e08787fed613a5d0c057893a39e203eada2b91d09e5019304a0b53678b475d03",
+      "type": "mint_instance",
+      "name": "Sovran Mint",
+      "host": "none",
+      "repos": [],
+      "url": "https://mint.sovran.money",
+      "status": "active",
+      "aliases": [
+        "03e08787fed613a5d0c057893a39e203eada2b91d09e5019304a0b53678b475d03"
+      ],
+      "tags": [],
+      "nuts": [],
+      "primary_parent": "cashubtc/cdk-mintd",
+      "sources": [
+        {
+          "kind": "mint-directory",
+          "ref": "https://raw.githubusercontent.com/ye0man/cashu-mint-directory/main/docs/mints.json"
+        },
+        {
+          "kind": "known-mints"
+        },
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.sovran.money/v1/info"
         }
       ],
       "metrics": {},
@@ -19873,15 +19875,15 @@
       "scores": {}
     },
     {
-      "id": "mint:039631dcd0ac8de79e84afaf4120d667686518d7aa5f9967df786f33e3046e65cf",
+      "id": "mint:03d207829861fcaa86f96258828e8a70e381451941cb4d69d6ef2d93a8d59efbbe",
       "type": "mint_instance",
-      "name": "Kashir Mint",
+      "name": "WesternBTC Cashu mint",
       "host": "none",
       "repos": [],
-      "url": "https://mint.kashir.xyz",
+      "url": "https://mint.westernbtc.com",
       "status": "active",
       "aliases": [
-        "039631dcd0ac8de79e84afaf4120d667686518d7aa5f9967df786f33e3046e65cf"
+        "03d207829861fcaa86f96258828e8a70e381451941cb4d69d6ef2d93a8d59efbbe"
       ],
       "tags": [],
       "nuts": [],
@@ -19896,7 +19898,7 @@
         },
         {
           "kind": "mint-probe",
-          "ref": "https://mint.kashir.xyz/v1/info"
+          "ref": "https://mint.westernbtc.com/v1/info"
         }
       ],
       "metrics": {},
@@ -19927,6 +19929,36 @@
         {
           "kind": "mint-probe",
           "ref": "https://mint.103100.xyz/v1/info"
+        }
+      ],
+      "metrics": {},
+      "scores": {}
+    },
+    {
+      "id": "mint:039631dcd0ac8de79e84afaf4120d667686518d7aa5f9967df786f33e3046e65cf",
+      "type": "mint_instance",
+      "name": "Kashir Mint",
+      "host": "none",
+      "repos": [],
+      "url": "https://mint.kashir.xyz",
+      "status": "active",
+      "aliases": [
+        "039631dcd0ac8de79e84afaf4120d667686518d7aa5f9967df786f33e3046e65cf"
+      ],
+      "tags": [],
+      "nuts": [],
+      "primary_parent": "cashubtc/cdk-mintd",
+      "sources": [
+        {
+          "kind": "mint-directory",
+          "ref": "https://raw.githubusercontent.com/ye0man/cashu-mint-directory/main/docs/mints.json"
+        },
+        {
+          "kind": "known-mints"
+        },
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.kashir.xyz/v1/info"
         }
       ],
       "metrics": {},
@@ -20023,38 +20055,6 @@
       "scores": {}
     },
     {
-      "id": "mint:02fdd2f40867c79dfe1de03409a1ffdb1119b53d2102b4c3bd256e39b854ad9d43",
-      "type": "mint_instance",
-      "name": "21linz Cashu Mint",
-      "host": "none",
-      "repos": [],
-      "url": "https://mint.21linz.at",
-      "status": "active",
-      "aliases": [
-        "02fdd2f40867c79dfe1de03409a1ffdb1119b53d2102b4c3bd256e39b854ad9d43"
-      ],
-      "tags": [],
-      "nuts": [],
-      "primary_parent": "cashubtc/cdk-mintd",
-      "sources": [
-        {
-          "kind": "mint-directory",
-          "ref": "https://raw.githubusercontent.com/ye0man/cashu-mint-directory/main/docs/mints.json"
-        },
-        {
-          "kind": "known-mints"
-        },
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.21linz.at/v1/info"
-        }
-      ],
-      "metrics": {
-        "recommenders": 1
-      },
-      "scores": {}
-    },
-    {
       "id": "mint:03c5f16604678b8b118a454db12885e586f0fc146788d54182b3ca7943a327278e",
       "type": "mint_instance",
       "name": "LemonFizz Mint",
@@ -20079,6 +20079,36 @@
         {
           "kind": "mint-probe",
           "ref": "https://mint.lemonfizz.st/v1/info"
+        }
+      ],
+      "metrics": {},
+      "scores": {}
+    },
+    {
+      "id": "mint:0353208248b23df42633d981fc6a75ffb4020c554d0a445f01a00d97fdd2f31de0",
+      "type": "mint_instance",
+      "name": "21Mint",
+      "host": "none",
+      "repos": [],
+      "url": "https://21mint.me",
+      "status": "active",
+      "aliases": [
+        "0353208248b23df42633d981fc6a75ffb4020c554d0a445f01a00d97fdd2f31de0"
+      ],
+      "tags": [],
+      "nuts": [],
+      "primary_parent": "cashubtc/nutshell",
+      "sources": [
+        {
+          "kind": "mint-directory",
+          "ref": "https://raw.githubusercontent.com/ye0man/cashu-mint-directory/main/docs/mints.json"
+        },
+        {
+          "kind": "known-mints"
+        },
+        {
+          "kind": "mint-probe",
+          "ref": "https://21mint.me/v1/info"
         }
       ],
       "metrics": {},
@@ -20115,15 +20145,15 @@
       "scores": {}
     },
     {
-      "id": "mint:0353208248b23df42633d981fc6a75ffb4020c554d0a445f01a00d97fdd2f31de0",
+      "id": "mint:03dce4cc88bdcc2166bf34d2592178df0acd4d72f2f3b2043c64e7761d20355f13",
       "type": "mint_instance",
-      "name": "21Mint",
+      "name": "Mint Cuba Bitcoin",
       "host": "none",
       "repos": [],
-      "url": "https://21mint.me",
+      "url": "https://mint.cubabitcoin.org",
       "status": "active",
       "aliases": [
-        "0353208248b23df42633d981fc6a75ffb4020c554d0a445f01a00d97fdd2f31de0"
+        "03dce4cc88bdcc2166bf34d2592178df0acd4d72f2f3b2043c64e7761d20355f13"
       ],
       "tags": [],
       "nuts": [],
@@ -20138,7 +20168,37 @@
         },
         {
           "kind": "mint-probe",
-          "ref": "https://21mint.me/v1/info"
+          "ref": "https://mint.cubabitcoin.org/v1/info"
+        }
+      ],
+      "metrics": {},
+      "scores": {}
+    },
+    {
+      "id": "mint:027482d8b3c0c897638e13e18567eaf9c15b6b0f1216e817a814fae263305bc821",
+      "type": "mint_instance",
+      "name": "Century Metadata Test Mint",
+      "host": "none",
+      "repos": [],
+      "url": "https://cashu.centurymetadata.org",
+      "status": "active",
+      "aliases": [
+        "027482d8b3c0c897638e13e18567eaf9c15b6b0f1216e817a814fae263305bc821"
+      ],
+      "tags": [],
+      "nuts": [],
+      "primary_parent": "cashubtc/cdk-mintd",
+      "sources": [
+        {
+          "kind": "mint-directory",
+          "ref": "https://raw.githubusercontent.com/ye0man/cashu-mint-directory/main/docs/mints.json"
+        },
+        {
+          "kind": "known-mints"
+        },
+        {
+          "kind": "mint-probe",
+          "ref": "https://cashu.centurymetadata.org/v1/info"
         }
       ],
       "metrics": {},
@@ -20177,36 +20237,6 @@
       "scores": {}
     },
     {
-      "id": "mint:027482d8b3c0c897638e13e18567eaf9c15b6b0f1216e817a814fae263305bc821",
-      "type": "mint_instance",
-      "name": "Century Metadata Test Mint",
-      "host": "none",
-      "repos": [],
-      "url": "https://cashu.centurymetadata.org",
-      "status": "active",
-      "aliases": [
-        "027482d8b3c0c897638e13e18567eaf9c15b6b0f1216e817a814fae263305bc821"
-      ],
-      "tags": [],
-      "nuts": [],
-      "primary_parent": "cashubtc/cdk-mintd",
-      "sources": [
-        {
-          "kind": "mint-directory",
-          "ref": "https://raw.githubusercontent.com/ye0man/cashu-mint-directory/main/docs/mints.json"
-        },
-        {
-          "kind": "known-mints"
-        },
-        {
-          "kind": "mint-probe",
-          "ref": "https://cashu.centurymetadata.org/v1/info"
-        }
-      ],
-      "metrics": {},
-      "scores": {}
-    },
-    {
       "id": "mint:029e23f9fdef5e6686c16357be347b1edfbbdda5c3737d0316818483897c40dc7e",
       "type": "mint_instance",
       "name": "Kashu.me",
@@ -20236,36 +20266,6 @@
       "metrics": {
         "recommenders": 1
       },
-      "scores": {}
-    },
-    {
-      "id": "mint:03dce4cc88bdcc2166bf34d2592178df0acd4d72f2f3b2043c64e7761d20355f13",
-      "type": "mint_instance",
-      "name": "Mint Cuba Bitcoin",
-      "host": "none",
-      "repos": [],
-      "url": "https://mint.cubabitcoin.org",
-      "status": "active",
-      "aliases": [
-        "03dce4cc88bdcc2166bf34d2592178df0acd4d72f2f3b2043c64e7761d20355f13"
-      ],
-      "tags": [],
-      "nuts": [],
-      "primary_parent": "cashubtc/nutshell",
-      "sources": [
-        {
-          "kind": "mint-directory",
-          "ref": "https://raw.githubusercontent.com/ye0man/cashu-mint-directory/main/docs/mints.json"
-        },
-        {
-          "kind": "known-mints"
-        },
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.cubabitcoin.org/v1/info"
-        }
-      ],
-      "metrics": {},
       "scores": {}
     },
     {
@@ -20329,36 +20329,6 @@
       "scores": {}
     },
     {
-      "id": "mint:020d0c305e10741a6b207352880be21bccd985eec4b8cc2d7ec4cfc64070b300f3",
-      "type": "mint_instance",
-      "name": "MintLND",
-      "host": "none",
-      "repos": [],
-      "url": "https://mint.mintlnd.org",
-      "status": "active",
-      "aliases": [
-        "020d0c305e10741a6b207352880be21bccd985eec4b8cc2d7ec4cfc64070b300f3"
-      ],
-      "tags": [],
-      "nuts": [],
-      "primary_parent": "cashubtc/nutshell",
-      "sources": [
-        {
-          "kind": "mint-directory",
-          "ref": "https://raw.githubusercontent.com/ye0man/cashu-mint-directory/main/docs/mints.json"
-        },
-        {
-          "kind": "known-mints"
-        },
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.mintlnd.org/v1/info"
-        }
-      ],
-      "metrics": {},
-      "scores": {}
-    },
-    {
       "id": "mint:02232ae96b92a66d3e0ec3b5e66bbb661313de2b43c7aa7e0183fa3c634e1738af",
       "type": "mint_instance",
       "name": "Mint ColBitcoin",
@@ -20389,15 +20359,15 @@
       "scores": {}
     },
     {
-      "id": "mint:02bf3ff52f21bd89be1992dc0fa42bf1d3a35ba4618364e7049c9861bd38a36dc4",
+      "id": "mint:020d0c305e10741a6b207352880be21bccd985eec4b8cc2d7ec4cfc64070b300f3",
       "type": "mint_instance",
-      "name": "Nebula",
+      "name": "MintLND",
       "host": "none",
       "repos": [],
-      "url": "https://mint.nodenebula.com",
+      "url": "https://mint.mintlnd.org",
       "status": "active",
       "aliases": [
-        "02bf3ff52f21bd89be1992dc0fa42bf1d3a35ba4618364e7049c9861bd38a36dc4"
+        "020d0c305e10741a6b207352880be21bccd985eec4b8cc2d7ec4cfc64070b300f3"
       ],
       "tags": [],
       "nuts": [],
@@ -20412,7 +20382,7 @@
         },
         {
           "kind": "mint-probe",
-          "ref": "https://mint.nodenebula.com/v1/info"
+          "ref": "https://mint.mintlnd.org/v1/info"
         }
       ],
       "metrics": {},
@@ -20447,6 +20417,36 @@
         {
           "kind": "mint-probe",
           "ref": "https://mint.mountainlake.io/v1/info"
+        }
+      ],
+      "metrics": {},
+      "scores": {}
+    },
+    {
+      "id": "mint:02dd15abd6a2b385b2a70c6daff703dac3553184a8c836f271911faac9a2bbc979",
+      "type": "mint_instance",
+      "name": "Chorus OFF Mint",
+      "host": "none",
+      "repos": [],
+      "url": "https://mint.chorus.community",
+      "status": "active",
+      "aliases": [
+        "02dd15abd6a2b385b2a70c6daff703dac3553184a8c836f271911faac9a2bbc979"
+      ],
+      "tags": [],
+      "nuts": [],
+      "primary_parent": "cashubtc/nutshell",
+      "sources": [
+        {
+          "kind": "mint-directory",
+          "ref": "https://raw.githubusercontent.com/ye0man/cashu-mint-directory/main/docs/mints.json"
+        },
+        {
+          "kind": "known-mints"
+        },
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.chorus.community/v1/info"
         }
       ],
       "metrics": {},
@@ -20515,15 +20515,15 @@
       "scores": {}
     },
     {
-      "id": "mint:02dd15abd6a2b385b2a70c6daff703dac3553184a8c836f271911faac9a2bbc979",
+      "id": "mint:02bf3ff52f21bd89be1992dc0fa42bf1d3a35ba4618364e7049c9861bd38a36dc4",
       "type": "mint_instance",
-      "name": "Chorus OFF Mint",
+      "name": "Nebula",
       "host": "none",
       "repos": [],
-      "url": "https://mint.chorus.community",
+      "url": "https://mint.nodenebula.com",
       "status": "active",
       "aliases": [
-        "02dd15abd6a2b385b2a70c6daff703dac3553184a8c836f271911faac9a2bbc979"
+        "02bf3ff52f21bd89be1992dc0fa42bf1d3a35ba4618364e7049c9861bd38a36dc4"
       ],
       "tags": [],
       "nuts": [],
@@ -20538,7 +20538,7 @@
         },
         {
           "kind": "mint-probe",
-          "ref": "https://mint.chorus.community/v1/info"
+          "ref": "https://mint.nodenebula.com/v1/info"
         }
       ],
       "metrics": {},
@@ -20579,36 +20579,6 @@
       "scores": {}
     },
     {
-      "id": "mint:03bb3b622e0f024acf5c01bfb609624d3be30d7815e0c940ccf3e932a02c998c0c",
-      "type": "mint_instance",
-      "name": "cashu.21m.lol",
-      "host": "none",
-      "repos": [],
-      "url": "https://cashu.21m.lol",
-      "status": "active",
-      "aliases": [
-        "03bb3b622e0f024acf5c01bfb609624d3be30d7815e0c940ccf3e932a02c998c0c"
-      ],
-      "tags": [],
-      "nuts": [],
-      "primary_parent": "cashubtc/nutshell",
-      "sources": [
-        {
-          "kind": "mint-directory",
-          "ref": "https://raw.githubusercontent.com/ye0man/cashu-mint-directory/main/docs/mints.json"
-        },
-        {
-          "kind": "known-mints"
-        },
-        {
-          "kind": "mint-probe",
-          "ref": "https://cashu.21m.lol/v1/info"
-        }
-      ],
-      "metrics": {},
-      "scores": {}
-    },
-    {
       "id": "mint:02f5f553e27fd93d5def70def7d0bba9c21a8b64478783219fdcd3543eb7f0b8cb",
       "type": "mint_instance",
       "name": "mjex.me cashu mint",
@@ -20639,15 +20609,15 @@
       "scores": {}
     },
     {
-      "id": "mint:021bce61ecb2628d96f5fba9b2e640b7c2d2a1c5e20dfdf4dede764ae17c60c872",
+      "id": "mint:03bb3b622e0f024acf5c01bfb609624d3be30d7815e0c940ccf3e932a02c998c0c",
       "type": "mint_instance",
-      "name": "cashu.chat",
+      "name": "cashu.21m.lol",
       "host": "none",
       "repos": [],
-      "url": "https://mint.cashu.chat",
+      "url": "https://cashu.21m.lol",
       "status": "active",
       "aliases": [
-        "021bce61ecb2628d96f5fba9b2e640b7c2d2a1c5e20dfdf4dede764ae17c60c872"
+        "03bb3b622e0f024acf5c01bfb609624d3be30d7815e0c940ccf3e932a02c998c0c"
       ],
       "tags": [],
       "nuts": [],
@@ -20661,12 +20631,8 @@
           "kind": "known-mints"
         },
         {
-          "kind": "nostr",
-          "ref": "kind:38172"
-        },
-        {
           "kind": "mint-probe",
-          "ref": "https://mint.cashu.chat/v1/info"
+          "ref": "https://cashu.21m.lol/v1/info"
         }
       ],
       "metrics": {},
@@ -20705,15 +20671,15 @@
       "scores": {}
     },
     {
-      "id": "mint:023c87c6aa15bb7158fb59661973e73930e4351634fa1b7d56988df8441fa021f2",
+      "id": "mint:021bce61ecb2628d96f5fba9b2e640b7c2d2a1c5e20dfdf4dede764ae17c60c872",
       "type": "mint_instance",
-      "name": "MK Mint",
+      "name": "cashu.chat",
       "host": "none",
       "repos": [],
-      "url": "https://mint.mikelcalvo.net",
+      "url": "https://mint.cashu.chat",
       "status": "active",
       "aliases": [
-        "023c87c6aa15bb7158fb59661973e73930e4351634fa1b7d56988df8441fa021f2"
+        "021bce61ecb2628d96f5fba9b2e640b7c2d2a1c5e20dfdf4dede764ae17c60c872"
       ],
       "tags": [],
       "nuts": [],
@@ -20727,8 +20693,12 @@
           "kind": "known-mints"
         },
         {
+          "kind": "nostr",
+          "ref": "kind:38172"
+        },
+        {
           "kind": "mint-probe",
-          "ref": "https://mint.mikelcalvo.net/v1/info"
+          "ref": "https://mint.cashu.chat/v1/info"
         }
       ],
       "metrics": {},
@@ -20795,36 +20765,6 @@
       "scores": {}
     },
     {
-      "id": "mint:038df1da9aa65a3cfbd4e81fa6864eed356483b95e3d4492028d2444e257acf637",
-      "type": "mint_instance",
-      "name": "Mineracks Mint",
-      "host": "none",
-      "repos": [],
-      "url": "https://mint.mineracks.com",
-      "status": "active",
-      "aliases": [
-        "038df1da9aa65a3cfbd4e81fa6864eed356483b95e3d4492028d2444e257acf637"
-      ],
-      "tags": [],
-      "nuts": [],
-      "primary_parent": "cashubtc/nutshell",
-      "sources": [
-        {
-          "kind": "mint-directory",
-          "ref": "https://raw.githubusercontent.com/ye0man/cashu-mint-directory/main/docs/mints.json"
-        },
-        {
-          "kind": "known-mints"
-        },
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.mineracks.com/v1/info"
-        }
-      ],
-      "metrics": {},
-      "scores": {}
-    },
-    {
       "id": "mint:0294f53f13f988e3a5bf80f384168bf02c117ee9e81019f7e1b66e1250b5e0ebfa",
       "type": "mint_instance",
       "name": "28MINT",
@@ -20885,6 +20825,36 @@
       "scores": {}
     },
     {
+      "id": "mint:02fe192cb84704538a5c40dd759c4dbf82f47282dd494b8544c2be314499444372",
+      "type": "mint_instance",
+      "name": "\"Agorist Cashu Mint\"",
+      "host": "none",
+      "repos": [],
+      "url": "https://mint.agorist.space",
+      "status": "active",
+      "aliases": [
+        "02fe192cb84704538a5c40dd759c4dbf82f47282dd494b8544c2be314499444372"
+      ],
+      "tags": [],
+      "nuts": [],
+      "primary_parent": "cashubtc/nutshell",
+      "sources": [
+        {
+          "kind": "mint-directory",
+          "ref": "https://raw.githubusercontent.com/ye0man/cashu-mint-directory/main/docs/mints.json"
+        },
+        {
+          "kind": "known-mints"
+        },
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.agorist.space/v1/info"
+        }
+      ],
+      "metrics": {},
+      "scores": {}
+    },
+    {
       "id": "mint:029e44152a6aaa4563cb14ebe691c868b23ea37e727682d3745e54f42ca25b3054",
       "type": "mint_instance",
       "name": "Rugs Monthly 01",
@@ -20915,15 +20885,15 @@
       "scores": {}
     },
     {
-      "id": "mint:02fe192cb84704538a5c40dd759c4dbf82f47282dd494b8544c2be314499444372",
+      "id": "mint:023c87c6aa15bb7158fb59661973e73930e4351634fa1b7d56988df8441fa021f2",
       "type": "mint_instance",
-      "name": "\"Agorist Cashu Mint\"",
+      "name": "MK Mint",
       "host": "none",
       "repos": [],
-      "url": "https://mint.agorist.space",
+      "url": "https://mint.mikelcalvo.net",
       "status": "active",
       "aliases": [
-        "02fe192cb84704538a5c40dd759c4dbf82f47282dd494b8544c2be314499444372"
+        "023c87c6aa15bb7158fb59661973e73930e4351634fa1b7d56988df8441fa021f2"
       ],
       "tags": [],
       "nuts": [],
@@ -20938,7 +20908,7 @@
         },
         {
           "kind": "mint-probe",
-          "ref": "https://mint.agorist.space/v1/info"
+          "ref": "https://mint.mikelcalvo.net/v1/info"
         }
       ],
       "metrics": {},
@@ -20988,6 +20958,32 @@
       "tags": [],
       "nuts": [],
       "primary_parent": "spec",
+      "sources": [
+        {
+          "kind": "mint-directory",
+          "ref": "https://raw.githubusercontent.com/ye0man/cashu-mint-directory/main/docs/mints.json"
+        },
+        {
+          "kind": "known-mints"
+        }
+      ],
+      "metrics": {},
+      "scores": {}
+    },
+    {
+      "id": "mint:mint.mineracks.com",
+      "type": "mint_instance",
+      "name": "Mineracks Mint",
+      "host": "none",
+      "repos": [],
+      "url": "https://mint.mineracks.com",
+      "status": "active",
+      "aliases": [
+        "mint.mineracks.com"
+      ],
+      "tags": [],
+      "nuts": [],
+      "primary_parent": "cashubtc/nutshell",
       "sources": [
         {
           "kind": "mint-directory",
@@ -23014,24 +23010,6 @@
       "role": "secondary"
     },
     {
-      "from": "aeschylus/botwallets",
-      "to": "cashubtc/cashu-ts",
-      "type": "depends_on",
-      "scope": [],
-      "declared_range": "^3.4.1",
-      "sources": [
-        {
-          "kind": "manifest",
-          "ref": "package.json",
-          "url": "https://github.com/aeschylus/botwallets/blob/HEAD/package.json"
-        }
-      ],
-      "confidence": 0.95,
-      "latest_at_build": "4.11.0",
-      "lag": "behind_major",
-      "role": "primary"
-    },
-    {
       "from": "rayfish/cashr",
       "to": "cashubtc/cdk",
       "type": "depends_on",
@@ -23047,6 +23025,24 @@
       "confidence": 0.95,
       "latest_at_build": "0.18.1",
       "lag": "up_to_date",
+      "role": "primary"
+    },
+    {
+      "from": "aeschylus/botwallets",
+      "to": "cashubtc/cashu-ts",
+      "type": "depends_on",
+      "scope": [],
+      "declared_range": "^3.4.1",
+      "sources": [
+        {
+          "kind": "manifest",
+          "ref": "package.json",
+          "url": "https://github.com/aeschylus/botwallets/blob/HEAD/package.json"
+        }
+      ],
+      "confidence": 0.95,
+      "latest_at_build": "4.11.0",
+      "lag": "behind_major",
       "role": "primary"
     },
     {
@@ -23122,24 +23118,6 @@
       "role": "primary"
     },
     {
-      "from": "eridanux/cashu-skill",
-      "to": "cashubtc/coco",
-      "type": "depends_on",
-      "scope": [],
-      "declared_range": "^1.1.2-rc.43",
-      "sources": [
-        {
-          "kind": "manifest",
-          "ref": "package.json",
-          "url": "https://github.com/eridanux/cashu-skill/blob/HEAD/package.json"
-        }
-      ],
-      "confidence": 0.95,
-      "latest_at_build": "1.0.0-rc11",
-      "lag": "ahead",
-      "role": "primary"
-    },
-    {
       "from": "cashubtc/cashu.me",
       "to": "cashubtc/cashu-ts",
       "type": "depends_on",
@@ -23155,6 +23133,24 @@
       "confidence": 0.95,
       "latest_at_build": "4.11.0",
       "lag": "behind_minor",
+      "role": "primary"
+    },
+    {
+      "from": "eridanux/cashu-skill",
+      "to": "cashubtc/coco",
+      "type": "depends_on",
+      "scope": [],
+      "declared_range": "^1.1.2-rc.43",
+      "sources": [
+        {
+          "kind": "manifest",
+          "ref": "package.json",
+          "url": "https://github.com/eridanux/cashu-skill/blob/HEAD/package.json"
+        }
+      ],
+      "confidence": 0.95,
+      "latest_at_build": "1.0.0-rc11",
+      "lag": "ahead",
       "role": "primary"
     },
     {
@@ -23230,6 +23226,24 @@
       "role": "primary"
     },
     {
+      "from": "harborwallet/harbor",
+      "to": "cashubtc/cdk",
+      "type": "depends_on",
+      "scope": [],
+      "declared_range": "0.11.1",
+      "sources": [
+        {
+          "kind": "manifest",
+          "ref": "Cargo.toml",
+          "url": "https://github.com/harborwallet/harbor/blob/HEAD/Cargo.toml"
+        }
+      ],
+      "confidence": 0.95,
+      "latest_at_build": "0.18.1",
+      "lag": "behind_major",
+      "role": "primary"
+    },
+    {
       "from": "cashubtc/enuts",
       "to": "cashubtc/cashu-ts",
       "type": "depends_on",
@@ -23264,24 +23278,6 @@
       "latest_at_build": "2.0.0",
       "lag": "behind_major",
       "role": "secondary"
-    },
-    {
-      "from": "harborwallet/harbor",
-      "to": "cashubtc/cdk",
-      "type": "depends_on",
-      "scope": [],
-      "declared_range": "0.11.1",
-      "sources": [
-        {
-          "kind": "manifest",
-          "ref": "Cargo.toml",
-          "url": "https://github.com/harborwallet/harbor/blob/HEAD/Cargo.toml"
-        }
-      ],
-      "confidence": 0.95,
-      "latest_at_build": "0.18.1",
-      "lag": "behind_major",
-      "role": "primary"
     },
     {
       "from": "hexdaemon/hexnuts",
@@ -23896,24 +23892,6 @@
       "role": "primary"
     },
     {
-      "from": "cypherflow/cypherflow_ai",
-      "to": "cashubtc/cashu-ts",
-      "type": "depends_on",
-      "scope": [],
-      "declared_range": "2.1.0",
-      "sources": [
-        {
-          "kind": "manifest",
-          "ref": "package.json",
-          "url": "https://github.com/cypherflow/cypherflow_ai/blob/HEAD/package.json"
-        }
-      ],
-      "confidence": 0.95,
-      "latest_at_build": "4.11.0",
-      "lag": "behind_major",
-      "role": "primary"
-    },
-    {
       "from": "johnzilla/arbstr-vault",
       "to": "cashubtc/cashu-ts",
       "type": "depends_on",
@@ -23924,6 +23902,24 @@
           "kind": "manifest",
           "ref": "package.json",
           "url": "https://github.com/johnzilla/arbstr-vault/blob/HEAD/package.json"
+        }
+      ],
+      "confidence": 0.95,
+      "latest_at_build": "4.11.0",
+      "lag": "behind_major",
+      "role": "primary"
+    },
+    {
+      "from": "cypherflow/cypherflow_ai",
+      "to": "cashubtc/cashu-ts",
+      "type": "depends_on",
+      "scope": [],
+      "declared_range": "2.1.0",
+      "sources": [
+        {
+          "kind": "manifest",
+          "ref": "package.json",
+          "url": "https://github.com/cypherflow/cypherflow_ai/blob/HEAD/package.json"
         }
       ],
       "confidence": 0.95,
@@ -24184,24 +24180,6 @@
       "role": "primary"
     },
     {
-      "from": "robwoodgate/clawtar",
-      "to": "cashubtc/cashu-ts",
-      "type": "depends_on",
-      "scope": [],
-      "declared_range": "^3.4.1",
-      "sources": [
-        {
-          "kind": "manifest",
-          "ref": "package.json",
-          "url": "https://github.com/robwoodgate/clawtar/blob/HEAD/package.json"
-        }
-      ],
-      "confidence": 0.95,
-      "latest_at_build": "4.11.0",
-      "lag": "behind_major",
-      "role": "primary"
-    },
-    {
       "from": "gudnuf/cashu-mpp",
       "to": "cashubtc/cdk",
       "type": "depends_on",
@@ -24216,6 +24194,24 @@
       ],
       "confidence": 0.95,
       "latest_at_build": "0.18.1",
+      "lag": "behind_major",
+      "role": "primary"
+    },
+    {
+      "from": "robwoodgate/clawtar",
+      "to": "cashubtc/cashu-ts",
+      "type": "depends_on",
+      "scope": [],
+      "declared_range": "^3.4.1",
+      "sources": [
+        {
+          "kind": "manifest",
+          "ref": "package.json",
+          "url": "https://github.com/robwoodgate/clawtar/blob/HEAD/package.json"
+        }
+      ],
+      "confidence": 0.95,
+      "latest_at_build": "4.11.0",
       "lag": "behind_major",
       "role": "primary"
     },
@@ -24796,6 +24792,24 @@
       "role": "primary"
     },
     {
+      "from": "gudnuf/cashu-gateway",
+      "to": "cashubtc/cdk",
+      "type": "depends_on",
+      "scope": [],
+      "declared_range": "*",
+      "sources": [
+        {
+          "kind": "manifest",
+          "ref": "Cargo.toml",
+          "url": "https://github.com/gudnuf/cashu-gateway/blob/HEAD/Cargo.toml"
+        }
+      ],
+      "confidence": 0.95,
+      "latest_at_build": "0.18.1",
+      "lag": "unknown",
+      "role": "primary"
+    },
+    {
       "from": "gautambytes/cashu-fault-lab",
       "to": "cashubtc/cdk",
       "type": "depends_on",
@@ -24830,24 +24844,6 @@
       "latest_at_build": "4.11.0",
       "lag": "behind_minor",
       "role": "secondary"
-    },
-    {
-      "from": "gudnuf/cashu-gateway",
-      "to": "cashubtc/cdk",
-      "type": "depends_on",
-      "scope": [],
-      "declared_range": "*",
-      "sources": [
-        {
-          "kind": "manifest",
-          "ref": "Cargo.toml",
-          "url": "https://github.com/gudnuf/cashu-gateway/blob/HEAD/Cargo.toml"
-        }
-      ],
-      "confidence": 0.95,
-      "latest_at_build": "0.18.1",
-      "lag": "unknown",
-      "role": "primary"
     },
     {
       "from": "babdbtc/cashu-pos",
@@ -25388,24 +25384,6 @@
       "role": "primary"
     },
     {
-      "from": "doktorshift/nutbits",
-      "to": "cashubtc/cashu-ts",
-      "type": "depends_on",
-      "scope": [],
-      "declared_range": "^3.6.1",
-      "sources": [
-        {
-          "kind": "manifest",
-          "ref": "package.json",
-          "url": "https://github.com/doktorshift/nutbits/blob/HEAD/package.json"
-        }
-      ],
-      "confidence": 0.95,
-      "latest_at_build": "4.11.0",
-      "lag": "behind_major",
-      "role": "primary"
-    },
-    {
       "from": "brenorb/nutft",
       "to": "cashubtc/cashu-ts",
       "type": "depends_on",
@@ -25421,6 +25399,24 @@
       "confidence": 0.95,
       "latest_at_build": "4.11.0",
       "lag": "behind_minor",
+      "role": "primary"
+    },
+    {
+      "from": "doktorshift/nutbits",
+      "to": "cashubtc/cashu-ts",
+      "type": "depends_on",
+      "scope": [],
+      "declared_range": "^3.6.1",
+      "sources": [
+        {
+          "kind": "manifest",
+          "ref": "package.json",
+          "url": "https://github.com/doktorshift/nutbits/blob/HEAD/package.json"
+        }
+      ],
+      "confidence": 0.95,
+      "latest_at_build": "4.11.0",
+      "lag": "behind_major",
       "role": "primary"
     },
     {
@@ -26054,24 +26050,6 @@
       "role": "primary"
     },
     {
-      "from": "heathermm55/purrmint",
-      "to": "cashubtc/cdk",
-      "type": "depends_on",
-      "scope": [],
-      "declared_range": "0.11",
-      "sources": [
-        {
-          "kind": "manifest",
-          "ref": "Cargo.toml",
-          "url": "https://github.com/heathermm55/purrmint/blob/HEAD/Cargo.toml"
-        }
-      ],
-      "confidence": 0.95,
-      "latest_at_build": "0.18.1",
-      "lag": "behind_major",
-      "role": "primary"
-    },
-    {
       "from": "callebtc/nutshell-lnurl",
       "to": "cashubtc/cashu",
       "type": "depends_on",
@@ -26090,40 +26068,22 @@
       "role": "primary"
     },
     {
-      "from": "andotherstuff/cashu-wallet",
-      "to": "cashubtc/cashu-ts",
+      "from": "heathermm55/purrmint",
+      "to": "cashubtc/cdk",
       "type": "depends_on",
       "scope": [],
-      "declared_range": "^2.5.2",
+      "declared_range": "0.11",
       "sources": [
         {
           "kind": "manifest",
-          "ref": "package.json",
-          "url": "https://github.com/andotherstuff/cashu-wallet/blob/HEAD/package.json"
+          "ref": "Cargo.toml",
+          "url": "https://github.com/heathermm55/purrmint/blob/HEAD/Cargo.toml"
         }
       ],
       "confidence": 0.95,
-      "latest_at_build": "4.11.0",
+      "latest_at_build": "0.18.1",
       "lag": "behind_major",
       "role": "primary"
-    },
-    {
-      "from": "andotherstuff/cashu-wallet",
-      "to": "cashubtc/cashu-crypto-ts",
-      "type": "depends_on",
-      "scope": [],
-      "declared_range": "^0.3.4",
-      "sources": [
-        {
-          "kind": "manifest",
-          "ref": "package.json",
-          "url": "https://github.com/andotherstuff/cashu-wallet/blob/HEAD/package.json"
-        }
-      ],
-      "confidence": 0.95,
-      "latest_at_build": "0.3.4",
-      "lag": "up_to_date",
-      "role": "secondary"
     },
     {
       "from": "abdelstark/zashu",
@@ -26159,6 +26119,42 @@
       "confidence": 0.95,
       "latest_at_build": "0.18.1",
       "lag": "behind_major",
+      "role": "secondary"
+    },
+    {
+      "from": "andotherstuff/cashu-wallet",
+      "to": "cashubtc/cashu-ts",
+      "type": "depends_on",
+      "scope": [],
+      "declared_range": "^2.5.2",
+      "sources": [
+        {
+          "kind": "manifest",
+          "ref": "package.json",
+          "url": "https://github.com/andotherstuff/cashu-wallet/blob/HEAD/package.json"
+        }
+      ],
+      "confidence": 0.95,
+      "latest_at_build": "4.11.0",
+      "lag": "behind_major",
+      "role": "primary"
+    },
+    {
+      "from": "andotherstuff/cashu-wallet",
+      "to": "cashubtc/cashu-crypto-ts",
+      "type": "depends_on",
+      "scope": [],
+      "declared_range": "^0.3.4",
+      "sources": [
+        {
+          "kind": "manifest",
+          "ref": "package.json",
+          "url": "https://github.com/andotherstuff/cashu-wallet/blob/HEAD/package.json"
+        }
+      ],
+      "confidence": 0.95,
+      "latest_at_build": "0.3.4",
+      "lag": "up_to_date",
       "role": "secondary"
     },
     {
@@ -26324,24 +26320,6 @@
       "role": "primary"
     },
     {
-      "from": "callebtc/cashu-wallet-cli-tools",
-      "to": "cashubtc/cashu",
-      "type": "depends_on",
-      "scope": [],
-      "declared_range": "^0.16.5",
-      "sources": [
-        {
-          "kind": "manifest",
-          "ref": "pyproject.toml",
-          "url": "https://github.com/callebtc/cashu-wallet-cli-tools/blob/HEAD/pyproject.toml"
-        }
-      ],
-      "confidence": 0.95,
-      "latest_at_build": "0.21.0",
-      "lag": "behind_major",
-      "role": "primary"
-    },
-    {
       "from": "cashuprojects/cashu-wallet-browser-extension",
       "to": "cashubtc/cashu-ts",
       "type": "depends_on",
@@ -26356,6 +26334,24 @@
       ],
       "confidence": 0.95,
       "latest_at_build": "4.11.0",
+      "lag": "behind_major",
+      "role": "primary"
+    },
+    {
+      "from": "callebtc/cashu-wallet-cli-tools",
+      "to": "cashubtc/cashu",
+      "type": "depends_on",
+      "scope": [],
+      "declared_range": "^0.16.5",
+      "sources": [
+        {
+          "kind": "manifest",
+          "ref": "pyproject.toml",
+          "url": "https://github.com/callebtc/cashu-wallet-cli-tools/blob/HEAD/pyproject.toml"
+        }
+      ],
+      "confidence": 0.95,
+      "latest_at_build": "0.21.0",
       "lag": "behind_major",
       "role": "primary"
     },
@@ -26882,24 +26878,6 @@
       "role": "primary"
     },
     {
-      "from": "lightning-digital-entertainment/cashu-address-cli",
-      "to": "cashubtc/cashu-ts",
-      "type": "depends_on",
-      "scope": [],
-      "declared_range": "^0.9.0",
-      "sources": [
-        {
-          "kind": "manifest",
-          "ref": "package.json",
-          "url": "https://github.com/lightning-digital-entertainment/cashu-address-cli/blob/HEAD/package.json"
-        }
-      ],
-      "confidence": 0.95,
-      "latest_at_build": "4.11.0",
-      "lag": "behind_major",
-      "role": "primary"
-    },
-    {
       "from": "gudnuf/cashu-address",
       "to": "cashubtc/cashu-ts",
       "type": "depends_on",
@@ -26910,6 +26888,24 @@
           "kind": "manifest",
           "ref": "package.json",
           "url": "https://github.com/gudnuf/cashu-address/blob/HEAD/package.json"
+        }
+      ],
+      "confidence": 0.95,
+      "latest_at_build": "4.11.0",
+      "lag": "behind_major",
+      "role": "primary"
+    },
+    {
+      "from": "lightning-digital-entertainment/cashu-address-cli",
+      "to": "cashubtc/cashu-ts",
+      "type": "depends_on",
+      "scope": [],
+      "declared_range": "^0.9.0",
+      "sources": [
+        {
+          "kind": "manifest",
+          "ref": "package.json",
+          "url": "https://github.com/lightning-digital-entertainment/cashu-address-cli/blob/HEAD/package.json"
         }
       ],
       "confidence": 0.95,
@@ -27440,24 +27436,6 @@
       "role": "primary"
     },
     {
-      "from": "abhi25jk/p2pk-locked-cashu-token",
-      "to": "cashubtc/cashu-ts",
-      "type": "depends_on",
-      "scope": [],
-      "declared_range": "^2.4.2",
-      "sources": [
-        {
-          "kind": "manifest",
-          "ref": "package.json",
-          "url": "https://github.com/abhi25jk/p2pk-locked-cashu-token/blob/HEAD/package.json"
-        }
-      ],
-      "confidence": 0.95,
-      "latest_at_build": "4.11.0",
-      "lag": "behind_major",
-      "role": "primary"
-    },
-    {
       "from": "dtdannen/strfry-ecash-plugin-dvm-demo",
       "to": "cashubtc/cashu-ts",
       "type": "depends_on",
@@ -27492,6 +27470,24 @@
       "latest_at_build": "0.21.0",
       "lag": "behind_major",
       "role": "secondary"
+    },
+    {
+      "from": "abhi25jk/p2pk-locked-cashu-token",
+      "to": "cashubtc/cashu-ts",
+      "type": "depends_on",
+      "scope": [],
+      "declared_range": "^2.4.2",
+      "sources": [
+        {
+          "kind": "manifest",
+          "ref": "package.json",
+          "url": "https://github.com/abhi25jk/p2pk-locked-cashu-token/blob/HEAD/package.json"
+        }
+      ],
+      "confidence": 0.95,
+      "latest_at_build": "4.11.0",
+      "lag": "behind_major",
+      "role": "primary"
     },
     {
       "from": "egge21m/swissbtc-cashu",
@@ -27725,6 +27721,578 @@
       "scope": []
     },
     {
+      "from": "mint:02fdd2f40867c79dfe1de03409a1ffdb1119b53d2102b4c3bd256e39b854ad9d43",
+      "to": "cashubtc/cdk-mintd",
+      "type": "runs",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "version cdk-mintd/0.18.2"
+        }
+      ],
+      "confidence": 0.6,
+      "scope": []
+    },
+    {
+      "from": "mint:02fdd2f40867c79dfe1de03409a1ffdb1119b53d2102b4c3bd256e39b854ad9d43",
+      "to": "NUT-04",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.21linz.at/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:02fdd2f40867c79dfe1de03409a1ffdb1119b53d2102b4c3bd256e39b854ad9d43",
+      "to": "NUT-05",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.21linz.at/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:02fdd2f40867c79dfe1de03409a1ffdb1119b53d2102b4c3bd256e39b854ad9d43",
+      "to": "NUT-07",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.21linz.at/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:02fdd2f40867c79dfe1de03409a1ffdb1119b53d2102b4c3bd256e39b854ad9d43",
+      "to": "NUT-08",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.21linz.at/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:02fdd2f40867c79dfe1de03409a1ffdb1119b53d2102b4c3bd256e39b854ad9d43",
+      "to": "NUT-09",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.21linz.at/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:02fdd2f40867c79dfe1de03409a1ffdb1119b53d2102b4c3bd256e39b854ad9d43",
+      "to": "NUT-10",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.21linz.at/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:02fdd2f40867c79dfe1de03409a1ffdb1119b53d2102b4c3bd256e39b854ad9d43",
+      "to": "NUT-11",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.21linz.at/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:02fdd2f40867c79dfe1de03409a1ffdb1119b53d2102b4c3bd256e39b854ad9d43",
+      "to": "NUT-12",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.21linz.at/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:02fdd2f40867c79dfe1de03409a1ffdb1119b53d2102b4c3bd256e39b854ad9d43",
+      "to": "NUT-14",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.21linz.at/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:02fdd2f40867c79dfe1de03409a1ffdb1119b53d2102b4c3bd256e39b854ad9d43",
+      "to": "NUT-15",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.21linz.at/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:02fdd2f40867c79dfe1de03409a1ffdb1119b53d2102b4c3bd256e39b854ad9d43",
+      "to": "NUT-17",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.21linz.at/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:02fdd2f40867c79dfe1de03409a1ffdb1119b53d2102b4c3bd256e39b854ad9d43",
+      "to": "NUT-19",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.21linz.at/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:02fdd2f40867c79dfe1de03409a1ffdb1119b53d2102b4c3bd256e39b854ad9d43",
+      "to": "NUT-20",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.21linz.at/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:02fdd2f40867c79dfe1de03409a1ffdb1119b53d2102b4c3bd256e39b854ad9d43",
+      "to": "NUT-29",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.21linz.at/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:02f9e6a53065594ec71dcbb828fb949b482b60ac959fd8ca6be49a8f40822c9256",
+      "to": "cashubtc/cdk-mintd",
+      "type": "runs",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "version cdk-mintd/0.18.2"
+        }
+      ],
+      "confidence": 0.6,
+      "scope": []
+    },
+    {
+      "from": "mint:02f9e6a53065594ec71dcbb828fb949b482b60ac959fd8ca6be49a8f40822c9256",
+      "to": "NUT-04",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://m7.mountainlake.io/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:02f9e6a53065594ec71dcbb828fb949b482b60ac959fd8ca6be49a8f40822c9256",
+      "to": "NUT-05",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://m7.mountainlake.io/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:02f9e6a53065594ec71dcbb828fb949b482b60ac959fd8ca6be49a8f40822c9256",
+      "to": "NUT-07",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://m7.mountainlake.io/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:02f9e6a53065594ec71dcbb828fb949b482b60ac959fd8ca6be49a8f40822c9256",
+      "to": "NUT-08",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://m7.mountainlake.io/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:02f9e6a53065594ec71dcbb828fb949b482b60ac959fd8ca6be49a8f40822c9256",
+      "to": "NUT-09",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://m7.mountainlake.io/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:02f9e6a53065594ec71dcbb828fb949b482b60ac959fd8ca6be49a8f40822c9256",
+      "to": "NUT-10",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://m7.mountainlake.io/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:02f9e6a53065594ec71dcbb828fb949b482b60ac959fd8ca6be49a8f40822c9256",
+      "to": "NUT-11",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://m7.mountainlake.io/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:02f9e6a53065594ec71dcbb828fb949b482b60ac959fd8ca6be49a8f40822c9256",
+      "to": "NUT-12",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://m7.mountainlake.io/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:02f9e6a53065594ec71dcbb828fb949b482b60ac959fd8ca6be49a8f40822c9256",
+      "to": "NUT-14",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://m7.mountainlake.io/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:02f9e6a53065594ec71dcbb828fb949b482b60ac959fd8ca6be49a8f40822c9256",
+      "to": "NUT-15",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://m7.mountainlake.io/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:02f9e6a53065594ec71dcbb828fb949b482b60ac959fd8ca6be49a8f40822c9256",
+      "to": "NUT-17",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://m7.mountainlake.io/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:02f9e6a53065594ec71dcbb828fb949b482b60ac959fd8ca6be49a8f40822c9256",
+      "to": "NUT-19",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://m7.mountainlake.io/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:02f9e6a53065594ec71dcbb828fb949b482b60ac959fd8ca6be49a8f40822c9256",
+      "to": "NUT-20",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://m7.mountainlake.io/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:02f9e6a53065594ec71dcbb828fb949b482b60ac959fd8ca6be49a8f40822c9256",
+      "to": "NUT-29",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://m7.mountainlake.io/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:020be7b4338138f0128bb22e442358c4d499ddcf612492fe616cdbb041bcbc276d",
+      "to": "cashubtc/cdk-mintd",
+      "type": "runs",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "version cdk-mintd/0.18.0-rc.3"
+        }
+      ],
+      "confidence": 0.6,
+      "scope": []
+    },
+    {
+      "from": "mint:020be7b4338138f0128bb22e442358c4d499ddcf612492fe616cdbb041bcbc276d",
+      "to": "NUT-04",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.hedwig.sh/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:020be7b4338138f0128bb22e442358c4d499ddcf612492fe616cdbb041bcbc276d",
+      "to": "NUT-05",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.hedwig.sh/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:020be7b4338138f0128bb22e442358c4d499ddcf612492fe616cdbb041bcbc276d",
+      "to": "NUT-07",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.hedwig.sh/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:020be7b4338138f0128bb22e442358c4d499ddcf612492fe616cdbb041bcbc276d",
+      "to": "NUT-08",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.hedwig.sh/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:020be7b4338138f0128bb22e442358c4d499ddcf612492fe616cdbb041bcbc276d",
+      "to": "NUT-09",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.hedwig.sh/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:020be7b4338138f0128bb22e442358c4d499ddcf612492fe616cdbb041bcbc276d",
+      "to": "NUT-10",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.hedwig.sh/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:020be7b4338138f0128bb22e442358c4d499ddcf612492fe616cdbb041bcbc276d",
+      "to": "NUT-11",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.hedwig.sh/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:020be7b4338138f0128bb22e442358c4d499ddcf612492fe616cdbb041bcbc276d",
+      "to": "NUT-12",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.hedwig.sh/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:020be7b4338138f0128bb22e442358c4d499ddcf612492fe616cdbb041bcbc276d",
+      "to": "NUT-14",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.hedwig.sh/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:020be7b4338138f0128bb22e442358c4d499ddcf612492fe616cdbb041bcbc276d",
+      "to": "NUT-17",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.hedwig.sh/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:020be7b4338138f0128bb22e442358c4d499ddcf612492fe616cdbb041bcbc276d",
+      "to": "NUT-19",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.hedwig.sh/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:020be7b4338138f0128bb22e442358c4d499ddcf612492fe616cdbb041bcbc276d",
+      "to": "NUT-20",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.hedwig.sh/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:020be7b4338138f0128bb22e442358c4d499ddcf612492fe616cdbb041bcbc276d",
+      "to": "NUT-29",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.hedwig.sh/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
       "from": "mint:030b8f63e87420144ccd1e1d76628f8bd5c86e3e5aa6b185445689ee2d746157bb",
       "to": "cashubtc/cdk-mintd",
       "type": "runs",
@@ -27914,6 +28482,370 @@
         {
           "kind": "mint-probe",
           "ref": "https://mint.macadamia.cash/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:03e08787fed613a5d0c057893a39e203eada2b91d09e5019304a0b53678b475d03",
+      "to": "cashubtc/cdk-mintd",
+      "type": "runs",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "version cdk-mintd/0.18.0-rc.1"
+        }
+      ],
+      "confidence": 0.6,
+      "scope": []
+    },
+    {
+      "from": "mint:03e08787fed613a5d0c057893a39e203eada2b91d09e5019304a0b53678b475d03",
+      "to": "NUT-04",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.sovran.money/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:03e08787fed613a5d0c057893a39e203eada2b91d09e5019304a0b53678b475d03",
+      "to": "NUT-05",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.sovran.money/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:03e08787fed613a5d0c057893a39e203eada2b91d09e5019304a0b53678b475d03",
+      "to": "NUT-07",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.sovran.money/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:03e08787fed613a5d0c057893a39e203eada2b91d09e5019304a0b53678b475d03",
+      "to": "NUT-08",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.sovran.money/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:03e08787fed613a5d0c057893a39e203eada2b91d09e5019304a0b53678b475d03",
+      "to": "NUT-09",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.sovran.money/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:03e08787fed613a5d0c057893a39e203eada2b91d09e5019304a0b53678b475d03",
+      "to": "NUT-10",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.sovran.money/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:03e08787fed613a5d0c057893a39e203eada2b91d09e5019304a0b53678b475d03",
+      "to": "NUT-11",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.sovran.money/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:03e08787fed613a5d0c057893a39e203eada2b91d09e5019304a0b53678b475d03",
+      "to": "NUT-12",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.sovran.money/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:03e08787fed613a5d0c057893a39e203eada2b91d09e5019304a0b53678b475d03",
+      "to": "NUT-14",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.sovran.money/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:03e08787fed613a5d0c057893a39e203eada2b91d09e5019304a0b53678b475d03",
+      "to": "NUT-17",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.sovran.money/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:03e08787fed613a5d0c057893a39e203eada2b91d09e5019304a0b53678b475d03",
+      "to": "NUT-19",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.sovran.money/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:03e08787fed613a5d0c057893a39e203eada2b91d09e5019304a0b53678b475d03",
+      "to": "NUT-20",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.sovran.money/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:03e08787fed613a5d0c057893a39e203eada2b91d09e5019304a0b53678b475d03",
+      "to": "NUT-29",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.sovran.money/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:02267d57bae586c1bf5ad0a44a68b275b8d743809dd476d062854c95db0d37c32f",
+      "to": "cashubtc/cdk-mintd",
+      "type": "runs",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "version cdk-mintd/0.18.2"
+        }
+      ],
+      "confidence": 0.6,
+      "scope": []
+    },
+    {
+      "from": "mint:02267d57bae586c1bf5ad0a44a68b275b8d743809dd476d062854c95db0d37c32f",
+      "to": "NUT-04",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.ucash.space/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:02267d57bae586c1bf5ad0a44a68b275b8d743809dd476d062854c95db0d37c32f",
+      "to": "NUT-05",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.ucash.space/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:02267d57bae586c1bf5ad0a44a68b275b8d743809dd476d062854c95db0d37c32f",
+      "to": "NUT-07",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.ucash.space/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:02267d57bae586c1bf5ad0a44a68b275b8d743809dd476d062854c95db0d37c32f",
+      "to": "NUT-08",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.ucash.space/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:02267d57bae586c1bf5ad0a44a68b275b8d743809dd476d062854c95db0d37c32f",
+      "to": "NUT-09",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.ucash.space/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:02267d57bae586c1bf5ad0a44a68b275b8d743809dd476d062854c95db0d37c32f",
+      "to": "NUT-10",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.ucash.space/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:02267d57bae586c1bf5ad0a44a68b275b8d743809dd476d062854c95db0d37c32f",
+      "to": "NUT-11",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.ucash.space/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:02267d57bae586c1bf5ad0a44a68b275b8d743809dd476d062854c95db0d37c32f",
+      "to": "NUT-12",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.ucash.space/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:02267d57bae586c1bf5ad0a44a68b275b8d743809dd476d062854c95db0d37c32f",
+      "to": "NUT-14",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.ucash.space/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:02267d57bae586c1bf5ad0a44a68b275b8d743809dd476d062854c95db0d37c32f",
+      "to": "NUT-17",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.ucash.space/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:02267d57bae586c1bf5ad0a44a68b275b8d743809dd476d062854c95db0d37c32f",
+      "to": "NUT-19",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.ucash.space/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:02267d57bae586c1bf5ad0a44a68b275b8d743809dd476d062854c95db0d37c32f",
+      "to": "NUT-20",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.ucash.space/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:02267d57bae586c1bf5ad0a44a68b275b8d743809dd476d062854c95db0d37c32f",
+      "to": "NUT-29",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.ucash.space/v1/info"
         }
       ],
       "confidence": 0.95,
@@ -28115,741 +29047,182 @@
       "scope": []
     },
     {
-      "from": "mint:03e08787fed613a5d0c057893a39e203eada2b91d09e5019304a0b53678b475d03",
+      "from": "mint:03fa022dd30c5aac5b56c32c89e667561387e0a23de0e34a668abfbc1b2e968cf7",
       "to": "cashubtc/cdk-mintd",
       "type": "runs",
       "sources": [
         {
           "kind": "mint-probe",
-          "ref": "version cdk-mintd/0.18.0-rc.1"
+          "ref": "version cdk-mintd/0.17.5"
         }
       ],
       "confidence": 0.6,
       "scope": []
     },
     {
-      "from": "mint:03e08787fed613a5d0c057893a39e203eada2b91d09e5019304a0b53678b475d03",
+      "from": "mint:03fa022dd30c5aac5b56c32c89e667561387e0a23de0e34a668abfbc1b2e968cf7",
       "to": "NUT-04",
       "type": "implements",
       "sources": [
         {
           "kind": "mint-probe",
-          "ref": "https://mint.sovran.money/v1/info"
+          "ref": "https://mint.103100.xyz/v1/info"
         }
       ],
       "confidence": 0.95,
       "scope": []
     },
     {
-      "from": "mint:03e08787fed613a5d0c057893a39e203eada2b91d09e5019304a0b53678b475d03",
+      "from": "mint:03fa022dd30c5aac5b56c32c89e667561387e0a23de0e34a668abfbc1b2e968cf7",
       "to": "NUT-05",
       "type": "implements",
       "sources": [
         {
           "kind": "mint-probe",
-          "ref": "https://mint.sovran.money/v1/info"
+          "ref": "https://mint.103100.xyz/v1/info"
         }
       ],
       "confidence": 0.95,
       "scope": []
     },
     {
-      "from": "mint:03e08787fed613a5d0c057893a39e203eada2b91d09e5019304a0b53678b475d03",
+      "from": "mint:03fa022dd30c5aac5b56c32c89e667561387e0a23de0e34a668abfbc1b2e968cf7",
       "to": "NUT-07",
       "type": "implements",
       "sources": [
         {
           "kind": "mint-probe",
-          "ref": "https://mint.sovran.money/v1/info"
+          "ref": "https://mint.103100.xyz/v1/info"
         }
       ],
       "confidence": 0.95,
       "scope": []
     },
     {
-      "from": "mint:03e08787fed613a5d0c057893a39e203eada2b91d09e5019304a0b53678b475d03",
+      "from": "mint:03fa022dd30c5aac5b56c32c89e667561387e0a23de0e34a668abfbc1b2e968cf7",
       "to": "NUT-08",
       "type": "implements",
       "sources": [
         {
           "kind": "mint-probe",
-          "ref": "https://mint.sovran.money/v1/info"
+          "ref": "https://mint.103100.xyz/v1/info"
         }
       ],
       "confidence": 0.95,
       "scope": []
     },
     {
-      "from": "mint:03e08787fed613a5d0c057893a39e203eada2b91d09e5019304a0b53678b475d03",
+      "from": "mint:03fa022dd30c5aac5b56c32c89e667561387e0a23de0e34a668abfbc1b2e968cf7",
       "to": "NUT-09",
       "type": "implements",
       "sources": [
         {
           "kind": "mint-probe",
-          "ref": "https://mint.sovran.money/v1/info"
+          "ref": "https://mint.103100.xyz/v1/info"
         }
       ],
       "confidence": 0.95,
       "scope": []
     },
     {
-      "from": "mint:03e08787fed613a5d0c057893a39e203eada2b91d09e5019304a0b53678b475d03",
+      "from": "mint:03fa022dd30c5aac5b56c32c89e667561387e0a23de0e34a668abfbc1b2e968cf7",
       "to": "NUT-10",
       "type": "implements",
       "sources": [
         {
           "kind": "mint-probe",
-          "ref": "https://mint.sovran.money/v1/info"
+          "ref": "https://mint.103100.xyz/v1/info"
         }
       ],
       "confidence": 0.95,
       "scope": []
     },
     {
-      "from": "mint:03e08787fed613a5d0c057893a39e203eada2b91d09e5019304a0b53678b475d03",
+      "from": "mint:03fa022dd30c5aac5b56c32c89e667561387e0a23de0e34a668abfbc1b2e968cf7",
       "to": "NUT-11",
       "type": "implements",
       "sources": [
         {
           "kind": "mint-probe",
-          "ref": "https://mint.sovran.money/v1/info"
+          "ref": "https://mint.103100.xyz/v1/info"
         }
       ],
       "confidence": 0.95,
       "scope": []
     },
     {
-      "from": "mint:03e08787fed613a5d0c057893a39e203eada2b91d09e5019304a0b53678b475d03",
+      "from": "mint:03fa022dd30c5aac5b56c32c89e667561387e0a23de0e34a668abfbc1b2e968cf7",
       "to": "NUT-12",
       "type": "implements",
       "sources": [
         {
           "kind": "mint-probe",
-          "ref": "https://mint.sovran.money/v1/info"
+          "ref": "https://mint.103100.xyz/v1/info"
         }
       ],
       "confidence": 0.95,
       "scope": []
     },
     {
-      "from": "mint:03e08787fed613a5d0c057893a39e203eada2b91d09e5019304a0b53678b475d03",
+      "from": "mint:03fa022dd30c5aac5b56c32c89e667561387e0a23de0e34a668abfbc1b2e968cf7",
       "to": "NUT-14",
       "type": "implements",
       "sources": [
         {
           "kind": "mint-probe",
-          "ref": "https://mint.sovran.money/v1/info"
+          "ref": "https://mint.103100.xyz/v1/info"
         }
       ],
       "confidence": 0.95,
       "scope": []
     },
     {
-      "from": "mint:03e08787fed613a5d0c057893a39e203eada2b91d09e5019304a0b53678b475d03",
+      "from": "mint:03fa022dd30c5aac5b56c32c89e667561387e0a23de0e34a668abfbc1b2e968cf7",
       "to": "NUT-17",
       "type": "implements",
       "sources": [
         {
           "kind": "mint-probe",
-          "ref": "https://mint.sovran.money/v1/info"
+          "ref": "https://mint.103100.xyz/v1/info"
         }
       ],
       "confidence": 0.95,
       "scope": []
     },
     {
-      "from": "mint:03e08787fed613a5d0c057893a39e203eada2b91d09e5019304a0b53678b475d03",
+      "from": "mint:03fa022dd30c5aac5b56c32c89e667561387e0a23de0e34a668abfbc1b2e968cf7",
       "to": "NUT-19",
       "type": "implements",
       "sources": [
         {
           "kind": "mint-probe",
-          "ref": "https://mint.sovran.money/v1/info"
+          "ref": "https://mint.103100.xyz/v1/info"
         }
       ],
       "confidence": 0.95,
       "scope": []
     },
     {
-      "from": "mint:03e08787fed613a5d0c057893a39e203eada2b91d09e5019304a0b53678b475d03",
+      "from": "mint:03fa022dd30c5aac5b56c32c89e667561387e0a23de0e34a668abfbc1b2e968cf7",
       "to": "NUT-20",
       "type": "implements",
       "sources": [
         {
           "kind": "mint-probe",
-          "ref": "https://mint.sovran.money/v1/info"
+          "ref": "https://mint.103100.xyz/v1/info"
         }
       ],
       "confidence": 0.95,
       "scope": []
     },
     {
-      "from": "mint:03e08787fed613a5d0c057893a39e203eada2b91d09e5019304a0b53678b475d03",
+      "from": "mint:03fa022dd30c5aac5b56c32c89e667561387e0a23de0e34a668abfbc1b2e968cf7",
       "to": "NUT-29",
       "type": "implements",
       "sources": [
         {
           "kind": "mint-probe",
-          "ref": "https://mint.sovran.money/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:020be7b4338138f0128bb22e442358c4d499ddcf612492fe616cdbb041bcbc276d",
-      "to": "cashubtc/cdk-mintd",
-      "type": "runs",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "version cdk-mintd/0.18.0-rc.3"
-        }
-      ],
-      "confidence": 0.6,
-      "scope": []
-    },
-    {
-      "from": "mint:020be7b4338138f0128bb22e442358c4d499ddcf612492fe616cdbb041bcbc276d",
-      "to": "NUT-04",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.hedwig.sh/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:020be7b4338138f0128bb22e442358c4d499ddcf612492fe616cdbb041bcbc276d",
-      "to": "NUT-05",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.hedwig.sh/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:020be7b4338138f0128bb22e442358c4d499ddcf612492fe616cdbb041bcbc276d",
-      "to": "NUT-07",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.hedwig.sh/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:020be7b4338138f0128bb22e442358c4d499ddcf612492fe616cdbb041bcbc276d",
-      "to": "NUT-08",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.hedwig.sh/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:020be7b4338138f0128bb22e442358c4d499ddcf612492fe616cdbb041bcbc276d",
-      "to": "NUT-09",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.hedwig.sh/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:020be7b4338138f0128bb22e442358c4d499ddcf612492fe616cdbb041bcbc276d",
-      "to": "NUT-10",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.hedwig.sh/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:020be7b4338138f0128bb22e442358c4d499ddcf612492fe616cdbb041bcbc276d",
-      "to": "NUT-11",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.hedwig.sh/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:020be7b4338138f0128bb22e442358c4d499ddcf612492fe616cdbb041bcbc276d",
-      "to": "NUT-12",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.hedwig.sh/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:020be7b4338138f0128bb22e442358c4d499ddcf612492fe616cdbb041bcbc276d",
-      "to": "NUT-14",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.hedwig.sh/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:020be7b4338138f0128bb22e442358c4d499ddcf612492fe616cdbb041bcbc276d",
-      "to": "NUT-17",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.hedwig.sh/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:020be7b4338138f0128bb22e442358c4d499ddcf612492fe616cdbb041bcbc276d",
-      "to": "NUT-19",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.hedwig.sh/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:020be7b4338138f0128bb22e442358c4d499ddcf612492fe616cdbb041bcbc276d",
-      "to": "NUT-20",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.hedwig.sh/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:020be7b4338138f0128bb22e442358c4d499ddcf612492fe616cdbb041bcbc276d",
-      "to": "NUT-29",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.hedwig.sh/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:02f9e6a53065594ec71dcbb828fb949b482b60ac959fd8ca6be49a8f40822c9256",
-      "to": "cashubtc/cdk-mintd",
-      "type": "runs",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "version cdk-mintd/0.18.2"
-        }
-      ],
-      "confidence": 0.6,
-      "scope": []
-    },
-    {
-      "from": "mint:02f9e6a53065594ec71dcbb828fb949b482b60ac959fd8ca6be49a8f40822c9256",
-      "to": "NUT-04",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://m7.mountainlake.io/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:02f9e6a53065594ec71dcbb828fb949b482b60ac959fd8ca6be49a8f40822c9256",
-      "to": "NUT-05",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://m7.mountainlake.io/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:02f9e6a53065594ec71dcbb828fb949b482b60ac959fd8ca6be49a8f40822c9256",
-      "to": "NUT-07",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://m7.mountainlake.io/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:02f9e6a53065594ec71dcbb828fb949b482b60ac959fd8ca6be49a8f40822c9256",
-      "to": "NUT-08",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://m7.mountainlake.io/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:02f9e6a53065594ec71dcbb828fb949b482b60ac959fd8ca6be49a8f40822c9256",
-      "to": "NUT-09",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://m7.mountainlake.io/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:02f9e6a53065594ec71dcbb828fb949b482b60ac959fd8ca6be49a8f40822c9256",
-      "to": "NUT-10",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://m7.mountainlake.io/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:02f9e6a53065594ec71dcbb828fb949b482b60ac959fd8ca6be49a8f40822c9256",
-      "to": "NUT-11",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://m7.mountainlake.io/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:02f9e6a53065594ec71dcbb828fb949b482b60ac959fd8ca6be49a8f40822c9256",
-      "to": "NUT-12",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://m7.mountainlake.io/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:02f9e6a53065594ec71dcbb828fb949b482b60ac959fd8ca6be49a8f40822c9256",
-      "to": "NUT-14",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://m7.mountainlake.io/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:02f9e6a53065594ec71dcbb828fb949b482b60ac959fd8ca6be49a8f40822c9256",
-      "to": "NUT-15",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://m7.mountainlake.io/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:02f9e6a53065594ec71dcbb828fb949b482b60ac959fd8ca6be49a8f40822c9256",
-      "to": "NUT-17",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://m7.mountainlake.io/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:02f9e6a53065594ec71dcbb828fb949b482b60ac959fd8ca6be49a8f40822c9256",
-      "to": "NUT-19",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://m7.mountainlake.io/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:02f9e6a53065594ec71dcbb828fb949b482b60ac959fd8ca6be49a8f40822c9256",
-      "to": "NUT-20",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://m7.mountainlake.io/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:02f9e6a53065594ec71dcbb828fb949b482b60ac959fd8ca6be49a8f40822c9256",
-      "to": "NUT-29",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://m7.mountainlake.io/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:02267d57bae586c1bf5ad0a44a68b275b8d743809dd476d062854c95db0d37c32f",
-      "to": "cashubtc/cdk-mintd",
-      "type": "runs",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "version cdk-mintd/0.18.2"
-        }
-      ],
-      "confidence": 0.6,
-      "scope": []
-    },
-    {
-      "from": "mint:02267d57bae586c1bf5ad0a44a68b275b8d743809dd476d062854c95db0d37c32f",
-      "to": "NUT-04",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.ucash.space/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:02267d57bae586c1bf5ad0a44a68b275b8d743809dd476d062854c95db0d37c32f",
-      "to": "NUT-05",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.ucash.space/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:02267d57bae586c1bf5ad0a44a68b275b8d743809dd476d062854c95db0d37c32f",
-      "to": "NUT-07",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.ucash.space/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:02267d57bae586c1bf5ad0a44a68b275b8d743809dd476d062854c95db0d37c32f",
-      "to": "NUT-08",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.ucash.space/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:02267d57bae586c1bf5ad0a44a68b275b8d743809dd476d062854c95db0d37c32f",
-      "to": "NUT-09",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.ucash.space/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:02267d57bae586c1bf5ad0a44a68b275b8d743809dd476d062854c95db0d37c32f",
-      "to": "NUT-10",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.ucash.space/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:02267d57bae586c1bf5ad0a44a68b275b8d743809dd476d062854c95db0d37c32f",
-      "to": "NUT-11",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.ucash.space/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:02267d57bae586c1bf5ad0a44a68b275b8d743809dd476d062854c95db0d37c32f",
-      "to": "NUT-12",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.ucash.space/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:02267d57bae586c1bf5ad0a44a68b275b8d743809dd476d062854c95db0d37c32f",
-      "to": "NUT-14",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.ucash.space/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:02267d57bae586c1bf5ad0a44a68b275b8d743809dd476d062854c95db0d37c32f",
-      "to": "NUT-17",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.ucash.space/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:02267d57bae586c1bf5ad0a44a68b275b8d743809dd476d062854c95db0d37c32f",
-      "to": "NUT-19",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.ucash.space/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:02267d57bae586c1bf5ad0a44a68b275b8d743809dd476d062854c95db0d37c32f",
-      "to": "NUT-20",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.ucash.space/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:02267d57bae586c1bf5ad0a44a68b275b8d743809dd476d062854c95db0d37c32f",
-      "to": "NUT-29",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.ucash.space/v1/info"
+          "ref": "https://mint.103100.xyz/v1/info"
         }
       ],
       "confidence": 0.95,
@@ -29032,188 +29405,6 @@
         {
           "kind": "mint-probe",
           "ref": "https://mint.kashir.xyz/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:03fa022dd30c5aac5b56c32c89e667561387e0a23de0e34a668abfbc1b2e968cf7",
-      "to": "cashubtc/cdk-mintd",
-      "type": "runs",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "version cdk-mintd/0.17.5"
-        }
-      ],
-      "confidence": 0.6,
-      "scope": []
-    },
-    {
-      "from": "mint:03fa022dd30c5aac5b56c32c89e667561387e0a23de0e34a668abfbc1b2e968cf7",
-      "to": "NUT-04",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.103100.xyz/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:03fa022dd30c5aac5b56c32c89e667561387e0a23de0e34a668abfbc1b2e968cf7",
-      "to": "NUT-05",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.103100.xyz/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:03fa022dd30c5aac5b56c32c89e667561387e0a23de0e34a668abfbc1b2e968cf7",
-      "to": "NUT-07",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.103100.xyz/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:03fa022dd30c5aac5b56c32c89e667561387e0a23de0e34a668abfbc1b2e968cf7",
-      "to": "NUT-08",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.103100.xyz/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:03fa022dd30c5aac5b56c32c89e667561387e0a23de0e34a668abfbc1b2e968cf7",
-      "to": "NUT-09",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.103100.xyz/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:03fa022dd30c5aac5b56c32c89e667561387e0a23de0e34a668abfbc1b2e968cf7",
-      "to": "NUT-10",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.103100.xyz/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:03fa022dd30c5aac5b56c32c89e667561387e0a23de0e34a668abfbc1b2e968cf7",
-      "to": "NUT-11",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.103100.xyz/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:03fa022dd30c5aac5b56c32c89e667561387e0a23de0e34a668abfbc1b2e968cf7",
-      "to": "NUT-12",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.103100.xyz/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:03fa022dd30c5aac5b56c32c89e667561387e0a23de0e34a668abfbc1b2e968cf7",
-      "to": "NUT-14",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.103100.xyz/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:03fa022dd30c5aac5b56c32c89e667561387e0a23de0e34a668abfbc1b2e968cf7",
-      "to": "NUT-17",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.103100.xyz/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:03fa022dd30c5aac5b56c32c89e667561387e0a23de0e34a668abfbc1b2e968cf7",
-      "to": "NUT-19",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.103100.xyz/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:03fa022dd30c5aac5b56c32c89e667561387e0a23de0e34a668abfbc1b2e968cf7",
-      "to": "NUT-20",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.103100.xyz/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:03fa022dd30c5aac5b56c32c89e667561387e0a23de0e34a668abfbc1b2e968cf7",
-      "to": "NUT-29",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.103100.xyz/v1/info"
         }
       ],
       "confidence": 0.95,
@@ -29779,201 +29970,6 @@
       "scope": []
     },
     {
-      "from": "mint:02fdd2f40867c79dfe1de03409a1ffdb1119b53d2102b4c3bd256e39b854ad9d43",
-      "to": "cashubtc/cdk-mintd",
-      "type": "runs",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "version cdk-mintd/0.18.1"
-        }
-      ],
-      "confidence": 0.6,
-      "scope": []
-    },
-    {
-      "from": "mint:02fdd2f40867c79dfe1de03409a1ffdb1119b53d2102b4c3bd256e39b854ad9d43",
-      "to": "NUT-04",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.21linz.at/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:02fdd2f40867c79dfe1de03409a1ffdb1119b53d2102b4c3bd256e39b854ad9d43",
-      "to": "NUT-05",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.21linz.at/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:02fdd2f40867c79dfe1de03409a1ffdb1119b53d2102b4c3bd256e39b854ad9d43",
-      "to": "NUT-07",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.21linz.at/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:02fdd2f40867c79dfe1de03409a1ffdb1119b53d2102b4c3bd256e39b854ad9d43",
-      "to": "NUT-08",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.21linz.at/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:02fdd2f40867c79dfe1de03409a1ffdb1119b53d2102b4c3bd256e39b854ad9d43",
-      "to": "NUT-09",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.21linz.at/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:02fdd2f40867c79dfe1de03409a1ffdb1119b53d2102b4c3bd256e39b854ad9d43",
-      "to": "NUT-10",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.21linz.at/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:02fdd2f40867c79dfe1de03409a1ffdb1119b53d2102b4c3bd256e39b854ad9d43",
-      "to": "NUT-11",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.21linz.at/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:02fdd2f40867c79dfe1de03409a1ffdb1119b53d2102b4c3bd256e39b854ad9d43",
-      "to": "NUT-12",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.21linz.at/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:02fdd2f40867c79dfe1de03409a1ffdb1119b53d2102b4c3bd256e39b854ad9d43",
-      "to": "NUT-14",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.21linz.at/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:02fdd2f40867c79dfe1de03409a1ffdb1119b53d2102b4c3bd256e39b854ad9d43",
-      "to": "NUT-15",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.21linz.at/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:02fdd2f40867c79dfe1de03409a1ffdb1119b53d2102b4c3bd256e39b854ad9d43",
-      "to": "NUT-17",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.21linz.at/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:02fdd2f40867c79dfe1de03409a1ffdb1119b53d2102b4c3bd256e39b854ad9d43",
-      "to": "NUT-19",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.21linz.at/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:02fdd2f40867c79dfe1de03409a1ffdb1119b53d2102b4c3bd256e39b854ad9d43",
-      "to": "NUT-20",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.21linz.at/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:02fdd2f40867c79dfe1de03409a1ffdb1119b53d2102b4c3bd256e39b854ad9d43",
-      "to": "NUT-29",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.21linz.at/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
       "from": "mint:03c5f16604678b8b118a454db12885e586f0fc146788d54182b3ca7943a327278e",
       "to": "cashubtc/cdk-mintd",
       "type": "runs",
@@ -30156,188 +30152,6 @@
       "scope": []
     },
     {
-      "from": "mint:02fb2009743c0cc2a13309c807ac5c3aa772d9b17241801194e3b938811e6644c1",
-      "to": "cashubtc/nutshell",
-      "type": "runs",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "version Nutshell/0.21.0"
-        }
-      ],
-      "confidence": 0.6,
-      "scope": []
-    },
-    {
-      "from": "mint:02fb2009743c0cc2a13309c807ac5c3aa772d9b17241801194e3b938811e6644c1",
-      "to": "NUT-04",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.coinos.io/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:02fb2009743c0cc2a13309c807ac5c3aa772d9b17241801194e3b938811e6644c1",
-      "to": "NUT-05",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.coinos.io/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:02fb2009743c0cc2a13309c807ac5c3aa772d9b17241801194e3b938811e6644c1",
-      "to": "NUT-07",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.coinos.io/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:02fb2009743c0cc2a13309c807ac5c3aa772d9b17241801194e3b938811e6644c1",
-      "to": "NUT-08",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.coinos.io/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:02fb2009743c0cc2a13309c807ac5c3aa772d9b17241801194e3b938811e6644c1",
-      "to": "NUT-09",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.coinos.io/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:02fb2009743c0cc2a13309c807ac5c3aa772d9b17241801194e3b938811e6644c1",
-      "to": "NUT-10",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.coinos.io/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:02fb2009743c0cc2a13309c807ac5c3aa772d9b17241801194e3b938811e6644c1",
-      "to": "NUT-11",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.coinos.io/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:02fb2009743c0cc2a13309c807ac5c3aa772d9b17241801194e3b938811e6644c1",
-      "to": "NUT-12",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.coinos.io/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:02fb2009743c0cc2a13309c807ac5c3aa772d9b17241801194e3b938811e6644c1",
-      "to": "NUT-14",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.coinos.io/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:02fb2009743c0cc2a13309c807ac5c3aa772d9b17241801194e3b938811e6644c1",
-      "to": "NUT-15",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.coinos.io/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:02fb2009743c0cc2a13309c807ac5c3aa772d9b17241801194e3b938811e6644c1",
-      "to": "NUT-17",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.coinos.io/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:02fb2009743c0cc2a13309c807ac5c3aa772d9b17241801194e3b938811e6644c1",
-      "to": "NUT-20",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.coinos.io/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:02fb2009743c0cc2a13309c807ac5c3aa772d9b17241801194e3b938811e6644c1",
-      "to": "NUT-29",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.coinos.io/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
       "from": "mint:0353208248b23df42633d981fc6a75ffb4020c554d0a445f01a00d97fdd2f31de0",
       "to": "cashubtc/nutshell",
       "type": "runs",
@@ -30520,7 +30334,7 @@
       "scope": []
     },
     {
-      "from": "mint:027b0002fc57ff426aa7c69ffd8da55091e4c793953397a47a42fa72256d34848f",
+      "from": "mint:02fb2009743c0cc2a13309c807ac5c3aa772d9b17241801194e3b938811e6644c1",
       "to": "cashubtc/nutshell",
       "type": "runs",
       "sources": [
@@ -30533,169 +30347,364 @@
       "scope": []
     },
     {
-      "from": "mint:027b0002fc57ff426aa7c69ffd8da55091e4c793953397a47a42fa72256d34848f",
+      "from": "mint:02fb2009743c0cc2a13309c807ac5c3aa772d9b17241801194e3b938811e6644c1",
       "to": "NUT-04",
       "type": "implements",
       "sources": [
         {
           "kind": "mint-probe",
-          "ref": "https://antifiat.cash/v1/info"
+          "ref": "https://mint.coinos.io/v1/info"
         }
       ],
       "confidence": 0.95,
       "scope": []
     },
     {
-      "from": "mint:027b0002fc57ff426aa7c69ffd8da55091e4c793953397a47a42fa72256d34848f",
+      "from": "mint:02fb2009743c0cc2a13309c807ac5c3aa772d9b17241801194e3b938811e6644c1",
       "to": "NUT-05",
       "type": "implements",
       "sources": [
         {
           "kind": "mint-probe",
-          "ref": "https://antifiat.cash/v1/info"
+          "ref": "https://mint.coinos.io/v1/info"
         }
       ],
       "confidence": 0.95,
       "scope": []
     },
     {
-      "from": "mint:027b0002fc57ff426aa7c69ffd8da55091e4c793953397a47a42fa72256d34848f",
+      "from": "mint:02fb2009743c0cc2a13309c807ac5c3aa772d9b17241801194e3b938811e6644c1",
       "to": "NUT-07",
       "type": "implements",
       "sources": [
         {
           "kind": "mint-probe",
-          "ref": "https://antifiat.cash/v1/info"
+          "ref": "https://mint.coinos.io/v1/info"
         }
       ],
       "confidence": 0.95,
       "scope": []
     },
     {
-      "from": "mint:027b0002fc57ff426aa7c69ffd8da55091e4c793953397a47a42fa72256d34848f",
+      "from": "mint:02fb2009743c0cc2a13309c807ac5c3aa772d9b17241801194e3b938811e6644c1",
       "to": "NUT-08",
       "type": "implements",
       "sources": [
         {
           "kind": "mint-probe",
-          "ref": "https://antifiat.cash/v1/info"
+          "ref": "https://mint.coinos.io/v1/info"
         }
       ],
       "confidence": 0.95,
       "scope": []
     },
     {
-      "from": "mint:027b0002fc57ff426aa7c69ffd8da55091e4c793953397a47a42fa72256d34848f",
+      "from": "mint:02fb2009743c0cc2a13309c807ac5c3aa772d9b17241801194e3b938811e6644c1",
       "to": "NUT-09",
       "type": "implements",
       "sources": [
         {
           "kind": "mint-probe",
-          "ref": "https://antifiat.cash/v1/info"
+          "ref": "https://mint.coinos.io/v1/info"
         }
       ],
       "confidence": 0.95,
       "scope": []
     },
     {
-      "from": "mint:027b0002fc57ff426aa7c69ffd8da55091e4c793953397a47a42fa72256d34848f",
+      "from": "mint:02fb2009743c0cc2a13309c807ac5c3aa772d9b17241801194e3b938811e6644c1",
       "to": "NUT-10",
       "type": "implements",
       "sources": [
         {
           "kind": "mint-probe",
-          "ref": "https://antifiat.cash/v1/info"
+          "ref": "https://mint.coinos.io/v1/info"
         }
       ],
       "confidence": 0.95,
       "scope": []
     },
     {
-      "from": "mint:027b0002fc57ff426aa7c69ffd8da55091e4c793953397a47a42fa72256d34848f",
+      "from": "mint:02fb2009743c0cc2a13309c807ac5c3aa772d9b17241801194e3b938811e6644c1",
       "to": "NUT-11",
       "type": "implements",
       "sources": [
         {
           "kind": "mint-probe",
-          "ref": "https://antifiat.cash/v1/info"
+          "ref": "https://mint.coinos.io/v1/info"
         }
       ],
       "confidence": 0.95,
       "scope": []
     },
     {
-      "from": "mint:027b0002fc57ff426aa7c69ffd8da55091e4c793953397a47a42fa72256d34848f",
+      "from": "mint:02fb2009743c0cc2a13309c807ac5c3aa772d9b17241801194e3b938811e6644c1",
       "to": "NUT-12",
       "type": "implements",
       "sources": [
         {
           "kind": "mint-probe",
-          "ref": "https://antifiat.cash/v1/info"
+          "ref": "https://mint.coinos.io/v1/info"
         }
       ],
       "confidence": 0.95,
       "scope": []
     },
     {
-      "from": "mint:027b0002fc57ff426aa7c69ffd8da55091e4c793953397a47a42fa72256d34848f",
+      "from": "mint:02fb2009743c0cc2a13309c807ac5c3aa772d9b17241801194e3b938811e6644c1",
       "to": "NUT-14",
       "type": "implements",
       "sources": [
         {
           "kind": "mint-probe",
-          "ref": "https://antifiat.cash/v1/info"
+          "ref": "https://mint.coinos.io/v1/info"
         }
       ],
       "confidence": 0.95,
       "scope": []
     },
     {
-      "from": "mint:027b0002fc57ff426aa7c69ffd8da55091e4c793953397a47a42fa72256d34848f",
+      "from": "mint:02fb2009743c0cc2a13309c807ac5c3aa772d9b17241801194e3b938811e6644c1",
       "to": "NUT-15",
       "type": "implements",
       "sources": [
         {
           "kind": "mint-probe",
-          "ref": "https://antifiat.cash/v1/info"
+          "ref": "https://mint.coinos.io/v1/info"
         }
       ],
       "confidence": 0.95,
       "scope": []
     },
     {
-      "from": "mint:027b0002fc57ff426aa7c69ffd8da55091e4c793953397a47a42fa72256d34848f",
+      "from": "mint:02fb2009743c0cc2a13309c807ac5c3aa772d9b17241801194e3b938811e6644c1",
       "to": "NUT-17",
       "type": "implements",
       "sources": [
         {
           "kind": "mint-probe",
-          "ref": "https://antifiat.cash/v1/info"
+          "ref": "https://mint.coinos.io/v1/info"
         }
       ],
       "confidence": 0.95,
       "scope": []
     },
     {
-      "from": "mint:027b0002fc57ff426aa7c69ffd8da55091e4c793953397a47a42fa72256d34848f",
+      "from": "mint:02fb2009743c0cc2a13309c807ac5c3aa772d9b17241801194e3b938811e6644c1",
       "to": "NUT-20",
       "type": "implements",
       "sources": [
         {
           "kind": "mint-probe",
-          "ref": "https://antifiat.cash/v1/info"
+          "ref": "https://mint.coinos.io/v1/info"
         }
       ],
       "confidence": 0.95,
       "scope": []
     },
     {
-      "from": "mint:027b0002fc57ff426aa7c69ffd8da55091e4c793953397a47a42fa72256d34848f",
+      "from": "mint:02fb2009743c0cc2a13309c807ac5c3aa772d9b17241801194e3b938811e6644c1",
       "to": "NUT-29",
       "type": "implements",
       "sources": [
         {
           "kind": "mint-probe",
-          "ref": "https://antifiat.cash/v1/info"
+          "ref": "https://mint.coinos.io/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:03dce4cc88bdcc2166bf34d2592178df0acd4d72f2f3b2043c64e7761d20355f13",
+      "to": "cashubtc/nutshell",
+      "type": "runs",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "version Nutshell/0.21.0"
+        }
+      ],
+      "confidence": 0.6,
+      "scope": []
+    },
+    {
+      "from": "mint:03dce4cc88bdcc2166bf34d2592178df0acd4d72f2f3b2043c64e7761d20355f13",
+      "to": "NUT-04",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.cubabitcoin.org/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:03dce4cc88bdcc2166bf34d2592178df0acd4d72f2f3b2043c64e7761d20355f13",
+      "to": "NUT-05",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.cubabitcoin.org/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:03dce4cc88bdcc2166bf34d2592178df0acd4d72f2f3b2043c64e7761d20355f13",
+      "to": "NUT-07",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.cubabitcoin.org/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:03dce4cc88bdcc2166bf34d2592178df0acd4d72f2f3b2043c64e7761d20355f13",
+      "to": "NUT-08",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.cubabitcoin.org/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:03dce4cc88bdcc2166bf34d2592178df0acd4d72f2f3b2043c64e7761d20355f13",
+      "to": "NUT-09",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.cubabitcoin.org/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:03dce4cc88bdcc2166bf34d2592178df0acd4d72f2f3b2043c64e7761d20355f13",
+      "to": "NUT-10",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.cubabitcoin.org/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:03dce4cc88bdcc2166bf34d2592178df0acd4d72f2f3b2043c64e7761d20355f13",
+      "to": "NUT-11",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.cubabitcoin.org/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:03dce4cc88bdcc2166bf34d2592178df0acd4d72f2f3b2043c64e7761d20355f13",
+      "to": "NUT-12",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.cubabitcoin.org/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:03dce4cc88bdcc2166bf34d2592178df0acd4d72f2f3b2043c64e7761d20355f13",
+      "to": "NUT-14",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.cubabitcoin.org/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:03dce4cc88bdcc2166bf34d2592178df0acd4d72f2f3b2043c64e7761d20355f13",
+      "to": "NUT-15",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.cubabitcoin.org/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:03dce4cc88bdcc2166bf34d2592178df0acd4d72f2f3b2043c64e7761d20355f13",
+      "to": "NUT-17",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.cubabitcoin.org/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:03dce4cc88bdcc2166bf34d2592178df0acd4d72f2f3b2043c64e7761d20355f13",
+      "to": "NUT-19",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.cubabitcoin.org/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:03dce4cc88bdcc2166bf34d2592178df0acd4d72f2f3b2043c64e7761d20355f13",
+      "to": "NUT-20",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.cubabitcoin.org/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:03dce4cc88bdcc2166bf34d2592178df0acd4d72f2f3b2043c64e7761d20355f13",
+      "to": "NUT-29",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.cubabitcoin.org/v1/info"
         }
       ],
       "confidence": 0.95,
@@ -30884,6 +30893,188 @@
       "scope": []
     },
     {
+      "from": "mint:027b0002fc57ff426aa7c69ffd8da55091e4c793953397a47a42fa72256d34848f",
+      "to": "cashubtc/nutshell",
+      "type": "runs",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "version Nutshell/0.21.0"
+        }
+      ],
+      "confidence": 0.6,
+      "scope": []
+    },
+    {
+      "from": "mint:027b0002fc57ff426aa7c69ffd8da55091e4c793953397a47a42fa72256d34848f",
+      "to": "NUT-04",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://antifiat.cash/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:027b0002fc57ff426aa7c69ffd8da55091e4c793953397a47a42fa72256d34848f",
+      "to": "NUT-05",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://antifiat.cash/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:027b0002fc57ff426aa7c69ffd8da55091e4c793953397a47a42fa72256d34848f",
+      "to": "NUT-07",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://antifiat.cash/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:027b0002fc57ff426aa7c69ffd8da55091e4c793953397a47a42fa72256d34848f",
+      "to": "NUT-08",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://antifiat.cash/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:027b0002fc57ff426aa7c69ffd8da55091e4c793953397a47a42fa72256d34848f",
+      "to": "NUT-09",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://antifiat.cash/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:027b0002fc57ff426aa7c69ffd8da55091e4c793953397a47a42fa72256d34848f",
+      "to": "NUT-10",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://antifiat.cash/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:027b0002fc57ff426aa7c69ffd8da55091e4c793953397a47a42fa72256d34848f",
+      "to": "NUT-11",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://antifiat.cash/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:027b0002fc57ff426aa7c69ffd8da55091e4c793953397a47a42fa72256d34848f",
+      "to": "NUT-12",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://antifiat.cash/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:027b0002fc57ff426aa7c69ffd8da55091e4c793953397a47a42fa72256d34848f",
+      "to": "NUT-14",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://antifiat.cash/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:027b0002fc57ff426aa7c69ffd8da55091e4c793953397a47a42fa72256d34848f",
+      "to": "NUT-15",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://antifiat.cash/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:027b0002fc57ff426aa7c69ffd8da55091e4c793953397a47a42fa72256d34848f",
+      "to": "NUT-17",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://antifiat.cash/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:027b0002fc57ff426aa7c69ffd8da55091e4c793953397a47a42fa72256d34848f",
+      "to": "NUT-20",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://antifiat.cash/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:027b0002fc57ff426aa7c69ffd8da55091e4c793953397a47a42fa72256d34848f",
+      "to": "NUT-29",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://antifiat.cash/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
       "from": "mint:029e23f9fdef5e6686c16357be347b1edfbbdda5c3737d0316818483897c40dc7e",
       "to": "cashubtc/nutshell",
       "type": "runs",
@@ -31060,201 +31251,6 @@
         {
           "kind": "mint-probe",
           "ref": "https://kashu.me/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:03dce4cc88bdcc2166bf34d2592178df0acd4d72f2f3b2043c64e7761d20355f13",
-      "to": "cashubtc/nutshell",
-      "type": "runs",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "version Nutshell/0.21.0"
-        }
-      ],
-      "confidence": 0.6,
-      "scope": []
-    },
-    {
-      "from": "mint:03dce4cc88bdcc2166bf34d2592178df0acd4d72f2f3b2043c64e7761d20355f13",
-      "to": "NUT-04",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.cubabitcoin.org/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:03dce4cc88bdcc2166bf34d2592178df0acd4d72f2f3b2043c64e7761d20355f13",
-      "to": "NUT-05",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.cubabitcoin.org/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:03dce4cc88bdcc2166bf34d2592178df0acd4d72f2f3b2043c64e7761d20355f13",
-      "to": "NUT-07",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.cubabitcoin.org/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:03dce4cc88bdcc2166bf34d2592178df0acd4d72f2f3b2043c64e7761d20355f13",
-      "to": "NUT-08",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.cubabitcoin.org/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:03dce4cc88bdcc2166bf34d2592178df0acd4d72f2f3b2043c64e7761d20355f13",
-      "to": "NUT-09",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.cubabitcoin.org/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:03dce4cc88bdcc2166bf34d2592178df0acd4d72f2f3b2043c64e7761d20355f13",
-      "to": "NUT-10",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.cubabitcoin.org/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:03dce4cc88bdcc2166bf34d2592178df0acd4d72f2f3b2043c64e7761d20355f13",
-      "to": "NUT-11",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.cubabitcoin.org/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:03dce4cc88bdcc2166bf34d2592178df0acd4d72f2f3b2043c64e7761d20355f13",
-      "to": "NUT-12",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.cubabitcoin.org/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:03dce4cc88bdcc2166bf34d2592178df0acd4d72f2f3b2043c64e7761d20355f13",
-      "to": "NUT-14",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.cubabitcoin.org/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:03dce4cc88bdcc2166bf34d2592178df0acd4d72f2f3b2043c64e7761d20355f13",
-      "to": "NUT-15",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.cubabitcoin.org/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:03dce4cc88bdcc2166bf34d2592178df0acd4d72f2f3b2043c64e7761d20355f13",
-      "to": "NUT-17",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.cubabitcoin.org/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:03dce4cc88bdcc2166bf34d2592178df0acd4d72f2f3b2043c64e7761d20355f13",
-      "to": "NUT-19",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.cubabitcoin.org/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:03dce4cc88bdcc2166bf34d2592178df0acd4d72f2f3b2043c64e7761d20355f13",
-      "to": "NUT-20",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.cubabitcoin.org/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:03dce4cc88bdcc2166bf34d2592178df0acd4d72f2f3b2043c64e7761d20355f13",
-      "to": "NUT-29",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.cubabitcoin.org/v1/info"
         }
       ],
       "confidence": 0.95,
@@ -31632,188 +31628,6 @@
         {
           "kind": "mint-probe",
           "ref": "https://8333.space:3338/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:020d0c305e10741a6b207352880be21bccd985eec4b8cc2d7ec4cfc64070b300f3",
-      "to": "cashubtc/nutshell",
-      "type": "runs",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "version Nutshell/0.21.0"
-        }
-      ],
-      "confidence": 0.6,
-      "scope": []
-    },
-    {
-      "from": "mint:020d0c305e10741a6b207352880be21bccd985eec4b8cc2d7ec4cfc64070b300f3",
-      "to": "NUT-04",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.mintlnd.org/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:020d0c305e10741a6b207352880be21bccd985eec4b8cc2d7ec4cfc64070b300f3",
-      "to": "NUT-05",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.mintlnd.org/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:020d0c305e10741a6b207352880be21bccd985eec4b8cc2d7ec4cfc64070b300f3",
-      "to": "NUT-07",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.mintlnd.org/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:020d0c305e10741a6b207352880be21bccd985eec4b8cc2d7ec4cfc64070b300f3",
-      "to": "NUT-08",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.mintlnd.org/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:020d0c305e10741a6b207352880be21bccd985eec4b8cc2d7ec4cfc64070b300f3",
-      "to": "NUT-09",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.mintlnd.org/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:020d0c305e10741a6b207352880be21bccd985eec4b8cc2d7ec4cfc64070b300f3",
-      "to": "NUT-10",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.mintlnd.org/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:020d0c305e10741a6b207352880be21bccd985eec4b8cc2d7ec4cfc64070b300f3",
-      "to": "NUT-11",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.mintlnd.org/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:020d0c305e10741a6b207352880be21bccd985eec4b8cc2d7ec4cfc64070b300f3",
-      "to": "NUT-12",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.mintlnd.org/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:020d0c305e10741a6b207352880be21bccd985eec4b8cc2d7ec4cfc64070b300f3",
-      "to": "NUT-14",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.mintlnd.org/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:020d0c305e10741a6b207352880be21bccd985eec4b8cc2d7ec4cfc64070b300f3",
-      "to": "NUT-15",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.mintlnd.org/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:020d0c305e10741a6b207352880be21bccd985eec4b8cc2d7ec4cfc64070b300f3",
-      "to": "NUT-17",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.mintlnd.org/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:020d0c305e10741a6b207352880be21bccd985eec4b8cc2d7ec4cfc64070b300f3",
-      "to": "NUT-20",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.mintlnd.org/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:020d0c305e10741a6b207352880be21bccd985eec4b8cc2d7ec4cfc64070b300f3",
-      "to": "NUT-29",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.mintlnd.org/v1/info"
         }
       ],
       "confidence": 0.95,
@@ -32002,182 +31816,182 @@
       "scope": []
     },
     {
-      "from": "mint:02bf3ff52f21bd89be1992dc0fa42bf1d3a35ba4618364e7049c9861bd38a36dc4",
+      "from": "mint:020d0c305e10741a6b207352880be21bccd985eec4b8cc2d7ec4cfc64070b300f3",
       "to": "cashubtc/nutshell",
       "type": "runs",
       "sources": [
         {
           "kind": "mint-probe",
-          "ref": "version Nutshell/0.20.3.1"
+          "ref": "version Nutshell/0.21.0"
         }
       ],
       "confidence": 0.6,
       "scope": []
     },
     {
-      "from": "mint:02bf3ff52f21bd89be1992dc0fa42bf1d3a35ba4618364e7049c9861bd38a36dc4",
+      "from": "mint:020d0c305e10741a6b207352880be21bccd985eec4b8cc2d7ec4cfc64070b300f3",
       "to": "NUT-04",
       "type": "implements",
       "sources": [
         {
           "kind": "mint-probe",
-          "ref": "https://mint.nodenebula.com/v1/info"
+          "ref": "https://mint.mintlnd.org/v1/info"
         }
       ],
       "confidence": 0.95,
       "scope": []
     },
     {
-      "from": "mint:02bf3ff52f21bd89be1992dc0fa42bf1d3a35ba4618364e7049c9861bd38a36dc4",
+      "from": "mint:020d0c305e10741a6b207352880be21bccd985eec4b8cc2d7ec4cfc64070b300f3",
       "to": "NUT-05",
       "type": "implements",
       "sources": [
         {
           "kind": "mint-probe",
-          "ref": "https://mint.nodenebula.com/v1/info"
+          "ref": "https://mint.mintlnd.org/v1/info"
         }
       ],
       "confidence": 0.95,
       "scope": []
     },
     {
-      "from": "mint:02bf3ff52f21bd89be1992dc0fa42bf1d3a35ba4618364e7049c9861bd38a36dc4",
+      "from": "mint:020d0c305e10741a6b207352880be21bccd985eec4b8cc2d7ec4cfc64070b300f3",
       "to": "NUT-07",
       "type": "implements",
       "sources": [
         {
           "kind": "mint-probe",
-          "ref": "https://mint.nodenebula.com/v1/info"
+          "ref": "https://mint.mintlnd.org/v1/info"
         }
       ],
       "confidence": 0.95,
       "scope": []
     },
     {
-      "from": "mint:02bf3ff52f21bd89be1992dc0fa42bf1d3a35ba4618364e7049c9861bd38a36dc4",
+      "from": "mint:020d0c305e10741a6b207352880be21bccd985eec4b8cc2d7ec4cfc64070b300f3",
       "to": "NUT-08",
       "type": "implements",
       "sources": [
         {
           "kind": "mint-probe",
-          "ref": "https://mint.nodenebula.com/v1/info"
+          "ref": "https://mint.mintlnd.org/v1/info"
         }
       ],
       "confidence": 0.95,
       "scope": []
     },
     {
-      "from": "mint:02bf3ff52f21bd89be1992dc0fa42bf1d3a35ba4618364e7049c9861bd38a36dc4",
+      "from": "mint:020d0c305e10741a6b207352880be21bccd985eec4b8cc2d7ec4cfc64070b300f3",
       "to": "NUT-09",
       "type": "implements",
       "sources": [
         {
           "kind": "mint-probe",
-          "ref": "https://mint.nodenebula.com/v1/info"
+          "ref": "https://mint.mintlnd.org/v1/info"
         }
       ],
       "confidence": 0.95,
       "scope": []
     },
     {
-      "from": "mint:02bf3ff52f21bd89be1992dc0fa42bf1d3a35ba4618364e7049c9861bd38a36dc4",
+      "from": "mint:020d0c305e10741a6b207352880be21bccd985eec4b8cc2d7ec4cfc64070b300f3",
       "to": "NUT-10",
       "type": "implements",
       "sources": [
         {
           "kind": "mint-probe",
-          "ref": "https://mint.nodenebula.com/v1/info"
+          "ref": "https://mint.mintlnd.org/v1/info"
         }
       ],
       "confidence": 0.95,
       "scope": []
     },
     {
-      "from": "mint:02bf3ff52f21bd89be1992dc0fa42bf1d3a35ba4618364e7049c9861bd38a36dc4",
+      "from": "mint:020d0c305e10741a6b207352880be21bccd985eec4b8cc2d7ec4cfc64070b300f3",
       "to": "NUT-11",
       "type": "implements",
       "sources": [
         {
           "kind": "mint-probe",
-          "ref": "https://mint.nodenebula.com/v1/info"
+          "ref": "https://mint.mintlnd.org/v1/info"
         }
       ],
       "confidence": 0.95,
       "scope": []
     },
     {
-      "from": "mint:02bf3ff52f21bd89be1992dc0fa42bf1d3a35ba4618364e7049c9861bd38a36dc4",
+      "from": "mint:020d0c305e10741a6b207352880be21bccd985eec4b8cc2d7ec4cfc64070b300f3",
       "to": "NUT-12",
       "type": "implements",
       "sources": [
         {
           "kind": "mint-probe",
-          "ref": "https://mint.nodenebula.com/v1/info"
+          "ref": "https://mint.mintlnd.org/v1/info"
         }
       ],
       "confidence": 0.95,
       "scope": []
     },
     {
-      "from": "mint:02bf3ff52f21bd89be1992dc0fa42bf1d3a35ba4618364e7049c9861bd38a36dc4",
+      "from": "mint:020d0c305e10741a6b207352880be21bccd985eec4b8cc2d7ec4cfc64070b300f3",
       "to": "NUT-14",
       "type": "implements",
       "sources": [
         {
           "kind": "mint-probe",
-          "ref": "https://mint.nodenebula.com/v1/info"
+          "ref": "https://mint.mintlnd.org/v1/info"
         }
       ],
       "confidence": 0.95,
       "scope": []
     },
     {
-      "from": "mint:02bf3ff52f21bd89be1992dc0fa42bf1d3a35ba4618364e7049c9861bd38a36dc4",
+      "from": "mint:020d0c305e10741a6b207352880be21bccd985eec4b8cc2d7ec4cfc64070b300f3",
       "to": "NUT-15",
       "type": "implements",
       "sources": [
         {
           "kind": "mint-probe",
-          "ref": "https://mint.nodenebula.com/v1/info"
+          "ref": "https://mint.mintlnd.org/v1/info"
         }
       ],
       "confidence": 0.95,
       "scope": []
     },
     {
-      "from": "mint:02bf3ff52f21bd89be1992dc0fa42bf1d3a35ba4618364e7049c9861bd38a36dc4",
+      "from": "mint:020d0c305e10741a6b207352880be21bccd985eec4b8cc2d7ec4cfc64070b300f3",
       "to": "NUT-17",
       "type": "implements",
       "sources": [
         {
           "kind": "mint-probe",
-          "ref": "https://mint.nodenebula.com/v1/info"
+          "ref": "https://mint.mintlnd.org/v1/info"
         }
       ],
       "confidence": 0.95,
       "scope": []
     },
     {
-      "from": "mint:02bf3ff52f21bd89be1992dc0fa42bf1d3a35ba4618364e7049c9861bd38a36dc4",
+      "from": "mint:020d0c305e10741a6b207352880be21bccd985eec4b8cc2d7ec4cfc64070b300f3",
       "to": "NUT-20",
       "type": "implements",
       "sources": [
         {
           "kind": "mint-probe",
-          "ref": "https://mint.nodenebula.com/v1/info"
+          "ref": "https://mint.mintlnd.org/v1/info"
         }
       ],
       "confidence": 0.95,
       "scope": []
     },
     {
-      "from": "mint:02bf3ff52f21bd89be1992dc0fa42bf1d3a35ba4618364e7049c9861bd38a36dc4",
+      "from": "mint:020d0c305e10741a6b207352880be21bccd985eec4b8cc2d7ec4cfc64070b300f3",
       "to": "NUT-29",
       "type": "implements",
       "sources": [
         {
           "kind": "mint-probe",
-          "ref": "https://mint.nodenebula.com/v1/info"
+          "ref": "https://mint.mintlnd.org/v1/info"
         }
       ],
       "confidence": 0.95,
@@ -32373,6 +32187,188 @@
         {
           "kind": "mint-probe",
           "ref": "https://mint.mountainlake.io/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:02dd15abd6a2b385b2a70c6daff703dac3553184a8c836f271911faac9a2bbc979",
+      "to": "cashubtc/nutshell",
+      "type": "runs",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "version Nutshell/0.20.3.1"
+        }
+      ],
+      "confidence": 0.6,
+      "scope": []
+    },
+    {
+      "from": "mint:02dd15abd6a2b385b2a70c6daff703dac3553184a8c836f271911faac9a2bbc979",
+      "to": "NUT-04",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.chorus.community/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:02dd15abd6a2b385b2a70c6daff703dac3553184a8c836f271911faac9a2bbc979",
+      "to": "NUT-05",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.chorus.community/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:02dd15abd6a2b385b2a70c6daff703dac3553184a8c836f271911faac9a2bbc979",
+      "to": "NUT-07",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.chorus.community/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:02dd15abd6a2b385b2a70c6daff703dac3553184a8c836f271911faac9a2bbc979",
+      "to": "NUT-08",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.chorus.community/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:02dd15abd6a2b385b2a70c6daff703dac3553184a8c836f271911faac9a2bbc979",
+      "to": "NUT-09",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.chorus.community/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:02dd15abd6a2b385b2a70c6daff703dac3553184a8c836f271911faac9a2bbc979",
+      "to": "NUT-10",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.chorus.community/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:02dd15abd6a2b385b2a70c6daff703dac3553184a8c836f271911faac9a2bbc979",
+      "to": "NUT-11",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.chorus.community/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:02dd15abd6a2b385b2a70c6daff703dac3553184a8c836f271911faac9a2bbc979",
+      "to": "NUT-12",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.chorus.community/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:02dd15abd6a2b385b2a70c6daff703dac3553184a8c836f271911faac9a2bbc979",
+      "to": "NUT-14",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.chorus.community/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:02dd15abd6a2b385b2a70c6daff703dac3553184a8c836f271911faac9a2bbc979",
+      "to": "NUT-15",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.chorus.community/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:02dd15abd6a2b385b2a70c6daff703dac3553184a8c836f271911faac9a2bbc979",
+      "to": "NUT-17",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.chorus.community/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:02dd15abd6a2b385b2a70c6daff703dac3553184a8c836f271911faac9a2bbc979",
+      "to": "NUT-20",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.chorus.community/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:02dd15abd6a2b385b2a70c6daff703dac3553184a8c836f271911faac9a2bbc979",
+      "to": "NUT-29",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.chorus.community/v1/info"
         }
       ],
       "confidence": 0.95,
@@ -32730,7 +32726,7 @@
       "scope": []
     },
     {
-      "from": "mint:02dd15abd6a2b385b2a70c6daff703dac3553184a8c836f271911faac9a2bbc979",
+      "from": "mint:02bf3ff52f21bd89be1992dc0fa42bf1d3a35ba4618364e7049c9861bd38a36dc4",
       "to": "cashubtc/nutshell",
       "type": "runs",
       "sources": [
@@ -32743,169 +32739,169 @@
       "scope": []
     },
     {
-      "from": "mint:02dd15abd6a2b385b2a70c6daff703dac3553184a8c836f271911faac9a2bbc979",
+      "from": "mint:02bf3ff52f21bd89be1992dc0fa42bf1d3a35ba4618364e7049c9861bd38a36dc4",
       "to": "NUT-04",
       "type": "implements",
       "sources": [
         {
           "kind": "mint-probe",
-          "ref": "https://mint.chorus.community/v1/info"
+          "ref": "https://mint.nodenebula.com/v1/info"
         }
       ],
       "confidence": 0.95,
       "scope": []
     },
     {
-      "from": "mint:02dd15abd6a2b385b2a70c6daff703dac3553184a8c836f271911faac9a2bbc979",
+      "from": "mint:02bf3ff52f21bd89be1992dc0fa42bf1d3a35ba4618364e7049c9861bd38a36dc4",
       "to": "NUT-05",
       "type": "implements",
       "sources": [
         {
           "kind": "mint-probe",
-          "ref": "https://mint.chorus.community/v1/info"
+          "ref": "https://mint.nodenebula.com/v1/info"
         }
       ],
       "confidence": 0.95,
       "scope": []
     },
     {
-      "from": "mint:02dd15abd6a2b385b2a70c6daff703dac3553184a8c836f271911faac9a2bbc979",
+      "from": "mint:02bf3ff52f21bd89be1992dc0fa42bf1d3a35ba4618364e7049c9861bd38a36dc4",
       "to": "NUT-07",
       "type": "implements",
       "sources": [
         {
           "kind": "mint-probe",
-          "ref": "https://mint.chorus.community/v1/info"
+          "ref": "https://mint.nodenebula.com/v1/info"
         }
       ],
       "confidence": 0.95,
       "scope": []
     },
     {
-      "from": "mint:02dd15abd6a2b385b2a70c6daff703dac3553184a8c836f271911faac9a2bbc979",
+      "from": "mint:02bf3ff52f21bd89be1992dc0fa42bf1d3a35ba4618364e7049c9861bd38a36dc4",
       "to": "NUT-08",
       "type": "implements",
       "sources": [
         {
           "kind": "mint-probe",
-          "ref": "https://mint.chorus.community/v1/info"
+          "ref": "https://mint.nodenebula.com/v1/info"
         }
       ],
       "confidence": 0.95,
       "scope": []
     },
     {
-      "from": "mint:02dd15abd6a2b385b2a70c6daff703dac3553184a8c836f271911faac9a2bbc979",
+      "from": "mint:02bf3ff52f21bd89be1992dc0fa42bf1d3a35ba4618364e7049c9861bd38a36dc4",
       "to": "NUT-09",
       "type": "implements",
       "sources": [
         {
           "kind": "mint-probe",
-          "ref": "https://mint.chorus.community/v1/info"
+          "ref": "https://mint.nodenebula.com/v1/info"
         }
       ],
       "confidence": 0.95,
       "scope": []
     },
     {
-      "from": "mint:02dd15abd6a2b385b2a70c6daff703dac3553184a8c836f271911faac9a2bbc979",
+      "from": "mint:02bf3ff52f21bd89be1992dc0fa42bf1d3a35ba4618364e7049c9861bd38a36dc4",
       "to": "NUT-10",
       "type": "implements",
       "sources": [
         {
           "kind": "mint-probe",
-          "ref": "https://mint.chorus.community/v1/info"
+          "ref": "https://mint.nodenebula.com/v1/info"
         }
       ],
       "confidence": 0.95,
       "scope": []
     },
     {
-      "from": "mint:02dd15abd6a2b385b2a70c6daff703dac3553184a8c836f271911faac9a2bbc979",
+      "from": "mint:02bf3ff52f21bd89be1992dc0fa42bf1d3a35ba4618364e7049c9861bd38a36dc4",
       "to": "NUT-11",
       "type": "implements",
       "sources": [
         {
           "kind": "mint-probe",
-          "ref": "https://mint.chorus.community/v1/info"
+          "ref": "https://mint.nodenebula.com/v1/info"
         }
       ],
       "confidence": 0.95,
       "scope": []
     },
     {
-      "from": "mint:02dd15abd6a2b385b2a70c6daff703dac3553184a8c836f271911faac9a2bbc979",
+      "from": "mint:02bf3ff52f21bd89be1992dc0fa42bf1d3a35ba4618364e7049c9861bd38a36dc4",
       "to": "NUT-12",
       "type": "implements",
       "sources": [
         {
           "kind": "mint-probe",
-          "ref": "https://mint.chorus.community/v1/info"
+          "ref": "https://mint.nodenebula.com/v1/info"
         }
       ],
       "confidence": 0.95,
       "scope": []
     },
     {
-      "from": "mint:02dd15abd6a2b385b2a70c6daff703dac3553184a8c836f271911faac9a2bbc979",
+      "from": "mint:02bf3ff52f21bd89be1992dc0fa42bf1d3a35ba4618364e7049c9861bd38a36dc4",
       "to": "NUT-14",
       "type": "implements",
       "sources": [
         {
           "kind": "mint-probe",
-          "ref": "https://mint.chorus.community/v1/info"
+          "ref": "https://mint.nodenebula.com/v1/info"
         }
       ],
       "confidence": 0.95,
       "scope": []
     },
     {
-      "from": "mint:02dd15abd6a2b385b2a70c6daff703dac3553184a8c836f271911faac9a2bbc979",
+      "from": "mint:02bf3ff52f21bd89be1992dc0fa42bf1d3a35ba4618364e7049c9861bd38a36dc4",
       "to": "NUT-15",
       "type": "implements",
       "sources": [
         {
           "kind": "mint-probe",
-          "ref": "https://mint.chorus.community/v1/info"
+          "ref": "https://mint.nodenebula.com/v1/info"
         }
       ],
       "confidence": 0.95,
       "scope": []
     },
     {
-      "from": "mint:02dd15abd6a2b385b2a70c6daff703dac3553184a8c836f271911faac9a2bbc979",
+      "from": "mint:02bf3ff52f21bd89be1992dc0fa42bf1d3a35ba4618364e7049c9861bd38a36dc4",
       "to": "NUT-17",
       "type": "implements",
       "sources": [
         {
           "kind": "mint-probe",
-          "ref": "https://mint.chorus.community/v1/info"
+          "ref": "https://mint.nodenebula.com/v1/info"
         }
       ],
       "confidence": 0.95,
       "scope": []
     },
     {
-      "from": "mint:02dd15abd6a2b385b2a70c6daff703dac3553184a8c836f271911faac9a2bbc979",
+      "from": "mint:02bf3ff52f21bd89be1992dc0fa42bf1d3a35ba4618364e7049c9861bd38a36dc4",
       "to": "NUT-20",
       "type": "implements",
       "sources": [
         {
           "kind": "mint-probe",
-          "ref": "https://mint.chorus.community/v1/info"
+          "ref": "https://mint.nodenebula.com/v1/info"
         }
       ],
       "confidence": 0.95,
       "scope": []
     },
     {
-      "from": "mint:02dd15abd6a2b385b2a70c6daff703dac3553184a8c836f271911faac9a2bbc979",
+      "from": "mint:02bf3ff52f21bd89be1992dc0fa42bf1d3a35ba4618364e7049c9861bd38a36dc4",
       "to": "NUT-29",
       "type": "implements",
       "sources": [
         {
           "kind": "mint-probe",
-          "ref": "https://mint.chorus.community/v1/info"
+          "ref": "https://mint.nodenebula.com/v1/info"
         }
       ],
       "confidence": 0.95,
@@ -33075,188 +33071,6 @@
         {
           "kind": "mint-probe",
           "ref": "https://mint.gitvid.net/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:03bb3b622e0f024acf5c01bfb609624d3be30d7815e0c940ccf3e932a02c998c0c",
-      "to": "cashubtc/nutshell",
-      "type": "runs",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "version Nutshell/0.20.1"
-        }
-      ],
-      "confidence": 0.6,
-      "scope": []
-    },
-    {
-      "from": "mint:03bb3b622e0f024acf5c01bfb609624d3be30d7815e0c940ccf3e932a02c998c0c",
-      "to": "NUT-04",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://cashu.21m.lol/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:03bb3b622e0f024acf5c01bfb609624d3be30d7815e0c940ccf3e932a02c998c0c",
-      "to": "NUT-05",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://cashu.21m.lol/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:03bb3b622e0f024acf5c01bfb609624d3be30d7815e0c940ccf3e932a02c998c0c",
-      "to": "NUT-07",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://cashu.21m.lol/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:03bb3b622e0f024acf5c01bfb609624d3be30d7815e0c940ccf3e932a02c998c0c",
-      "to": "NUT-08",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://cashu.21m.lol/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:03bb3b622e0f024acf5c01bfb609624d3be30d7815e0c940ccf3e932a02c998c0c",
-      "to": "NUT-09",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://cashu.21m.lol/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:03bb3b622e0f024acf5c01bfb609624d3be30d7815e0c940ccf3e932a02c998c0c",
-      "to": "NUT-10",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://cashu.21m.lol/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:03bb3b622e0f024acf5c01bfb609624d3be30d7815e0c940ccf3e932a02c998c0c",
-      "to": "NUT-11",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://cashu.21m.lol/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:03bb3b622e0f024acf5c01bfb609624d3be30d7815e0c940ccf3e932a02c998c0c",
-      "to": "NUT-12",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://cashu.21m.lol/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:03bb3b622e0f024acf5c01bfb609624d3be30d7815e0c940ccf3e932a02c998c0c",
-      "to": "NUT-14",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://cashu.21m.lol/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:03bb3b622e0f024acf5c01bfb609624d3be30d7815e0c940ccf3e932a02c998c0c",
-      "to": "NUT-17",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://cashu.21m.lol/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:03bb3b622e0f024acf5c01bfb609624d3be30d7815e0c940ccf3e932a02c998c0c",
-      "to": "NUT-19",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://cashu.21m.lol/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:03bb3b622e0f024acf5c01bfb609624d3be30d7815e0c940ccf3e932a02c998c0c",
-      "to": "NUT-20",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://cashu.21m.lol/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:03bb3b622e0f024acf5c01bfb609624d3be30d7815e0c940ccf3e932a02c998c0c",
-      "to": "NUT-29",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://cashu.21m.lol/v1/info"
         }
       ],
       "confidence": 0.95,
@@ -33426,6 +33240,370 @@
         {
           "kind": "mint-probe",
           "ref": "https://mint.mjex.me/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:03bb3b622e0f024acf5c01bfb609624d3be30d7815e0c940ccf3e932a02c998c0c",
+      "to": "cashubtc/nutshell",
+      "type": "runs",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "version Nutshell/0.20.1"
+        }
+      ],
+      "confidence": 0.6,
+      "scope": []
+    },
+    {
+      "from": "mint:03bb3b622e0f024acf5c01bfb609624d3be30d7815e0c940ccf3e932a02c998c0c",
+      "to": "NUT-04",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://cashu.21m.lol/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:03bb3b622e0f024acf5c01bfb609624d3be30d7815e0c940ccf3e932a02c998c0c",
+      "to": "NUT-05",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://cashu.21m.lol/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:03bb3b622e0f024acf5c01bfb609624d3be30d7815e0c940ccf3e932a02c998c0c",
+      "to": "NUT-07",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://cashu.21m.lol/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:03bb3b622e0f024acf5c01bfb609624d3be30d7815e0c940ccf3e932a02c998c0c",
+      "to": "NUT-08",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://cashu.21m.lol/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:03bb3b622e0f024acf5c01bfb609624d3be30d7815e0c940ccf3e932a02c998c0c",
+      "to": "NUT-09",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://cashu.21m.lol/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:03bb3b622e0f024acf5c01bfb609624d3be30d7815e0c940ccf3e932a02c998c0c",
+      "to": "NUT-10",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://cashu.21m.lol/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:03bb3b622e0f024acf5c01bfb609624d3be30d7815e0c940ccf3e932a02c998c0c",
+      "to": "NUT-11",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://cashu.21m.lol/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:03bb3b622e0f024acf5c01bfb609624d3be30d7815e0c940ccf3e932a02c998c0c",
+      "to": "NUT-12",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://cashu.21m.lol/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:03bb3b622e0f024acf5c01bfb609624d3be30d7815e0c940ccf3e932a02c998c0c",
+      "to": "NUT-14",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://cashu.21m.lol/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:03bb3b622e0f024acf5c01bfb609624d3be30d7815e0c940ccf3e932a02c998c0c",
+      "to": "NUT-17",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://cashu.21m.lol/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:03bb3b622e0f024acf5c01bfb609624d3be30d7815e0c940ccf3e932a02c998c0c",
+      "to": "NUT-19",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://cashu.21m.lol/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:03bb3b622e0f024acf5c01bfb609624d3be30d7815e0c940ccf3e932a02c998c0c",
+      "to": "NUT-20",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://cashu.21m.lol/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:03bb3b622e0f024acf5c01bfb609624d3be30d7815e0c940ccf3e932a02c998c0c",
+      "to": "NUT-29",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://cashu.21m.lol/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:0241d9e8b02e75d6e2bcddfc772657a167b302b6d96a96a91be44672a3992a59e9",
+      "to": "cashubtc/nutshell",
+      "type": "runs",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "version Nutshell/0.20.3"
+        }
+      ],
+      "confidence": 0.6,
+      "scope": []
+    },
+    {
+      "from": "mint:0241d9e8b02e75d6e2bcddfc772657a167b302b6d96a96a91be44672a3992a59e9",
+      "to": "NUT-04",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.lnvoltz.com/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:0241d9e8b02e75d6e2bcddfc772657a167b302b6d96a96a91be44672a3992a59e9",
+      "to": "NUT-05",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.lnvoltz.com/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:0241d9e8b02e75d6e2bcddfc772657a167b302b6d96a96a91be44672a3992a59e9",
+      "to": "NUT-07",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.lnvoltz.com/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:0241d9e8b02e75d6e2bcddfc772657a167b302b6d96a96a91be44672a3992a59e9",
+      "to": "NUT-08",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.lnvoltz.com/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:0241d9e8b02e75d6e2bcddfc772657a167b302b6d96a96a91be44672a3992a59e9",
+      "to": "NUT-09",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.lnvoltz.com/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:0241d9e8b02e75d6e2bcddfc772657a167b302b6d96a96a91be44672a3992a59e9",
+      "to": "NUT-10",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.lnvoltz.com/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:0241d9e8b02e75d6e2bcddfc772657a167b302b6d96a96a91be44672a3992a59e9",
+      "to": "NUT-11",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.lnvoltz.com/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:0241d9e8b02e75d6e2bcddfc772657a167b302b6d96a96a91be44672a3992a59e9",
+      "to": "NUT-12",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.lnvoltz.com/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:0241d9e8b02e75d6e2bcddfc772657a167b302b6d96a96a91be44672a3992a59e9",
+      "to": "NUT-14",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.lnvoltz.com/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:0241d9e8b02e75d6e2bcddfc772657a167b302b6d96a96a91be44672a3992a59e9",
+      "to": "NUT-17",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.lnvoltz.com/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:0241d9e8b02e75d6e2bcddfc772657a167b302b6d96a96a91be44672a3992a59e9",
+      "to": "NUT-19",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.lnvoltz.com/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:0241d9e8b02e75d6e2bcddfc772657a167b302b6d96a96a91be44672a3992a59e9",
+      "to": "NUT-20",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.lnvoltz.com/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:0241d9e8b02e75d6e2bcddfc772657a167b302b6d96a96a91be44672a3992a59e9",
+      "to": "NUT-29",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.lnvoltz.com/v1/info"
         }
       ],
       "confidence": 0.95,
@@ -33601,370 +33779,6 @@
       "scope": []
     },
     {
-      "from": "mint:0241d9e8b02e75d6e2bcddfc772657a167b302b6d96a96a91be44672a3992a59e9",
-      "to": "cashubtc/nutshell",
-      "type": "runs",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "version Nutshell/0.20.3"
-        }
-      ],
-      "confidence": 0.6,
-      "scope": []
-    },
-    {
-      "from": "mint:0241d9e8b02e75d6e2bcddfc772657a167b302b6d96a96a91be44672a3992a59e9",
-      "to": "NUT-04",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.lnvoltz.com/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:0241d9e8b02e75d6e2bcddfc772657a167b302b6d96a96a91be44672a3992a59e9",
-      "to": "NUT-05",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.lnvoltz.com/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:0241d9e8b02e75d6e2bcddfc772657a167b302b6d96a96a91be44672a3992a59e9",
-      "to": "NUT-07",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.lnvoltz.com/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:0241d9e8b02e75d6e2bcddfc772657a167b302b6d96a96a91be44672a3992a59e9",
-      "to": "NUT-08",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.lnvoltz.com/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:0241d9e8b02e75d6e2bcddfc772657a167b302b6d96a96a91be44672a3992a59e9",
-      "to": "NUT-09",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.lnvoltz.com/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:0241d9e8b02e75d6e2bcddfc772657a167b302b6d96a96a91be44672a3992a59e9",
-      "to": "NUT-10",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.lnvoltz.com/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:0241d9e8b02e75d6e2bcddfc772657a167b302b6d96a96a91be44672a3992a59e9",
-      "to": "NUT-11",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.lnvoltz.com/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:0241d9e8b02e75d6e2bcddfc772657a167b302b6d96a96a91be44672a3992a59e9",
-      "to": "NUT-12",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.lnvoltz.com/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:0241d9e8b02e75d6e2bcddfc772657a167b302b6d96a96a91be44672a3992a59e9",
-      "to": "NUT-14",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.lnvoltz.com/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:0241d9e8b02e75d6e2bcddfc772657a167b302b6d96a96a91be44672a3992a59e9",
-      "to": "NUT-17",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.lnvoltz.com/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:0241d9e8b02e75d6e2bcddfc772657a167b302b6d96a96a91be44672a3992a59e9",
-      "to": "NUT-19",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.lnvoltz.com/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:0241d9e8b02e75d6e2bcddfc772657a167b302b6d96a96a91be44672a3992a59e9",
-      "to": "NUT-20",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.lnvoltz.com/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:0241d9e8b02e75d6e2bcddfc772657a167b302b6d96a96a91be44672a3992a59e9",
-      "to": "NUT-29",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.lnvoltz.com/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:023c87c6aa15bb7158fb59661973e73930e4351634fa1b7d56988df8441fa021f2",
-      "to": "cashubtc/nutshell",
-      "type": "runs",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "version Nutshell/0.21.0"
-        }
-      ],
-      "confidence": 0.6,
-      "scope": []
-    },
-    {
-      "from": "mint:023c87c6aa15bb7158fb59661973e73930e4351634fa1b7d56988df8441fa021f2",
-      "to": "NUT-04",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.mikelcalvo.net/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:023c87c6aa15bb7158fb59661973e73930e4351634fa1b7d56988df8441fa021f2",
-      "to": "NUT-05",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.mikelcalvo.net/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:023c87c6aa15bb7158fb59661973e73930e4351634fa1b7d56988df8441fa021f2",
-      "to": "NUT-07",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.mikelcalvo.net/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:023c87c6aa15bb7158fb59661973e73930e4351634fa1b7d56988df8441fa021f2",
-      "to": "NUT-08",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.mikelcalvo.net/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:023c87c6aa15bb7158fb59661973e73930e4351634fa1b7d56988df8441fa021f2",
-      "to": "NUT-09",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.mikelcalvo.net/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:023c87c6aa15bb7158fb59661973e73930e4351634fa1b7d56988df8441fa021f2",
-      "to": "NUT-10",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.mikelcalvo.net/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:023c87c6aa15bb7158fb59661973e73930e4351634fa1b7d56988df8441fa021f2",
-      "to": "NUT-11",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.mikelcalvo.net/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:023c87c6aa15bb7158fb59661973e73930e4351634fa1b7d56988df8441fa021f2",
-      "to": "NUT-12",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.mikelcalvo.net/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:023c87c6aa15bb7158fb59661973e73930e4351634fa1b7d56988df8441fa021f2",
-      "to": "NUT-14",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.mikelcalvo.net/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:023c87c6aa15bb7158fb59661973e73930e4351634fa1b7d56988df8441fa021f2",
-      "to": "NUT-15",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.mikelcalvo.net/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:023c87c6aa15bb7158fb59661973e73930e4351634fa1b7d56988df8441fa021f2",
-      "to": "NUT-17",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.mikelcalvo.net/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:023c87c6aa15bb7158fb59661973e73930e4351634fa1b7d56988df8441fa021f2",
-      "to": "NUT-20",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.mikelcalvo.net/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:023c87c6aa15bb7158fb59661973e73930e4351634fa1b7d56988df8441fa021f2",
-      "to": "NUT-29",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.mikelcalvo.net/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
       "from": "mint:020dc057db31e2ad68a82c3f4bd3a4e3452cc34de83489818a720ac6a4c81dcd03",
       "to": "cashubtc/nutshell",
       "type": "runs",
@@ -34303,175 +34117,6 @@
       "scope": []
     },
     {
-      "from": "mint:038df1da9aa65a3cfbd4e81fa6864eed356483b95e3d4492028d2444e257acf637",
-      "to": "cashubtc/nutshell",
-      "type": "runs",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "version Nutshell/0.19.2"
-        }
-      ],
-      "confidence": 0.6,
-      "scope": []
-    },
-    {
-      "from": "mint:038df1da9aa65a3cfbd4e81fa6864eed356483b95e3d4492028d2444e257acf637",
-      "to": "NUT-04",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.mineracks.com/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:038df1da9aa65a3cfbd4e81fa6864eed356483b95e3d4492028d2444e257acf637",
-      "to": "NUT-05",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.mineracks.com/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:038df1da9aa65a3cfbd4e81fa6864eed356483b95e3d4492028d2444e257acf637",
-      "to": "NUT-07",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.mineracks.com/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:038df1da9aa65a3cfbd4e81fa6864eed356483b95e3d4492028d2444e257acf637",
-      "to": "NUT-08",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.mineracks.com/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:038df1da9aa65a3cfbd4e81fa6864eed356483b95e3d4492028d2444e257acf637",
-      "to": "NUT-09",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.mineracks.com/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:038df1da9aa65a3cfbd4e81fa6864eed356483b95e3d4492028d2444e257acf637",
-      "to": "NUT-10",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.mineracks.com/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:038df1da9aa65a3cfbd4e81fa6864eed356483b95e3d4492028d2444e257acf637",
-      "to": "NUT-11",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.mineracks.com/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:038df1da9aa65a3cfbd4e81fa6864eed356483b95e3d4492028d2444e257acf637",
-      "to": "NUT-12",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.mineracks.com/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:038df1da9aa65a3cfbd4e81fa6864eed356483b95e3d4492028d2444e257acf637",
-      "to": "NUT-14",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.mineracks.com/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:038df1da9aa65a3cfbd4e81fa6864eed356483b95e3d4492028d2444e257acf637",
-      "to": "NUT-15",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.mineracks.com/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:038df1da9aa65a3cfbd4e81fa6864eed356483b95e3d4492028d2444e257acf637",
-      "to": "NUT-17",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.mineracks.com/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:038df1da9aa65a3cfbd4e81fa6864eed356483b95e3d4492028d2444e257acf637",
-      "to": "NUT-20",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://mint.mineracks.com/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
       "from": "mint:0294f53f13f988e3a5bf80f384168bf02c117ee9e81019f7e1b66e1250b5e0ebfa",
       "to": "cashubtc/nutshell",
       "type": "runs",
@@ -34791,175 +34436,6 @@
         {
           "kind": "mint-probe",
           "ref": "https://rugs.cashu.exchange/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:029e44152a6aaa4563cb14ebe691c868b23ea37e727682d3745e54f42ca25b3054",
-      "to": "cashubtc/nutshell",
-      "type": "runs",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "version Nutshell-CF/0.0.1"
-        }
-      ],
-      "confidence": 0.6,
-      "scope": []
-    },
-    {
-      "from": "mint:029e44152a6aaa4563cb14ebe691c868b23ea37e727682d3745e54f42ca25b3054",
-      "to": "NUT-04",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://rugs01.cashu.exchange/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:029e44152a6aaa4563cb14ebe691c868b23ea37e727682d3745e54f42ca25b3054",
-      "to": "NUT-05",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://rugs01.cashu.exchange/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:029e44152a6aaa4563cb14ebe691c868b23ea37e727682d3745e54f42ca25b3054",
-      "to": "NUT-07",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://rugs01.cashu.exchange/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:029e44152a6aaa4563cb14ebe691c868b23ea37e727682d3745e54f42ca25b3054",
-      "to": "NUT-08",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://rugs01.cashu.exchange/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:029e44152a6aaa4563cb14ebe691c868b23ea37e727682d3745e54f42ca25b3054",
-      "to": "NUT-09",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://rugs01.cashu.exchange/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:029e44152a6aaa4563cb14ebe691c868b23ea37e727682d3745e54f42ca25b3054",
-      "to": "NUT-10",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://rugs01.cashu.exchange/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:029e44152a6aaa4563cb14ebe691c868b23ea37e727682d3745e54f42ca25b3054",
-      "to": "NUT-11",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://rugs01.cashu.exchange/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:029e44152a6aaa4563cb14ebe691c868b23ea37e727682d3745e54f42ca25b3054",
-      "to": "NUT-12",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://rugs01.cashu.exchange/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:029e44152a6aaa4563cb14ebe691c868b23ea37e727682d3745e54f42ca25b3054",
-      "to": "NUT-14",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://rugs01.cashu.exchange/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:029e44152a6aaa4563cb14ebe691c868b23ea37e727682d3745e54f42ca25b3054",
-      "to": "NUT-19",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://rugs01.cashu.exchange/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:029e44152a6aaa4563cb14ebe691c868b23ea37e727682d3745e54f42ca25b3054",
-      "to": "NUT-20",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://rugs01.cashu.exchange/v1/info"
-        }
-      ],
-      "confidence": 0.95,
-      "scope": []
-    },
-    {
-      "from": "mint:029e44152a6aaa4563cb14ebe691c868b23ea37e727682d3745e54f42ca25b3054",
-      "to": "NUT-29",
-      "type": "implements",
-      "sources": [
-        {
-          "kind": "mint-probe",
-          "ref": "https://rugs01.cashu.exchange/v1/info"
         }
       ],
       "confidence": 0.95,
@@ -35116,6 +34592,357 @@
         {
           "kind": "mint-probe",
           "ref": "https://mint.agorist.space/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:029e44152a6aaa4563cb14ebe691c868b23ea37e727682d3745e54f42ca25b3054",
+      "to": "cashubtc/nutshell",
+      "type": "runs",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "version Nutshell-CF/0.0.1"
+        }
+      ],
+      "confidence": 0.6,
+      "scope": []
+    },
+    {
+      "from": "mint:029e44152a6aaa4563cb14ebe691c868b23ea37e727682d3745e54f42ca25b3054",
+      "to": "NUT-04",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://rugs01.cashu.exchange/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:029e44152a6aaa4563cb14ebe691c868b23ea37e727682d3745e54f42ca25b3054",
+      "to": "NUT-05",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://rugs01.cashu.exchange/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:029e44152a6aaa4563cb14ebe691c868b23ea37e727682d3745e54f42ca25b3054",
+      "to": "NUT-07",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://rugs01.cashu.exchange/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:029e44152a6aaa4563cb14ebe691c868b23ea37e727682d3745e54f42ca25b3054",
+      "to": "NUT-08",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://rugs01.cashu.exchange/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:029e44152a6aaa4563cb14ebe691c868b23ea37e727682d3745e54f42ca25b3054",
+      "to": "NUT-09",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://rugs01.cashu.exchange/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:029e44152a6aaa4563cb14ebe691c868b23ea37e727682d3745e54f42ca25b3054",
+      "to": "NUT-10",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://rugs01.cashu.exchange/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:029e44152a6aaa4563cb14ebe691c868b23ea37e727682d3745e54f42ca25b3054",
+      "to": "NUT-11",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://rugs01.cashu.exchange/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:029e44152a6aaa4563cb14ebe691c868b23ea37e727682d3745e54f42ca25b3054",
+      "to": "NUT-12",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://rugs01.cashu.exchange/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:029e44152a6aaa4563cb14ebe691c868b23ea37e727682d3745e54f42ca25b3054",
+      "to": "NUT-14",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://rugs01.cashu.exchange/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:029e44152a6aaa4563cb14ebe691c868b23ea37e727682d3745e54f42ca25b3054",
+      "to": "NUT-19",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://rugs01.cashu.exchange/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:029e44152a6aaa4563cb14ebe691c868b23ea37e727682d3745e54f42ca25b3054",
+      "to": "NUT-20",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://rugs01.cashu.exchange/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:029e44152a6aaa4563cb14ebe691c868b23ea37e727682d3745e54f42ca25b3054",
+      "to": "NUT-29",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://rugs01.cashu.exchange/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:023c87c6aa15bb7158fb59661973e73930e4351634fa1b7d56988df8441fa021f2",
+      "to": "cashubtc/nutshell",
+      "type": "runs",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "version Nutshell/0.21.0"
+        }
+      ],
+      "confidence": 0.6,
+      "scope": []
+    },
+    {
+      "from": "mint:023c87c6aa15bb7158fb59661973e73930e4351634fa1b7d56988df8441fa021f2",
+      "to": "NUT-04",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.mikelcalvo.net/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:023c87c6aa15bb7158fb59661973e73930e4351634fa1b7d56988df8441fa021f2",
+      "to": "NUT-05",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.mikelcalvo.net/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:023c87c6aa15bb7158fb59661973e73930e4351634fa1b7d56988df8441fa021f2",
+      "to": "NUT-07",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.mikelcalvo.net/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:023c87c6aa15bb7158fb59661973e73930e4351634fa1b7d56988df8441fa021f2",
+      "to": "NUT-08",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.mikelcalvo.net/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:023c87c6aa15bb7158fb59661973e73930e4351634fa1b7d56988df8441fa021f2",
+      "to": "NUT-09",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.mikelcalvo.net/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:023c87c6aa15bb7158fb59661973e73930e4351634fa1b7d56988df8441fa021f2",
+      "to": "NUT-10",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.mikelcalvo.net/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:023c87c6aa15bb7158fb59661973e73930e4351634fa1b7d56988df8441fa021f2",
+      "to": "NUT-11",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.mikelcalvo.net/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:023c87c6aa15bb7158fb59661973e73930e4351634fa1b7d56988df8441fa021f2",
+      "to": "NUT-12",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.mikelcalvo.net/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:023c87c6aa15bb7158fb59661973e73930e4351634fa1b7d56988df8441fa021f2",
+      "to": "NUT-14",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.mikelcalvo.net/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:023c87c6aa15bb7158fb59661973e73930e4351634fa1b7d56988df8441fa021f2",
+      "to": "NUT-15",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.mikelcalvo.net/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:023c87c6aa15bb7158fb59661973e73930e4351634fa1b7d56988df8441fa021f2",
+      "to": "NUT-17",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.mikelcalvo.net/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:023c87c6aa15bb7158fb59661973e73930e4351634fa1b7d56988df8441fa021f2",
+      "to": "NUT-20",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.mikelcalvo.net/v1/info"
+        }
+      ],
+      "confidence": 0.95,
+      "scope": []
+    },
+    {
+      "from": "mint:023c87c6aa15bb7158fb59661973e73930e4351634fa1b7d56988df8441fa021f2",
+      "to": "NUT-29",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-probe",
+          "ref": "https://mint.mikelcalvo.net/v1/info"
         }
       ],
       "confidence": 0.95,
@@ -35311,6 +35138,149 @@
         {
           "kind": "mint-directory",
           "ref": "https://lekmint.cash/api"
+        }
+      ],
+      "confidence": 0.8,
+      "scope": []
+    },
+    {
+      "from": "mint:mint.mineracks.com",
+      "to": "cashubtc/nutshell",
+      "type": "runs",
+      "sources": [
+        {
+          "kind": "mint-directory",
+          "ref": "version 0.19.2"
+        }
+      ],
+      "confidence": 0.5,
+      "scope": []
+    },
+    {
+      "from": "mint:mint.mineracks.com",
+      "to": "NUT-07",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-directory",
+          "ref": "https://mint.mineracks.com"
+        }
+      ],
+      "confidence": 0.8,
+      "scope": []
+    },
+    {
+      "from": "mint:mint.mineracks.com",
+      "to": "NUT-08",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-directory",
+          "ref": "https://mint.mineracks.com"
+        }
+      ],
+      "confidence": 0.8,
+      "scope": []
+    },
+    {
+      "from": "mint:mint.mineracks.com",
+      "to": "NUT-09",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-directory",
+          "ref": "https://mint.mineracks.com"
+        }
+      ],
+      "confidence": 0.8,
+      "scope": []
+    },
+    {
+      "from": "mint:mint.mineracks.com",
+      "to": "NUT-10",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-directory",
+          "ref": "https://mint.mineracks.com"
+        }
+      ],
+      "confidence": 0.8,
+      "scope": []
+    },
+    {
+      "from": "mint:mint.mineracks.com",
+      "to": "NUT-11",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-directory",
+          "ref": "https://mint.mineracks.com"
+        }
+      ],
+      "confidence": 0.8,
+      "scope": []
+    },
+    {
+      "from": "mint:mint.mineracks.com",
+      "to": "NUT-12",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-directory",
+          "ref": "https://mint.mineracks.com"
+        }
+      ],
+      "confidence": 0.8,
+      "scope": []
+    },
+    {
+      "from": "mint:mint.mineracks.com",
+      "to": "NUT-14",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-directory",
+          "ref": "https://mint.mineracks.com"
+        }
+      ],
+      "confidence": 0.8,
+      "scope": []
+    },
+    {
+      "from": "mint:mint.mineracks.com",
+      "to": "NUT-15",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-directory",
+          "ref": "https://mint.mineracks.com"
+        }
+      ],
+      "confidence": 0.8,
+      "scope": []
+    },
+    {
+      "from": "mint:mint.mineracks.com",
+      "to": "NUT-17",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-directory",
+          "ref": "https://mint.mineracks.com"
+        }
+      ],
+      "confidence": 0.8,
+      "scope": []
+    },
+    {
+      "from": "mint:mint.mineracks.com",
+      "to": "NUT-20",
+      "type": "implements",
+      "sources": [
+        {
+          "kind": "mint-directory",
+          "ref": "https://mint.mineracks.com"
         }
       ],
       "confidence": 0.8,
