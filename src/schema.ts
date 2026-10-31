@@ -9,7 +9,7 @@ import { z } from "zod";
  * migration note in DATA_QUALITY.md.
  */
 
-export const SCHEMA_VERSION = "1.0.0";
+export const SCHEMA_VERSION = "1.1.0";
 
 export const NodeType = z.enum([
   "spec", // the protocol hub itself (the gravitational center)
@@ -32,6 +32,7 @@ export const EdgeType = z.enum([
   "depends_on", // project -> core_lib    (versioned, machine-derived)
   "imports", // project -> library       (heuristic, unversioned)
   "binding_of", // binding -> core_lib
+  "facet_of", // same-codebase role (mint/CLI wallet) -> canonical project
   "fork_of", // project -> project
   "runs", // mint_instance -> mint_software
   "maintained_by", // project -> org
@@ -108,6 +109,10 @@ export const Node = z.object({
   aliases: z.array(z.string()).default([]),
   tags: z.array(z.string()).default([]),
   created_at: z.string().optional(),
+  /** ecosystem layer: 0 spec, 1 nut, 2 core, 3 adjacent, 4 sdk, 5 app */
+  tier: z.number().int().min(0).max(5).optional(),
+  /** hidden from the viewer but kept in the dataset (e.g. superseded libraries) */
+  retired: z.boolean().optional(),
   /** orbit attachment: which node this one clusters around in the radial layout */
   primary_parent: z.string().optional(),
   /** NUT ids this node implements/claims (mints from /v1/info, libs from curation/detection) */

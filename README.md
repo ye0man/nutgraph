@@ -33,9 +33,10 @@ it; release tooling and agent context are the others.
 
 Implemented: **ingest** of the awesome-cashu README, the NUTs spec, repo
 metadata and manifests (including nested monorepo manifests), the mint
-directory JSON, and live mints (NIP-87 relays, directories, `/v1/info` over
-clearnet/Tor); **resolve** of node identity, the NUT compatibility matrix,
-version-aware dependencies, ranking, and mint→software edges; **build** of
+directory JSON, live mints (NIP-87 relays, directories, `/v1/info` over
+clearnet/Tor), and per-repo `nut-support.yaml`; **resolve** of node identity
+(including URL redirects and same-codebase facets), role-scoped NUT support,
+version-aware dependencies, tiers, ranking and mint/software edges; **build** of
 `dist/graph.json`, dated snapshots, and `DATA_QUALITY.md`.
 
 ## The curation line
@@ -44,12 +45,51 @@ Humans curate the **ontology**; machines compute the **edges**.
 
 - **Automated (no human):** dependencies, versions, stars/contributors/commits/
   releases, creation dates, mint `/v1/info` probes.
-- **Curated (`ontology/`):** canonical project identity (repos, aliases, dedupe),
-  node **type**, which things are core modules, which are bindings of which core.
+- **Curated (`ontology/`):** canonical project identity (repos, aliases, URL
+  redirects, dedupe), node **type**, which things are core modules, which are
+  bindings of which core, which same-codebase roles are facets (mint, CLI
+  wallet), and each node's **tier**.
+- **Declared (`nut-support.yaml`):** the repo owner's explicit NUT support by
+  role (`wallet`, `mint`, `library`). Direct implementers only; never inherited.
 - **Escape hatch (`overrides/edges.yaml`):** edges machine collection cannot see.
 
 Litmus test: *if a field changes when the world changes, compute it; if it only
 changes when our understanding changes, curate it.*
+
+## The hierarchy model
+
+`primary_parent` is the nesting edge (from dependencies, or curated in the
+ontology). Every node also gets a `tier`, which drives the radius; `scores.ring`
+only spreads nodes *inside* a tier.
+
+| tier | layer | examples |
+| --- | --- | --- |
+| 0 | spec | `spec` |
+| 1 | NUTs | mandatory and optional NUT rings |
+| 2 | core libs | cashu-ts, cdk, nutshell |
+| 3 | core-adjacent | language bindings, first-party facets (Nutshell mint/CLI) |
+| 4 | SDK / framework | coco |
+| 5 | applications | wallets, apps, mint software, mints, tools, other libraries |
+
+A **facet** (`facet_of`) is a role that shares its parent's codebase, not a
+separate implementation. It nests under the canonical project, inherits its repo
+for metrics/dependencies, and does not carry its own NUT claims.
+
+## NUT support declarations
+
+Repos can ship a machine-readable `nut-support.yaml`:
+
+```yaml
+repo: cashubtc/cdk
+roles:
+  wallet:  { nuts: ["00", "07", "11"] }
+  mint:    { nuts: ["00", "04", "05"] }
+  library: { nuts: ["00", "01", "02"] }
+```
+
+nutgraph reads it from every `cashubtc`-owned repo. A missing file is fine; an
+unknown role or NUT id is reported in `DATA_QUALITY.md`. The schema lives in
+[`schema/nut-support.schema.json`](./schema/nut-support.schema.json).
 
 ## Run it
 
@@ -83,11 +123,12 @@ outputs, and deploys the site.
 ## Repo layout
 
 ```
-ontology/     curated: core.yaml, bindings.yaml, projects.yaml, packages.yaml, sections.yaml, hosts.yaml
+ontology/     curated: core.yaml, bindings.yaml, facets.yaml, projects.yaml, packages.yaml, sections.yaml, hosts.yaml
 discovery/    curated: sources.yaml (mint discovery), mints-seed.yaml
 overrides/    curated: edges.yaml (escape hatch)
+schema/       JSON schema for repo-side nut-support.yaml
 src/hosts/    CodeHost adapter: github (forgejo -> M6)
-src/ingest/   readme, nuts, manifests, registries, mints/ (nostr, directories, probe)
+src/ingest/   readme, nuts, nut-support, manifests, registries, mints/ (nostr, directories, probe)
 src/resolve/  packages, dependencies (depends_on + semver), versions
 src/score/    profiles, rank (popularity/freshness/rings)
 src/build/    graph compose, snapshots, agent bundle
@@ -113,6 +154,10 @@ explains the *classes* so they can be fixed deliberately.
 | Non-project README entries | Decoders, simulators, status boards, testnut mints. | Repo-less entries in those sections are skipped (no phantom nodes). | Curated `ontology/sections.yaml`; skipped entries are logged as `README_NON_PROJECT_SKIP`. Repo-backed entries in those sections are still kept. |
 | NUT list drift | NUT nodes are parsed from the `cashubtc/nuts` README. | If parsing breaks, a curated fallback is used and may be stale. | The ledger flags `NUTS_FETCH_FAILED`/`NUTS_FALLBACK_USED`; regenerate each run. |
 | Implementer unmatched | The spec README credits a project with a NUT, but no node matched by URL/repo/alias. | A missing compatibility edge. | Add the project or an alias; logged as `NUT_IMPLEMENTER_UNMATCHED`. |
+| Identity redirects | A README/legacy URL redirects to the canonical repo (`cashubtc/cashu` → `cashubtc/nutshell`). | Two nodes for one codebase would split dependency and NUT history. | Canonicalized by `url_aliases` in `ontology/projects.yaml`; logged as `IDENTITY_REDIRECT_MERGED`. |
+| Same-codebase roles | A mint or CLI wallet ships from the parent library's repo. | Without facets the role floats at the spec hub. | Declared in `ontology/facets.yaml`; `FACET_PARENT_MISSING` flags a bad parent. |
+| Orphan structural nodes | A core lib, binding, library or mint software has no dependency parent. | The viewer attaches it to the spec hub. | `ORPHAN_NODE` in the ledger; add `primary_parent` if it belongs elsewhere. |
+| NUT support declarations | `nut-support.yaml` is malformed or names an unknown role/NUT. | That repo's claims are dropped for the run. | `NUT_SUPPORT_PARSE_FAILED`, `NUT_SUPPORT_UNKNOWN_ROLE`, `NUT_SUPPORT_UNKNOWN_NUT`. |
 | `METADATA_MISSING` | Repo metadata fetch failed (transient GitHub 502, or repo moved/renamed). | No metrics/ranking for that node until a later run. | Re-run (failures aren't cached as empty); the retry/backoff usually clears it. |
 | `PACKAGE_TARGET_MISSING` | A machine-read dependency maps to a node not in the graph. | The edge is dropped. | Add the project, or fix `ontology/packages.yaml`. |
 | Dependency scope unlabelled | Manifests don't say whether a dep is runtime or dev/test. | A dev-only dependency looks like a real one. | M1.5: prefer `dependencies` over `devDependencies`; flag test-only edges. |
@@ -138,4 +183,7 @@ explains the *classes* so they can be fixed deliberately.
 - **M3** mint discovery: NIP-87 relays, directory fan-in, seed list, Tor-aware `/v1/info` probing, pubkey identity. *(done)*
 - **M4** static 2D radial site: spec at center, NUT ring, core/binding rings, dependency orbit, detail panel, filters, search. *(done)*
 - **M5** agent bundle + snapshots: `nodes/edges.jsonl`, `schema.md`, `manifest.json`, growth animation.
+- **M5.5** hierarchy model: identity/redirect resolution, `facet_of` roles, curated
+  tiers (core → SDK → app), per-repo `nut-support.yaml`, role-scoped `implements`
+  edges. *(done)*
 - **M6** Forgejo `CodeHost` adapter (git.cashu.dev).

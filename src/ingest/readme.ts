@@ -18,9 +18,13 @@ export interface ProjectOverride {
   name: string;
   type: NodeType;
   url?: string;
+  /** Other URLs this project is known by (legacy names, redirects, doc sites). */
+  url_aliases?: string[];
   aliases?: string[];
   status?: NodeStatus;
   primary_parent?: string;
+  tier?: number;
+  retired?: boolean;
 }
 
 /** Curated README section handling, from ontology/sections.yaml. */
@@ -86,6 +90,7 @@ export function parseReadme(
   const overrideByName = new Map<string, ProjectOverride>();
   for (const o of overrides) {
     if (o.url) overrideByUrl.set(o.url, o);
+    for (const u of o.url_aliases ?? []) overrideByUrl.set(u, o);
     overrideByName.set(o.name.toLowerCase(), o);
     for (const a of o.aliases ?? []) overrideByName.set(a.toLowerCase(), o);
   }
@@ -116,6 +121,7 @@ export function parseReadme(
   }
 
   const byId = new Map<string, Node>();
+  const loggedRedirects = new Set<string>();
 
   for (const e of entries) {
     if (!e.url) {
@@ -129,6 +135,19 @@ export function parseReadme(
     }
 
     const override = overrideByUrl.get(e.url) ?? overrideByName.get(e.rawName.toLowerCase());
+    if (override && override.url && override.url !== e.url && (override.url_aliases ?? []).includes(e.url)) {
+      const key = `${e.url}|${override.id}`;
+      if (!loggedRedirects.has(key)) {
+        loggedRedirects.add(key);
+        dq.add({
+          code: "IDENTITY_REDIRECT_MERGED",
+          severity: "info",
+          subject: normalizeNodeId(override.id),
+          detail: `"${e.url}" resolved to the canonical project ${override.url}.`,
+          suggestion: "Keep url_aliases current if the repo or canonical URL moves again.",
+        });
+      }
+    }
     const repoSource = override?.url ?? e.url;
     const ghRepo = githubRepoFromUrl(repoSource);
     const fjRepo = forgejoRepoFromUrl(repoSource);
@@ -195,6 +214,8 @@ export function parseReadme(
       }
       if (!existing.aliases.includes(e.rawName)) existing.aliases.push(e.rawName);
       if (!existing.description && e.description) existing.description = e.description;
+      if (existing.tier === undefined && override?.tier !== undefined) existing.tier = override.tier;
+      if (override?.retired) existing.retired = true;
       dq.add({
         code: "README_DUPLICATE_ID",
         severity: "info",
@@ -234,8 +255,10 @@ export function parseReadme(
       description: e.description,
       category,
       status,
-      aliases: [],
+      aliases: [...(override?.aliases ?? [])],
       tags: [],
+      tier: override?.tier,
+      retired: override?.retired ?? false,
       primary_parent: override?.primary_parent
         ? normalizeNodeId(override.primary_parent)
         : undefined,

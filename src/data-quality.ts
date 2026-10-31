@@ -23,6 +23,18 @@ const CODE_DOCS: Record<string, string> = {
     "Node type was inferred from the README section and may be wrong; add an override in ontology/projects.yaml.",
   README_DUPLICATE_ID:
     "Two README entries resolved to the same canonical id; they were merged. Verify the merge is correct.",
+  IDENTITY_REDIRECT_MERGED:
+    "A legacy or redirecting URL was folded into the canonical project id; dependencies and NUT claims now attach to the canonical node.",
+  FACET_PARENT_MISSING:
+    "A facet declared in ontology/facets.yaml points at a canonical project that is not in the graph; the facet was skipped.",
+  ORPHAN_NODE:
+    "A structural node (core lib, binding, library, mint software) has no parent. The viewer hangs it off the spec hub; add primary_parent if it belongs elsewhere.",
+  NUT_SUPPORT_PARSE_FAILED:
+    "A repo's nut-support.yaml could not be parsed, so its NUT declarations were ignored this run.",
+  NUT_SUPPORT_UNKNOWN_ROLE:
+    "nut-support.yaml declared a role outside wallet|mint|library.",
+  NUT_SUPPORT_UNKNOWN_NUT:
+    "nut-support.yaml declared a NUT id that is not in the parsed spec list.",
   README_NO_REPO:
     "A listed project has no GitHub/Forgejo repo, so its dependencies cannot be derived. It will never have edges until a repo or override is supplied.",
   README_NON_PROJECT_SKIP:

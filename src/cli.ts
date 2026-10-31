@@ -25,8 +25,14 @@ async function impact(nodeId: string): Promise<void> {
   const byId = new Map(graph.nodes.map((n) => [n.id, n]));
   const target = byId.get(nodeId);
   if (!target) {
-    console.error(`No such node: ${nodeId}`);
-    process.exit(1);
+    const aliasTarget = graph.nodes.find((n) =>
+      n.aliases.some((a) => a.toLowerCase() === nodeId.toLowerCase()),
+    );
+    if (!aliasTarget) {
+      console.error(`No such node: ${nodeId}`);
+      process.exit(1);
+    }
+    return impact(aliasTarget.id);
   }
   const deps = graph.edges
     .filter((e) => e.type === "depends_on" && e.to === nodeId)
@@ -64,10 +70,35 @@ spec, nut, core_lib, binding, library, mint_software, mint_instance, wallet, app
 - \`depends_on\` -- project -> core_lib (versioned, machine-derived; M1)
 - \`imports\` -- project -> library (heuristic, unversioned)
 - \`binding_of\` -- binding -> core_lib
+- \`facet_of\` -- same-codebase role (mint, CLI wallet) -> canonical project
 - \`fork_of\` -- project -> project
-- \`implements\` -- lib/mint -> nut (compatibility matrix)
+- \`implements\` -- lib/mint -> nut (compatibility matrix; \`scope\` is wallet|mint|library)
 - \`runs\` -- mint_instance -> mint_software
 - \`maintained_by\` -- project -> org
+
+## Node layers
+
+\`tier\` is the ecosystem layer that drives the radial geometry (rank only
+orders nodes inside a layer): 0 spec, 1 nut, 2 core, 3 core-adjacent
+(bindings, first-party facets), 4 SDK/framework, 5 application.
+
+\`retired: true\` keeps a node in the dataset (so legacy dependency edges
+resolve) while hiding it from the viewer.
+
+## NUT support declarations
+
+Repos can ship \`nut-support.yaml\`:
+
+\`\`\`yaml
+repo: cashubtc/cdk
+roles:
+  wallet:  { nuts: ["00", "07", "11"] }
+  mint:    { nuts: ["00", "04", "05"] }
+  library: { nuts: ["00", "01", "02"] }
+\`\`\`
+
+Those claims are direct implementers only; nothing is inherited from a
+dependency.
 
 ## Provenance
 

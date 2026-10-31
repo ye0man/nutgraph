@@ -1,0 +1,27 @@
+# Facets: roles that share a canonical project's codebase.
+#
+# A facet is a first-class node you can find and select (the mint you run, the
+# CLI wallet you install), but it is NOT a separate implementation: it inherits
+# the canonical project's repo, metrics, dependencies and NUT claims. It nests
+# directly under its parent in the viewer (tier = parent tier + 1).
+#
+# Curation rule: only declare facets for roles that live in the parent's repo.
+# A separate repo is a binding (ontology/bindings.yaml) or its own project.
+#
+# `software_aliases` is how mint discovery maps an implementation string (from
+# a directory listing or /v1/info) to this facet. Match is case-insensitive
+# substring.
+
+facets:
+  - id: cashubtc/nutshell/mint
+    parent: cashubtc/nutshell
+    name: Nutshell (mint)
+    type: mint_software
+    role: mint
+    software_aliases: ["nutshell", "nutshell-cf"]
+
+  - id: cashubtc/nutshell/cli
+    parent: cashubtc/nutshell
+    name: Nutshell (CLI wallet)
+    type: wallet
+    role: cli

@@ -44,6 +44,7 @@ export async function resolveMints(
   validNutIds: Set<string>,
   dq: DataQualityLog,
   refresh: boolean,
+  softwareAliases: Array<{ id: string; aliases: string[] }> = [],
 ): Promise<MintResolution> {
   const sourcesFile = await readYaml<SourcesFile>(path("discovery", "sources.yaml"));
   const seedFile = await readYaml<SeedFile>(path("discovery", "mints-seed.yaml"));
@@ -181,14 +182,15 @@ export async function resolveMints(
         type: "implements",
         sources: [evidence],
         confidence: evidence.kind === "mint-probe" ? 0.95 : 0.8,
-        scope: [],
+        scope: ["mint"],
       });
     }
   };
 
   for (const { info, candidate } of byPubkey.values()) {
     probedUrls.add(candidate.url);
-    const software = implementationToNode(candidate.implementation) ?? detectSoftware(info);
+    const software =
+      implementationToNode(candidate.implementation, softwareAliases) ?? detectSoftware(info, softwareAliases);
     const recommenders = recommenderCounts.get(info.pubkey);
     addMint(
       `mint:${info.pubkey}`,
@@ -209,7 +211,7 @@ export async function resolveMints(
   for (const c of list) {
     if (probedUrls.has(c.url)) continue;
     if (!c.sources.some((s) => s.kind === "mint-directory")) continue;
-    const software = implementationToNode(c.implementation);
+    const software = implementationToNode(c.implementation, softwareAliases);
     addMint(
       `mint:${mintSlug(c.url)}`,
       c.name ?? new URL(c.url).host,
@@ -313,10 +315,14 @@ async function loadMintDirectory(
 }
 
 /** Map a directory-reported implementation string to a software node. */
-function implementationToNode(impl: string | undefined): string | undefined {
+function implementationToNode(
+  impl: string | undefined,
+  softwareAliases: Array<{ id: string; aliases: string[] }>,
+): string | undefined {
   if (!impl) return undefined;
   const s = impl.toLowerCase();
-  if (s.includes("nutshell")) return "cashubtc/nutshell";
+  const declared = matchSoftwareAlias(s, softwareAliases);
+  if (declared) return declared;
   if (s.includes("cdk-mintd")) return "cashubtc/cdk-mintd";
   if (s.includes("cdk")) return "cashubtc/cdk";
   if (s.includes("nutmix")) return "lescuer97/nutmix";
@@ -327,11 +333,28 @@ function implementationToNode(impl: string | undefined): string | undefined {
  * Weak software detection from /v1/info name/version. Most mints do not report
  * their implementation, so `runs` edges are sparse -- a documented gap.
  */
-function detectSoftware(info: MintInfo): string | undefined {
+function detectSoftware(
+  info: MintInfo,
+  softwareAliases: Array<{ id: string; aliases: string[] }>,
+): string | undefined {
   const s = `${info.name ?? ""} ${info.version ?? ""}`.toLowerCase();
-  if (s.includes("nutshell")) return "cashubtc/nutshell";
+  const declared = matchSoftwareAlias(s, softwareAliases);
+  if (declared) return declared;
   if (s.includes("cdk") || s.includes("mintd")) return "cashubtc/cdk-mintd";
   if (s.includes("nutmix")) return "lescuer97/nutmix";
+  return undefined;
+}
+
+/** Facet software aliases win over the built-in heuristics. */
+function matchSoftwareAlias(
+  haystack: string,
+  softwareAliases: Array<{ id: string; aliases: string[] }>,
+): string | undefined {
+  for (const entry of softwareAliases) {
+    if (entry.aliases.some((alias) => haystack.includes(alias.toLowerCase()))) {
+      return entry.id;
+    }
+  }
   return undefined;
 }
 

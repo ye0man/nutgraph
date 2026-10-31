@@ -26,8 +26,16 @@ const TYPE_LABEL = {
   tool: "Tool",
   org: "Org",
 };
-const RADIUS = { spec: 0, nutMandatory: 118, nutOptional: 200, core_lib: 300, binding: 388 };
-const SAT_BASE = 476;
+const TIER_LABEL = {
+  0: "Spec",
+  1: "NUT",
+  2: "Core",
+  3: "Core-adjacent",
+  4: "SDK",
+  5: "Application",
+};
+const TIER_RADIUS = { 0: 0, 1: 118, 2: 300, 3: 388, 4: 470, 5: 540 };
+const NUT_RADIUS = { mandatory: 118, optional: 200 };
 const SAT_STEP = 64;
 const NEW_WINDOW_DAYS = 90;
 const HIDE_AFTER_DAYS = 365;
@@ -72,6 +80,7 @@ function init() {
 /** Projects with no meaningful activity for a year (or marked unmaintained /
  * archived) are hidden from the view but kept in the data (graph.json). */
 function isHidden(n) {
+  if (n.retired) return true;
   if (n.type === "spec" || n.type === "nut" || n.type === "core_lib" || n.type === "binding") {
     return false;
   }
@@ -127,8 +136,8 @@ function buildTree() {
       n._angle = -Math.PI / 2 + (2 * Math.PI * i) / Math.max(1, arr.length);
       n._radius = r;
     });
-  placeRing(nuts.filter((n) => (n.tags || []).includes("mandatory")), RADIUS.nutMandatory);
-  placeRing(nuts.filter((n) => !(n.tags || []).includes("mandatory")), RADIUS.nutOptional);
+  placeRing(nuts.filter((n) => (n.tags || []).includes("mandatory")), NUT_RADIUS.mandatory);
+  placeRing(nuts.filter((n) => !(n.tags || []).includes("mandatory")), NUT_RADIUS.optional);
 }
 
 function assignSubtrees(id, a0, a1) {
@@ -149,16 +158,23 @@ function assignSubtrees(id, a0, a1) {
 }
 
 function radiusOf(n) {
-  if (n.type === "core_lib") return RADIUS.core_lib;
-  if (n.type === "binding") return RADIUS.binding;
-  const ring = n.scores && n.scores.ring !== undefined ? n.scores.ring : 2;
-  return SAT_BASE + ring * SAT_STEP;
+  if (n.type === "spec") return 0;
+  if (n.type === "nut") {
+    return (n.tags || []).includes("mandatory") ? NUT_RADIUS.mandatory : NUT_RADIUS.optional;
+  }
+  const tier = n.tier !== undefined ? n.tier : 5;
+  const ring = n.scores && n.scores.ring !== undefined ? n.scores.ring : 0;
+  const own = tier === 5 ? (TIER_RADIUS[5] ?? 540) + ring * SAT_STEP : (TIER_RADIUS[tier] ?? 540);
+  const parent = n._parent ? nodeById.get(n._parent) : null;
+  const parentRadius = parent && parent._radius !== undefined ? parent._radius : 0;
+  return Math.max(own, parentRadius + 64);
 }
 
 function visualRadius(n) {
   if (n.id === "spec") return 24;
   if (n.type === "core_lib") return 16;
   if (n.type === "binding") return 10;
+  if ((n.tags || []).includes("facet")) return 10;
   if (n.type === "nut") return 7;
   const rank = n.scores && n.scores.rank !== undefined ? n.scores.rank : 0.1;
   return 4 + rank * 13;
@@ -213,7 +229,7 @@ function draw() {
     .attr("y2", (d) => pos(d.t)[1])
     .attr("stroke", (d) => linkColor(d))
     .attr("stroke-width", (d) => (d.type === "binding_of" ? 0.8 : d.role === "primary" ? 1.1 : 0.6))
-    .attr("stroke-dasharray", (d) => (d.type === "binding_of" || d.type === "runs" ? "2 3" : null))
+    .attr("stroke-dasharray", (d) => (d.type === "binding_of" || d.type === "facet_of" || d.type === "runs" ? "2 3" : null))
     .attr("opacity", (d) => linkOpacity(d));
 
   const nodes = graph.nodes.filter((n) => visible.has(n.id));
@@ -275,6 +291,8 @@ function shortName(d) {
 }
 function shouldLabel(d) {
   if (d.id === "spec" || d.type === "core_lib" || d.type === "binding") return true;
+  if ((d.tags || []).includes("facet")) return true;
+  if (d.tier !== undefined && d.tier <= 4) return true;
   if (d.type === "nut" && d.id.endsWith("0")) return true;
   const rank = d.scores && d.scores.rank;
   return rank !== undefined && rank > 0.72;
@@ -282,13 +300,14 @@ function shouldLabel(d) {
 
 function linkColor(d) {
   if (d.type === "binding_of") return "#ffb454";
+  if (d.type === "facet_of") return "#c9a26b";
   if (d.type === "implements") return "#2f6f78";
   if (d.type === "runs") return "#ff6bd6";
   return "#3a4763";
 }
 function linkOpacity(d) {
   if (d.type === "implements") return 0.16;
-  if (d.type === "binding_of") return 0.7;
+  if (d.type === "binding_of" || d.type === "facet_of") return 0.7;
   if (d.type === "runs") return 0.5;
   return d.role === "primary" ? 0.5 : 0.18;
 }
@@ -335,8 +354,14 @@ function renderPanel(d) {
   const nuts = graph.edges.filter((e) => e.type === "implements" && e.from === d.id);
   const rows = [];
 
-  rows.push(`<div class="type">${TYPE_LABEL[d.type] || d.type}${d.status && d.status !== "active" ? " · " + d.status : ""}</div>`);
+  rows.push(
+    `<div class="type">${TYPE_LABEL[d.type] || d.type}${d.tier !== undefined ? " · " + (TIER_LABEL[d.tier] || "tier " + d.tier) : ""}${d.status && d.status !== "active" ? " · " + d.status : ""}${d.retired ? " · retired" : ""}</div>`,
+  );
   rows.push(`<h2>${esc(d.name)}</h2>`);
+  if ((d.tags || []).includes("facet") && d.primary_parent) {
+    const parent = nodeById.get(d.primary_parent);
+    rows.push(`<div class="type">part of ${esc(parent?.name || d.primary_parent)}</div>`);
+  }
   if (isNew(d)) rows.push(`<div class="type" style="color:#6ee7a8">new</div>`);
   if (d.url) rows.push(`<div><a href="${esc(d.url)}" target="_blank" rel="noopener">${esc(d.url)}</a></div>`);
   if (d.description) rows.push(`<div class="desc">${esc(d.description)}</div>`);
@@ -362,9 +387,23 @@ function renderPanel(d) {
   }
 
   if (nuts.length) {
-    rows.push(`<h3>Implements (${nuts.length})</h3><ul>${nuts
-      .map((e) => `<li><span>${e.to}</span></li>`)
-      .join("")}</ul>`);
+    const byScope = new Map();
+    for (const e of nuts) {
+      const scopes = e.scope && e.scope.length ? e.scope : ["unspecified"];
+      for (const scope of scopes) {
+        if (!byScope.has(scope)) byScope.set(scope, []);
+        byScope.get(scope).push(e.to);
+      }
+    }
+    rows.push(`<h3>Implements (${nuts.length})</h3>`);
+    for (const [scope, ids] of [...byScope.entries()].sort((a, b) => a[0].localeCompare(b[0]))) {
+      rows.push(
+        `<div class="type">${esc(scope)} · ${ids.length}</div><ul>${ids
+          .sort()
+          .map((id) => `<li><span>${esc(id)}</span></li>`)
+          .join("")}</ul>`,
+      );
+    }
   }
   if (out.length) {
     rows.push(`<h3>Depends on (${out.length})</h3><ul>${out

@@ -1,0 +1,16 @@
+# Export this file from a cashubtc repo as /nut-support.yaml.
+#
+# Declare only NUTs this repo's own code implements. Do not list NUTs you get
+# transitively from a dependency (that would be an inherited claim).
+#
+# roles: wallet | mint | library
+# nuts:  "07", "NUT-07", or 7 all normalise to NUT-07.
+
+repo: cashubtc/cdk
+roles:
+  wallet:
+    nuts: ["00", "01", "07", "11", "13"]
+  mint:
+    nuts: ["00", "01", "04", "05", "06", "19"]
+  library:
+    nuts: ["00", "01", "02", "03"]

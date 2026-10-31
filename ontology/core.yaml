@@ -23,14 +23,8 @@ core:
     description: Rust library implementing the Cashu protocol.
     url: https://github.com/cashubtc/cdk
 
-  - id: cashubtc/cashu
-    name: Nutshell (Python library)
+  - id: cashubtc/nutshell
+    name: Nutshell
     language: python
-    description: Python library for using Cashu wallets and mints inside other Python projects.
-    url: https://github.com/cashubtc/cashu
-
-  - id: cashubtc/cashu-crypto-ts
-    name: cashu-crypto-ts
-    language: typescript
-    description: TypeScript library implementing basic crypto operations for Cashu wallets and mints.
-    url: https://github.com/cashubtc/cashu-crypto-ts
+    description: Python library, CLI wallet, and reference mint implementation of the Cashu protocol.
+    url: https://github.com/cashubtc/nutshell

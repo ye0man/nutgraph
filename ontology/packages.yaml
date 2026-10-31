@@ -74,10 +74,10 @@ packages:
     name: "cashu-crypto"
     node: cashubtc/cdk
 
-  # --- nutshell (Python) ---
+  # --- nutshell (Python; library, CLI and mint share one package) ---
   - registry: pypi
     name: "cashu"
-    node: cashubtc/cashu
+    node: cashubtc/nutshell
 
   # --- cdk-kotlin (Maven; the repo publishes cdk-android and cdk-kotlin) ---
   - registry: maven

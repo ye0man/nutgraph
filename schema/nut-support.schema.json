@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/cashubtc/nutgraph/schema/nut-support.schema.json",
+  "title": "nutgraph NUT support declaration",
+  "description": "Drop this file at a repo root as nut-support.yaml. It declares which NUTs the repo's own code implements, by role. nutgraph ingests it directly; nothing is inherited from dependencies.",
+  "type": "object",
+  "required": ["roles"],
+  "additionalProperties": false,
+  "properties": {
+    "repo": {
+      "type": "string",
+      "pattern": "^[^/\\s]+/[^/\\s]+$",
+      "description": "owner/repo, for human reference. nutgraph keys the file by the repo it was fetched from."
+    },
+    "roles": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": false,
+      "properties": {
+        "wallet": { "$ref": "#/$defs/role" },
+        "mint": { "$ref": "#/$defs/role" },
+        "library": { "$ref": "#/$defs/role" }
+      }
+    }
+  },
+  "$defs": {
+    "role": {
+      "type": "object",
+      "required": ["nuts"],
+      "additionalProperties": false,
+      "properties": {
+        "nuts": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "oneOf": [
+              { "type": "string", "pattern": "^(NUT-)?\\d{1,2}$" },
+              { "type": "integer", "minimum": 0, "maximum": 99 }
+            ]
+          }
+        }
+      }
+    }
+  }
+}

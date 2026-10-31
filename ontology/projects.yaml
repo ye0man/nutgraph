@@ -55,12 +55,33 @@ projects:
     url: https://github.com/cashubtc/Numo
     primary_parent: cashubtc/cdk-kotlin
 
-  # Nutshell is listed in both the mint and wallet sections. Its primary role is
-  # the reference mint implementation.
+  # Nutshell is listed in the README as a mint, a CLI wallet, and a Python
+  # library. It is one codebase (the old cashubtc/cashu URL redirects here), so
+  # it is one canonical core node; the mint and CLI roles are facets
+  # (ontology/facets.yaml) nested underneath it.
   - id: cashubtc/nutshell
-    name: Nutshell (mint)
-    type: mint_software
+    name: Nutshell
+    type: core_lib
     url: https://github.com/cashubtc/nutshell
+    url_aliases: ["https://github.com/cashubtc/cashu"]
+    aliases: ["Nutshell", "nutshell", "cashubtc/cashu"]
+
+  # coco is a wallet SDK built on cashu-ts: a library by type, but it sits in
+  # the layer between core libs and applications.
+  - id: cashubtc/coco
+    name: Coco
+    type: library
+    tier: 4
+    url: https://github.com/cashubtc/coco
+    aliases: ["Coco"]
+
+  # Superseded by the crypto shipped in cashu-ts v4+. Kept in the dataset so
+  # legacy dependents still resolve their edges, retired from the view.
+  - id: cashubtc/cashu-crypto-ts
+    name: cashu-crypto-ts
+    type: library
+    retired: true
+    url: https://github.com/cashubtc/cashu-crypto-ts
 
   # A showcase of dedupe + type correction: the "mintd" entry points into the
   # cdk monorepo rather than a standalone repo. Keep it as mint software whose
